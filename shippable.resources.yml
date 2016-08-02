@@ -4,7 +4,7 @@ resources:
     integration: docker
     pointer:
       sourceName: "library/nginx"
-      isPull: false
+      isPull: true
     seed:
       versionName: latest
  
@@ -13,7 +13,7 @@ resources:
     integration: docker
     pointer:
       sourceName: "scriptnull/sample_node"
-      isPull: false
+      isPull: true
     seed:
       versionName: "dc.pipeline.3"
   
@@ -33,7 +33,7 @@ resources:
   - name: plv2-dopts1
     type: dockerOptions
     version:
-      memory: 512
+      memory: 256
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
       
