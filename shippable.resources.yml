@@ -1,5 +1,5 @@
 resources:
-  - name: ssdocker
+  - name: ssdocker2
     type: image
     integration: docker
     pointer:
@@ -8,14 +8,14 @@ resources:
     seed:
       versionName: latest
  
-  - name: ssdocker2
+  - name: ssdocker3
     type: image
     integration: docker
     pointer:
       sourceName: "scriptnull/sample_node"
       isPull: false
     seed:
-      versionName: "dc.pipeline.3"
+      versionName: "dc.pipeline.2"
   
   # - name: ddc-cluster
   #   type: cluster
@@ -33,7 +33,7 @@ resources:
   - name: plv2-dopts1
     type: dockerOptions
     version:
-      memory: 256
+      memory: 512
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
       
