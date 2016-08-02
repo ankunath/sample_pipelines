@@ -51,16 +51,7 @@ jobs:
   #     - IN: manifestjob1
   #     - IN: ddc-cluster
       
-  # - name: tri-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: manifestjob1
-  #     #- IN: manifestjob2
-  #     - IN: tri-cluster
-  #     # - TASK: managed
-  #     #   deployMethod: upgrade
-      
-  - name: tri-deploy123
+  - name: tri-deploy
     type: deploy
     steps:
       - IN: manifestjob1
@@ -68,6 +59,15 @@ jobs:
       - IN: tri-cluster
       # - TASK: managed
       #   deployMethod: upgrade
+      
+  # - name: tri-deploy123
+  #   type: deploy
+  #   steps:
+  #     - IN: manifestjob1
+  #     #- IN: manifestjob2
+  #     - IN: tri-cluster
+  #     # - TASK: managed
+  #     #   deployMethod: upgrade
       
   # - name: gke-deploy
   #   type: deploy
