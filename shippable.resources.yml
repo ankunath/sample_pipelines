@@ -1,5 +1,5 @@
 resources:
-  - name: ssdocker2
+  - name: ssdocker
     type: image
     integration: docker
     pointer:
@@ -8,14 +8,14 @@ resources:
     seed:
       versionName: latest
  
-  - name: ssdocker3
+  - name: ssdocker2
     type: image
     integration: docker
     pointer:
       sourceName: "scriptnull/sample_node"
       isPull: false
     seed:
-      versionName: "dc.pipeline.2"
+      versionName: "dc.pipeline.3"
   
   # - name: ddc-cluster
   #   type: cluster
