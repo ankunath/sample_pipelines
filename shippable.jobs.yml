@@ -5,6 +5,13 @@ jobs:
       - IN: ssdocker
       #- IN: plv2-dopts1
       - IN: trigger-dv-man
+      
+  - name: manifestjob2
+    type: manifest
+    steps:
+      - IN: ssdocker2
+      #- IN: plv2-dopts1
+      - IN: trigger-dv-man
 
 
   # - name: jatin-2
@@ -48,6 +55,7 @@ jobs:
     type: deploy
     steps:
       - IN: manifestjob1
+      - IN: manifestjob2
       - IN: tri-cluster
       # - TASK: managed
       #   deployMethod: upgrade
