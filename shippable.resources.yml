@@ -33,7 +33,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 300
+      memory: 500
       portMappings:
         - "3000"
       # volumesFrom:
