@@ -64,16 +64,14 @@ jobs:
     type: deploy
     steps:
       - IN: manifestjob2
-      - TASK: managed
-        deployMethod: upgrade
       - IN: ecs-cluster
       - IN: myLB
         applyTo:
           - manifest: manifestjob2 # it can only apply to one manifest
             image: ssdocker2 # it can only apply to one image in the manifest
-            port: 3030 # it can only reference one port in the image
-                             # these rules are mostly just for ECS
-      
+            port: 3030 
+      - TASK: managed
+        deployMethod: upgrade
   # - name: tri-deploy123
   #   type: deploy
   #   steps:
