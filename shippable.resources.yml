@@ -1,62 +1,51 @@
 resources:
-  - name: ssdocker
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "library/nginx"
-      isPull: true
-    seed:
-      versionName: latest
- 
-  - name: ssdocker2
+  - name: sh-myapp2
     type: image
     integration: docker
     pointer:
       sourceName: "scriptnull/sample_node"
       isPull: true
     seed:
-      versionName: "dc.pipeline.3"
-  
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: ddc
-  #   pointer:
-  #     sourceName: "ddc-cluster"
+      versionName: myapp2
 
+  - name: sh-myapp1
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp1"
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
-  
-  - name: ecs-cluster
+  - name: sh-ecs-cluster
     type: cluster
     integration: ecscluster
     pointer:
       sourceName : "testCL" #name of the cluster we are deploying
       region: "us-west-2"
 
-      
-  - name: myLB
+
+  - name: sh-lb
     type: loadBalancer
     pointer:
-      sourceName: testLoadBalancer1
-  
-  - name: plv2-dopts1
+      sourceName: shloadBalancer1
+
+  - name: sh-docker-opts
     type: dockerOptions
     version:
       memory: 100
+      portMappings:
+        - "3000"
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
-      
+
   # - name: gkecluster
   #   type: cluster
   #   integration: shubh-gce
   #   pointer:
   #     sourceName: "small-cluster" #name of the cluster we are deploying.
   #     region: "us-east1-d"
-  
+
   # - name: scale
   #   type: replicas
   #   version:
@@ -68,9 +57,22 @@ resources:
      # sourceName: "small-cluster"
       #region: "us-east1-d"
 
-  
+
   # - name: dcl-cluster
   #   type: dclCluster
   #   integration: jatin-dcl
   #   pointer:
   #     sourceName: "cluster-dcl"
+
+# - name: ddc-cluster
+  #   type: cluster
+  #   integration: ddc
+  #   pointer:
+  #     sourceName: "ddc-cluster"
+
+
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"

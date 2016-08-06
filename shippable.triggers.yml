@@ -1,5 +1,5 @@
 triggers:
-   - name: trigger-dv-man
+   - name: sh-trigger
      type: trigger
      pointer:
-       counter: 6
+       counter: 78
