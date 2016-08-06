@@ -64,6 +64,8 @@ jobs:
     type: deploy
     steps:
       - IN: manifestjob2
+      - TASK: managed
+        deployMethod: upgrade
       - IN: ecs-cluster
       - IN: myLB
         applyTo:
