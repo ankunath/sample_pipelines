@@ -64,6 +64,7 @@ jobs:
     type: deploy
     steps:
       - IN: manifestjob2
+      - IN: ecs-cluster
       - IN: myLB
         applyTo:
           - manifest: manifestjob2 # it can only apply to one manifest
