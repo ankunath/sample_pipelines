@@ -51,14 +51,25 @@ jobs:
   #     - IN: manifestjob1
   #     - IN: ddc-cluster
       
-  - name: tri-deploy
+  # - name: tri-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: manifestjob1
+  #     - IN: manifestjob2
+  #     - IN: tri-cluster
+  #     # - TASK: managed
+  #     #   deployMethod: upgrade
+  
+  - name: ecsDeploy
     type: deploy
     steps:
-      - IN: manifestjob1
       - IN: manifestjob2
-      - IN: tri-cluster
-      # - TASK: managed
-      #   deployMethod: upgrade
+      - IN: myLB
+        applyTo:
+          - manifest: manifestjob2 # it can only apply to one manifest
+            image: ssdocker2 # it can only apply to one image in the manifest
+            port: 3030 # it can only reference one port in the image
+                             # these rules are mostly just for ECS
       
   # - name: tri-deploy123
   #   type: deploy
