@@ -1,5 +1,5 @@
 triggers:
-   - name: sh-trigger-1
+   - name: sh-trigger
      type: trigger
      pointer:
-       counter: 778
+       counter: 77
