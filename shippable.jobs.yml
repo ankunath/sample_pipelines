@@ -11,11 +11,11 @@ jobs:
     steps:
       - IN: sh-manifestjob1
       - IN: sh-ecs-cluster
-      # - IN: sh-lb
-      #   applyTo:
-      #     - manifest: sh-manifestjob1 # it can only apply to one manifest
-      #       image: sh-myapp3 # it can only apply to one image in the manifest
-      #       port: 80
+      - IN: sh-lb
+        applyTo:
+          - manifest: sh-manifestjob1 # it can only apply to one manifest
+            image: sh-myapp3 # it can only apply to one image in the manifest
+            port: 80
       - TASK: managed
         deployMethod: upgrade
   # - name: tri-deploy123
