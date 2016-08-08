@@ -39,10 +39,15 @@ resources:
     pointer:
       sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
+  - name: sh-lb-1
+    type: loadBalancer
+    pointer:
+      sourceName: shLoadBalancer
+
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 700
+      memory: 200
       portMappings:
         - "80:80"
       # volumesFrom:
