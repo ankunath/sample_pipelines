@@ -17,25 +17,34 @@ resources:
     seed:
       versionName: "myapp1"
 
+  - name: sh-myapp3
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
+
   - name: sh-ecs-cluster
     type: cluster
     integration: ecscluster
     pointer:
-      sourceName : "testCL" #name of the cluster we are deploying
-      region: "us-west-2"
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
 
 
   - name: sh-lb
     type: loadBalancer
     pointer:
-      sourceName: shloadBalancer1
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
       memory: 200
       portMappings:
-        - "8089:3000"
+        - "80:80"
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
