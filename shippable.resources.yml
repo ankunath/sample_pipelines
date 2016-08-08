@@ -1,5 +1,5 @@
 resources:
-  - name: sh-myapp2
+  - name: sh-myapp2-1
     type: image
     integration: docker
     pointer:
@@ -8,7 +8,7 @@ resources:
     seed:
       versionName: myapp2
 
-  - name: sh-myapp1
+  - name: sh-myapp1-1
     type: image
     integration: docker
     pointer:
@@ -17,7 +17,7 @@ resources:
     seed:
       versionName: "myapp1"
 
-  - name: sh-myapp3
+  - name: sh-myapp3-1
     type: image
     integration: docker
     pointer:
@@ -26,7 +26,7 @@ resources:
     seed:
       versionName: "myapp3"
 
-  - name: sh-ecs-cluster
+  - name: sh-ecs-cluster-1
     type: cluster
     integration: ecscluster
     pointer:
