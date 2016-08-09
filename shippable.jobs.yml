@@ -24,8 +24,8 @@ jobs:
       - IN: sh-manifestjob1
       #- IN: manifestjob2
       - IN: four-cluster
-      # - TASK: managed
-      #   deployMethod: upgrade
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: gke-deploy
   #   type: deploy
