@@ -23,7 +23,7 @@ jobs:
     steps:
       - IN: sh-manifestjob1
       #- IN: manifestjob2
-      - IN: four-cluster
+      - IN: tri-cluster
       - TASK: managed
         deployMethod: upgrade
 
