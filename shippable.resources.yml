@@ -48,7 +48,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 500
       portMappings:
         - "80:80"
       # volumesFrom:
