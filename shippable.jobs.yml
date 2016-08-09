@@ -18,14 +18,14 @@ jobs:
   #           port: 80
   #     - TASK: managed
   #       deployMethod: upgrade
-  - name: tri-deploy123
-    type: deploy
-    steps:
-      - IN: sh-manifestjob1
-      #- IN: manifestjob2
-      - IN: tri-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: tri-deploy123
+  #   type: deploy
+  #   steps:
+  #     - IN: sh-manifestjob1
+  #     #- IN: manifestjob2
+  #     - IN: tri-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   # - name: gke-deploy
   #   type: deploy
