@@ -79,15 +79,15 @@ resources:
   #   pointer:
   #     sourceName: "cluster-dcl"
 
-# - name: ddc-cluster
-  #   type: cluster
-  #   integration: ddc
-  #   pointer:
-  #     sourceName: "ddc-cluster"
+  - name: four-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
 
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: tri-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
