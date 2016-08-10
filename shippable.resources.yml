@@ -51,8 +51,9 @@ resources:
       memory: 508
       portMappings:
         - "80:80"
-      # volumesFrom:
-      #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
+      version:
+      links:
+        - "plv2-manifest8redis_0_0_055d5014-109c-4c84-9bbe-3009a523:testenv"
 
   # - name: gkecluster
   #   type: cluster

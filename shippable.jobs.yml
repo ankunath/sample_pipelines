@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp2
-      - IN: sh-docker-opt
+      - IN: sh-docker-opts
       - IN: sh-trigger
 
   # - name: sh-ecsDeploy
