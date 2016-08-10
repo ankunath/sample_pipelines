@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp2
-      - IN: sh-docker-opts
+      - IN: sh-docker-opt
       - IN: sh-trigger
 
   # - name: sh-ecsDeploy
@@ -23,7 +23,7 @@ jobs:
     steps:
       - IN: sh-manifestjob1
       #- IN: manifestjob2
-      - IN: tri-clusters
+      - IN: tri-cluster
       - TASK: managed
         deployMethod: upgrade
 
