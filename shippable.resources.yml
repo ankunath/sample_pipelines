@@ -8,41 +8,41 @@ resources:
     seed:
       versionName: myapp2
 
-  - name: sh-myapp1
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: true
-    seed:
-      versionName: "myapp1"
+  # - name: sh-myapp1
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     isPull: true
+  #   seed:
+  #     versionName: "myapp1"
 
-  - name: sh-myapp3
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: true
-    seed:
-      versionName: "myapp3"
+  # - name: sh-myapp3
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     isPull: true
+  #   seed:
+  #     versionName: "myapp3"
 
-  - name: sh-ecs-cluster
-    type: cluster
-    integration: ecscluster
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
+  # - name: sh-ecs-cluster
+  #   type: cluster
+  #   integration: ecscluster
+  #   pointer:
+  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
+  #     region: "us-east-1"
 
 
-  - name: sh-lb-1
-    type: loadBalancer
-    pointer:
-      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+  # - name: sh-lb-1
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
-  - name: sh-lb-2
-    type: loadBalancer
-    pointer:
-      sourceName: shLoadBalancer
+  # - name: sh-lb-2
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: shLoadBalancer
 
 
   - name: sh-docker-opts
@@ -79,11 +79,11 @@ resources:
   #   pointer:
   #     sourceName: "cluster-dcl"
 
-  - name: four-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
+  # - name: four-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
 
 
   - name: tri-cluster
