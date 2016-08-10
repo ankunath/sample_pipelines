@@ -90,4 +90,4 @@ resources:
     type: cluster
     integration: shubh-triton
     pointer:
-      region: "us-east-2"
+      region: "us-east-3"
