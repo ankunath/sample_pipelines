@@ -88,6 +88,6 @@ resources:
 
   - name: tri-cluster
     type: cluster
-    integration: shubh-triton
+    integration: shubh-tritons
     pointer:
       region: "us-east-2"
