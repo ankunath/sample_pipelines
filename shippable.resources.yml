@@ -49,8 +49,7 @@ resources:
     type: dockerOptions
     version:
       memory: 501
-      portMappings:
-        - "80:80"
+      publishAllPorts: true
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
