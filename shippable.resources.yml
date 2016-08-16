@@ -94,7 +94,7 @@ resources:
 
   - name: 3rd
     type: gitRepo
-    integration: github
+    integration: git
     pointer:
       sourceName: ankunath/3rd
       branch: master
