@@ -91,3 +91,10 @@ resources:
     integration: shubh-triton
     pointer:
       region: "us-east-2"
+
+  - name: 3rd
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: ankunath/3rd
+      branch: master
