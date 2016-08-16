@@ -2,4 +2,4 @@ triggers:
    - name: sh-trigger
      type: trigger
      pointer:
-       counter: 790
+       counter: 7908
