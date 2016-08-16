@@ -30,7 +30,7 @@ jobs:
   - name: infra-provision
     type: runSh
     steps:
-      - IN: infra-repo
+      - IN: 3rd
     on_success:
       - script: echo 'This block executes after TASK section executes successfully'
 
