@@ -19,7 +19,7 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
   - name: tri-deploy123
-    #type: deploy
+    type: deploy
     steps:
       - IN: sh-manifestjob1
       #- IN: manifestjob2
