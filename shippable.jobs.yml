@@ -27,12 +27,12 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: infra-provision
-    type: runSh
-    steps:
-      - IN: 3rd
-    on_success:
-      - script: echo 'This block executes after TASK section executes successfully'
+  # - name: infra-provision
+  #   type: runSh
+  #   steps:
+  #     - IN: 3rd
+  #   on_success:
+  #     - script: echo 'This block executes after TASK section executes successfully'
 
   # - name: gke-deploy
   #   type: deploy

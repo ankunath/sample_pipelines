@@ -92,9 +92,9 @@ resources:
     pointer:
       region: "us-east-2"
 
-  - name: 3rd
-    type: gitRepo
-    integration: git
-    pointer:
-      sourceName: ankunath/3rd
-      branch: master
+  # - name: 3rd
+  #   type: gitRepo
+  #   integration: git
+  #   pointer:
+  #     sourceName: ankunath/3rd
+  #     branch: master
