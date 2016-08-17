@@ -2,9 +2,9 @@ resources:
   - name: sh-myapp2
     type: image
     integration: docker
-    # pointer:
-    #   sourceName: "scriptnull/sample_node"
-      #isPull: true
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
     seed:
       versionName: myapp2
 
