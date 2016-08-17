@@ -1,5 +1,7 @@
 triggers:
    - name: sh-trigger
      type: trigger
+     version:
+       memory: 500
      pointer:
        counter: 2
