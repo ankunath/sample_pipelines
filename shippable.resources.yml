@@ -37,7 +37,7 @@ resources:
   - name: sh-lb-1
     type: loadBalancer
     pointer:
-      # sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
   # - name: sh-lb-2
   #   type: loadBalancer
