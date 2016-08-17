@@ -91,7 +91,7 @@ resources:
     integration: shubh-triton
     pointer:
       region: "us-east-2"
-
+      sourceName: "shubh"
 
   # - name: sample_node
   #   type: gitRepo
