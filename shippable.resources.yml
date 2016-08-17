@@ -34,9 +34,9 @@ resources:
   #     region: "us-east-1"
 
 
-  - name: sh-lb-1
-    type: loadBalancer
-    pointer:
+  # - name: sh-lb-1
+  #   type: loadBalancer
+  #   pointer:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
   # - name: sh-lb-2
