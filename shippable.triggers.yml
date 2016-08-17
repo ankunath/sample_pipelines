@@ -4,4 +4,4 @@ triggers:
      version:
        memory: 500
      pointer:
-       counter: 295
+       counter: 29500

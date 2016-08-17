@@ -93,6 +93,13 @@ resources:
       region: "us-east-2"
       sourceName: "shubh"
 
+  - name: sample_node
+    type: syncRepo
+    integration: git
+    pointer:
+      sourceName: ankunath/sample_node
+      branch: master
+
   # - name: sample_node
   #   type: gitRepo
   #   integration: git
