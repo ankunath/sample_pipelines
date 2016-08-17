@@ -111,3 +111,23 @@ resources:
   #   pointer:
   #     sourceName: ankunath/sample_node
   #     branch: master
+
+  - name: slackNotification
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "#slackchannel"
+
+  - name: myEmail
+    type: notification
+    pointer:
+      method: email
+      recipients:
+        - "john@shippable.com"
+
+  - name: myEmail1
+    type: notification
+    pointer:
+      method: email
+      recipients:
