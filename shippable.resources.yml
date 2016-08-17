@@ -17,10 +17,10 @@ resources:
   #   seed:
   #     versionName: "myapp1"
 
-  - name: version-resource
-    type: version
-    seed:
-     # versionName: "0.0.1-beta"
+  # - name: version-resource
+  #   type: version
+  #   seed:
+  #    # versionName: "0.0.1-beta"
 
   # - name: sh-myapp3
   #   type: image
@@ -98,12 +98,12 @@ resources:
       region: "us-east-2"
       sourceName: "shubh"
 
-  - name: sample_node
-    type: syncRepo
-    integration: git
-    pointer:
-      sourceName: ankunath/sample_node
-      branch: master
+  # - name: sample_node
+  #   type: syncRepo
+  #   integration: git
+  #   pointer:
+  #     sourceName: ankunath/sample_node
+  #     branch: master
 
   # - name: sample_node
   #   type: gitRepo
@@ -114,7 +114,7 @@ resources:
 
   - name: slackNotification
     type: notification
-    integration: slack
+    #integration: slack
     pointer:
       recipients:
         - "#slackchannel"
