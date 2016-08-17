@@ -6,7 +6,7 @@ resources:
       sourceName: "scriptnull/sample_node"
       isPull: true
     seed:
-      versionName: myapp2
+      #versionName: myapp2
 
   # - name: sh-myapp1
   #   type: image
@@ -91,7 +91,7 @@ resources:
     integration: shubh-triton
     pointer:
       region: "us-east-2"
-      #sourceName: "shubh"
+      sourceName: "shubh"
 
   # - name: sample_node
   #   type: gitRepo
