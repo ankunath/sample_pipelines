@@ -17,6 +17,11 @@ resources:
   #   seed:
   #     versionName: "myapp1"
 
+  - name: version-resource
+    type: version
+    seed:
+      versionName: "0.0.1-beta"
+
   # - name: sh-myapp3
   #   type: image
   #   integration: docker

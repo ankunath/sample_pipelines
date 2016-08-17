@@ -23,7 +23,7 @@ jobs:
     type: deploy
     steps:
       - IN: sh-manifestjob1
-      #- IN: manifestjob2
+      - IN: version-resource
       - IN: tri-cluster
       - TASK: managed
         deployMethod: upgrade
