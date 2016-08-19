@@ -2,4 +2,4 @@ triggers:
    - name: sh-trigger
      type: trigger
      version:
-       counter: 211
+       counter: 21178
