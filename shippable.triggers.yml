@@ -4,7 +4,7 @@ triggers:
      version:
        counter: 2
 
-  - name: releaseTrigger
-    type: trigger
-    version:
-      message: 'create release from staging cluster. triggered:1'
+   - name: releaseTrigger
+     type: trigger
+     version:
+       message: 'create release from staging cluster. triggered:1'
