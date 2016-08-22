@@ -54,7 +54,7 @@ jobs:
   - name: stagingRelease
     type: release
     steps:
-      # - IN: releaseTrigger
+      - IN: releaseTrigger
       - IN: stagingVerBase
         #switch: on
       - IN: tri-deploy123
