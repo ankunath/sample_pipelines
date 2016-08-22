@@ -23,10 +23,10 @@ jobs:
   - name: tri-deploy1234
     type: deploy
     steps:
-      - IN: sh-manifestjob1
+      #- IN: sh-manifestjob1
      # - IN: version-resource
      # - IN: releaseTrigger
-      - IN: stagingVerBase
+      - IN: stagingRelease
       #- IN: stagingRelease
       - IN: tri-cluster
       - TASK: managed
@@ -36,10 +36,10 @@ jobs:
   - name: stagingRelease
     type: release
     steps:
-      - IN: releaseTrigger
+      #- IN: releaseTrigger
       - IN: stagingVerBase
         #switch: on
-      #- IN: tri-deploy1234
+      - IN: sh-manifestjob1
       - TASK: managed
         bump: major
 
