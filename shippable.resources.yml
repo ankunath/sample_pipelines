@@ -44,6 +44,11 @@ resources:
   #   pointer:
   #     sourceName: shLoadBalancer
 
+  - name: stagingVerBase
+    type: version
+    seed:
+      versionName: "1.0.0"
+
 
   - name: sh-docker-opts
     type: dockerOptions
@@ -88,6 +93,6 @@ resources:
 
   - name: tri-cluster
     type: cluster
-    integration: shubh-tritons
+    integration: shubh-triton
     pointer:
       region: "us-east-2"

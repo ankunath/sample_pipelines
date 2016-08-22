@@ -27,6 +27,18 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
+
+  - name: stagingRelease
+    type: release
+    steps:
+      - IN: releaseTrigger
+      - IN: stagingVerBase
+        #switch: on
+      - IN: tri-deploy123
+      - TASK: managed
+        bump: major
+
+
   # - name: gke-deploy
   #   type: deploy
   #   steps:
