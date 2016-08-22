@@ -61,8 +61,21 @@ jobs:
       - IN: releaseTrigger
       - IN: stagingVerBase
         #switch: on
-      - IN: tri-deploy123
+      - IN: tri-deploy1234
       - TASK: managed
+        bump: major
+
+  - name: tri-deploy1234
+    type: deploy
+    steps:
+      - IN: sh-manifestjob1
+     # - IN: version-resource
+     # - IN: releaseTrigger
+      #- IN: stagingVerBase
+      #- IN: stagingRelease
+      - IN: tri-cluster
+      - TASK: managed
+        deployMethod: upgrade
         bump: major
 
         #switch: off
