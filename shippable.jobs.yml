@@ -35,6 +35,21 @@ jobs:
   #   on_success:
   #     - script: echo 'This block executes after TASK section executes successfully'
 
+  # - name: release-job
+  #   type: release
+  #   steps:
+  #     - IN: sample_node
+  #   on_success:
+  #     - script: echo 'This block executes after TASK section executes successfully'
+
+  - name: release-one
+    type: release
+    steps:
+      - IN: version-resource
+      - IN: sh-manifestjob1
+      - TASK: managed
+        bump: major
+
   # # - name: gke-deploy
   #   type: deploy
   #   steps:
