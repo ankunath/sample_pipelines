@@ -24,6 +24,8 @@ jobs:
     steps:
       - IN: sh-manifestjob1
      # - IN: version-resource
+      - IN: releaseTrigger
+      - IN: stagingVerBase
       - IN: tri-cluster
       - TASK: managed
         deployMethod: upgrade
