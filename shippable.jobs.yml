@@ -58,6 +58,9 @@ jobs:
       - IN: stagingVerBase
         #switch: on
       - IN: tri-deploy123
+      - TASK: managed
+        bump: major
+
         #switch: off
     # on_failure:
     #   - NOTIFY: stagingSlack
