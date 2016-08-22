@@ -56,9 +56,9 @@ jobs:
     steps:
       # - IN: releaseTrigger
       - IN: stagingVerBase
-        switch: off
+        #switch: on
       - IN: tri-deploy123
-        switch: off
+        #switch: off
     # on_failure:
     #   - NOTIFY: stagingSlack
 
