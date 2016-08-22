@@ -26,8 +26,8 @@ jobs:
       - IN: sh-manifestjob1
      # - IN: version-resource
      # - IN: releaseTrigger
-      #- IN: stagingVerBase
-      - IN: stagingRelease
+      - IN: stagingVerBase
+      #- IN: stagingRelease
       - IN: tri-cluster
       - TASK: managed
         deployMethod: upgrade
