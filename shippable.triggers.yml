@@ -2,9 +2,9 @@ triggers:
    - name: sh-trigger
      type: trigger
      version:
-       counter: 2211
+       counter: 332211
 
    - name: releaseTrigger
      type: trigger
      version:
-       message: 'create a AArelease from staging cluster. triggered:1'
+       message: 'cqqreate a AArelease from staging cluster. triggered:1'
