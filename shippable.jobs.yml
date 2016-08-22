@@ -29,6 +29,7 @@ jobs:
       - IN: tri-cluster
       - TASK: managed
         deployMethod: upgrade
+        bump: major
 
   # - name: sample
   #   type: runSh
