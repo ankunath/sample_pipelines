@@ -19,6 +19,30 @@ jobs:
   #           port: 80
   #     - TASK: managed
   #       deployMethod: upgrade
+
+  - name: tri-deploy1234
+    type: deploy
+    steps:
+      - IN: sh-manifestjob1
+     # - IN: version-resource
+     # - IN: releaseTrigger
+      #- IN: stagingVerBase
+      #- IN: stagingRelease
+      - IN: tri-cluster
+      - TASK: managed
+        deployMethod: upgrade
+        bump: major
+
+  - name: stagingRelease
+    type: release
+    steps:
+      - IN: releaseTrigger
+      - IN: stagingVerBase
+        #switch: on
+      - IN: tri-deploy1234
+      - TASK: managed
+        bump: major
+
   - name: tri-deploy123
     type: deploy
     steps:
@@ -28,9 +52,9 @@ jobs:
       #- IN: stagingVerBase
       - IN: stagingRelease
       - IN: tri-cluster
-      - TASK: managed
-        deployMethod: upgrade
-        bump: major
+      # - TASK: managed
+        # deployMethod: upgrade
+        # bump: major
 
   # - name: sample
   #   type: runSh
@@ -55,28 +79,9 @@ jobs:
   #     #   bump: major
 
 
-  - name: stagingRelease
-    type: release
-    steps:
-      - IN: releaseTrigger
-      - IN: stagingVerBase
-        #switch: on
-      - IN: tri-deploy1234
-      - TASK: managed
-        bump: major
 
-  - name: tri-deploy1234
-    type: deploy
-    steps:
-      - IN: sh-manifestjob1
-     # - IN: version-resource
-     # - IN: releaseTrigger
-      #- IN: stagingVerBase
-      #- IN: stagingRelease
-      - IN: tri-cluster
-      - TASK: managed
-        deployMethod: upgrade
-        bump: major
+
+
 
         #switch: off
     # on_failure:
