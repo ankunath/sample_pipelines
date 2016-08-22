@@ -42,13 +42,25 @@ jobs:
   #   on_success:
   #     - script: echo 'This block executes after TASK section executes successfully'
 
-  - name: release-one
+  # - name: release-one
+  #   type: release
+  #   steps:
+  #     - IN: version-resource
+  #     - IN: sh-manifestjob1
+  #     # - TASK: managed
+  #     #   bump: major
+
+
+  - name: stagingRelease
     type: release
     steps:
-      - IN: version-resource
-      - IN: sh-manifestjob1
-      # - TASK: managed
-      #   bump: major
+      # - IN: releaseTrigger
+      - IN: stagingVerBase
+        switch: off
+      - IN: tri-deploy123
+        switch: off
+    # on_failure:
+    #   - NOTIFY: stagingSlack
 
   # # - name: gke-deploy
   #   type: deploy

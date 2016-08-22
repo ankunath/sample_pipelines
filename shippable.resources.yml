@@ -90,10 +90,10 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  - name: version-resource
+  - name: stagingVerBase
     type: version
     seed:
-      versionName: "0.0.1-beta"
+      versionName: "1.0.0"
 
 
   - name: tri-cluster
