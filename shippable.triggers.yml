@@ -7,4 +7,4 @@ triggers:
    - name: releaseTrigger
      type: trigger
      version:
-       message: 'cqqreate a AArelease from staging cluster. triggered:1'
+       message: '2qqreate a AArelease from staging cluster. triggered:1'
