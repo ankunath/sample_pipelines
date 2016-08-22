@@ -22,10 +22,11 @@ jobs:
   - name: tri-deploy123
     type: deploy
     steps:
-      - IN: sh-manifestjob1
+      #- IN: sh-manifestjob1
      # - IN: version-resource
-      - IN: releaseTrigger
-      - IN: stagingVerBase
+     # - IN: releaseTrigger
+      #- IN: stagingVerBase
+      - IN: stagingRelease
       - IN: tri-cluster
       - TASK: managed
         deployMethod: upgrade
