@@ -27,7 +27,7 @@ jobs:
      # - IN: version-resource
      # - IN: releaseTrigger
       #- IN: stagingVerBase
-      #- IN: stagingRelease
+      - IN: stagingRelease
       - IN: tri-cluster
       - TASK: managed
         deployMethod: upgrade
@@ -39,22 +39,22 @@ jobs:
       - IN: releaseTrigger
       - IN: stagingVerBase
         #switch: on
-      - IN: tri-deploy1234
+      #- IN: tri-deploy1234
       - TASK: managed
         bump: major
 
-  - name: tri-deploy123
-    type: deploy
-    steps:
-      #- IN: sh-manifestjob1
-     # - IN: version-resource
-     # - IN: releaseTrigger
-      #- IN: stagingVerBase
-      - IN: stagingRelease
-      - IN: tri-cluster
-      # - TASK: managed
-        # deployMethod: upgrade
-        # bump: major
+  # - name: tri-deploy123
+  #   type: deploy
+  #   steps:
+  #     #- IN: sh-manifestjob1
+  #    # - IN: version-resource
+  #    # - IN: releaseTrigger
+  #     #- IN: stagingVerBase
+  #     - IN: stagingRelease
+  #     - IN: tri-cluster
+  #     # - TASK: managed
+  #       # deployMethod: upgrade
+  #       # bump: major
 
   # - name: sample
   #   type: runSh
