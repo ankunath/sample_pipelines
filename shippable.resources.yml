@@ -53,8 +53,8 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 500
-      workingDir: "/app/makemeworking"
+      memory: 400
+      workingDir: "/app"
       links:
         - sn-b-man-1_scriptnull_debian_0:shubhAlias
         #- containerNameTwo:twoAlias
