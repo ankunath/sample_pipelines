@@ -53,7 +53,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 400
+      memory: 500
       workingDir: "/app"
       privileged: false
       readOnlyRootFilesystem: true
@@ -71,9 +71,6 @@ resources:
         - name: nofile
           soft: 50
           hard: 100
-        - name: nofile
-          soft: 200
-          hard: 300
       labels:
         key1: value1
         key2: value2
