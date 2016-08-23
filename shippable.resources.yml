@@ -53,10 +53,10 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 400
+      memory: 500
       workingDir: "/app"
       links:
-        - sn-b-man-1_scriptnull_debian_0:shubhAlias
+        - myenv_app:aliasName
         #- containerNameTwo:twoAlias
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
