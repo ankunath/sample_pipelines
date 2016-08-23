@@ -53,10 +53,11 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 700
+      memory: 500
       workingDir: "/app"
       privileged: false
       readOnlyRootFilesystem: true
+      network: bridge
       logConfig:
         type: json-file
         # options:  # "options" is not required
