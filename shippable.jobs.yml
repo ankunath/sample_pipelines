@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp2
-      #- IN: sh-docker-opts
+      - IN: sh-docker-opts
       - IN: sh-trigger
       #- IN: sh-lb-1
 
@@ -23,25 +23,20 @@ jobs:
   - name: tri-deploy1234
     type: deploy
     steps:
-      #- IN: sh-manifestjob1
-     # - IN: version-resource
-     # - IN: releaseTrigger
-      - IN: stagingRelease
-      #- IN: stagingRelease
-      - IN: tri-cluster
+      - IN: ddccluster
       - TASK: managed
         deployMethod: upgrade
-        bump: major
 
-  - name: stagingRelease
-    type: release
-    steps:
-      #- IN: releaseTrigger
-      - IN: stagingVerBase
-        #switch: on
-      - IN: sh-manifestjob1
-      - TASK: managed
-        bump: major
+
+  # - name: stagingRelease
+  #   type: release
+  #   steps:
+  #     #- IN: releaseTrigger
+  #     - IN: stagingVerBase
+  #       #switch: on
+  #     - IN: sh-manifestjob1
+  #     - TASK: managed
+  #       bump: major
 
   # - name: tri-deploy123
   #   type: deploy
