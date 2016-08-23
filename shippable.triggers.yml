@@ -2,7 +2,7 @@ triggers:
    - name: sh-trigger
      type: trigger
      version:
-       counter: 300
+       counter: 300000
 
    # - name: releaseTrigger
    #   type: trigger
