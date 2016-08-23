@@ -3,10 +3,10 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/sample_node"
+      sourceName: "scriptnull/debian"
       isPull: true
     seed:
-      versionName: "myapp2"
+      versionName: "entrypoint"
 
   # - name: sh-myapp1
   #   type: image
@@ -54,7 +54,7 @@ resources:
     type: dockerOptions
     version:
       memory: 500
-      workingDir: "/home/jake"
+      workingDir: "/app/makemeworking"
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
