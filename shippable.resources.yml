@@ -53,8 +53,9 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 500
+      memory: 200
       workingDir: "/app"
+      privileged: true
       links:
         - myenv_app:aliasName
         #- containerNameTwo:twoAlias
