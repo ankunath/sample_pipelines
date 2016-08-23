@@ -22,14 +22,14 @@ resources:
   #   seed:
   #    # versionName: "0.0.1-beta"
 
-  # - name: sh-myapp3
-  #   type: image
-  #   integration: docker
-  #   pointer:
-  #     sourceName: "scriptnull/sample_node"
-  #     isPull: true
-  #   seed:
-  #     versionName: "myapp3"
+  - name: sh-myapp3
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/sample_node"
+      isPull: true
+    seed:
+      versionName: "myapp3"
 
   # - name: sh-ecs-cluster
   #   type: cluster
