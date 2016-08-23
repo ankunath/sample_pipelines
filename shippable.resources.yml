@@ -57,6 +57,9 @@ resources:
       workingDir: "/app"
       privileged: false
       readOnlyRootFilesystem: true
+      labels:
+        key1: value1
+        key2: value2
       links:
         - myenv_app:aliasName
         #- containerNameTwo:twoAlias
