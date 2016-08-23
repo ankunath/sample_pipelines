@@ -56,6 +56,7 @@ resources:
       memory: 500
       # publishAllPorts: false
       cpuShares: 2
+      workingDir: '/home/shubh'
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
