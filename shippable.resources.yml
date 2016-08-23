@@ -53,7 +53,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 500
+      memory: 300
       workingDir: "/app"
       privileged: false
       readOnlyRootFilesystem: true
@@ -63,6 +63,10 @@ resources:
         # options:  # "options" is not required
         #   key11: value11
         #   key22: value22
+      dnsServers:
+        - "127.0.0.1"
+      dnsSearch:
+        - "127.0.0.1"
       labels:
         key1: value1
         key2: value2
