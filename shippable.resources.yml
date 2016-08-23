@@ -53,12 +53,12 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 600
+      memory: 300
       workingDir: "/app"
       privileged: false
       readOnlyRootFilesystem: true
       logConfig:
-        type: logConfigType
+        type: syslog
         options:  # "options" is not required
           key11: value11
           key22: value22
