@@ -20,12 +20,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: tri-deploy1234
+  - name: ddc-deploy1234
     type: deploy
     steps:
       - IN: ddccluster
-      - TASK: managed
-        deployMethod: upgrade
+      - IN: sh-manifestjob1
 
 
   # - name: stagingRelease
