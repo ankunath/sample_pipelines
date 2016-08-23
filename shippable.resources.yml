@@ -53,7 +53,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 500
+      memory: 400
       workingDir: "/app"
       privileged: false
       readOnlyRootFilesystem: true
@@ -74,6 +74,9 @@ resources:
       labels:
         key1: value1
         key2: value2
+      volumes:
+        - "host:container:rw"
+      #- "host:container:rw"
       # links:
       #   - myenv_app:aliasName
         #- containerNameTwo:twoAlias
