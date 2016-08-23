@@ -56,6 +56,7 @@ resources:
       memory: 500
       workingDir: "/app"
       privileged: false
+      readOnlyRootFilesystem: true
       links:
         - myenv_app:aliasName
         #- containerNameTwo:twoAlias
