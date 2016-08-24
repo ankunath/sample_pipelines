@@ -104,11 +104,11 @@ resources:
   #   pointer:
   #     sourceName: "cluster-dcl"
 
-  # - name: four-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: four-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
 
   # - name: stagingVerBase
   #   type: version

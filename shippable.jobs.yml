@@ -26,6 +26,12 @@ jobs:
       - IN: ddccluster
       - IN: sh-manifestjob1
 
+  - name: ddc-deploytriton
+    type: deploy
+    steps:
+      - IN: four-cluster
+      - IN: sh-manifestjob1
+
 
   # - name: stagingRelease
   #   type: release
