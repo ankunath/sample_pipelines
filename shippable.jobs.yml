@@ -20,11 +20,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: ddc-deploy1234
-    type: deploy
-    steps:
-      - IN: ddccluster
-      - IN: sh-manifestjob1
+  # - name: ddc-deploy1234
+  #   type: deploy
+  #   steps:
+  #     - IN: ddccluster
+  #     - IN: sh-manifestjob1
 
   - name: ddc-deploytriton
     type: deploy

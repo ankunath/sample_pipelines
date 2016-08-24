@@ -53,7 +53,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 800
+      memory: 200
       # workingDir: "/app"
       # privileged: false
       # readOnlyRootFilesystem: true
@@ -80,11 +80,11 @@ resources:
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
-  - name: ddccluster
-    type: cluster
-    integration: shubh-ddc
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+  # - name: ddccluster
+  #   type: cluster
+  #   integration: shubh-ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: scale
   #   type: replicas
