@@ -53,7 +53,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 500
+      memory: 300
       # workingDir: "/app"
       # privileged: false
       # readOnlyRootFilesystem: true
