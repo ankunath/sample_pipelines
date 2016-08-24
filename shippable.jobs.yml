@@ -30,7 +30,6 @@ jobs:
     type: deploy
     steps:
       - IN: four-cluster
-        versionNumber: 1898
       - IN: sh-manifestjob1
 
 
