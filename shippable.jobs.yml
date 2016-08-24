@@ -30,7 +30,6 @@ jobs:
     type: deploy
     steps:
       - IN: four-cluster
-        versionNumber: 189
       - IN: sh-manifestjob1
 
 
