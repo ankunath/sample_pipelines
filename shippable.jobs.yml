@@ -29,7 +29,7 @@ jobs:
   - name: deployGKE
     type: deploy
     steps:
-      - IN: gke-cluster
+      - IN: four-cluster
       - IN: sh-manifestjob1
 
 
