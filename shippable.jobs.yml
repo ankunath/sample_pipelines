@@ -26,11 +26,10 @@ jobs:
   #     - IN: ddccluster
   #     - IN: sh-manifestjob1
 
-  - name: deployGKE
+  - name: deploytriton
     type: deploy
     steps:
       - IN: four-cluster
-        versionNumber: 1889
       - IN: sh-manifestjob1
 
 
