@@ -90,12 +90,7 @@ resources:
   #   type: replicas
   #   version:
   #     count: 2
- # - name: gke-cluster
-  #  type: gkeCluster
-    #integration: jatin-gke
-    #pointer:
-     # sourceName: "small-cluster"
-      #region: "us-east1-d"
+
 
 
   # - name: dcl-cluster
@@ -104,11 +99,18 @@ resources:
   #   pointer:
   #     sourceName: "cluster-dcl"
 
-  - name: four-cluster
+  # - name: four-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
+
+  - name: gke-cluster
     type: cluster
-    integration: shubh-triton
+    integration: shubh-gke
     pointer:
-      region: "us-east-2"
+      sourceName: "small-cluster"
+      region: "us-east1-d"
 
   # - name: stagingVerBase
   #   type: version

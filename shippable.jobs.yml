@@ -26,10 +26,10 @@ jobs:
   #     - IN: ddccluster
   #     - IN: sh-manifestjob1
 
-  - name: ddc-deploytriton
+  - name: deployGKE
     type: deploy
     steps:
-      - IN: four-cluster
+      - IN: gke-cluster
       - IN: sh-manifestjob1
 
 
