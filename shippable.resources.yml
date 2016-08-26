@@ -31,12 +31,12 @@ resources:
     seed:
       versionName: "myapp3"
 
-  - name: ecs-cluster
-    type: cluster
-    integration: ecscluster
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: ecscluster
+  #   pointer:
+  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
+  #     region: "us-east-1"
 
 
   # - name: sh-lb-1
