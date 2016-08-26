@@ -29,9 +29,27 @@ jobs:
   - name: deploytriton
     type: deploy
     steps:
-      - IN: four-cluster
-        versionNumber: 1889
+      - IN: tri-cluster
       - IN: sh-manifestjob1
+
+  - name: deployecs
+    type: deploy
+    steps:
+      - IN: ecs-cluster
+      - IN: sh-manifestjob1
+
+  - name: deploygke
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      - IN: sh-manifestjob1
+
+  - name: deployddc
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: sh-manifestjob1
+
 
 
   # - name: stagingRelease
