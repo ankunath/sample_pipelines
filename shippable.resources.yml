@@ -119,9 +119,8 @@ resources:
 
 
   - name: tri-cluster
-    type: cluster
+    types: cluster
     integration: shubh-triton
-    readOnlyRootFilesystem: true
     pointer:
       region: "us-east-2"
       sourceName: "shubh"
