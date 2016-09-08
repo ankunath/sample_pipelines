@@ -119,7 +119,7 @@ resources:
 
 
   - name: tri-cluster
-    types: cluster
+    type: cluster
     integration: shubh-triton
     pointer:
       region: "us-east-2"
