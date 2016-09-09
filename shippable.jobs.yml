@@ -30,7 +30,6 @@ jobs:
     type: deploy
     steps:
       - IN: tri-cluster
-        versionNumber: 1898
       - IN: sh-manifestjob1
 
   # - name: deployecs
