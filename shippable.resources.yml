@@ -55,7 +55,7 @@ resources:
     version:
       memory: 20
       portMappings:
-        - "80:80"
+        - "20:20"
       # workingDir: "/app"
       # privileged: false
       #readOnlyRootFilesystem: true
