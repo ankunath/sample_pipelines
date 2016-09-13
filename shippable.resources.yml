@@ -47,7 +47,7 @@ resources:
   - name: sh-lb-2
     type: loadBalancer
     pointer:
-      sourceName: shLoadBalancer
+      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
 
   - name: sh-docker-opts
