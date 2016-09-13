@@ -2,7 +2,7 @@ jobs:
   - name: sh-manifestjob1
     type: manifest
     steps:
-      - IN: sh-myapp3
+      - IN: sh-myapp2
       - IN: sh-docker-opts
       - IN: sh-trigger
      # - IN: sh-lb-2
