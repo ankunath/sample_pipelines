@@ -26,10 +26,10 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/debian"
+      sourceName: "scriptnull/sample_node"
       isPull: true
     seed:
-      versionName: "entrypoint"
+      versionName: "myapp3"
 
   - name: ecs-cluster
     type: cluster
@@ -55,7 +55,7 @@ resources:
     version:
       memory: 23
       portMappings:
-        - "90:90"
+        - "80:80"
       # workingDir: "/app"
       # privileged: false
       #readOnlyRootFilesystem: true
