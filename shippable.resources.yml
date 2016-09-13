@@ -53,9 +53,9 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 26
+      memory: 30
       portMappings:
-        - "8082:8082"
+        - "80:80"
       # workingDir: "/app"
       # privileged: false
       #readOnlyRootFilesystem: true
