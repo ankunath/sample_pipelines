@@ -28,6 +28,12 @@ jobs:
       # - TASK: managed
       #   deployMethod: upgrade
 
+  - name: foo-app-ci
+    type: jenkinsJob
+    integration: "jenkins-production"
+    # pointer:
+    #   sourceName: "fooApp"
+
   # - name: ddc-deploy1234
   #   type: deploy
   #   steps:
