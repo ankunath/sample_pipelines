@@ -31,8 +31,6 @@ jobs:
   - name: foo-app-ci
     type: jenkinsJob
     integration: "jenkins-production"
-    steps:
-      - IN: sh-myapp2
     pointer:
       sourceName: "fooApp"
 
