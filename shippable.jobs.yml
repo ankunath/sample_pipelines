@@ -15,24 +15,24 @@ jobs:
       - IN: sh-trigger
      # - IN: sh-lb-2
 
-  - name: sh-ecsDeploy
-    type: deploy
-    steps:
-      - IN: sh-manifestjob1
-      - IN: ecs-cluster
-      - IN: sh-lb-2
-        applyTo:
-          - manifest: sh-manifestjob1 # it can only apply to one manifest
-            image: sh-myapp3 # it can only apply to one image in the manifest
-            port: 80
-      # - TASK: managed
-      #   deployMethod: upgrade
+  # - name: sh-ecsDeploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sh-manifestjob1
+  #     - IN: ecs-cluster
+  #     - IN: sh-lb-2
+  #       applyTo:
+  #         - manifest: sh-manifestjob1 # it can only apply to one manifest
+  #           image: sh-myapp3 # it can only apply to one image in the manifest
+  #           port: 80
+  #     # - TASK: managed
+  #     #   deployMethod: upgrade
 
   - name: foo-app-ci
     type: jenkinsJob
     integration: "jenkins-production"
-    # pointer:
-    #   sourceName: "fooApp"
+    pointer:
+      sourceName: "fooApp"
 
   # - name: ddc-deploy1234
   #   type: deploy

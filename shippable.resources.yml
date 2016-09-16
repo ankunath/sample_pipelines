@@ -31,12 +31,12 @@ resources:
     seed:
       versionName: "myapp3"
 
-  - name: ecs-cluster
-    type: cluster
-    integration: aws
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: aws
+  #   pointer:
+  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
+  #     region: "us-east-1"
 
 
   # - name: sh-lb-1
@@ -44,10 +44,10 @@ resources:
   #   pointer:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
-  - name: sh-lb-2
-    type: loadBalancer
-    pointer:
-      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+  # - name: sh-lb-2
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
 
   - name: sh-docker-opts
