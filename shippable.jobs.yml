@@ -32,7 +32,7 @@ jobs:
     type: jenkinsJob
     integration: "jenkins-production"
     pointer:
-      sourceName: "fooApp"
+      sourceName: "fooApp2"
 
 
   # - name: ddc-deploy1234
