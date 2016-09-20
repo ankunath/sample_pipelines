@@ -2,7 +2,7 @@ triggers:
    - name: sh-trigger
      type: trigger
      version:
-       counter: 8111231230012
+       counter: 81
 
    #   type: trigger
    #   version:
