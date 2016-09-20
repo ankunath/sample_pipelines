@@ -135,8 +135,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-        secure: k10l7WHxqxHzlsDC8QptqLAb60acxIBt850KCdDD0E92QRIh9DM4dI7ryl/bYFwMHgvCbtaBL9bW8hpVlDaRVaWQP1fHlvG8M2sdfWkQ9bb8/JqcHSnbP5f6SiaUg8bW/q96oMAPVxpbQhkt2TNJTU5ZajBU8hjzQkO1mlkg+LLlumUEbWUNQM9U5nBwkY8s9/nD0RfwI23MHgoq+P7eC2ud0OJaAIV/qrjYuyCn/OBkBtRSyXbkq6zWd9O4Fve1QBlD5ow/gY/qF8nlcpFpWuaIJUxm9A51Tm4JMPn3c3QXTRjKA14AKTrSDyTg62nyw+eHdnqsGtJVblJ2QNwXlg==
-
+        #secure: k10l7WHxqxHzlsDC8QptqLAb60acxIBt850KCdDD0E92QRIh9DM4dI7ryl/bYFwMHgvCbtaBL9bW8hpVlDaRVaWQP1fHlvG8M2sdfWkQ9bb8/JqcHSnbP5f6SiaUg8bW/q96oMAPVxpbQhkt2TNJTU5ZajBU8hjzQkO1mlkg+LLlumUEbWUNQM9U5nBwkY8s9/nD0RfwI23MHgoq+P7eC2ud0OJaAIV/qrjYuyCn/OBkBtRSyXbkq6zWd9O4Fve1QBlD5ow/gY/qF8nlcpFpWuaIJUxm9A51Tm4JMPn3c3QXTRjKA14AKTrSDyTg62nyw+eHdnqsGtJVblJ2QNwXlg==
+        secure: kMkUumx55a90YrhrlhlSVoo4QdERDdRr9c6ytSri1dV6zpBWlLE1j9IsJlfuj10Y/zJkYXOq+xMa/OKb5pc2k/2PquRAC4rvuc6gp8cvKuvID6yOtuoM1sDJB56OWk1H9/jb7SKchYIrt8pqz50Uv3R+2BH1eO1nOOYzO7TlN2oVO8Xn65oaT1j0hNwQhtIw/NoFJdCv6hKf19ITIyJE9OYN/hOd7RcRgiNIiMrMy3cz4YvoNOnZcBAG3YX4tKGH+9m48/5A4HGsUMghjv7AEh0ddrbbDCE5UDJDRryFkgoi02wlnXOpDVkwwp/m8qd1onzk3lC5grvIB03MPdJz7w==
 
   # - name: sample_node
   #   type: syncRepo
