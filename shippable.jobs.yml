@@ -40,7 +40,6 @@ jobs:
       - IN: tri-cluster
       - IN: sh-manifestjob2
       - IN: sh-manifestjob1
-        force: true
 
   # - name: deployecs
   #   type: deploy
