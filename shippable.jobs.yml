@@ -7,6 +7,14 @@ jobs:
       - IN: sh-trigger
       #- IN: sh-lb-1
 
+  - name: sh-manifestjob2
+    type: manifest
+    steps:
+      - IN: sh-myapp3
+      - IN: sh-docker-opts
+      - IN: sh-trigger
+      #- IN: sh-lb-1
+
   # - name: sh-ecsDeploy
   #   type: deploy
   #   steps:
@@ -30,6 +38,7 @@ jobs:
     type: deploy
     steps:
       - IN: tri-cluster
+      - IN: sh-manifestjob2
       - IN: sh-manifestjob1
         force: true
 
