@@ -13,7 +13,7 @@ jobs:
       - IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
-      - IN: sh-lb-1
+      #- IN: sh-lb-1
 
   # - name: sh-ecsDeploy
   #   type: deploy
