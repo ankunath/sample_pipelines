@@ -31,7 +31,7 @@ jobs:
     steps:
       - IN: tri-cluster
       - IN: sh-manifestjob1
-        force: true
+        versionNumber: 100
 
   # - name: deployecs
   #   type: deploy
