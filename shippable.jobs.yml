@@ -4,6 +4,7 @@ jobs:
     steps:
       - IN: sh-myapp2
       - IN: sh-docker-opts
+      - IN: dv-params
       - IN: sh-trigger
      # - IN: sh-lb-2
 
