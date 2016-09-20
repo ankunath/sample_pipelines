@@ -38,11 +38,11 @@ jobs:
   #     - IN: ecs-cluster
   #     - IN: sh-manifestjob1
 
-  # - name: deploygke
-  #   type: deploy
-  #   steps:
-  #     - IN: gke-cluster
-  #     - IN: sh-manifestjob1
+  - name: deploygce
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      - IN: sh-manifestjob1
 
   # - name: deployddc
   #   type: deploy

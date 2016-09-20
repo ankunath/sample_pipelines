@@ -107,12 +107,12 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  # - name: gke-cluster
-  #   type: cluster
-  #   integration: shubh-gke
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "us-east1-d"
+  - name: gke-cluster
+    type: cluster
+    integration: gce
+    pointer:
+      sourceName: "small-cluster"
+      region: "us-east1-d"
 
   # - name: stagingVerBase
   #   type: version
