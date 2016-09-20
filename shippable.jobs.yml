@@ -28,11 +28,11 @@ jobs:
   #     # - TASK: managed
   #     #   deployMethod: upgrade
 
-  - name: foo-app-ci
-    type: jenkinsJob
-    integration: "jenkins-production"
-    pointer:
-      sourceName: "fooApp2"
+  # - name: foo-app-ci
+  #   type: jenkinsJob
+  #   integration: "jenkins-production"
+  #   pointer:
+  #     sourceName: "fooApp2"
 
 
   # - name: ddc-deploy1234
@@ -41,12 +41,11 @@ jobs:
   #     - IN: ddccluster
   #     - IN: sh-manifestjob1
 
-  # - name: deploytriton
-  #   type: deploy
-  #   steps:
-  #     - IN: tri-cluster
-  #       versionNumber: 1898
-  #     - IN: sh-manifestjob1
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-manifestjob1
 
   # - name: deployecs
   #   type: deploy
