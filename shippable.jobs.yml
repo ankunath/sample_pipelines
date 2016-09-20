@@ -32,11 +32,11 @@ jobs:
       - IN: tri-cluster
       - IN: sh-manifestjob1
 
-  # - name: deployecs
-  #   type: deploy
-  #   steps:
-  #     - IN: ecs-cluster
-  #     - IN: sh-manifestjob1
+  - name: deployecs
+    type: deploy
+    steps:
+      - IN: ecs-cluster
+      - IN: sh-manifestjob1
 
   - name: deploygce
     type: deploy
