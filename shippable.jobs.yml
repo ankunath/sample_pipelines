@@ -5,15 +5,11 @@ jobs:
       - IN: sh-myapp2
       - IN: sh-docker-opts
       - IN: sh-trigger
+      - IN: dv-params
+
       #- IN: sh-lb-1
 
-  - name: sh-manifestjob2
-    type: manifest
-    steps:
-      - IN: sh-myapp3
-      - IN: sh-docker-opts
-      - IN: sh-trigger
-      #- IN: sh-lb-1
+
 
   # - name: sh-ecsDeploy
   #   type: deploy
@@ -38,10 +34,7 @@ jobs:
     type: deploy
     steps:
       - IN: tri-cluster
-      - IN: sh-manifestjob2
-        force: true
       - IN: sh-manifestjob1
-        force: true
 
   # - name: deployecs
   #   type: deploy
