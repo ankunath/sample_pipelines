@@ -53,7 +53,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 100
+      memory: 50
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
@@ -135,7 +135,8 @@ resources:
     version:
       params:
         MONGO_API_URL: "localhost:28017"
-        secure: HoVr0VQak5dFoBJr6WeOD8QlZ9k7vkldOJcrR0oqDnzswgTCBG5TLuWkL5R7oIYS2RADcZY0edbrgZ1/3tcaJ+uCA+CKLHUDKB9BrLhuor+YgBP2PPsg6c0St0nihB+dR2ty6upxMnAVih8k6KiTeVSCiqY4KcfQ1T/wgNZEhdRWPkyWpJrpRASYo7Dg5w1sn73TrSKTiuA85D9O6mDWL/sqMbtVVKoNv9jNBUKH9Moeup1tKB7Yd6Pp4ReekdoJGzywGojhoHSnEdOOx7FMGkJZcZEY+BMlOikBq08qSk9S08E00bweoVZ62cunR0eK/Y4RkJm6LdHXs1u2atUKiA==
+        #secure: HoVr0VQak5dFoBJr6WeOD8QlZ9k7vkldOJcrR0oqDnzswgTCBG5TLuWkL5R7oIYS2RADcZY0edbrgZ1/3tcaJ+uCA+CKLHUDKB9BrLhuor+YgBP2PPsg6c0St0nihB+dR2ty6upxMnAVih8k6KiTeVSCiqY4KcfQ1T/wgNZEhdRWPkyWpJrpRASYo7Dg5w1sn73TrSKTiuA85D9O6mDWL/sqMbtVVKoNv9jNBUKH9Moeup1tKB7Yd6Pp4ReekdoJGzywGojhoHSnEdOOx7FMGkJZcZEY+BMlOikBq08qSk9S08E00bweoVZ62cunR0eK/Y4RkJm6LdHXs1u2atUKiA==
+        secure: G9mAGNS6RrMim/ahSP99MyIoiNzJdfuGbByevM4kzM3uqED1JPq4cIYoqZOs4fgXujpsSsDRmV840BjmV9b2pdEFQZSM0p41jfX9F8Efjt1381DDK/yej+vOibHNFaqAlkTfkft2ori9I7feNXtIdh1L+e/ncThnXbZ52bcxYobVUjmMQkzV/F0e1D1PCekZ+D/phjN5W8E41kadFgfQFLFZgkT/NkccTYVM9+pXEKi0nCqyzkLfDRaQSLozEn34YhSViBESVTeDC4d+vEP+t6nJkMCicWAE0CjQ7MSWnBvwG895XhfETVkbU7W46yAWwafxjuvORAmTgXhhD20dzg==
   # - name: sample_node
   #   type: syncRepo
   #   integration: git
