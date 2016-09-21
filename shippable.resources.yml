@@ -53,7 +53,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 20
+      memory: 200
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
@@ -152,7 +152,8 @@ resources:
         #secure: UuRQyW0Xe1iL9optLIahRtesdNewUzgVtTmwek9VGvOBFBNrKvCo4UtShESnckD4fE8p/22HxdwmF17CdOHVgopGHWkrpTjd1HOKw6nCAQUfDeVZVCmeWh4w3LATzIN/weLG+MfuBh3yamV6hX8wt/TeNy27iMP0sTUJGxyU0g5K8mvdu/ZJo1Km5+npYCPGTCWNXqCAmze3bmyQBwvB/krbEHVD5TRppcafj1q6K8CqnbwHYEiVJb9IFJtcLOa33x5b+1rDCQkHkCIjtS1q5Rw/LeMZfDYH3zTXabSxLMelX2L5PR9/fbN19fspHziPTerPChuofkDDFNyruIyk+A==
         #secure: kqoFbWwyafU4XsI05GavivxyAd+spZVZDrp6hBpikeoAfTVi18LywFx7LPQBQCdpfS1ElwJDlx9UMxZXpv9byW9UYz5eAEdr2YKyyf7vfFhgyPzSsXbfbC8kuIVMPjnHIKXkjyo1gmpNKdKjR/fO+z5WsvleVnNZEfMChA/6WFNizthRjO/1IGUYBRieBa3TjhPMHnZSZwNdeFayEtGx+MN1NwURZd+ZHjsp1P/+hA1RJmGuqgrCm1FWKdwbyx4yvpSAi3GGkB8NhE7xbtolffSZ3pIJAKsSfzAYeQuA4ZrO3wsKHUNWMNakQxfhRsV2hPh84UFQo9ymT9GfEa5CdQ==
         #secure: SLCQWDlR2fJ0VqMtzBwky6t+DZbLxvC2p9V3Oy8mD2J032FtEZXsXFx0iy1rRfKrNgcilklLINSozvl4Hukq42Wky8On4KziH/OodB9DApKqmx5R1Qe6tetY5HOH/YulstxY9MfkQIjMEdXD1MIkeYtLPUYUG1u1/T3nohc45txSVnEXd8Aoum9icD8bBxdoU31honpxiI8qjJEgu0Zm2QSo00OsVBnx0kK4tU+qqFBuIpqSf6I8PxshnMAHDHilevZ4q07VyqMUh6h2+KXnH6HG28ia9338iYEBLhCwP5iTtpgkvp1qX7aWPxtbzkAdqg50SjSHKwxSS/HNT5lzXg==
-        secure: FwT7nCQPI5hKu3vh82nYnoszRiHWXm7sgjzbPSVWSkYrkUkyeuP155caT6/JMtE/5Zb1KjcWCuppoK3FhJiInNeYLYWbCred2El+5rfM/N0u31PazVez9bcephUyL4qyVhg9KVMV4TydsdcEysKpJIf2/maYPbE++9uoZyxmjxUxV2rp5fkqu8N1uVzcGkvCsxRLQRToPNmtPINdOUCN3w9tHuac+6spkODQg+36ptzYILMkMDeYeQwtz/hL7ZjnxtjQFJBqZrvpOv/XBpxLxUelGxOBez0G3t1FJGXrTBlHN85Jk/K/oPM7YS1BwMZM1asNEuJNQLPxL4VmxjtGZA==
+        #secure: FwT7nCQPI5hKu3vh82nYnoszRiHWXm7sgjzbPSVWSkYrkUkyeuP155caT6/JMtE/5Zb1KjcWCuppoK3FhJiInNeYLYWbCred2El+5rfM/N0u31PazVez9bcephUyL4qyVhg9KVMV4TydsdcEysKpJIf2/maYPbE++9uoZyxmjxUxV2rp5fkqu8N1uVzcGkvCsxRLQRToPNmtPINdOUCN3w9tHuac+6spkODQg+36ptzYILMkMDeYeQwtz/hL7ZjnxtjQFJBqZrvpOv/XBpxLxUelGxOBez0G3t1FJGXrTBlHN85Jk/K/oPM7YS1BwMZM1asNEuJNQLPxL4VmxjtGZA==
+        secure: kit/98RtyMT9bc8yM2nhw2vhZVO6ZwbY/oxoLdlxCj3hj3+jTsYhmeD6SLQ+D62o7fLhMtZgAIiuLqwFxvAuh0E8CDU+r88BYdc4+xUsdGVR+wk3lTHQK2JGUjqlhHtRAFxPFgebYs3iuJc9KAEahI4RWRNvr2n+hVoVAVi8uYyFXPkHJ9QXgWlDqX2c5qg+fRC3PXw7uBX2HFcpqEkqIjmzE/XNK4ORAcsl+Dv4gr/9XSxhpkXvEqLsJ9RNCskEtKwXLqWord8D3Ya/IAcMJFaU9nYljqohVw4adWBfCyj5cIP/v9SIx7PliT4o8uZElhqP6e7QrzSY4ARLBurcVA==
   # - name: sample_node
   #   type: syncRepo
   #   integration: git
