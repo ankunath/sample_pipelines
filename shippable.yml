@@ -11,7 +11,7 @@ build:
 
 integrations:
   notifications:
-    - integrationName: trigger1
+    - integrationName: shuh
       type: webhook
       payload:
         - versionName=Shippable Run $BUILD_NUMBER
