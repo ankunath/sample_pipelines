@@ -1,15 +1,15 @@
 jobs:
-  - name: sh-manifestjob1
-    type: manifest
-    steps:
-      - IN: sh-myapp2
-      - IN: sh-docker-opts
-      - IN: sh-trigger
-      #- IN: dv-params
+  # - name: sh-manifestjob1
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp2
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
+  #     #- IN: dv-params
 
-      #- IN: sh-lb-1
+  #     #- IN: sh-lb-1
 
-  - name: sn-file-man
+  - name: sn-file-man-1
     type: manifest
     steps:
       - IN: sn-file
@@ -22,10 +22,10 @@ jobs:
   #     - IN: sn-file-man
   #     - IN: sn-vici-trigger
 
-  - name: sn-cluster-dep
+  - name: sn-cluster-dep-1
     type: deploy
     steps:
-      - IN: sn-file-man
+      - IN: sn-file-man-1
       - IN: sn-cluster
 
 

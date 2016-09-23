@@ -1,12 +1,12 @@
 resources:
-  - name: sh-myapp2
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      isPull: true
-    seed:
-      versionName: "entrypoint"
+  # - name: sh-myapp2
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     isPull: true
+  #   seed:
+  #     versionName: "entrypoint"
 
   - name: sn-file
     type: file
@@ -15,12 +15,12 @@ resources:
     seed:
       versionName: "initial"
 
-  - name: sn-vici-http-js
-    type: file
-    pointer:
-      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
-    seed:
-      versionName: "initial"
+  # - name: sn-vici-http-js
+  #   type: file
+  #   pointer:
+  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
+  #   seed:
+  #     versionName: "initial"
 
   - name: sn-cluster
     type: cluster
@@ -42,14 +42,14 @@ resources:
   #   seed:
   #    # versionName: "0.0.1-beta"
 
-  - name: sh-myapp3
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/sample_node"
-      isPull: true
-    seed:
-      versionName: "myapp3"
+  # - name: sh-myapp3
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/sample_node"
+  #     isPull: true
+  #   seed:
+  #     versionName: "myapp3"
 
   # - name: ecs-cluster
   #   type: cluster
@@ -70,10 +70,10 @@ resources:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
 
-  - name: sh-docker-opts
-    type: dockerOptions
-    version:
-      memory: 100
+  # - name: sh-docker-opts
+  #   type: dockerOptions
+  #   version:
+  #     memory: 100
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
