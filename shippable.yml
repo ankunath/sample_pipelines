@@ -8,14 +8,3 @@ python:
 build:
   ci:
     - python --version
-
-integrations:
-  notifications:
-    - integrationName: shuh
-      type: webhook
-      payload:
-        - versionName=Shippable Run $BUILD_NUMBER
-      on_success: always
-      on_failure: always
-      on_pull_request: always
-      on_start: always

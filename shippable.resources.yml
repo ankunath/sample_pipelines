@@ -140,12 +140,12 @@ resources:
   #     versionName: "1.0.0"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
-      sourceName: "shubh"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
+  #     sourceName: "shubh"
     # version:
     #   params:
     #     pipelinev2: fleming
