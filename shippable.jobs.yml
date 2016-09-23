@@ -28,6 +28,15 @@ jobs:
       - IN: sn-file-man-2
       - IN: sn-cluster
 
+  - name: build-mexec
+    type: runSh
+    steps:
+      #- IN: sn-file
+      #- IN: microbase-img
+      #- IN: docker-creds
+      - OUT: sn-file
+    on_success:
+      - script: echo 'on success !!!!!'
 
   # - name: sh-ecsDeploy
   #   type: deploy
