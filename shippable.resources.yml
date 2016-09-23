@@ -5,7 +5,7 @@ resources:
     pointer:
       sourceName: "scriptnull/debian"
       isPull: true
-    version:
+    seed:
       versionName: "entrypoint"
 
   # - name: sn-file
