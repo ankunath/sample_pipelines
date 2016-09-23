@@ -9,11 +9,11 @@ jobs:
 
   #     #- IN: sh-lb-1
 
-  - name: sn-file-man-1
-    type: manifest
-    steps:
-      - IN: sn-file
-      - IN: sh-trigger
+  # - name: sn-file-man-1
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-file
+  #     - IN: sh-trigger
 
   # - name: sn-vici-man
   #   type: manifest
@@ -25,7 +25,7 @@ jobs:
   - name: sn-cluster-dep-1
     type: deploy
     steps:
-      - IN: sn-file-man-1
+      #- IN: sn-file-man-1
       - IN: sh-manifestjob1
       - IN: sn-cluster
 
