@@ -35,7 +35,7 @@ jobs:
       #- IN: microbase-img
       #- IN: sh-trigger
       - TASK:
-        - script: "echo 'versionName=latest' > /build/state/dv-image.env"
+        - script: "echo 'versionName=latest' > /build/state/sn-file.env"
       - OUT: sn-file
     on_success:
       - script: echo 'on success !!!!!'
