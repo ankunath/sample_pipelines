@@ -34,6 +34,8 @@ jobs:
       #- IN: sn-file
       #- IN: microbase-img
       #- IN: docker-creds
+      - TASK:
+        - script: "echo 'versionName=latest' > /build/state/dv-image.env"
       - OUT: sn-file
     on_success:
       - script: echo 'on success !!!!!'
