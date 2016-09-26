@@ -1,10 +1,10 @@
 jobs:
-  # - name: sh-manifestjob1
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp2
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
+  - name: sh-manifestjob1
+    type: manifest
+    steps:
+      - IN: sh-myapp2
+      #- IN: sh-docker-opts
+      - IN: sh-trigger
   #     #- IN: dv-params
 
   #     #- IN: sh-lb-1
@@ -22,11 +22,17 @@ jobs:
   #     - IN: sn-file-man
   #     - IN: sn-vici-trigger
 
-  - name: sn-cluster-dep-2
+  - name: sn-cluster-dep-file
     type: deploy
     steps:
       - IN: sn-file-man-2
-      - IN: sn-cluster
+      - IN: sn-cluster-file
+
+  - name: sn-cluster-dep-image
+    type: deploy
+    steps:
+      - IN: sn-manifestjob1
+      - IN: sn-cluster-image
 
   # - name: build-mexec
   #   type: runSh
