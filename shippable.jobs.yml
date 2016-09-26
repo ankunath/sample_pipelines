@@ -28,17 +28,17 @@ jobs:
       - IN: sn-file-man-2
       - IN: sn-cluster
 
-  - name: build-mexec
-    type: runSh
-    steps:
-      #- IN: sn-file
-      #- IN: microbase-img
-      #- IN: sh-trigger
-      - TASK:
-        - script: "echo 'versionName=latest' > /build/state/sn-file.env"
-      - OUT: sn-file
-    on_success:
-      - script: echo 'on success !!!!!'
+  # - name: build-mexec
+  #   type: runSh
+  #   steps:
+  #     #- IN: sn-file
+  #     #- IN: microbase-img
+  #     #- IN: sh-trigger
+  #     - TASK:
+  #       - script: "echo 'versionName=latest' > /build/state/sn-file.env"
+  #     - OUT: sn-file
+  #   on_success:
+  #     - script: echo 'on success !!!!!'
 
   # - name: sh-ecsDeploy
   #   type: deploy

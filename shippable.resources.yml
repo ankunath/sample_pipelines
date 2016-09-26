@@ -13,7 +13,7 @@ resources:
     pointer:
       sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
     seed:
-      versionName: "shubh7"
+      versionName: "newVersionShip"
 
   # - name: sn-vici-http-js
   #   type: file
