@@ -13,7 +13,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-file
-      #- IN: sh-trigger
+      - IN: sh-trigger
 
   # - name: sn-vici-man
   #   type: manifest
