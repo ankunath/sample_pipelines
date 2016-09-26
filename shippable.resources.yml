@@ -39,7 +39,7 @@ resources:
     version:
       params:
         HELLO: "world"
-        #SHIPPABLE: "code-faster"
+        SHIPPABLE: "code-faster"
 
   # - name: sh-myapp1
   #   type: image
