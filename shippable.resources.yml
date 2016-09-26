@@ -1,12 +1,12 @@
 resources:
-  - name: sh-myapp2
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      isPull: true
-    seed:
-      versionName: "entrypoint"
+  # - name: sh-myapp2
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     isPull: true
+  #   seed:
+  #     versionName: "entrypoint"
 
   - name: sn-file
     type: file
@@ -28,11 +28,11 @@ resources:
     pointer:
       sourceName: 'scriptnull-cluster'
 
-  - name: sn-cluster-image
-    type: cluster
-    integration: scriptnull-node-image
-    pointer:
-      sourceName: 'scriptnull-cluster-image'
+  # - name: sn-cluster-image
+  #   type: cluster
+  #   integration: scriptnull-node-image
+  #   pointer:
+  #     sourceName: 'scriptnull-cluster-image'
 
   - name: my-params
     type: params

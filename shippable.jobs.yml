@@ -1,10 +1,10 @@
 jobs:
-  - name: sh-manifestjob1
-    type: manifest
-    steps:
-      - IN: sh-myapp2
-      - IN: my-params
-      - IN: sh-trigger
+  # - name: sh-manifestjob1
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp2
+  #     - IN: my-params
+  #     - IN: sh-trigger
   #     #- IN: dv-params
 
   #     #- IN: sh-lb-1
@@ -29,11 +29,11 @@ jobs:
       - IN: sn-file-man-2
       - IN: sn-cluster-file
 
-  - name: sn-cluster-dep-image
-    type: deploy
-    steps:
-      - IN: sh-manifestjob1
-      - IN: sn-cluster-image
+  # - name: sn-cluster-dep-image
+  #   type: deploy
+  #   steps:
+  #     - IN: sh-manifestjob1
+  #     - IN: sn-cluster-image
 
   # - name: build-mexec
   #   type: runSh
