@@ -32,7 +32,7 @@ jobs:
   - name: sn-cluster-dep-image
     type: deploy
     steps:
-      - IN: sn-manifestjob1
+      - IN: sh-manifestjob1
       - IN: sn-cluster-image
 
   # - name: build-mexec
