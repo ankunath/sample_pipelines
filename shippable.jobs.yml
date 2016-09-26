@@ -33,7 +33,7 @@ jobs:
     steps:
       #- IN: sn-file
       #- IN: microbase-img
-      #- IN: docker-creds
+      - IN: sh-trigger
       - TASK:
         - script: "echo 'versionName=latest' > /build/state/dv-image.env"
       - OUT: sn-file
