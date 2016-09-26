@@ -40,6 +40,8 @@ resources:
       params:
         HELLO: "world"
         SHIPPABLE: "code-faster"
+        SHIPPABLE1: "code-faster-1"
+        SHIPPABLE2: "code-faster-2"
 
   # - name: sh-myapp1
   #   type: image
