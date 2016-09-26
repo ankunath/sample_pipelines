@@ -42,6 +42,7 @@ resources:
         SHIPPABLE: "code-faster"
         SHIPPABLE1: "code-faster-1"
         SHIPPABLE2: "code-faster-2"
+        SHIPPABLE3: "code-faster-3"
 
   # - name: sh-myapp1
   #   type: image
