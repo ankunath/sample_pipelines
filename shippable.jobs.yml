@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp2
-      #- IN: sh-docker-opts
+      - IN: my-params
       - IN: sh-trigger
   #     #- IN: dv-params
 
@@ -13,6 +13,7 @@ jobs:
     type: manifest
     steps:
       - IN: sn-file
+      - IN: my-params
       - IN: sh-trigger
 
   # - name: sn-vici-man

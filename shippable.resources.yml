@@ -34,6 +34,12 @@ resources:
     pointer:
       sourceName: 'scriptnull-cluster-image'
 
+  - name: my-params
+    type: params
+    version:
+      params:
+        HELLO: "world"
+
   # - name: sh-myapp1
   #   type: image
   #   integration: docker
