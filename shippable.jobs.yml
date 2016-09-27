@@ -13,12 +13,13 @@ jobs:
     type: manifest
     steps:
       - IN: sn-file
+      - IN: sn-file-2
       - IN: my-params
         applyTo:
           - sn-file
       - IN: my-params-2
         applyTo:
-          - sn-file
+          - sn-file-2
       - IN: sh-trigger
 
   # - name: sn-vici-man

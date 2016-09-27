@@ -15,6 +15,13 @@ resources:
     seed:
       versionName: "newVersionShip"
 
+  - name: sn-file-2
+    type: file
+    pointer:
+      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+    seed:
+      versionName: "newVersionShip-2"
+
   # - name: sn-vici-http-js
   #   type: file
   #   pointer:
