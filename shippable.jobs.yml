@@ -30,6 +30,9 @@ jobs:
     steps:
       - IN: sn-file-man-2
       - IN: sn-cluster-file
+      - TASK:
+         - script: "ls"
+
 
   # - name: sn-cluster-dep-image
   #   type: deploy
