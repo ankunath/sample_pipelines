@@ -9,17 +9,17 @@ jobs:
 
   #     #- IN: sh-lb-1
 
-  - name: sn-file-man-1
+  - name: sn-file-man-12
     type: manifest
     steps:
       - IN: sn-file
-      - IN: sn-file-2
+      # - IN: sn-file-2
       - IN: my-params
         applyTo:
           - sn-file
-      - IN: my-params-2
-        applyTo:
-          - sn-file-2
+      # - IN: my-params-2
+      #   applyTo:
+      #     - sn-file-2
       - IN: sh-trigger
 
   # - name: sn-vici-man
@@ -32,7 +32,7 @@ jobs:
   - name: sn-cluster-dep-file
     type: deploy
     steps:
-      - IN: sn-file-man-1
+      - IN: sn-file-man-12
       - IN: sn-cluster-file
       - TASK:
          - script: echo "$SHIPPABLE3"
