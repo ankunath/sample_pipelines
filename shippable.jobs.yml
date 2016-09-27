@@ -9,7 +9,7 @@ jobs:
 
   #     #- IN: sh-lb-1
 
-  - name: sn-file-man-120
+  - name: sn-file-man-1
     type: manifest
     steps:
       - IN: sn-file
@@ -32,10 +32,10 @@ jobs:
   - name: sn-cluster-dep-file
     type: deploy
     steps:
-      - IN: sn-file-man-120
+      - IN: sn-file-man-1
       - IN: sn-cluster-file
       - TASK:
-         - script: echo $SHIPPABLE3
+         - script: echo "$SHIPPABLE3"
 
 
   # - name: sn-cluster-dep-image
