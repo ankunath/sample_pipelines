@@ -44,6 +44,16 @@ resources:
         SHIPPABLE2: "code-faster-2"
         SHIPPABLE3: "code-faster-3"
 
+  - name: my-params-2
+    type: params
+    version:
+      params:
+        HELLO-2: "world"
+        SHIPPABLE-2: "code-faster"
+        SHIPPABLE1-2: "code-faster-1"
+        SHIPPABLE2-2: "code-faster-2"
+        SHIPPABLE3-2: "code-faster-3"
+
   # - name: sh-myapp1
   #   type: image
   #   integration: docker

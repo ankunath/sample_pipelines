@@ -16,6 +16,9 @@ jobs:
       - IN: my-params
         applyTo:
           - sn-file
+      - IN: my-params-2
+        applyTo:
+          - sn-file
       - IN: sh-trigger
 
   # - name: sn-vici-man
