@@ -8,19 +8,19 @@ resources:
     seed:
       versionName: "entrypoint"
 
-  - name: sn-file
-    type: file
-    pointer:
-      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
-    seed:
-      versionName: "newVersionShip"
+  # - name: sn-file
+  #   type: file
+  #   pointer:
+  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+  #   seed:
+  #     versionName: "newVersionShip"
 
-  - name: sn-file-2
-    type: file
-    pointer:
-      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
-    seed:
-      versionName: "newVersionShip-2"
+  # - name: sn-file-2
+  #   type: file
+  #   pointer:
+  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+  #   seed:
+  #     versionName: "newVersionShip-2"
 
   # - name: sn-vici-http-js
   #   type: file
@@ -29,11 +29,11 @@ resources:
   #   seed:
   #     versionName: "initial"
 
-  - name: sn-cluster-file
-    type: cluster
-    integration: scriptnull-node
-    pointer:
-      sourceName: 'scriptnull-cluster'
+  # - name: sn-cluster-file
+  #   type: cluster
+  #   integration: scriptnull-node
+  #   pointer:
+  #     sourceName: 'scriptnull-cluster'
 
   # - name: sn-cluster-image
   #   type: cluster
@@ -41,15 +41,15 @@ resources:
   #   pointer:
   #     sourceName: 'scriptnull-cluster-image'
 
-  - name: my-params
-    type: params
-    version:
-      params:
-        HELLO: "world"
-        SHIPPABLE: "code-faster"
-        SHIPPABLE1: "code-faster-1"
-        SHIPPABLE2: "code-faster-2"
-        SHIPPABLE3: "code-faster-3"
+  # - name: my-params
+  #   type: params
+  #   version:
+  #     params:
+  #       HELLO: "world"
+  #       SHIPPABLE: "code-faster"
+  #       SHIPPABLE1: "code-faster-1"
+  #       SHIPPABLE2: "code-faster-2"
+  #       SHIPPABLE3: "code-faster-3"
 
   # - name: my-params-2
   #   type: params
@@ -103,10 +103,10 @@ resources:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
 
-  # - name: sh-docker-opts
-  #   type: dockerOptions
-  #   version:
-  #     memory: 100
+  - name: sh-docker-opts
+    type: dockerOptions
+    version:
+      memory: 100
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
@@ -154,11 +154,11 @@ resources:
   #   pointer:
   #     sourceName: "cluster-dcl"
 
-  # - name: four-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: tri-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
 
   # - name: gke-cluster
   #   type: cluster

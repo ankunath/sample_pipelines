@@ -1,41 +1,41 @@
 jobs:
-  # - name: sh-manifestjob1
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp2
-  #     - IN: my-params
-  #     - IN: sh-trigger
-  #     #- IN: dv-params
+  - name: sh-manifestjob1
+    type: manifest
+    steps:
+      - IN: sh-myapp2
+      #- IN: my-params
+      - IN: sh-trigger
+      #- IN: dv-params
 
   #     #- IN: sh-lb-1
 
-  - name: sn-file-man-16
-    type: manifest
-    steps:
-      - IN: sn-file
-      # - IN: sn-file-2
-      - IN: my-params
-        applyTo:
-          - sn-file
-      # - IN: my-params-2
-      #   applyTo:
-      #     - sn-file-2
-      - IN: sh-trigger
-
-  # - name: sn-vici-man
+  # - name: sn-file-man-16
   #   type: manifest
   #   steps:
-  #     - IN: sn-vici-http-js
-  #     - IN: sn-file-man
-  #     - IN: sn-vici-trigger
+  #     - IN: sn-file
+  #     # - IN: sn-file-2
+  #     - IN: my-params
+  #       applyTo:
+  #         - sn-file
+  #     # - IN: my-params-2
+  #     #   applyTo:
+  #     #     - sn-file-2
+  #     - IN: sh-trigger
 
-  - name: sn-cluster-dep-file
-    type: deploy
-    steps:
-      - IN: sn-file-man-16
-      - IN: sn-cluster-file
-      - TASK:
-         - script: echo "$HELLO"
+  # # - name: sn-vici-man
+  # #   type: manifest
+  # #   steps:
+  # #     - IN: sn-vici-http-js
+  # #     - IN: sn-file-man
+  # #     - IN: sn-vici-trigger
+
+  # - name: sn-cluster-dep-file
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-file-man-16
+  #     - IN: sn-cluster-file
+  #     - TASK:
+  #        - script: echo "$HELLO"
 
 
   # - name: sn-cluster-dep-image
@@ -75,11 +75,11 @@ jobs:
   #     - IN: ddccluster
   #     - IN: sh-manifestjob1
 
-  # - name: deploytriton
-  #   type: deploy
-  #   steps:
-  #     - IN: tri-cluster
-  #     - IN: sh-manifestjob1
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-manifestjob1
 
   # - name: deployecs
   #   type: deploy
