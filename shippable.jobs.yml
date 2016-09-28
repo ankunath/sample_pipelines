@@ -80,6 +80,8 @@ jobs:
     steps:
       - IN: tri-cluster
       - IN: sh-manifestjob1
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: deployecs
   #   type: deploy
