@@ -3,12 +3,12 @@ resources:
     type: image
     integration: docker
     pointer:
-      #sourceName: "scriptnull/debian"
-      sourceName: "busybox"
+      sourceName: "scriptnull/debian"
+      #sourceName: "busybox"
       isPull: true
     seed:
-      #versionName: "entrypoint"
-      versionName: "latest"
+      versionName: "entrypoint"
+      #versionName: "latest"
 
   # - name: sn-file
   #   type: file
@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 12
+      memory: 13
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
