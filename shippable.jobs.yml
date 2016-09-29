@@ -1,5 +1,5 @@
 jobs:
-  - name: sh-manifestjob1
+  - name: sh-manifestjob2
     type: manifest
     steps:
       - IN: sh-myapp2
@@ -89,11 +89,11 @@ jobs:
   #     - IN: ecs-cluster
   #     - IN: sh-manifestjob1
 
-  - name: deploygce
+  - name: deploygce2upgrade
     type: deploy
     steps:
       - IN: gke-cluster
-      - IN: sh-manifestjob1
+      - IN: sh-manifestjob2
       - Task: managed
         deployMethod: upgrade
 
