@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 302
+      memory: 20
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
