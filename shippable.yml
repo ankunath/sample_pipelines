@@ -1,10 +1,19 @@
-# Language setting
-language: python
-
-# Version number
-python:
-  - 2.7
+language: none
 
 build:
   ci:
-    - python --version
+    - echo 'CI Running'
+    #- export IMAGE_NAME=shippablesamples/samplepipelinesdemo
+    - jfrog rt mv my-npm/project/ test-local/project/
+
+integrations:
+  hub:
+    - integrationName: jfInt
+      type: artifactory
+#  notifications:
+#    - integrationName: "triggerPipelinesDemo"
+#      type: webhook
+#      payload:
+#        - versionName=$BRANCH.$BUILD_NUMBER
+#      on_success: always
+#      on_failure: never
