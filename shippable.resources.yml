@@ -47,8 +47,8 @@ resources:
     type: params
     version:
       params:
-        HELLO: "world is not enough"
-        SHIPPABLE: "code-faster 100 "
+        HELLO: "world"
+        SHIPPABLE: "code-faster"
         SHIPPABLE1: "code-faster-1"
         SHIPPABLE2: "code-faster-2"
         SHIPPABLE3: "code-faster-3"
@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 50
+      memory: 120
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
