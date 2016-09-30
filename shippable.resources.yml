@@ -10,7 +10,7 @@ resources:
   #     versionName: "entrypoint"
   #     #versionName: "latest"
 
-  - name: sn-file
+  - name: sn-file-2
     type: file
     pointer:
       sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
@@ -48,7 +48,7 @@ resources:
     version:
       params:
         HELLO: "worldFasterCode"
-        SHIPPABLE: "code-faster"
+        SHIPPABLE: "code-faster-faster"
         SHIPPABLE1: "code-faster-1"
         SHIPPABLE2: "code-faster-2"
         SHIPPABLE3: "code-faster-3"
@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 102
+      memory: 250
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
