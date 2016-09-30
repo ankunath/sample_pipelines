@@ -47,8 +47,8 @@ resources:
     type: params
     version:
       params:
-        HELLO: "world"
-        SHIPPABLE: "code-faster"
+        HELLO: "world is not enough"
+        SHIPPABLE: "code-faster 100 "
         SHIPPABLE1: "code-faster-1"
         SHIPPABLE2: "code-faster-2"
         SHIPPABLE3: "code-faster-3"
@@ -105,10 +105,10 @@ resources:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
 
-  # - name: sh-docker-opts
-  #   type: dockerOptions
-  #   version:
-  #     memory: 50
+  - name: sh-docker-opts
+    type: dockerOptions
+    version:
+      memory: 50
       # portMappings:
       #   - "80:80"
       # workingDir: "/app"
