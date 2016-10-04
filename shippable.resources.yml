@@ -10,7 +10,7 @@ resources:
   #     versionName: "entrypoint"
   #     #versionName: "latest"
 
-  - name: sn-file-3
+  - name: sn-file-4
     type: file
     pointer:
       sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
@@ -47,7 +47,7 @@ resources:
     type: params
     version:
       params:
-        HELLO: "ShippableCodeFaster2"
+        HELLO: "ShippableCodeFaster5"
         SHIPPABLE: "code-faster-faster"
         SHIPPABLE1: "code-faster-1"
         SHIPPABLE2: "code-faster-2"

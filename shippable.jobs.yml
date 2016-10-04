@@ -9,14 +9,14 @@ jobs:
 
   #     #- IN: sh-lb-1
 
-  - name: sn-file-man-10
+  - name: sn-file-man-100
     type: manifest
     steps:
-      - IN: sn-file-3
+      - IN: sn-file-4
       # - IN: sn-file-2
       - IN: my-params
         applyTo:
-          - sn-file-3
+          - sn-file-4
       # - IN: my-params-2
       #   applyTo:
       #     - sn-file-2
@@ -33,7 +33,7 @@ jobs:
   - name: sn-cluster-dep-file
     type: deploy
     steps:
-      - IN: sn-file-man-10
+      - IN: sn-file-man-100
       - IN: sn-cluster-file
       - TASK:
          - script: echo "$HELLO"
