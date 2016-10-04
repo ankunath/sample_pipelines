@@ -140,7 +140,7 @@ resources:
       #   - ShubhContainer:aliasName
       #   - nginx-manifest-11_ankul_nginx_0:twoAlias
       volumesFrom:
-        - "/vol_con:r"
+        - "/vol_con:ro"
 
   - name: ddc-cluster
     type: cluster
