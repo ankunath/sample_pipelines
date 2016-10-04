@@ -141,7 +141,7 @@ resources:
       #   - nginx-manifest-11_ankul_nginx_0:twoAlias
       volumesFrom:
         - "/vol_con:rw"
-        - "/sh-manifestjob1_scriptnull_debian_0:rw"
+        - "/vol_con:ro"
 
   - name: ddc-cluster
     type: cluster
