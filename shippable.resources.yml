@@ -126,11 +126,11 @@ resources:
       #   # options:  # "options" is not required
       #   #   key11: value11
       #   #   key22: value22
-      dnsServers: "127.0.0.1"
-      dnsSearch: "127.0.0.1"
+      # dnsServers: "127.0.0.1"
+      # dnsSearch: "127.0.0.1"
       ulimits:
         - name: nofile
-          soft: 20
+          #soft: 20
           hard: 100
       # labels: "key1: value1"
         #key2: value2
