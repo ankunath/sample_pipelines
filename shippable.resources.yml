@@ -112,7 +112,7 @@ resources:
       #user: "shubhankit"
       portMappings:
         - 80:80
-      # entrypoint: "/cmd/shubh"
+      entrypoint: '/cmd/shubh'
       # workingDir: "/app"
       # privileged: false
       # cmd: '/home/ship'
