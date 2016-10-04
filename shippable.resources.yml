@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 300
       #user: "shubhankit"
       # portMappings:
       #   - 80:80
@@ -116,7 +116,7 @@ resources:
       #   - '/bin/sh'
       workingDir:
         - '/app'
-      privileged: false
+      privileged: true
       # cmd:
       #   - 'node -v'
       # readOnlyRootFilesystem: true
