@@ -106,7 +106,7 @@ resources:
 
 
   - name: sh-docker-opts
-    type: dockeroptions
+    #type: dockeroptions
     version:
       memory: 500
       user: "shubhankit"
