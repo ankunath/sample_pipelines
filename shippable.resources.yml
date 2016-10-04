@@ -107,38 +107,38 @@ resources:
 
   - name: sh-docker-opts
     type: dockerOptions
-    VERSION:
-      MEMORY: 500
-      user: "shubhankit"
-      portMappings:
-        - "80:80"
-      entrypoint: "/cmd/shubh"
-      workingDir: "/app"
-      privileged: false
-      cmd: '/home/ship'
-      readOnlyRootFilesystem: true
-      network: bridge
-      logConfig:
-        type: json-file
-        options:  # "options" is not required
-          key11: value11
-          key22: value22
-      dnsServers:
-        - "127.0.0.1"
-      dnsSearch:
-        - "127.0.0.1"
-      ulimits:
-        - name: nofile
-          soft: 50
-          hard: 100
-      labels:
-        key1: value1
-        key2: value2
-      # links:
-      #   - ShubhContainer123:aliasName
-      #   - containerNameTwo:twoAlias
-      volumesFrom:
-        - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
+    # version:
+    #   memory: 500
+    #   user: "shubhankit"
+    #   portMappings:
+    #     - "80:80"
+    #   entrypoint: "/cmd/shubh"
+    #   workingDir: "/app"
+    #   privileged: false
+    #   cmd: '/home/ship'
+    #   readOnlyRootFilesystem: true
+    #   network: bridge
+    #   logConfig:
+    #     type: json-file
+    #     options:  # "options" is not required
+    #       key11: value11
+    #       key22: value22
+    #   dnsServers:
+    #     - "127.0.0.1"
+    #   dnsSearch:
+    #     - "127.0.0.1"
+    #   ulimits:
+    #     - name: nofile
+    #       soft: 50
+    #       hard: 100
+    #   labels:
+    #     key1: value1
+    #     key2: value2
+    #   # links:
+    #   #   - ShubhContainer123:aliasName
+    #   #   - containerNameTwo:twoAlias
+    #   volumesFrom:
+    #     - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
   - name: ddc-cluster
     type: cluster
