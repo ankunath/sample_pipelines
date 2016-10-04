@@ -112,6 +112,7 @@ resources:
       user: "shubhankit"
       portMappings:
         - "1000:80098"
+        - "200:700"
       entrypoint: "/cmd/shubh"
       workingDir: "/app"
       privileged: false
