@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp2
-      - IN: sh-docker-opts
+      - IN: pipe123
       - IN: sh-trigger
       #- IN: dv-params
 
