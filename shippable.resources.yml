@@ -1,41 +1,41 @@
 resources:
-  # - name: sh-myapp2
-  #   type: image
-  #   integration: docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #     #sourceName: "busybox"
-  #     isPull: true
-  #   seed:
-  #     versionName: "entrypoint"
-  #     #versionName: "latest"
-
-  - name: sn-file-4
-    type: file
+  - name: sh-myapp2
+    type: image
+    integration: docker
     pointer:
-      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+      sourceName: "scriptnull/debian"
+      #sourceName: "busybox"
+      isPull: true
     seed:
-      versionName: "newVersionShip"
+      versionName: "entrypoint"
+      #versionName: "latest"
 
-  # - name: sn-file-2
+  # - name: sn-file-4
   #   type: file
   #   pointer:
   #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
   #   seed:
-  #     versionName: "newVersionShip-2"
+  #     versionName: "newVersionShip"
 
-  # - name: sn-vici-http-js
-  #   type: file
+  # # - name: sn-file-2
+  # #   type: file
+  # #   pointer:
+  # #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+  # #   seed:
+  # #     versionName: "newVersionShip-2"
+
+  # # - name: sn-vici-http-js
+  # #   type: file
+  # #   pointer:
+  # #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
+  # #   seed:
+  # #     versionName: "initial"
+
+  # - name: sn-cluster-file
+  #   type: cluster
+  #   integration: scriptnull-node
   #   pointer:
-  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
-  #   seed:
-  #     versionName: "initial"
-
-  - name: sn-cluster-file
-    type: cluster
-    integration: scriptnull-node
-    pointer:
-      sourceName: 'scriptnull-cluster'
+  #     sourceName: 'scriptnull-cluster'
 
   # - name: sn-cluster-image
   #   type: cluster
@@ -43,15 +43,15 @@ resources:
   #   pointer:
   #     sourceName: 'scriptnull-cluster-image'
 
-  - name: my-params
-    type: params
-    version:
-      params:
-        HELLO: "ShippableCodeFaster5"
-        SHIPPABLE: "code-faster-faster"
-        SHIPPABLE1: "code-faster-1"
-        SHIPPABLE2: "code-faster-2"
-        SHIPPABLE3: "code-faster-3"
+  # - name: my-params
+  #   type: params
+  #   version:
+  #     params:
+  #       HELLO: "ShippableCodeFaster5"
+  #       SHIPPABLE: "code-faster-faster"
+  #       SHIPPABLE1: "code-faster-1"
+  #       SHIPPABLE2: "code-faster-2"
+  #       SHIPPABLE3: "code-faster-3"
 
   # - name: my-params-2
   #   type: params
@@ -137,11 +137,11 @@ resources:
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: shubh-ddc
-  #   pointer:
-  #     sourceName: "small-cluster" #name of the cluster we are deploying.
+  - name: ddc-cluster
+    type: cluster
+    integration: shubh-ddc
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: scale
   #   type: replicas
