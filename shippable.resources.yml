@@ -134,9 +134,8 @@ resources:
       #   - name: nofile
       #     soft: 50
       #     hard: 100
-      labels:
-        key1: value1
-        key2: value2
+      labels: "key1: value1"
+        #key2: value2
       # links:
       #   - ShubhContainer:aliasName
       #   - nginx-manifest-11_ankul_nginx_0:twoAlias
