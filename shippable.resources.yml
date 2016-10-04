@@ -105,10 +105,10 @@ resources:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
 
-  - name: pipe123
+  - name: sh-docker-opts
     type: dockerOptions
-    version:
-      memory: 600
+    VERSION:
+      MEMORY: 500
       user: "shubhankit"
       portMappings:
         - "80:80"
