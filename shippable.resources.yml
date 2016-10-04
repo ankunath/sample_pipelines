@@ -112,10 +112,10 @@ resources:
       #user: "shubhankit"
       portMappings:
         - 80:80
-      entrypoint: '/cmd/shubh'
+      entrypoint: '/bin/sh'
       workingDir: '/app'
       privileged: false
-      cmd: '/home/ship'
+      cmd: 'node -v'
       # readOnlyRootFilesystem: true
       # network: bridge
       logConfig:
@@ -134,9 +134,9 @@ resources:
       # labels:
       #   key1: value1
       #   key2: value2
-      links:
-        - ShubhContainer:aliasName
-        - nginx-manifest-11_ankul_nginx_0:twoAlias
+      # links:
+      #   - ShubhContainer:aliasName
+      #   - nginx-manifest-11_ankul_nginx_0:twoAlias
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
