@@ -108,13 +108,14 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 100
+      memory: 200
       #user: "shubhankit"
       # portMappings:
       #   - 80:80
       # entrypoint:
       #   - '/bin/sh'
-      workingDir: '/app'
+      workingDir:
+        - '/app'
       privileged: false
       # cmd:
       #   - 'node -v'
