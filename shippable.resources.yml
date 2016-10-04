@@ -110,14 +110,14 @@ resources:
     version:
       memory: 100
       #user: "shubhankit"
-      portMappings:
-        - 80:80
-      entrypoint:
-        - '/bin/sh'
+      # portMappings:
+      #   - 80:80
+      # entrypoint:
+      #   - '/bin/sh'
       workingDir: '/app'
       privileged: false
-      cmd:
-        - 'node -v'
+      # cmd:
+      #   - 'node -v'
       # readOnlyRootFilesystem: true
       # network: bridge
       logConfig:
