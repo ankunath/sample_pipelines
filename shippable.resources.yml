@@ -113,9 +113,9 @@ resources:
       portMappings:
         - 80:80
       entrypoint: '/cmd/shubh'
-      # workingDir: "/app"
-      # privileged: false
-      # cmd: '/home/ship'
+      workingDir: '/app'
+      privileged: false
+      cmd: '/home/ship'
       # readOnlyRootFilesystem: true
       # network: bridge
       logConfig:
