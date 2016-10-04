@@ -106,9 +106,9 @@ resources:
 
 
   - name: pipe123
-    type: dockeroptions
+    type: dockerOptions
     version:
-      memory: 500
+      memory: 600
       user: "shubhankit"
       portMappings:
         - "80:80"
