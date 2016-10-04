@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 300
+      memory: 400
       #user: "shubhankit"
       # portMappings:
       #   - 80:80
@@ -116,31 +116,31 @@ resources:
       #   - '/bin/sh'
       workingDir:
         - '/app'
-      privileged: true
-      # cmd:
-      #   - 'node -v'
-      # readOnlyRootFilesystem: true
-      # network: bridge
-      logConfig:
-        type: json-file
-        # options:  # "options" is not required
-        #   key11: value11
-        #   key22: value22
-      # dnsServers:
-      #   - "127.0.0.1"
-      # dnsSearch:
-      #   - "127.0.0.1"
-      # ulimits:
-      #   - name: nofile
-      #     soft: 50
-      #     hard: 100
-      labels: "key1: value1"
+      # privileged: true
+      # # cmd:
+      # #   - 'node -v'
+      # # readOnlyRootFilesystem: true
+      # # network: bridge
+      # logConfig:
+      #   type: json-file
+      #   # options:  # "options" is not required
+      #   #   key11: value11
+      #   #   key22: value22
+      # # dnsServers:
+      # #   - "127.0.0.1"
+      # # dnsSearch:
+      # #   - "127.0.0.1"
+      # # ulimits:
+      # #   - name: nofile
+      # #     soft: 50
+      # #     hard: 100
+      # labels: "key1: value1"
         #key2: value2
       # links:
       #   - ShubhContainer:aliasName
       #   - nginx-manifest-11_ankul_nginx_0:twoAlias
-      # volumesFrom:
-      #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
+      volumesFrom:
+        - "/host/path.2:/container/path:rw"
 
   - name: ddc-cluster
     type: cluster
