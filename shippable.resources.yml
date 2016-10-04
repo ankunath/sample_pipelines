@@ -109,6 +109,7 @@ resources:
     type: dockerOptions
     version:
       memory: 500
+      user: "shubhankit"
       portMappings:
         - "80:80"
       workingDir: "/app"
@@ -134,8 +135,8 @@ resources:
       links:
         - ShubhContainer123:aliasName
         - containerNameTwo:twoAlias
-      # volumesFrom:
-      #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
+      volumesFrom:
+        - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
   - name: ddc-cluster
     type: cluster
