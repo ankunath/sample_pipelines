@@ -109,8 +109,7 @@ resources:
     type: dockerOptions
     version:
       memory: 500
-      user:
-        - shubhankit
+      user: "shubhankit"
       # portMappings:
       #   - "80:80"
       # #entrypoint
