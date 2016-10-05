@@ -18,7 +18,7 @@ resources:
       - nightly
 
   - name: slackNotification
-    type: notification
+    type: notifications
     integration: slack
     pointer:
       recipients:
