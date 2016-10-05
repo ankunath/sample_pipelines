@@ -10,12 +10,12 @@ resources:
       versionName: "entrypoint"
       #versionName: "latest"
 
-  - name: nightly
-    type: time
-    seed:
-      interval: "*/2 * * * *"
-    flags:
-      - nightly
+  # - name: nightly
+  #   type: time
+  #   seed:
+  #     interval: "*/2 * * * *"
+  #   flags:
+  #     - nightly
 
   # - name: myE
   #   type: notification
@@ -180,17 +180,17 @@ resources:
   #   pointer:
   #     sourceName: "cluster-dcl"
   - name: nightly
-    type: time
+    #type: time
     seed:
       interval: "*/2 * * * *"
     flags:
       - nightly
 
-  - name: ddc-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: gke-cluster
   #   type: cluster
