@@ -5,6 +5,7 @@ jobs:
       - IN: sh-myapp2
       - IN: sh-docker-opts
       - IN: sh-trigger
+      - IN: sh-trigger-1
       #- IN: dv-params
 
   #     #- IN: sh-lb-1
