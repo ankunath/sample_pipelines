@@ -20,10 +20,10 @@ resources:
   - name: slackNotification
     type: notification
     integration: slack
-    pointer:
-      recipients:
-        - "#testissues"
-        - "#slackchannel"
+    # pointer:
+    #   recipients:
+    #     - "#testissues"
+    #     - "#slackchannel"
 
   # - name: sn-file-4
   #   type: file
