@@ -10,6 +10,13 @@ resources:
       versionName: "entrypoint"
       #versionName: "latest"
 
+  - name: nightly
+    type: time
+    seed:
+      interval: "*/2 * * * *"
+    flags:
+      - nightly
+
   # - name: sn-file-4
   #   type: file
   #   pointer:
