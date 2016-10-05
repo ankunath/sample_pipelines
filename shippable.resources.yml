@@ -17,6 +17,13 @@ resources:
     flags:
       - nightly
 
+  - name: slackNotification
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "#testissues"
+
   # - name: sn-file-4
   #   type: file
   #   pointer:

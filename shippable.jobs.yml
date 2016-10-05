@@ -101,11 +101,29 @@ jobs:
 
   - name: deployddc
     type: deploy
+    on_start:
+      - NOTIFY: slackNotification
     steps:
       - IN: ddc-cluster
       - IN: sh-manifestjob1
+    on_success:
+      - NOTIFY: slackNotification
+    on_failure:
+      - NOTIFY: slackNotification
 
-
+ # - name: dv-test
+ #    type: deploy
+ #    on_start:
+ #      - NOTIFY: slackNotification
+ #    steps:
+ #      - IN: dv-man
+ #      - IN: env-test
+ #      - TASK: managed
+ #        deployMethod: upgrade
+ #    on_success:
+ #      - NOTIFY: slackNotification
+ #    on_failure:
+ #      - NOTIFY: slackNotification
 
   # - name: stagingRelease
   #   type: release
