@@ -129,7 +129,7 @@ resources:
       # dnsServers: "127.0.0.1"
       # dnsSearch: "127.0.0.1"
       ulimits:
-        - name: nofile
+        - name: "nofile"
           soft: 20
           hard: 100
       #labels: "key1: value1"
