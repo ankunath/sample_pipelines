@@ -128,7 +128,7 @@ resources:
         - "127.0.0.1"
       ulimits:
         - name: nofile
-          soft: 50
+          #soft: 50
           hard: 100
       labels:
         key1: value1
