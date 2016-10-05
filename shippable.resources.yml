@@ -17,7 +17,7 @@ resources:
     flags:
       - nightly
 
-  - name: slackNotification
+  - name: myEmail
     type: notification
     integration: slack
     pointer:
@@ -25,7 +25,7 @@ resources:
         - "#testissues"
         - "#slackchannel"
 
-  - name: ddc-cluster
+  - name: myEmail
     type: notification
     pointer:
       method: email
