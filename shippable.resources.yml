@@ -25,7 +25,7 @@ resources:
         - "#testissues"
         - "#slackchannel"
 
-  - name: myEmail
+  - name: ddc-cluster
     type: notification
     pointer:
       method: email
