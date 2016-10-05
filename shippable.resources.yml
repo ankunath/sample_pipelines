@@ -109,30 +109,31 @@ resources:
     type: dockerOptions
     version:
       memory: 500
-      #user: "shubhankit"
-      portMappings:
-        - "80:80"
-      #entrypoint
-      workingDir: "/app"
-      privileged: false
-      readOnlyRootFilesystem: true
-      network: bridge
-      logConfig:
-        type: json-file
-        # options:  # "options" is not required
-        #   key11: value11
-        #   key22: value22
-      dnsServers:
-        - "127.0.0.1"
-      dnsSearch:
-        - "127.0.0.1"
-      ulimits:
-        - name: nofile
-          #soft: 50
-          #hard: 100
-      labels:
-        key1: value1
-        key2: value2
+      user:
+        - shubhankit
+      # portMappings:
+      #   - "80:80"
+      # #entrypoint
+      # workingDir: "/app"
+      # privileged: false
+      # readOnlyRootFilesystem: true
+      # network: bridge
+      # logConfig:
+      #   type: json-file
+      #   # options:  # "options" is not required
+      #   #   key11: value11
+      #   #   key22: value22
+      # dnsServers:
+      #   - "127.0.0.1"
+      # dnsSearch:
+      #   - "127.0.0.1"
+      # ulimits:
+      #   - name: nofile
+      #     #soft: 50
+      #     #hard: 100
+      # labels:
+      #   key1: value1
+      #   key2: value2
       # links:
       #   - ShubhContainer123:aliasName
       #   - containerNameTwo:twoAlias
