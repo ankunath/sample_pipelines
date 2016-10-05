@@ -18,8 +18,8 @@ resources:
       - nightly
 
   - name: slackNotification
-    #type: notification
-    integration: slack
+    type: notification
+    integration: slacks
     pointer:
       recipients:
         - "#testissues"
