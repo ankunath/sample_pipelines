@@ -179,6 +179,12 @@ resources:
   #   integration: jatin-dcl
   #   pointer:
   #     sourceName: "cluster-dcl"
+  - name: nightly
+    type: time
+    seed:
+      interval: "*/2 * * * *"
+    flags:
+      - nightly
 
   - name: ddc-cluster
     type: cluster
