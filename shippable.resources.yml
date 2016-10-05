@@ -28,7 +28,7 @@ resources:
   - name: myEmail
     type: notification
     pointer:
-      #method: emails
+      method: email
       recipients:
         -  "shubhankit@shippable.com"
 
