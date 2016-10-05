@@ -106,6 +106,8 @@ jobs:
     steps:
       - IN: ddc-cluster
       - IN: sh-manifestjob1
+      - TASK: managed
+        deployMethod: upgrade
     on_success:
       - NOTIFY: slackNotification
     on_failure:
