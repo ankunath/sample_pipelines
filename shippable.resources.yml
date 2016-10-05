@@ -180,11 +180,11 @@ resources:
   #   pointer:
   #     sourceName: "cluster-dcl"
   - name: nightly
-    #type: time
+    type: time
     seed:
       interval: "*/2 * * * *"
-    flags:
-      - nightly
+    # flags:
+    #   - nightly
 
   # - name: ddc-cluster
   #   type: cluster
