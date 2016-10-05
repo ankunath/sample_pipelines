@@ -1,7 +1,7 @@
 triggers:
    - name: sh-trigger
      type: trigger
-     version:
+     version:999
        counter: 10009111000123123
    #   type: trigger
    #   version:
