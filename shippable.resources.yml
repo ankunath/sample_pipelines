@@ -25,6 +25,13 @@ resources:
         - "#testissues"
         - "#slackchannel"
 
+  - name: myEmail
+    type: notification
+    pointer:
+      method: email
+      recipients:
+        -  "shubhankit@shippable.com"
+
   # - name: sn-file-4
   #   type: file
   #   pointer:
@@ -123,7 +130,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 500
       user: "shubhankit"
       # portMappings:
       #   - "80:80"
@@ -154,11 +161,11 @@ resources:
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: shubh-ddc
-  #   pointer:
-  #     sourceName: "small-cluster" #name of the cluster we are deploying.
+  - name: ddc-cluster
+    type: cluster
+    integration: shubh-ddc
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: scale
   #   type: replicas
@@ -173,11 +180,11 @@ resources:
   #   pointer:
   #     sourceName: "cluster-dcl"
 
-  - name: ddc-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: gke-cluster
   #   type: cluster

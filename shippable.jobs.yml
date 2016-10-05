@@ -102,16 +102,16 @@ jobs:
   - name: deployddc
     type: deploy
     on_start:
-      - NOTIFY: slackNotification
+      - NOTIFY: myEmail
     steps:
       - IN: ddc-cluster
       - IN: sh-manifestjob1
       # - TASK: managed
       #   deployMethod: upgrade
     on_success:
-      - NOTIFY: slackNotification
+      - NOTIFY: myEmail
     on_failure:
-      - NOTIFY: slackNotification
+      - NOTIFY: myEmail
 
  # - name: dv-test
  #    type: deploy
