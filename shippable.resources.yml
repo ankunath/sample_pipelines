@@ -22,7 +22,8 @@ resources:
     integration: slack
     pointer:
       recipients:
-        - "#testissuesShubh"
+        - "#testissues"
+        - "#slackchannel"
 
   # - name: sn-file-4
   #   type: file
