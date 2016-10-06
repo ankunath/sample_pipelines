@@ -144,7 +144,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 600
       # user:
       #   - "driftking"
       portMappings:
@@ -166,7 +166,7 @@ resources:
       ulimits:
         - name: nofile
           soft: 50
-          #hard: 100
+          hard: 100
       # labels:
       #   key1: value1
       #   key2: value2
