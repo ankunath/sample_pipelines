@@ -182,7 +182,7 @@ resources:
   - name: nightly
     type: times
     seed:
-      interval: "*/2 * * * *"
+      interval: "9999"
     flags:
       - nightly
 
