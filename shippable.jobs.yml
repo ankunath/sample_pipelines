@@ -1,241 +1,245 @@
-# jobs:
-#   - name: sh-manifestjob1
-#     type: manifest
-#     steps:
-#       - IN: sh-myapp2
-#       - IN: sh-docker-opts
-#       - IN: sh-trigger
-#       #- IN: sh-trigger
-#       #- IN: dv-params
+jobs:
+  - name: sh-manifestjob1
+    type: manifest
+    steps:
+      - IN: sh-myapp2
+      - IN: sh-docker-opts
+      - IN: sh-trigger
+      #- IN: sh-trigger
+      #- IN: dv-params
 
-#   #     #- IN: sh-lb-1
+  #     #- IN: sh-lb-1
 
-#   # - name: sn-file-man-100
-#   #   type: manifest
-#   #   steps:
-#   #     - IN: sn-file-4
-#   #     # - IN: sn-file-2
-#   #     - IN: my-params
-#   #       applyTo:
-#   #         - sn-file-4
-#   #     # - IN: my-params-2
-#   #     #   applyTo:
-#   #     #     - sn-file-2
-#   #     - IN: sh-trigger
-#   #     - IN: sh-docker-opts
+  # - name: sn-file-man-100
+  #   type: manifest
+  #   steps:
+  #     - IN: sn-file-4
+  #     # - IN: sn-file-2
+  #     - IN: my-params
+  #       applyTo:
+  #         - sn-file-4
+  #     # - IN: my-params-2
+  #     #   applyTo:
+  #     #     - sn-file-2
+  #     - IN: sh-trigger
+  #     - IN: sh-docker-opts
 
-#   # # # - name: sn-vici-man
-#   # # #   type: manifest
-#   # # #   steps:
-#   # # #     - IN: sn-vici-http-js
-#   # # #     - IN: sn-file-man
-#   # # #     - IN: sn-vici-trigger
+  # # # - name: sn-vici-man
+  # # #   type: manifest
+  # # #   steps:
+  # # #     - IN: sn-vici-http-js
+  # # #     - IN: sn-file-man
+  # # #     - IN: sn-vici-trigger
 
-#   # - name: sn-cluster-dep-file
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: sn-file-man-100
-#   #     - IN: sn-cluster-file
-#   #     - TASK:
-#   #        - script: echo "$HELLO"
-
-
-#   # - name: sn-cluster-dep-image
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: sh-manifestjob1
-#   #     - IN: sn-cluster-image
-
-#   # - name: build-mexec
-#   #   type: runSh
-#   #   steps:
-#   #     #- IN: sn-file
-#   #     #- IN: microbase-img
-#   #     #- IN: sh-trigger
-#   #     - TASK:
-#   #       - script: "echo 'versionName=latest' > /build/state/sn-file.env"
-#   #     - OUT: sn-file
-#   #   on_success:
-#   #     - script: echo 'on success !!!!!'
-
-#   # - name: sh-ecsDeploy
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: sh-manifestjob1
-#   #     - IN: sh-ecs-cluster
-#   #     - IN: sh-lb-2
-#   #       applyTo:
-#   #         - manifest: sh-manifestjob1 # it can only apply to one manifest
-#   #           image: sh-myapp3 # it can only apply to one image in the manifest
-#   #           port: 80
-#   #     - TASK: managed
-#   #       deployMethod: upgrade
-
-#   # - name: ddc-deploy1234
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: ddccluster
-#   #     - IN: sh-manifestjob1
-
-#   # - name: deploytriton
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: tri-cluster
-#   #     - IN: sh-manifestjob1
-#   #     - TASK: managed
-#   #       deployMethod: upgrade
-
-#   # - name: deployecs
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: ecs-cluster
-#   #     - IN: sh-manifestjob1
-
-#   # - name: deploygce2upgrade
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: gke-cluster
-#   #     - IN: sh-manifestjob2
-#       # - TASK: managed
-#       #   deployMethod: upgrade
-
-#   # - name: deployddc
-#   #   type: deploy
-#   #   on_start:
-#   #     - NOTIFY: myEmail
-#   #   steps:
-#   #     - IN: ddc-cluster
-#   #     - IN: sh-manifestjob1
-#   #     # - TASK: managed
-#   #     #   deployMethod: upgrade
-#   #   on_success:
-#   #     - NOTIFY: myEmail
-#   #   on_failure:
-#   #     - NOTIFY: myEmail
-
-#  # - name: dv-test
-#  #    type: deploy
-#  #    on_start:
-#  #      - NOTIFY: slackNotification
-#  #    steps:
-#  #      - IN: dv-man
-#  #      - IN: env-test
-#  #      - TASK: managed
-#  #        deployMethod: upgrade
-#  #    on_success:
-#  #      - NOTIFY: slackNotification
-#  #    on_failure:
-#  #      - NOTIFY: slackNotification
-
-#   # - name: stagingRelease
-#   #   type: release
-#   #   steps:
-#   #     #- IN: releaseTrigger
-#   #     - IN: stagingVerBase
-#   #       #switch: on
-#   #     - IN: sh-manifestjob1
-#   #     - TASK: managed
-#   #       bump: major
-
-#   # - name: tri-deploy123
-#   #   type: deploy
-#   #   steps:
-#   #     #- IN: sh-manifestjob1
-#   #    # - IN: version-resource
-#   #    # - IN: releaseTrigger
-#   #     #- IN: stagingVerBase
-#   #     - IN: stagingRelease
-#   #     - IN: tri-cluster
-#   #     # - TASK: managed
-#   #       # deployMethod: upgrade
-#   #       # bump: major
-
-#   # - name: sample
-#   #   type: runSh
-#   #   steps:
-#   #     - IN: sample_node
-#   #   on_success:
-#   #     - script: echo 'This block executes after TASK section executes successfully'
-
-#   # - name: release-job
-#   #   type: release
-#   #   steps:
-#   #     - IN: sample_node
-#   #   on_success:
-#   #     - script: echo 'This block executes after TASK section executes successfully'
-
-#   # - name: release-one
-#   #   type: release
-#   #   steps:
-#   #     - IN: version-resource
-#   #     - IN: sh-manifestjob1
-#   #     # - TASK: managed
-#   #     #   bump: major
+  # - name: sn-cluster-dep-file
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-file-man-100
+  #     - IN: sn-cluster-file
+  #     - TASK:
+  #        - script: echo "$HELLO"
 
 
+  # - name: sn-cluster-dep-image
+  #   type: deploy
+  #   steps:
+  #     - IN: sh-manifestjob1
+  #     - IN: sn-cluster-image
+
+  # - name: build-mexec
+  #   type: runSh
+  #   steps:
+  #     #- IN: sn-file
+  #     #- IN: microbase-img
+  #     #- IN: sh-trigger
+  #     - TASK:
+  #       - script: "echo 'versionName=latest' > /build/state/sn-file.env"
+  #     - OUT: sn-file
+  #   on_success:
+  #     - script: echo 'on success !!!!!'
+
+  # - name: sh-ecsDeploy
+  #   type: deploy
+  #   steps:
+  #     - IN: sh-manifestjob1
+  #     - IN: sh-ecs-cluster
+  #     - IN: sh-lb-2
+  #       applyTo:
+  #         - manifest: sh-manifestjob1 # it can only apply to one manifest
+  #           image: sh-myapp3 # it can only apply to one image in the manifest
+  #           port: 80
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  # - name: ddc-deploy1234
+  #   type: deploy
+  #   steps:
+  #     - IN: ddccluster
+  #     - IN: sh-manifestjob1
+
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-manifestjob1
+    on_success:
+      -NOTIFY: slackNotification
+    on_failure:
+      -NOTIFY: slackNotification
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  # - name: deployecs
+  #   type: deploy
+  #   steps:
+  #     - IN: ecs-cluster
+  #     - IN: sh-manifestjob1
+
+  # - name: deploygce2upgrade
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     - IN: sh-manifestjob2
+      # - TASK: managed
+      #   deployMethod: upgrade
+
+  # - name: deployddc
+  #   type: deploy
+  #   on_start:
+  #     - NOTIFY: myEmail
+  #   steps:
+  #     - IN: ddc-cluster
+  #     - IN: sh-manifestjob1
+  #     # - TASK: managed
+  #     #   deployMethod: upgrade
+  #   on_success:
+  #     - NOTIFY: myEmail
+  #   on_failure:
+  #     - NOTIFY: myEmail
+
+ # - name: dv-test
+ #    type: deploy
+ #    on_start:
+ #      - NOTIFY: slackNotification
+ #    steps:
+ #      - IN: dv-man
+ #      - IN: env-test
+ #      - TASK: managed
+ #        deployMethod: upgrade
+ #    on_success:
+ #      - NOTIFY: slackNotification
+ #    on_failure:
+ #      - NOTIFY: slackNotification
+
+  # - name: stagingRelease
+  #   type: release
+  #   steps:
+  #     #- IN: releaseTrigger
+  #     - IN: stagingVerBase
+  #       #switch: on
+  #     - IN: sh-manifestjob1
+  #     - TASK: managed
+  #       bump: major
+
+  # - name: tri-deploy123
+  #   type: deploy
+  #   steps:
+  #     #- IN: sh-manifestjob1
+  #    # - IN: version-resource
+  #    # - IN: releaseTrigger
+  #     #- IN: stagingVerBase
+  #     - IN: stagingRelease
+  #     - IN: tri-cluster
+  #     # - TASK: managed
+  #       # deployMethod: upgrade
+  #       # bump: major
+
+  # - name: sample
+  #   type: runSh
+  #   steps:
+  #     - IN: sample_node
+  #   on_success:
+  #     - script: echo 'This block executes after TASK section executes successfully'
+
+  # - name: release-job
+  #   type: release
+  #   steps:
+  #     - IN: sample_node
+  #   on_success:
+  #     - script: echo 'This block executes after TASK section executes successfully'
+
+  # - name: release-one
+  #   type: release
+  #   steps:
+  #     - IN: version-resource
+  #     - IN: sh-manifestjob1
+  #     # - TASK: managed
+  #     #   bump: major
 
 
 
 
-#         #switch: off
-#     # on_failure:
-#     #   - NOTIFY: stagingSlack
 
-#   # # - name: gke-deploy
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: manifestjob1
-#   #     - IN: scale
-#   #     - IN: gkecluster
-#   # - name: dcl-deploy
-#   #   type: dclDeploy
-#   #   steps:
-#   #     - GET: box-man-1
-#   #     - GET: dcl-cluster
 
-#     # - name: jatin-2
-#   #   type: manifest
-#   #   steps:
-#   #     - GET: box-sn
-#   #     - GET: trigger-dv-man
+        #switch: off
+    # on_failure:
+    #   - NOTIFY: stagingSlack
 
-#   # - name: ecs-deploy
-#   #   type: ecsDeploy
-#   #   options:
-#   #     deployMethod: blueGreen
-#   #   steps:
-#   #     - GET: jatin-1
-#   #     - GET: jatin-2
-#   #     - GET: ecs-cluster
+  # # - name: gke-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: manifestjob1
+  #     - IN: scale
+  #     - IN: gkecluster
+  # - name: dcl-deploy
+  #   type: dclDeploy
+  #   steps:
+  #     - GET: box-man-1
+  #     - GET: dcl-cluster
 
-#   # - name: tri-deploy
-#   #   type: tripubDeploy
-#   #   options:
-#   #     deployMethod: upgrade
-#   #   steps:
-#   #     - GET: box-man-1
-#   #     - GET: tri-cluster
+    # - name: jatin-2
+  #   type: manifest
+  #   steps:
+  #     - GET: box-sn
+  #     - GET: trigger-dv-man
 
-#   #- name: gkeDeploy
-#    # type: gkeDeploy
-#    # steps:
-#     #  - GET: jD-1
-#     #  - GET: gke-cluster
-#     #  - TASK: managed
-#     #    deployMethod: upgrade
+  # - name: ecs-deploy
+  #   type: ecsDeploy
+  #   options:
+  #     deployMethod: blueGreen
+  #   steps:
+  #     - GET: jatin-1
+  #     - GET: jatin-2
+  #     - GET: ecs-cluster
 
-#   # - name: ddc-deploy
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: manifestjob1
-#   #     - IN: ddc-cluster
+  # - name: tri-deploy
+  #   type: tripubDeploy
+  #   options:
+  #     deployMethod: upgrade
+  #   steps:
+  #     - GET: box-man-1
+  #     - GET: tri-cluster
 
-#   # - name: tri-deploy
-#   #   type: deploy
-#   #   steps:
-#   #     - IN: manifestjob1
-#   #     - IN: manifestjob2
-#   #     - IN: tri-cluster
-#   #     # - TASK: managed
-#   #     #   deployMethod: upgrade
+  #- name: gkeDeploy
+   # type: gkeDeploy
+   # steps:
+    #  - GET: jD-1
+    #  - GET: gke-cluster
+    #  - TASK: managed
+    #    deployMethod: upgrade
+
+  # - name: ddc-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: manifestjob1
+  #     - IN: ddc-cluster
+
+  # - name: tri-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: manifestjob1
+  #     - IN: manifestjob2
+  #     - IN: tri-cluster
+  #     # - TASK: managed
+  #     #   deployMethod: upgrade
 

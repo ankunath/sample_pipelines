@@ -17,20 +17,20 @@ resources:
   #   flags:
   #     - nightly
 
-  # - name: myE
-  #   type: notification
-  #   integration: slack
-  #   pointer:
-  #     recipients:
-  #       - "#testissues"
-  #       - "#slackchannel"
-
-  - name: myEmail
+  - name: slackNotification
     type: notification
+    integration: slack
     pointer:
-      method: email
       recipients:
-        -  "shubhankit@shippable.com"
+        - "#testissues"
+        - "#slackchannel"
+
+  # - name: myEmail
+  #   type: notification
+  #   pointer:
+  #     method: email
+  #     recipients:
+  #       -  "shubhankit@shippable.com"
 
   # - name: sn-file-4
   #   type: file
@@ -180,12 +180,12 @@ resources:
   #   integration: jatin-dcl
   #   pointer:
   #     sourceName: "cluster-dcl"
-  - name: nightly
-    type: time
-    seed:
-       interval: "*/2 * * * *"
-    flags:
-      - nightly
+  # - name: nightly
+  #   type: time
+  #   seed:
+  #      interval: "*/2 * * * *"
+  #   flags:
+  #     - nightly
 
   # - name: ddc-cluster
   #   type: cluster
@@ -206,12 +206,12 @@ resources:
   #     versionName: "1.0.0"
 
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
-  #     sourceName: "shubh"
+  - name: tri-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
+      sourceName: "shubh"
     # version:
     #   params:
     #     pipelinev2: fleming
