@@ -180,13 +180,13 @@ resources:
     type: cluster
     integration: shubh-ddc
     pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+      sourceName: "small-cluster2" #name of the cluster we are deploying.
 
   - name: ddc-cluster
     type: cluster
     integration: shubh-ddc
     pointer:
-      sourceName: "small-cluster2" #name of the cluster we are deploying.
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: scale
   #   type: replicas
