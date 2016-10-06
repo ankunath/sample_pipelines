@@ -83,9 +83,9 @@ jobs:
       - IN: tri-cluster
       - IN: sh-manifestjob1
     on_success:
-      -NOTIFY: slackNotification
+      - NOTIFY: slackNotification
     on_failure:
-      -NOTIFY: slackNotification
+      - NOTIFY: slackNotification
   #     - TASK: managed
   #       deployMethod: upgrade
 
