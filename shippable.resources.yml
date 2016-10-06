@@ -119,7 +119,7 @@ resources:
     type: cluster
     integration: aws
     pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      sourceName : "loadBalanceTest222" #name of the cluster we are deploying
       region: "us-east-1"
 
 
