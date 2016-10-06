@@ -27,8 +27,8 @@ resources:
   - name: slackNotification
     type: notification
     integration: slack
-    pointer:
-    recipients:
+     pointer:
+      recipients:
         - "#testissues"
         - "#slackchannel"
 
