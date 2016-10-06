@@ -130,9 +130,8 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 100
-      user:
-        - "shubhankit"
+      memory: 200
+      user: "shubhankit"
       # portMappings:
       #   - "80:80"
       # #entrypoint
