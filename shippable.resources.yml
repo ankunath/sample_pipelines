@@ -10,19 +10,19 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  - name: nightly3
-    type: time
-    seed:
-      interval: "*/2 * * * *"
-    flags:
-      - nightly1
+  # - name: nightly3
+  #   type: time
+  #   seed:
+  #     interval: "*/2 * * * *"
+  #   flags:
+  #     - nightly1
 
-  - name: nightly2
-    type: time
-    seed:
-      interval: "*/1 * * * *"
-    flags:
-      - nightly2
+  # - name: nightly2
+  #   type: time
+  #   seed:
+  #     interval: "*/1 * * * *"
+  #   flags:
+  #     - nightly2
 
   - name: slackNotification
     type: notification
@@ -132,6 +132,11 @@ resources:
   #   type: loadBalancer
   #   pointer:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+
+  - name: sh-docker-opts
+    type: dockerOptions
+    version:
+      memory: 200
 
 
   - name: sh-docker-opts
