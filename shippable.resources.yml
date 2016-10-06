@@ -10,12 +10,19 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  # - name: nightly
-  #   type: time
-  #   seed:
-  #     interval: "*/2 * * * *"
-  #   flags:
-  #     - nightly
+  - name: nightly
+    type: time
+    seed:
+      interval: "*/2 * * * *"
+    flags:
+      - nightly1
+
+  - name: nightly2
+    type: time
+    seed:
+      interval: "*/2 * * * *"
+    flags:
+      - nightly2
 
   - name: slackNotification
     type: notification
