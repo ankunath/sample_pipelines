@@ -147,8 +147,8 @@ resources:
       memory: 200
       # user:
       #   - "driftking"
-      # portMappings:
-      #   - "80:80"
+      portMappings:
+        - "80:80"
       # #entrypoint
       # workingDir: "/app"
       # privileged: false
