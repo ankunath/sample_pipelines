@@ -10,7 +10,7 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  - name: nightly
+  - name: nightly3
     type: time
     seed:
       interval: "*/2 * * * *"
