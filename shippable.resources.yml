@@ -127,7 +127,7 @@ resources:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
 
-  - name: sh-docker-opts
+  - name: nightly
     type: dockerOptions
     version:
       memory: 100
@@ -182,7 +182,7 @@ resources:
   - name: nightly
     type: time
     seed:
-      interval: 9999
+       interval: "* * * */2 *"
     flags:
       - nightly
 
