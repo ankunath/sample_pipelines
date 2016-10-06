@@ -130,7 +130,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 280
       user: "shubhankit"
       # portMappings:
       #   - "80:80"
