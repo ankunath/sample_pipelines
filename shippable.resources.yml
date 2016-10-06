@@ -115,7 +115,7 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  - name: ecs-cluster
+  - name: ecs-cluster-1
     type: cluster
     integration: aws
     pointer:
@@ -144,7 +144,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 150
+      memory: 1000
       # user:
       #   - "driftking"
       portMappings:
