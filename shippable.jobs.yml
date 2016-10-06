@@ -77,23 +77,23 @@ jobs:
   #     - IN: ddccluster
   #     - IN: sh-manifestjob1
 
-  - name: deploytriton
-    type: deploy
-    steps:
-      - IN: tri-cluster
-      - IN: sh-manifestjob1
-    on_success:
-      - NOTIFY: slackNotification
-    on_failure:
-      - NOTIFY: slackNotification
+  # - name: deploytriton
+  #   type: deploy
+  #   steps:
+  #     - IN: tri-cluster
+  #     - IN: sh-manifestjob1
+  #   on_success:
+  #     - NOTIFY: slackNotification
+  #   on_failure:
+  #     - NOTIFY: slackNotification
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: deployecs
-  #   type: deploy
-  #   steps:
-  #     - IN: ecs-cluster
-  #     - IN: sh-manifestjob1
+  - name: deployecs
+    type: deploy
+    steps:
+      - IN: ecs-cluster
+      - IN: sh-manifestjob1
 
   # - name: deploygce2upgrade
   #   type: deploy

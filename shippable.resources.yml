@@ -24,13 +24,13 @@ resources:
   #   flags:
   #     - nightly2
 
-  - name: slackNotification
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        - "#testissues"
-        - "#slackchannel"
+  # - name: slackNotification
+  #   type: notification
+  #   integration: slack
+  #   pointer:
+  #     recipients:
+  #       - "#testissues"
+  #       - "#slackchannel"
 
   # - name: myEmail
   #   type: notification
@@ -115,12 +115,12 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  # - name: ecs-cluster
-  #   type: cluster
-  #   integration: aws
-  #   pointer:
-  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
-  #     region: "us-east-1"
+  - name: ecs-cluster
+    type: cluster
+    integration: aws
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
 
 
   # - name: sh-lb-1
@@ -145,8 +145,8 @@ resources:
     type: dockerOptions
     version:
       memory: 100
-      user:
-        - "driftking"
+      # user:
+      #   - "driftking"
       # portMappings:
       #   - "80:80"
       # #entrypoint
@@ -220,12 +220,12 @@ resources:
   #     versionName: "1.0.0"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
-      sourceName: "shubh"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
+  #     sourceName: "shubh"
     # version:
     #   params:
     #     pipelinev2: fleming
