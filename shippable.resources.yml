@@ -127,11 +127,12 @@ resources:
   #     sourceName: EC2Contai-EcsElast-17A64D22JHQLM
 
 
-  - name: nightly
+  - name: sh-docker-opts
     type: dockerOptions
     version:
       memory: 100
-      user: "shubhankit"
+      user:
+        - "shubhankit"
       # portMappings:
       #   - "80:80"
       # #entrypoint
@@ -182,7 +183,7 @@ resources:
   - name: nightly
     type: time
     seed:
-       interval: "* * * */2 *"
+       interval: "*/2 * * * *"
     flags:
       - nightly
 
