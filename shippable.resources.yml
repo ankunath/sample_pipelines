@@ -137,14 +137,15 @@ resources:
     type: dockerOptions
     version:
       memory: 200
+      user: "driftking1"
+
 
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
       memory: 100
-      user:
-        - "driftking"
+      user: "driftking"
       # portMappings:
       #   - "80:80"
       # #entrypoint
