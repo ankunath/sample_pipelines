@@ -20,7 +20,7 @@ resources:
   - name: nightly2
     type: time
     seed:
-      interval: "*/2 * * * *"
+      interval: "*/1 * * * *"
     flags:
       - nightly2
 
