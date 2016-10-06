@@ -94,6 +94,8 @@ jobs:
     steps:
       - IN: ecs-cluster
       - IN: sh-manifestjob1
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: deploygce2upgrade
   #   type: deploy
