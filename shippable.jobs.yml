@@ -105,19 +105,17 @@ jobs:
       # - TASK: managed
       #   deployMethod: upgrade
 
-  # - name: deployddc
-  #   type: deploy
-  #   on_start:
-  #     - NOTIFY: myEmail
-  #   steps:
-  #     - IN: ddc-cluster
-  #     - IN: sh-manifestjob1
-  #     # - TASK: managed
-  #     #   deployMethod: upgrade
-  #   on_success:
-  #     - NOTIFY: myEmail
-  #   on_failure:
-  #     - NOTIFY: myEmail
+  - name: deployddc
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: sh-manifestjob1
+      # - TASK: managed
+      #   deployMethod: upgrade
+    # on_success:
+    #   - NOTIFY: myEmail
+    # on_failure:
+    #   - NOTIFY: myEmail
 
  # - name: dv-test
  #    type: deploy

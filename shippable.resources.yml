@@ -144,7 +144,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 400
+      memory: 200
       # user:
       #   - "driftking"
       portMappings:
@@ -163,10 +163,10 @@ resources:
       #   - "127.0.0.1"
       # dnsSearch:
       #   - "127.0.0.1"
-      # ulimits:
-      #   - name: nofile
-      #     #soft: 50
-      #     #hard: 100
+      ulimits:
+        - name: nofile
+          #soft: 50
+          hard: 100
       # labels:
       #   key1: value1
       #   key2: value2
@@ -176,11 +176,11 @@ resources:
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: shubh-ddc
-  #   pointer:
-  #     sourceName: "small-cluster" #name of the cluster we are deploying.
+  - name: ddc-cluster
+    type: cluster
+    integration: shubh-ddc
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: scale
   #   type: replicas
