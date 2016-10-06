@@ -92,7 +92,7 @@ jobs:
   - name: deployecs
     type: deploy
     steps:
-      - IN: ecs-cluster-1
+      - IN: ecs-cluster-10
       - IN: sh-manifestjob1
       - TASK: managed
         deployMethod: upgrade
