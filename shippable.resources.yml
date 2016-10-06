@@ -141,9 +141,10 @@ resources:
 
 
 
+  - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 100
       # user:
       #   - "driftking"
       portMappings:
