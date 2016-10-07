@@ -148,7 +148,7 @@ resources:
       # user:
       #   - "driftking"
       portMappings:
-        - "80:80098"
+        - "80:80"
       # #entrypoint
       # workingDir: "/app"
       # privileged: false
