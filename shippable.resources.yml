@@ -7,7 +7,7 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "start"
+      versionName: "end"
       #versionName: "latest"
 
   # - name: nightly3
@@ -144,7 +144,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 359
+      memory: 389
       # user:
       #   - "driftking"
       # portMappings:
