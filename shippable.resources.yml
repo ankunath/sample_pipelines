@@ -3,11 +3,11 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "shubhankit/debian"
+      sourceName: "shubhankit/sshubh"
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "end"
+      versionName: "none"
       #versionName: "latest"
 
   # - name: nightly3
