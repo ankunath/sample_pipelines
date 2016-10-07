@@ -115,12 +115,12 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  - name: ecs-cluster-10
-    type: cluster
-    integration: aws
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
+  # - name: ecs-cluster-10
+  #   type: cluster
+  #   integration: aws
+  #   pointer:
+  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
+  #     region: "us-east-1"
 
 
   # - name: sh-lb-1
@@ -147,8 +147,8 @@ resources:
       memory: 200
       # user:
       #   - "driftking"
-      portMappings:
-        - "80:80"
+      # portMappings:
+      #   - "80:80"
       # #entrypoint
       # workingDir: "/app"
       # privileged: false
@@ -163,9 +163,9 @@ resources:
       #   - "127.0.0.1"
       # dnsSearch:
       #   - "127.0.0.1"
-      ulimits:
-        - name: nofile
-          soft: 50
+      # ulimits:
+      #   - name: nofile
+      #     soft: 50
           #hard: 100
       # labels:
       #   key1: value1
@@ -182,11 +182,11 @@ resources:
   #   pointer:
   #     sourceName: "small-cluster2" #name of the cluster we are deploying.
 
-  - name: ddc-cluster
-    type: cluster
-    integration: shubh-ddc
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: shubh-ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: scale
   #   type: replicas
@@ -226,12 +226,12 @@ resources:
   #     versionName: "1.0.0"
 
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
-  #     sourceName: "shubh"
+  - name: tri-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
+      #sourceName: "shubh"
     # version:
     #   params:
     #     pipelinev2: fleming
