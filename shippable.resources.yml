@@ -154,7 +154,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 406
+      memory: 500
       # cpuShares: 128
       # # user:
       # #   - "driftking"
@@ -262,7 +262,7 @@ resources:
 
   - name: tri-cluster
     type: cluster
-    integration: shubh-tritons
+    integration: shubh-triton
     pointer:
       region: "us-east-2"
       #sourceName: "shubh"
