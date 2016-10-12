@@ -177,9 +177,9 @@ resources:
       # dnsSearch:
       #   - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      # # ulimits:
-      # #   - name: nofile
-      # #     soft: 50
+      ulimits:
+        - name: nofile
+          soft: 50
       #     #hard: 100
       # labels:
       #   triton.cns.services:lb-sw1-dv
@@ -262,7 +262,7 @@ resources:
 
   - name: tri-cluster
     type: cluster
-    integration: shubh-tritonaas
+    integration: shubh-triton
     pointer:
       region: "us-east-2"
       #sourceName: "shubh"

@@ -87,7 +87,7 @@ jobs:
   #     - IN: sh-manifestjob1
 
   - name: deploytriton
-    type: deploy23
+    type: deploy
     steps:
       - IN: tri-cluster
       - IN: sh-manifestjob1
