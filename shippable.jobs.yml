@@ -95,8 +95,21 @@ jobs:
   #     - NOTIFY: slackNotification
   #   on_failure:
   #     - NOTIFY: slackNotification
-      # - TASK: managed
-      #   deployMethod: replace
+      - TASK: managed
+        deployMethod: replace
+
+
+  - name: deploytritonupgrade
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-manifestjob1
+  #   on_success:
+  #     - NOTIFY: slackNotification
+  #   on_failure:
+  #     - NOTIFY: slackNotification
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: deployecs
   #   type: deploy
