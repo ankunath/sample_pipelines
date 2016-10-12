@@ -222,10 +222,10 @@ resources:
   #   pointer:
   #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
-  # - name: scale
-  #   type: replicas
-  #   version:
-  #     count: 2
+  - name: scale
+    type: replicas
+    version:
+      count: 3
 
 
 

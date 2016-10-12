@@ -91,12 +91,13 @@ jobs:
     steps:
       - IN: tri-cluster
       - IN: sh-manifestjob1
+      - IN: scale
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
   #     - NOTIFY: slackNotification
-      - TASK: managed
-        deployMethod: replace
+      # - TASK: managed
+      #   deployMethod: replace
 
 
   - name: deploytritonupgrade
@@ -104,6 +105,7 @@ jobs:
     steps:
       - IN: tri-cluster
       - IN: sh-manifestjob1
+      - IN: scale
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
