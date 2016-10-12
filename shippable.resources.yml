@@ -154,7 +154,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 500
+      memory: 50000000000000000000000000
       # cpuShares: 128
       # # user:
       # #   - "driftking"
@@ -177,9 +177,9 @@ resources:
       # dnsSearch:
       #   - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      ulimits:
-        - name: nofile
-          soft: 50
+      # ulimits:
+      #   - name: nofile
+      #     soft: 50
       #     #hard: 100
       # labels:
       #   triton.cns.services:lb-sw1-dv
