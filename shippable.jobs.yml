@@ -3,6 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp2
+      - IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
       #- IN: sh-trigger
