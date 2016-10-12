@@ -7,7 +7,7 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "driftking"
+      versionName: "entrypoint"
       #versionName: "latest"
 
   # - name: sh-myapp3
