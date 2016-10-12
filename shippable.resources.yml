@@ -144,11 +144,11 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 10000000000000000000000
+      memory: 100
       # user:
       #   - "driftking"
-      # portMappings:
-      #   - "80:80"
+      portMappings:
+        - "80:80"
       # #entrypoint
       # workingDir: "/app"
       # privileged: false
@@ -161,21 +161,41 @@ resources:
       #   #   key22: value22
       # dnsServers:
       #   - "127.0.0.1"
-      # dnsSearch:
-      #   - "127.0.0.1"
+      dnsSearch:
+        - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # ulimits:
       #   - name: nofile
       #     soft: 50
           #hard: 100
-      # labels:
-      #   key1: value1
+      labels:
+        triton.cns.services:lb-sw1-dv
       #   key2: value2
-      links:
-        - vault:vault
+      # links:
+      #   - vault:vault
       #   - containerNameTwo:twoAlias
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
 
+"memory": 128,
+  "cpuShares": 128,
+  "portMappings": [
+    "80:80",
+    "443:443"
+  ],
+  "publishAllPorts": true,
+  "links": [
+    "consul:consul",
+    "vault:vault"
+  ],
+  "labels": {
+    "triton.cns.services": "lb-sw1-dv"
+  },
+  "dnsSearch": [
+    "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+  ],
+  "cmd": [
+    "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
+  ]
   # - name: ddc-cluster
   #   type: cluster
   #   integration: shubh-ddc
