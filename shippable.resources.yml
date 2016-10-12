@@ -144,11 +144,11 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 100
+      memory: 10000000000000000000000
       # user:
       #   - "driftking"
-      portMappings:
-        - "80:80"
+      # portMappings:
+      #   - "80:80"
       # #entrypoint
       # workingDir: "/app"
       # privileged: false
@@ -167,11 +167,11 @@ resources:
       #   - name: nofile
       #     soft: 50
           #hard: 100
-      labels:
-        triton.cns.services:lb-sw1-dv
+      # labels:
+      #   triton.cns.services:lb-sw1-dv
       #   key2: value2
-      # links:
-      #   - vault:vault
+      links:
+        - vault:vault
       #   - containerNameTwo:twoAlias
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
