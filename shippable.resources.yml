@@ -144,7 +144,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 290
+      memory: 280
       # cpuShares: 128
       # # user:
       # #   - "driftking"
