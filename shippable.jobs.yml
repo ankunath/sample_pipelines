@@ -95,8 +95,8 @@ jobs:
   #     - NOTIFY: slackNotification
   #   on_failure:
   #     - NOTIFY: slackNotification
-      - TASK: managed
-        deployMethod: replace
+      # - TASK: managed
+      #   deployMethod: replace
 
   # - name: deployecs
   #   type: deploy
