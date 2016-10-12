@@ -3,7 +3,7 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/debian2"
+      sourceName: "scriptnull/debian"
       #sourceName: "busybox"
       isPull: true
     seed:
@@ -144,7 +144,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 250
+      memory: 270
       # cpuShares: 128
       # # user:
       # #   - "driftking"
