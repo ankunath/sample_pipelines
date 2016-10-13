@@ -26,7 +26,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 42
+      memory: 14
       # cpuShares: 20
       # user: "driftking"
       # portMappings:
@@ -165,7 +165,7 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "busybox"
+      sourceName: "shubhankit/ubuntu"
       #sourceName: "busybox"
       isPull: true
     seed:
