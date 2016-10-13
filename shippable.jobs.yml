@@ -150,11 +150,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: deployddc
-    type: deploy
-    steps:
-      - IN: ddc-cluster
-      - IN: sh-manifestjob1
+  # - name: deployddc
+  #   type: deploy
+  #   steps:
+  #     - IN: ddc-cluster
+  #     - IN: sh-manifestjob1
       # - TASK: managed
       #   deployMethod: upgrade
     # on_success:
