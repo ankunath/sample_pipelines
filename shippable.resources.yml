@@ -20,16 +20,16 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 6
+      count: 1
 
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
       memory: 190
-      cpuShares: 20
-      user:
-        - "driftking"
+      # cpuShares: 20
+      # user:
+      #   - "driftking"
       # portMappings:
       #   - "80:80"
       #   - "443:443"
