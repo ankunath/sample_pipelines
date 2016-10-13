@@ -26,7 +26,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 41
+      memory: 42
       # cpuShares: 20
       # user: "driftking"
       # portMappings:
@@ -165,11 +165,11 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/debian"
+      sourceName: "busybox"
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "myapp"
+      versionName: "latest"
 
   # - name: nightly3
   #   type: time
