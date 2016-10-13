@@ -20,13 +20,13 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 3
+      count: 5
 
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 26
+      memory: 29
       # cpuShares: 20
       #user: driftking
       # portMappings:
