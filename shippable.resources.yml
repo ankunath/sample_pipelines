@@ -28,7 +28,7 @@ resources:
     version:
       memory: 28
       # cpuShares: 20
-      user: "driftking"
+      #user: driftking
       # portMappings:
       #   - "80:80"
       #   - "443:443"
