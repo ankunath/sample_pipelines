@@ -3,7 +3,7 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/debians"
+      sourceName: "scriptnull/debian"
       #sourceName: "busybox"
       isPull: true
     seed:
@@ -26,7 +26,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 12
+      memory: 22
       # cpuShares: 20
       #user: driftking
       # portMappings:
@@ -37,7 +37,7 @@ resources:
       workingDir: "/app"
       # # privileged: false
       # # readOnlyRootFilesystem: true
-      # # network: bridge
+      network: bridge
       # # logConfig:
       # #   type: json-file
       # #   # options:  # "options" is not required
