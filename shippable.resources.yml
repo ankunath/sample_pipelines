@@ -11,16 +11,16 @@ resources:
       #versionName: "latest"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
 
-  - name: scale
-    type: replicas
-    version:
-      count: 2
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 2
 
 
   - name: sh-docker-opts
@@ -28,8 +28,7 @@ resources:
     version:
       memory: 230
       cpuShares: 20
-      user:
-        - "driftking"
+      user: "driftking"
       # portMappings:
       #   - "80:80"
       #   - "443:443"
@@ -114,12 +113,12 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  # - name: gke-cluster
-  #   type: cluster
-  #   integration: gce
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "us-east1-d"
+  - name: gke-cluster
+    type: cluster
+    integration: gce
+    pointer:
+      sourceName: "small-cluster"
+      region: "us-east1-d"
 
   # - name: stagingVerBase
   #   type: version

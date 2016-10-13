@@ -9,12 +9,12 @@ jobs:
       #- IN: sh-trigger
       #- IN: dv-params
 
-  - name: deploytriton
-    type: deploy
-    steps:
-      - IN: sh-manifestjob1
-      - IN: scale
-      - IN: tri-cluster
+  # - name: deploytriton
+  #   type: deploy
+  #   steps:
+  #     - IN: sh-manifestjob1
+  #     - IN: scale
+  #     - IN: tri-cluster
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
@@ -124,13 +124,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # # - name: deploygce2upgrade
-  # #   type: deploy
-  # #   steps:
-  # #     - IN: gke-cluster
-  # #     - IN: sh-manifestjob2
-  #     # - TASK: managed
-  #     #   deployMethod: upgrade
+  - name: deploygce
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      - IN: sh-manifestjob1
+      # - TASK: managed
+      #   deployMethod: upgrade
 
   # - name: deployddc
   #   type: deploy
