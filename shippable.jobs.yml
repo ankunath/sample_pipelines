@@ -1,6 +1,6 @@
 jobs:
   - name: sh-manifestjob1
-     type: manifest
+    type: manifest
     steps:
       - IN: sh-myapp2
       #- IN: sh-myapp3
