@@ -129,8 +129,8 @@ jobs:
     steps:
       - IN: gke-cluster
       - IN: sh-manifestjob2
-      # - TASK: managed
-      #   deployMethod: replace
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: deployddc
   #   type: deploy
