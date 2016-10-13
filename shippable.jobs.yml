@@ -140,7 +140,7 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: deploygceBluegreen
+  - name: deploygceUpgrade
     type: deploy
     steps:
       - IN: gke-cluster
