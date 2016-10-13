@@ -17,16 +17,16 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  # - name: scale
-  #   type: replicas
-  #   version:
-  #     count: 2
+  - name: scale
+    type: replicas
+    version:
+      count: 1
 
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 22
+      memory: 26
       # cpuShares: 20
       #user: driftking
       # portMappings:
@@ -34,10 +34,10 @@ resources:
       #   - "443:443"
       # # #entrypoint
       # publishAllPorts: true
-      workingDir: "/app"
-      # # privileged: false
-      # # readOnlyRootFilesystem: true
-      network: bridge
+      # workingDir: "/app"
+      # # # privileged: false
+      # # # readOnlyRootFilesystem: true
+      # network: bridge
       # # logConfig:
       # #   type: json-file
       # #   # options:  # "options" is not required
@@ -161,15 +161,15 @@ resources:
   #     recipients:
   #       - "#slackchannel"
 
-  - name: sh-myapp3
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "shubhankit/ubuntu"
-      #sourceName: "busybox"
-      isPull: true
-    seed:
-      versionName: "shubh"
+  # - name: sh-myapp3
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "shubhankit/ubuntu"
+  #     #sourceName: "busybox"
+  #     isPull: true
+  #   seed:
+  #     versionName: "shubh"
 
   # - name: nightly3
   #   type: time
