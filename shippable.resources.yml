@@ -17,10 +17,10 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  - name: scale
-    type: replicas
-    version:
-      count: 6
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 6
 
 
   - name: sh-docker-opts
@@ -81,11 +81,11 @@ resources:
 #   "cmd": [
 #     "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
 #   ]
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: shubh-ddc
-  #   pointer:
-  #     sourceName: "small-cluster2" #name of the cluster we are deploying.
+  - name: ddc-cluster
+    type: cluster
+    integration: shubh-ddc
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: ddc-cluster
   #   type: cluster
@@ -113,12 +113,12 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gce
-    pointer:
-      sourceName: "small-cluster"
-      region: "us-east1-d"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gce
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "us-east1-d"
 
   # - name: stagingVerBase
   #   type: version
