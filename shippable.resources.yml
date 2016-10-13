@@ -26,7 +26,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 49
+      memory: 41
       # cpuShares: 20
       # user: "driftking"
       # portMappings:
@@ -169,7 +169,7 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "entrypoint"
+      versionName: "myapp"
 
   # - name: nightly3
   #   type: time
