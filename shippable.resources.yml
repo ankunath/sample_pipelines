@@ -225,7 +225,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 3
+      count: 2
 
 
 
