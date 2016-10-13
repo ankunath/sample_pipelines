@@ -130,7 +130,7 @@ jobs:
       - IN: gke-cluster
       - IN: sh-manifestjob1
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace
 
   # - name: deployddc
   #   type: deploy
