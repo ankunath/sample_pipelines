@@ -9,6 +9,20 @@ jobs:
       #- IN: sh-trigger
       #- IN: dv-params
 
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-manifestjob1
+      - IN: scale
+  #   on_success:
+  #     - NOTIFY: slackNotification
+  #   on_failure:
+  #     - NOTIFY: slackNotification
+      # - TASK: managed
+      #   deployMethod: scale
+
+
   # - name: sh-manifestjob2
   #   type: manifest
   #   steps:
@@ -86,18 +100,7 @@ jobs:
   #     - IN: ddccluster
   #     - IN: sh-manifestjob1
 
-  - name: deploytriton
-    type: deploy
-    steps:
-      - IN: tri-cluster
-      - IN: sh-manifestjob1
-      #- IN: scale
-  #   on_success:
-  #     - NOTIFY: slackNotification
-  #   on_failure:
-  #     - NOTIFY: slackNotification
-      - TASK: managed
-        deployMethod: scale
+
 
 
   # - name: deploytritonupgrade
