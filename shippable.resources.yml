@@ -26,7 +26,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 47
+      memory: 49
       # cpuShares: 20
       # user: "driftking"
       # portMappings:
