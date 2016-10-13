@@ -154,7 +154,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 150
       cpuShares: 20
       user:
         - "driftking"
@@ -225,7 +225,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 4
+      count: 1
 
 
 
