@@ -20,7 +20,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 1
+      count: 3
 
 
   - name: sh-docker-opts
