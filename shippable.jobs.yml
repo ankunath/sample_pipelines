@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp2
-      - IN: sh-myapp3
+      #- IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
       #- IN: sh-trigger
@@ -23,13 +23,13 @@ jobs:
       #   deployMethod: scale
 
 
-  # - name: sh-manifestjob2
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-manifestjob1
-  #     - IN: sh-myapp3
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
+  - name: sh-manifestjob2
+    type: manifest
+    steps:
+      - IN: sh-manifestjob1
+      - IN: sh-myapp3
+      - IN: sh-docker-opts
+      - IN: sh-trigger
 
   #     #- IN: sh-lb-1
 
@@ -128,9 +128,9 @@ jobs:
     type: deploy
     steps:
       - IN: gke-cluster
-      - IN: sh-manifestjob1
-      - TASK: managed
-        deployMethod: replace
+      - IN: sh-manifestjob2
+      # - TASK: managed
+      #   deployMethod: replace
 
   # - name: deployddc
   #   type: deploy
