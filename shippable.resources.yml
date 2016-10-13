@@ -26,15 +26,15 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 21
+      memory: 25
       # cpuShares: 20
-      # user: "driftking"
+      user: "driftking"
       # portMappings:
       #   - "80:80"
       #   - "443:443"
       # # #entrypoint
       # publishAllPorts: true
-      # # workingDir: "/app"
+      workingDir: "/app"
       # # privileged: false
       # # readOnlyRootFilesystem: true
       # # network: bridge
@@ -48,10 +48,10 @@ resources:
       # dnsSearch:
       #   - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      # ulimits:
-      #   - name: nofile
-      #     soft: 50
-      #     #hard: 100
+      ulimits:
+        - name: nofile
+          soft: 50
+          #hard: 100
       # labels:
       #   triton.cns.services:lb-sw1-dv
       #   key2: value2
