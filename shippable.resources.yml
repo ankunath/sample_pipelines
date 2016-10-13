@@ -10,16 +10,6 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  - name: sh-myapp3
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      #sourceName: "busybox"
-      isPull: true
-    seed:
-      versionName: "entrypoint"
-
 
   # - name: tri-cluster
   #   type: cluster
@@ -36,7 +26,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 15
+      memory: 29
       # cpuShares: 20
       # user: "driftking"
       # portMappings:
@@ -286,12 +276,12 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  - name: ecs-cluster
-    type: cluster
-    integration: aws
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
+  # - name: ecs-cluster-10
+  #   type: cluster
+  #   integration: aws
+  #   pointer:
+  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
+  #     region: "us-east-1"
 
 
   # - name: sh-lb-1
