@@ -26,7 +26,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 28
+      memory: 38
       # cpuShares: 20
       # user: "driftking"
       # portMappings:
@@ -81,11 +81,11 @@ resources:
 #   "cmd": [
 #     "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
 #   ]
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: shubh-ddc
-  #   pointer:
-  #     sourceName: "small-cluster2" #name of the cluster we are deploying.
+  - name: ddc-cluster
+    type: cluster
+    integration: shubh-ddc
+    pointer:
+      sourceName: "small-cluster2" #name of the cluster we are deploying.
 
   # - name: ddc-cluster
   #   type: cluster
