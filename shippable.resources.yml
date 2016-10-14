@@ -136,7 +136,7 @@ resources:
   #     region: "us-east-2"
 
   - name: gke-cluster
-    type: cluster
+    #type: cluster
     integration: gce
     pointer:
       sourceName: "small-cluster"
