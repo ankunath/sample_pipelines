@@ -7,7 +7,10 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
       #- IN: sh-trigger
-      #- IN: dv-params
+      - IN: dv-params
+        applyTo:
+          - sh-myapp2
+
 
   # - name: deploytriton
   #   type: deploy
