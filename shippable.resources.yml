@@ -48,7 +48,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 15
+      memory: 17
       cpuShares: 10
       #user: driftking
       # portMappings:
@@ -139,7 +139,7 @@ resources:
     type: cluster
     integration: gce
     pointer:
-      #sourceName: "small-cluster"
+      sourceName: "small-cluster1000"
       region: "us-east1-d"
 
   # - name: stagingVerBase
