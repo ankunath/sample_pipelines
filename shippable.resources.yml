@@ -44,11 +44,33 @@ resources:
   #     memory: 23
   #     cpuShares: 50
 
-
-  - name: sh-docker-opts
+  - name: sh-docker-opts-1
     type: dockerOptions
     version:
-      memory: 29
+      memory: 21
+      ulimits:
+        - name: nofile
+          soft: 50
+          #hard: 100
+
+  - name: sh-docker-opts-2
+    type: dockerOptions
+    version:
+      memory: 22
+      ulimits:
+        - name: nofile
+          #soft: 50
+          hard: 100
+
+
+  - name: sh-docker-opts-3
+    type: dockerOptions
+    version:
+      memory: 23
+      ulimits:
+        - name: nofile
+          soft: 50
+          hard: 100
       #cpuShares: 40
       # user:
       #   - "driftking"
@@ -71,18 +93,14 @@ resources:
       # dnsServers: "127.0.0.1"
       # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      ulimits:
-        - name: nofile
-          soft: 50
-          #hard: 100
       # labels: "shubhankit:saxena"
       # # links:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
-      volumesFrom:
-        - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
-        - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
-        - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
+      # volumesFrom:
+      #   - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
+      #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
+      #   - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
       #volumes: "/host/path:/container/path2:rw"
 
 # "memory": 128,
