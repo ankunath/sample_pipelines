@@ -48,7 +48,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 21
+      memory: 23
       cpuShares: 10
       #user: driftking
       # portMappings:
@@ -169,15 +169,15 @@ resources:
     #     pipelinev2: fleming
 
   - name: dv-params
-    #type: params
+    type: params
     version:
-      params:
-        MONGO_API_URL: "localhost:28017"
-        #secure: HoVr0VQak5dFoBJr6WeOD8QlZ9k7vkldOJcrR0oqDnzswgTCBG5TLuWkL5R7oIYS2RADcZY0edbrgZ1/3tcaJ+uCA+CKLHUDKB9BrLhuor+YgBP2PPsg6c0St0nihB+dR2ty6upxMnAVih8k6KiTeVSCiqY4KcfQ1T/wgNZEhdRWPkyWpJrpRASYo7Dg5w1sn73TrSKTiuA85D9O6mDWL/sqMbtVVKoNv9jNBUKH9Moeup1tKB7Yd6Pp4ReekdoJGzywGojhoHSnEdOOx7FMGkJZcZEY+BMlOikBq08qSk9S08E00bweoVZ62cunR0eK/Y4RkJm6LdHXs1u2atUKiA==
-        #secure: G9mAGNS6RrMim/ahSP99MyIoiNzJdfuGbByevM4kzM3uqED1JPq4cIYoqZOs4fgXujpsSsDRmV840BjmV9b2pdEFQZSM0p41jfX9F8Efjt1381DDK/yej+vOibHNFaqAlkTfkft2ori9I7feNXtIdh1L+e/ncThnXbZ52bcxYobVUjmMQkzV/F0e1D1PCekZ+D/phjN5W8E41kadFgfQFLFZgkT/NkccTYVM9+pXEKi0nCqyzkLfDRaQSLozEn34YhSViBESVTeDC4d+vEP+t6nJkMCicWAE0CjQ7MSWnBvwG895XhfETVkbU7W46yAWwafxjuvORAmTgXhhD20dzg==
-        #secure: GIFzp/NNbDn7L7YRuUrvidxqXsAy6h3zzUOiljrzWQgd8DvUo5hirwU5CInkapIJsjQarEVujo2uFUG52M3jIx7/YNOs92/FcF6EXH23MLSU+0c+Q3RAbzEGvSIguVJXoYI7SC+kECgA+aVikr8wTPT0u2JbA/7TjcCV8LsKfEEg4ARxjJgzLpiMpLq3Ss8zMvmJUBG89lYniy1ljdkBAVxp2TuX5EzC0wTm1VrMW+tRHK1V9V89HXrK38a9qw/ZV3tJc72a1MPnRb7rI+dBb+ffZUbrSI9qfCbJK5hOAhfDvnY7rymIQTdyEOcP+f8zeA6rAU9fVBajgn/d3B/iGg==
-        #secure: whW7ayc5KTktZ+w3G0OxBrqKdWlsiZHAiaDuLcJJCLxC6ZTt9mrA/DQlvXuvb834/KqCXu7Jaj/+dgfwA5cYX/2bv6lnXRzp4tb8/MVIWJzM0y8TnGmsru8JUcAyX/9NptSJjY7e6x5tinmWkrWrRNEfuWzIt/XULfbu5LgMfV78uim8UWxhop294JUFsPegZma2eNZJ+h/b5yaPaMP/JrEUvgqDu7vokmmYB26UG0WhvfDXOHBb4GeKPa4PEZEt2wpicOBa35dpFEk6KSgtccs8CrIw7qTahN4gdxCp8rCYQ3lIf6wWFt7kSPip0NgJWIWHk+g+jHbLdDv2To7lUQ==
-        secure: XKN4RNbuMpjRHl7I5FozeYpz/KuBlUCpy+2fbU8hMaYNf9g18zLCbynxeHtI4/aRfEEBb2IDRq7bI/HA+cpiGBgon1lw8pTGGWuXFxJxA3H7vRiHRVuJP3QuQB7Kh9p0jRy8I4cKHZTNpte9uqqmvnsyFn14nw9gxdYTxsfn+yDi1lMhHVt2TajjPpy/bB4b5ciR1+uNzi7e6g7Lc+GcaanUGSxAERHTLi95W2Qm1DIwlyN5+xvKtt9kVoyFGeRTq/gOwGaVBVV5tOSH7AiwOApe1bBsOmBmSHMLAW6a5slaUam8f70ehr8yUWCTkG2KhlxvaAh0Ud/fPJmMUs7f+Q==
+      # params:
+      #   MONGO_API_URL: "localhost:28017"
+      #   #secure: HoVr0VQak5dFoBJr6WeOD8QlZ9k7vkldOJcrR0oqDnzswgTCBG5TLuWkL5R7oIYS2RADcZY0edbrgZ1/3tcaJ+uCA+CKLHUDKB9BrLhuor+YgBP2PPsg6c0St0nihB+dR2ty6upxMnAVih8k6KiTeVSCiqY4KcfQ1T/wgNZEhdRWPkyWpJrpRASYo7Dg5w1sn73TrSKTiuA85D9O6mDWL/sqMbtVVKoNv9jNBUKH9Moeup1tKB7Yd6Pp4ReekdoJGzywGojhoHSnEdOOx7FMGkJZcZEY+BMlOikBq08qSk9S08E00bweoVZ62cunR0eK/Y4RkJm6LdHXs1u2atUKiA==
+      #   #secure: G9mAGNS6RrMim/ahSP99MyIoiNzJdfuGbByevM4kzM3uqED1JPq4cIYoqZOs4fgXujpsSsDRmV840BjmV9b2pdEFQZSM0p41jfX9F8Efjt1381DDK/yej+vOibHNFaqAlkTfkft2ori9I7feNXtIdh1L+e/ncThnXbZ52bcxYobVUjmMQkzV/F0e1D1PCekZ+D/phjN5W8E41kadFgfQFLFZgkT/NkccTYVM9+pXEKi0nCqyzkLfDRaQSLozEn34YhSViBESVTeDC4d+vEP+t6nJkMCicWAE0CjQ7MSWnBvwG895XhfETVkbU7W46yAWwafxjuvORAmTgXhhD20dzg==
+      #   #secure: GIFzp/NNbDn7L7YRuUrvidxqXsAy6h3zzUOiljrzWQgd8DvUo5hirwU5CInkapIJsjQarEVujo2uFUG52M3jIx7/YNOs92/FcF6EXH23MLSU+0c+Q3RAbzEGvSIguVJXoYI7SC+kECgA+aVikr8wTPT0u2JbA/7TjcCV8LsKfEEg4ARxjJgzLpiMpLq3Ss8zMvmJUBG89lYniy1ljdkBAVxp2TuX5EzC0wTm1VrMW+tRHK1V9V89HXrK38a9qw/ZV3tJc72a1MPnRb7rI+dBb+ffZUbrSI9qfCbJK5hOAhfDvnY7rymIQTdyEOcP+f8zeA6rAU9fVBajgn/d3B/iGg==
+      #   #secure: whW7ayc5KTktZ+w3G0OxBrqKdWlsiZHAiaDuLcJJCLxC6ZTt9mrA/DQlvXuvb834/KqCXu7Jaj/+dgfwA5cYX/2bv6lnXRzp4tb8/MVIWJzM0y8TnGmsru8JUcAyX/9NptSJjY7e6x5tinmWkrWrRNEfuWzIt/XULfbu5LgMfV78uim8UWxhop294JUFsPegZma2eNZJ+h/b5yaPaMP/JrEUvgqDu7vokmmYB26UG0WhvfDXOHBb4GeKPa4PEZEt2wpicOBa35dpFEk6KSgtccs8CrIw7qTahN4gdxCp8rCYQ3lIf6wWFt7kSPip0NgJWIWHk+g+jHbLdDv2To7lUQ==
+      #   secure: XKN4RNbuMpjRHl7I5FozeYpz/KuBlUCpy+2fbU8hMaYNf9g18zLCbynxeHtI4/aRfEEBb2IDRq7bI/HA+cpiGBgon1lw8pTGGWuXFxJxA3H7vRiHRVuJP3QuQB7Kh9p0jRy8I4cKHZTNpte9uqqmvnsyFn14nw9gxdYTxsfn+yDi1lMhHVt2TajjPpy/bB4b5ciR1+uNzi7e6g7Lc+GcaanUGSxAERHTLi95W2Qm1DIwlyN5+xvKtt9kVoyFGeRTq/gOwGaVBVV5tOSH7AiwOApe1bBsOmBmSHMLAW6a5slaUam8f70ehr8yUWCTkG2KhlxvaAh0Ud/fPJmMUs7f+Q==
 
   # - name: dv-params-2
   #   type: params
