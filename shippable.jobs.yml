@@ -142,6 +142,9 @@ jobs:
       #- IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-manifestjob1
+      - IN: dv-params
+        applyTo:
+          - sh-myapp2
       #- IN: scale
       # - TASK: managed
       #   deployMethod: upgrade
