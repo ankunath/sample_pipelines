@@ -110,11 +110,11 @@ jobs:
 
 
 
-  # - name: deploytritonupgrade
-  #   type: deploy
-  #   steps:
-  #     - IN: tri-cluster
-  #     - IN: sh-manifestjob1
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-manifestjob1
   #     - IN: scale
   # #   on_success:
   # #     - NOTIFY: slackNotification
@@ -123,11 +123,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: deployecs
-  #   type: deploy
-  #   steps:
-  #     - IN: ecs-cluster-10
-  #     - IN: sh-manifestjob1
+  - name: deployecs
+    type: deploy
+    steps:
+      - IN: ecs-cluster
+      - IN: sh-manifestjob1
   #     - TASK: managed
   #       deployMethod: upgrade
 
