@@ -4,13 +4,13 @@ jobs:
     steps:
       - IN: sh-myapp2
       #- IN: sh-myapp3
-      - IN: sh-docker-opts-2
+      - IN: sh-docker-opts
       - IN: sh-trigger
       #- IN: sh-trigger
       - IN: dv-params
         applyTo:
           - sh-myapp2
-      - IN: scale
+      #- IN: scale
 
 
   # - name: deploytriton
@@ -140,13 +140,13 @@ jobs:
     type: deploy
     steps:
       - IN: gke-cluster
-      - IN: sh-myapp3
-      - IN: sh-docker-opts
+      #- IN: sh-myapp3
+      #- IN: sh-docker-opts
       - IN: sh-manifestjob1
-      - IN: dv-params
-        applyTo:
-          - sh-myapp2
-      - IN: scale-2
+      # - IN: dv-params
+      #   applyTo:
+      #     - sh-myapp2
+      # - IN: scale-2
       # - TASK: managed
       #   deployMethod: upgrade
 
