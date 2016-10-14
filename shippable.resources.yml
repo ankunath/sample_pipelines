@@ -10,6 +10,17 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
+  - name: sh-myapp3
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      #sourceName: "busybox"
+      isPull: true
+    seed:
+      versionName: "entrypoint"
+      #versionName: "latest"
+
 
   # - name: tri-cluster
   #   type: cluster
@@ -26,7 +37,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 15
+      memory: 18
       # cpuShares: 20
       #user: driftking
       # portMappings:
