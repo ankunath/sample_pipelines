@@ -133,7 +133,7 @@ jobs:
   #       deployMethod: replace
 
   - name: deploygceBluegreen
-    type: deploy
+    type: deployment
     steps:
       - IN: gke-cluster
       - IN: sh-manifestjob1
