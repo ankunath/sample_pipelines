@@ -151,7 +151,7 @@ resources:
 
   - name: gke-cluster
     type: cluster
-    integration: gce9
+    integration: gce
     pointer:
       sourceName: "small-cluster"
       region: "us-east1-d"
@@ -169,7 +169,7 @@ resources:
     #     pipelinev2: fleming
 
   - name: dv-params
-    type: params
+    #type: params
     version:
       params:
         MONGO_API_URL: "localhost:28017"
