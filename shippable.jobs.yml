@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: sh-myapp2
       #- IN: sh-myapp3
-      - IN: sh-docker-opts
+      - IN: sh-docker-opts-2
       - IN: sh-trigger
       #- IN: sh-trigger
       - IN: dv-params
@@ -140,7 +140,7 @@ jobs:
     steps:
       - IN: gke-cluster
       #- IN: sh-myapp3
-      - IN: sh-docker-opts-2
+      - IN: sh-docker-opts
       - IN: sh-manifestjob1
       #- IN: scale
       # - TASK: managed
