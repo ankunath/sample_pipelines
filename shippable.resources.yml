@@ -48,9 +48,9 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 27
+      memory: 21
       #cpuShares: 40
-      #user: driftking
+      user: "driftking"
         #- "driftking2"
       # portMappings:
       #   - "80:80"
@@ -58,23 +58,23 @@ resources:
       # # #entrypoint
       # publishAllPorts: true
       # workingDir: "/app"
-      privileged: true
-      #readOnlyRootFilesystem: true
-      # network: bridge
-      # # logConfig:
-      # #   type: json-file
-      # #   # options:  # "options" is not required
-      # #   #   key11: value11
-      # #   #   key22: value22
-      dnsServers: "127.0.0.1"
-      dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
-      # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      # ulimits:
-      #   - name: nofile
-      #     soft: 50
-          #hard: 100
-      labels: "shubhankit:saxena"
-      # links:
+      # privileged: true
+      # #readOnlyRootFilesystem: true
+      # # network: bridge
+      # # # logConfig:
+      # # #   type: json-file
+      # # #   # options:  # "options" is not required
+      # # #   #   key11: value11
+      # # #   #   key22: value22
+      # dnsServers: "127.0.0.1"
+      # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+      # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
+      # # ulimits:
+      # #   - name: nofile
+      # #     soft: 50
+      #     #hard: 100
+      # labels: "shubhankit:saxena"
+      # # links:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
       # volumesFrom:
