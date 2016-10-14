@@ -81,6 +81,10 @@ resources:
       #   - containerNameTwo:twoAlias
       # volumesFrom:
       #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
+      volumes:
+        - "/host/path.2:/container/path:rw"
+        - "/host/path:/container/path2:rw"
+        - "/host/path2:/container/path3:ro"
 
 # "memory": 128,
 #   "cpuShares": 128,
