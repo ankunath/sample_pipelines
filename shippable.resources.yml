@@ -80,7 +80,7 @@ resources:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
       volumesFrom:
-        - "/host/path:/container/path2:rw"
+        - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530"
       #volumes: "/host/path:/container/path2:rw"
 
 # "memory": 128,
