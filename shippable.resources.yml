@@ -50,7 +50,7 @@ resources:
     version:
       memory: 27
       #cpuShares: 40
-      user: driftking
+      #user: driftking
         #- "driftking2"
       # portMappings:
       #   - "80:80"
