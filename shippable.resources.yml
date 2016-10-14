@@ -48,8 +48,8 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 25
-      cpuShares: 10
+      memory: 29
+      cpuShares: 40
       #user: driftking
       # portMappings:
       #   - "80:80"
