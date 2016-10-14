@@ -74,7 +74,7 @@ resources:
       #   - name: nofile
       #     soft: 50
           #hard: 100
-      labels: "shubhankit: saxena"
+      labels: shubhankit:saxena
       # links:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
