@@ -7,7 +7,7 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "driftking123"
+      versionName: "driftking"
       #versionName: "latest"
 
 
@@ -26,7 +26,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 12
+      memory: shubhnkit
       # cpuShares: 20
       #user: driftking
       # portMappings:
