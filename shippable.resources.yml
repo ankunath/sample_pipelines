@@ -139,15 +139,18 @@ resources:
     type: cluster
     integration: gce
     pointer:
-      sourceName: "small-cluster"
+      sourceName:
+        - "small-cluster"
+        - "ecs"
+        - "gke"
       region: "us-east1-d"
 
-  - name: gke-cluster-2
-    type: cluster
-    integration: gce
-    pointer:
-      sourceName: "small-cluster"
-      region: "us-east1-d"
+  # - name: gke-cluster-2
+  #   type: cluster
+  #   integration: gce
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "us-east1-d"
 
   # - name: stagingVerBase
   #   type: version
