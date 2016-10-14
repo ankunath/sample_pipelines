@@ -48,7 +48,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 23
+      memory: 25
       cpuShares: 10
       #user: driftking
       # portMappings:
@@ -181,7 +181,7 @@ resources:
     flags:
       - box
 
-  - name: dv-params-2
+  - name: dv-params
     type: params
     version:
       params:
