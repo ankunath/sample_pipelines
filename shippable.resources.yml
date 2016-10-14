@@ -57,7 +57,7 @@ resources:
       # # #entrypoint
       # publishAllPorts: true
       # workingDir: "/app"
-      privileged: false
+      privileged: true
       #readOnlyRootFilesystem: true
       # network: bridge
       # # logConfig:
