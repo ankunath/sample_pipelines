@@ -28,16 +28,21 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  - name: scale
-    type: replicas
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 3
+
+  - name: sh-docker-opts-2
+    type: dockerOptions
     version:
-      count: shubhankit
+      memory: 1000000000000000000
 
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 11
+      memory: 10
       # cpuShares: 20
       #user: driftking
       # portMappings:

@@ -140,8 +140,9 @@ jobs:
     steps:
       - IN: gke-cluster
       #- IN: sh-myapp3
+      - IN: sh-docker-opts-2
       - IN: sh-manifestjob1
-      - IN: scale
+      #- IN: scale
       # - TASK: managed
       #   deployMethod: upgrade
 
