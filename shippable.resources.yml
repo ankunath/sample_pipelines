@@ -138,9 +138,9 @@ resources:
   - name: gke-cluster
     type: cluster
     integration: gce
-    # pointer:
-    #   sourceName: "small-cluster"
-    #   region: "us-east1-d"
+    pointer:
+      #sourceName: "small-cluster"
+      region: "us-east1-d"
 
   # - name: stagingVerBase
   #   type: version
