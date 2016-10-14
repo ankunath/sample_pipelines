@@ -60,7 +60,7 @@ resources:
       # # #entrypoint
       # publishAllPorts: true
       # workingDir: "/app"
-      privileged: true
+      #privileged: true
       # #readOnlyRootFilesystem: true
       # # network: bridge
       # # # logConfig:
@@ -68,20 +68,20 @@ resources:
       # # #   # options:  # "options" is not required
       # # #   #   key11: value11
       # # #   #   key22: value22
-      dnsServers: "127.0.0.1"
-      dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+      # dnsServers: "127.0.0.1"
+      # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      # # ulimits:
-      # #   - name: nofile
-      # #     soft: 50
-      #     #hard: 100
+      ulimits:
+        - name: nofile
+          soft: 50
+          #hard: 100
       # labels: "shubhankit:saxena"
       # # links:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
-      # volumesFrom:
-      #   - "plv2-manifest5entrypointdopt_0_0_03c3505a-a99b-46a9-8uu6-7f4d2516aee5"
-      volumes: "/host/path:/container/path2:rw"
+      volumesFrom:
+        - "/host/path:/container/path2:rw"
+      #volumes: "/host/path:/container/path2:rw"
 
 # "memory": 128,
 #   "cpuShares": 128,
