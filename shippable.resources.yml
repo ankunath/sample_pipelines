@@ -142,16 +142,16 @@ resources:
   #     sourceName: "small-cluster2"
   #     region: "us-east1-d"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gce
-    pointer:
-      sourceName: "small-cluster"
-      region: "us-east2-d"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gce
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "us-east2-d"
 
   - name: gke-cluster
     type: cluster
-    integration: gce
+    integration: gce9
     pointer:
       sourceName: "small-cluster"
       region: "us-east1-d"
