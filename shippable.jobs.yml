@@ -133,9 +133,9 @@ jobs:
   #       deployMethod: replace
 
   - name: deploygceBluegreen
-    type: deployment
-    steps:
-      - IN: gke-cluster
+    type: deploy
+  steps:
+       - IN: gke-cluster
       - IN: sh-manifestjob1
       # - TASK: managed
       #   deployMethod: upgrade
