@@ -52,7 +52,7 @@ resources:
       #cpuShares: 40
       user:
         - "driftking"
-        - "driftking2"
+        #- "driftking2"
       # portMappings:
       #   - "80:80"
       #   - "443:443"
