@@ -10,6 +10,9 @@ jobs:
       - IN: dv-params
         applyTo:
           - sh-myapp2
+      - IN: dv-params-2
+        applyTo:
+          - sh-myapp2
       #- IN: scale
 
 
