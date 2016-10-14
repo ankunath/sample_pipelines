@@ -10,6 +10,7 @@ jobs:
       - IN: dv-params
         applyTo:
           - sh-myapp2
+      - IN: scale
 
 
   # - name: deploytriton
@@ -145,7 +146,7 @@ jobs:
       - IN: dv-params
         applyTo:
           - sh-myapp2
-      #- IN: scale
+      - IN: scale-2
       # - TASK: managed
       #   deployMethod: upgrade
 
