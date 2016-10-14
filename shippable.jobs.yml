@@ -139,7 +139,7 @@ jobs:
     type: deploy
     steps:
       - IN: gke-cluster
-      - IN: sh-myapp3
+      #- IN: sh-myapp3
       - IN: sh-manifestjob1
       # - TASK: managed
       #   deployMethod: upgrade
