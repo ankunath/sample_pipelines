@@ -48,7 +48,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 27
+      memory: 29
       #cpuShares: 40
       #user: driftking
       # portMappings:
@@ -58,7 +58,7 @@ resources:
       # publishAllPorts: true
       # workingDir: "/app"
       privileged: false
-      readOnlyRootFilesystem: true
+      #readOnlyRootFilesystem: true
       # network: bridge
       # # logConfig:
       # #   type: json-file
