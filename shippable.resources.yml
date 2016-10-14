@@ -74,9 +74,7 @@ resources:
       #   - name: nofile
       #     soft: 50
           #hard: 100
-      labels:
-        triton.cns.services: lb-sw1-dv
-        key2: value2
+      labels: "shubhankit: saxena"
       # links:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
