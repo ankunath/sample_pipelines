@@ -173,7 +173,7 @@ resources:
     type: cluster
     integration: gce
     pointer:
-      sourceName: "small-cluster"
+      sourceName: ""
       region: "us-east1-d"
 
   # - name: stagingVerBase
