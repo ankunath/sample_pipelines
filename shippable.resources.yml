@@ -22,11 +22,11 @@ resources:
   #     #versionName: "latest"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: scale
   #   type: replicas
@@ -44,33 +44,33 @@ resources:
   #     memory: 23
   #     cpuShares: 50
 
-  - name: sh-docker-opts-1
+  # - name: sh-docker-opts-1
+  #   type: dockerOptions
+  #   version:
+  #     memory: 21
+  #     ulimits:
+  #       - name: nofile
+  #         soft: 50
+  #         #hard: 100
+
+  # - name: sh-docker-opts-2
+  #   type: dockerOptions
+  #   version:
+  #     memory: 22
+  #     ulimits:
+  #       - name: nofile
+  #         #soft: 50
+  #         hard: 100
+
+
+  - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 21
-      ulimits:
-        - name: nofile
-          soft: 50
-          #hard: 100
-
-  - name: sh-docker-opts-2
-    type: dockerOptions
-    version:
-      memory: 22
-      ulimits:
-        - name: nofile
-          #soft: 50
-          hard: 100
-
-
-  - name: sh-docker-opts-3
-    type: dockerOptions
-    version:
-      memory: 23
-      ulimits:
-        - name: nofile
-          soft: 50
-          hard: 100
+      memory: 29
+      # ulimits:
+      #   - name: nofile
+      #     soft: 50
+      #     hard: 100
       #cpuShares: 40
       # user:
       #   - "driftking"
@@ -354,12 +354,12 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  - name: ecs-cluster
-    type: cluster
-    integration: aws
-    pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
-      region: "us-east-1"
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: aws
+  #   pointer:
+  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
+  #     region: "us-east-1"
 
 
   # - name: sh-lb-1

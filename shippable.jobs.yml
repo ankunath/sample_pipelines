@@ -4,7 +4,7 @@ jobs:
     steps:
       - IN: sh-myapp2
       #- IN: sh-myapp3
-      - IN: sh-docker-opts-1
+      - IN: sh-docker-opts
       - IN: sh-trigger
       #- IN: sh-trigger
       # - IN: dv-params
@@ -14,21 +14,21 @@ jobs:
       #   applyTo:
       #     - sh-myapp2
       #- IN: scale
-  - name: sh-manifestjob2
-    type: manifest
-    steps:
-      - IN: sh-myapp2
-      #- IN: sh-myapp3
-      - IN: sh-docker-opts-2
-      - IN: sh-trigger
+  # - name: sh-manifestjob2
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp2
+  #     #- IN: sh-myapp3
+  #     - IN: sh-docker-opts-2
+  #     - IN: sh-trigger
 
-  - name: sh-manifestjob3
-    type: manifest
-    steps:
-      - IN: sh-myapp2
-      #- IN: sh-myapp3
-      - IN: sh-docker-opts-3
-      - IN: sh-trigger
+  # - name: sh-manifestjob3
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp2
+  #     #- IN: sh-myapp3
+  #     - IN: sh-docker-opts-3
+  #     - IN: sh-trigger
 
 
   # - name: deploytriton
@@ -125,11 +125,11 @@ jobs:
 
 
 
-  - name: deploytriton
-    type: deploy
-    steps:
-      - IN: tri-cluster
-      - IN: sh-manifestjob1
+  # - name: deploytriton
+  #   type: deploy
+  #   steps:
+  #     - IN: tri-cluster
+  #     - IN: sh-manifestjob1
   #     - IN: scale
   # #   on_success:
   # #     - NOTIFY: slackNotification
@@ -138,25 +138,25 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: deployecs-1
-    type: deploy
-    steps:
-      - IN: ecs-cluster
-      - IN: sh-manifestjob1
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  # - name: deployecs-1
+  #   type: deploy
+  #   steps:
+  #     - IN: ecs-cluster
+  #     - IN: sh-manifestjob1
+  # #     - TASK: managed
+  # #       deployMethod: upgrade
 
-  - name: deployecs-2
-    type: deploy
-    steps:
-      - IN: ecs-cluster
-      - IN: sh-manifestjob2
+  # - name: deployecs-2
+  #   type: deploy
+  #   steps:
+  #     - IN: ecs-cluster
+  #     - IN: sh-manifestjob2
 
-  - name: deployecs-3
-    type: deploy
-    steps:
-      - IN: ecs-cluster
-      - IN: sh-manifestjob3
+  # - name: deployecs-3
+  #   type: deploy
+  #   steps:
+  #     - IN: ecs-cluster
+  #     - IN: sh-manifestjob3
 
   # - name: deploygceReplace
   #   type: deploy
