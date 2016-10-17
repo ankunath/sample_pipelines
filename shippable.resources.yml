@@ -66,7 +66,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 37
+      memory: 31
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -173,9 +173,9 @@ resources:
     type: cluster
     integration: gce
     pointer:
-      sourceName:
-        - "small-cluster"
-      region: "us-east1-d"
+      sourceName: "small-cluster"
+      region:
+        - "us-east1-d"
 
   # - name: stagingVerBase
   #   type: version
