@@ -3,7 +3,8 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/debian"
+      sourceName:
+        - "scriptnull/debian"
       #sourceName: "busybox"
       isPull: true
     seed:
@@ -66,7 +67,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 31
+      memory: 30
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -174,8 +175,7 @@ resources:
     integration: gce
     pointer:
       sourceName: "small-cluster"
-      region:
-        - "us-east1-d"
+      region: "us-east1-d"
 
   # - name: stagingVerBase
   #   type: version
