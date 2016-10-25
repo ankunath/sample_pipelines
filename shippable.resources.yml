@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 16
+      memory: 19
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -105,7 +105,7 @@ resources:
       # dnsServers: "127.0.0.1"
       # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      # labels: "shubhankit:saxena"
+       labels: "shubhankit:saxena"
       # # links:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
