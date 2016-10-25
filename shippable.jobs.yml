@@ -103,12 +103,12 @@ jobs:
   #   on_success:
   #     - script: echo 'on success !!!!!'
 
-  # - name: sh-ecsDeploy
-  #   type: deploy
-  #   steps:
-  #     - IN: sh-manifestjob1
-  #     - IN: sh-ecs-cluster
-  #     - IN: sh-lb-2
+  - name: sh-ecsDeploy
+    type: deploy
+    steps:
+      - IN: sh-manifestjob1
+      - IN: sh-ecs-cluster
+      - IN: sh-lb-2
   #       applyTo:
   #         - manifest: sh-manifestjob1 # it can only apply to one manifest
   #           image: sh-myapp3 # it can only apply to one image in the manifest
@@ -116,20 +116,20 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: ddc-deploy1234
-    type: deploy
-    steps:
-      - IN: ddc-cluster
-      - IN: sh-manifestjob1
+  # - name: ddc-deploy1234
+  #   type: deploy
+  #   steps:
+  #     - IN: ddc-cluster
+  #     - IN: sh-manifestjob1
 
 
 
 
-  - name: deploytriton
-    type: deploy
-    steps:
-      - IN: tri-cluster
-      - IN: sh-manifestjob1
+  # - name: deploytriton
+  #   type: deploy
+  #   steps:
+  #     - IN: tri-cluster
+  #     - IN: sh-manifestjob1
   #     - IN: scale
   # #   on_success:
   # #     - NOTIFY: slackNotification
@@ -158,7 +158,7 @@ jobs:
   #     - IN: ecs-cluster
   #     - IN: sh-manifestjob3
 
-  # - name: deploygceReplace
+  # - name: deploygce
   #   type: deploy
   #   steps:
   #     - IN: gke-cluster

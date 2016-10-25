@@ -34,11 +34,11 @@ resources:
   #     #versionName: "latest"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: scale
   #   type: replicas
@@ -83,10 +83,10 @@ resources:
       #   - name: nofile
       #     soft: 50
       #     hard: 100
-      cpuShares: 40
-      user:
-        - "driftking"
-        - "root"
+      #cpuShares: 40
+      # user:
+      #   - "driftking"
+        #- "root"
         #- "driftking2"
       # portMappings:
       #   - "80:80"
@@ -114,8 +114,8 @@ resources:
       #   - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
       #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
       #   - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
-      volumes:
-        - "/host/path:/container/path2:rw"
+      # volumes:
+      #   - "/host/path:/container/path2:rw"
 
 # "memory": 128,
 #   "cpuShares": 128,
@@ -137,11 +137,11 @@ resources:
 #   "cmd": [
 #     "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
 #   ]
-  - name: ddc-cluster
-    type: cluster
-    integration: shubh-ddc
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: shubh-ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: ddc-cluster
   #   type: cluster
@@ -358,12 +358,12 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  # - name: ecs-cluster
-  #   type: cluster
-  #   integration: aws
-  #   pointer:
-  #     sourceName : "loadBalanceTest" #name of the cluster we are deploying
-  #     region: "us-east-1"
+  - name: ecs-cluster
+    type: cluster
+    integration: aws
+    pointer:
+      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      region: "us-east-1"
 
 
   # - name: sh-lb-1
