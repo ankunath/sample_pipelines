@@ -78,12 +78,12 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 11
+      memory: 12
       # ulimits:
       #   - name: nofile
       #     soft: 50
       #     hard: 100
-      #cpuShares: 40
+      cpuShares: 40
       # user:
       #   - "driftking"
       #   - "root"
@@ -106,7 +106,6 @@ resources:
       # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
       labels:
-        "shubh_ankit: 192"
         ri_tu: 123
       # # links:
       #   - vault:vault
