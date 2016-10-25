@@ -362,7 +362,7 @@ resources:
     type: cluster
     integration: aws
     pointer:
-      sourceName : "loadBalanceTest" #name of the cluster we are deploying
+      sourceName : "default" #name of the cluster we are deploying
       region: "us-east-1"
 
 
@@ -374,7 +374,7 @@ resources:
   - name: sh-lb-2
     type: loadBalancer
     pointer:
-      sourceName: EC2Contai-EcsElast-17A64D22JHQLM
+      sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJ
 
   # - name: sh-docker-opts
   #   type: dockerOptions
