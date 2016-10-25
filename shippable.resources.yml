@@ -20,7 +20,7 @@ resources:
   - name: stagingVerBase
     type: version
     seed:
-      versionName: "199.0.0"
+      versionName: "23.0.0-rc.2"
 
   # - name: sh-myapp3
   #   type: image
@@ -105,8 +105,8 @@ resources:
       # dnsServers: "127.0.0.1"
       # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      labels:
-        ri_tu: 123
+      # labels:
+      #   ri_tu: 123
       # # links:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
