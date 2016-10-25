@@ -125,11 +125,11 @@ jobs:
 
 
 
-  # - name: deploytriton
-  #   type: deploy
-  #   steps:
-  #     - IN: tri-cluster
-  #     - IN: sh-manifestjob1
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-manifestjob1
   #     - IN: scale
   # #   on_success:
   # #     - NOTIFY: slackNotification

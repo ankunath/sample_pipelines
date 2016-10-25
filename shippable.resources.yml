@@ -34,11 +34,11 @@ resources:
   #     #versionName: "latest"
 
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: tri-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
 
   # - name: scale
   #   type: replicas
@@ -84,9 +84,9 @@ resources:
       #     soft: 50
       #     hard: 100
       cpuShares: 40
-      # user:
-      #   - "driftking"
-      #   - "root"
+      user:
+        - "driftking"
+        - "root"
         #- "driftking2"
       # portMappings:
       #   - "80:80"
