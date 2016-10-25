@@ -224,7 +224,7 @@ jobs:
         #switch: on
       - IN: sh-manifestjob1
       - TASK: managed
-        bump: major
+        bump: final
 
   # - name: tri-deploy123
   #   type: deploy
