@@ -20,7 +20,7 @@ resources:
   - name: stagingVerBase
     type: version
     seed:
-      versionName: "1.0.0-rc.5"
+      versionName: "1.0.0-alpha.5"
 
   # - name: sh-myapp3
   #   type: image
@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 23
+      memory: 16
       # ulimits:
       #   - name: nofile
       #     soft: 50
