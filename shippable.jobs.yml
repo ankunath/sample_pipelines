@@ -107,6 +107,7 @@ jobs:
     type: deploy
     steps:
       - IN: sh-manifestjob1
+      - IN: sh-manifestjob2
       - IN: sh-ecs-cluster
       - IN: sh-lb-2
       #- IN: dv-params
