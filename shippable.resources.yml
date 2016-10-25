@@ -17,10 +17,10 @@ resources:
       sourceName: "small-cluster"
       region: "us-east1-d"
 
-  - name: stagingVerBase
-    type: version
-    seed:
-      versionName: "3.0.0"
+  # - name: stagingVerBase
+  #   type: version
+  #   seed:
+  #     versionName: "3.0.0"
 
   # - name: sh-myapp3
   #   type: image
