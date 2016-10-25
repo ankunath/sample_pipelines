@@ -358,7 +358,7 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  - name: ecs-cluster
+  - name: sh-ecs-cluster
     type: cluster
     integration: aws
     pointer:
