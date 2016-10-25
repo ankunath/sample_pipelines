@@ -20,7 +20,7 @@ resources:
   - name: stagingVerBase
     type: version
     seed:
-      versionName: "1.0.0-alpha.5"
+      versionName: "1.0.0-rc.2"
 
   # - name: sh-myapp3
   #   type: image
