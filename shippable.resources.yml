@@ -363,7 +363,7 @@ resources:
     integration: aws
     pointer:
       sourceName : "default" #name of the cluster we are deploying
-      region: "us-east-1"
+      region: "us-west-2"
 
 
   # - name: sh-lb-1
