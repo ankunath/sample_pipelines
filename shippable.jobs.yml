@@ -109,10 +109,10 @@ jobs:
       - IN: sh-manifestjob1
       - IN: sh-ecs-cluster
       - IN: sh-lb-2
-  #       applyTo:
-  #         - manifest: sh-manifestjob1 # it can only apply to one manifest
-  #           image: sh-myapp3 # it can only apply to one image in the manifest
-  #           port: 80
+        applyTo:
+          - manifest: sh-manifestjob1 # it can only apply to one manifest
+            image: sh-myapp3 # it can only apply to one image in the manifest
+            port: 80
   #     - TASK: managed
   #       deployMethod: upgrade
 
