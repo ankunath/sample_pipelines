@@ -116,11 +116,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: ddc-deploy1234
-  #   type: deploy
-  #   steps:
-  #     - IN: ddc-cluster
-  #     - IN: sh-manifestjob1
+  - name: ddc-deploy1234
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: sh-manifestjob1
 
 
 
@@ -166,14 +166,14 @@ jobs:
   #     - TASK: managed
   #       deployMethod: replace
 
-  - name: deploygceBluegreen
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      #- IN: gke-cluster-2
-      #- IN: sh-myapp3
-      #- IN: sh-docker-opts
-      - IN: sh-manifestjob1
+  # - name: deploygceBluegreen
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     #- IN: gke-cluster-2
+  #     #- IN: sh-myapp3
+  #     #- IN: sh-docker-opts
+  #     - IN: sh-manifestjob1
       # - IN: dv-params
       #   applyTo:
       #     - sh-myapp2
