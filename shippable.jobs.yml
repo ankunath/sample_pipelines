@@ -103,26 +103,26 @@ jobs:
   #   on_success:
   #     - script: echo 'on success !!!!!'
 
-  - name: sh-ecsDeploy
-    type: deploy
-    steps:
-      - IN: sh-manifestjob1
-      #- IN: sh-manifestjob2
-      - IN: sh-ecs-cluster
-      - IN: sh-lb-2
-      #- IN: dv-params
-        applyTo:
-          - manifest: sh-manifestjob1 # it can only apply to one manifest
-            image: sh-myapp2 # it can only apply to one image in the manifest
-            port: 80
-      - TASK: managed
-        deployMethod: upgrade
-
-  # - name: ddc-deploy1234
+  # - name: sh-ecsDeploy
   #   type: deploy
   #   steps:
-  #     - IN: ddc-cluster
   #     - IN: sh-manifestjob1
+  #     #- IN: sh-manifestjob2
+  #     - IN: sh-ecs-cluster
+  #     - IN: sh-lb-2
+  #     #- IN: dv-params
+  #       applyTo:
+  #         - manifest: sh-manifestjob1 # it can only apply to one manifest
+  #           image: sh-myapp2 # it can only apply to one image in the manifest
+  #           port: 80
+  #     - TASK: managed
+  #       deployMethod: upgrade
+
+  - name: ddc-deploy1234
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: sh-manifestjob1
 
 
 
