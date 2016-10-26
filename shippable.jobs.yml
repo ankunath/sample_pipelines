@@ -2,7 +2,7 @@ jobs:
   - name: sh-manifestjob1
     type: manifest
     steps:
-      - IN: sh-myapp3
+      - IN: sh-myapp2
       #- IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
@@ -116,7 +116,7 @@ jobs:
           #   image: sh-myapp3 # it can only apply to one image in the manifest
           #   port: 80
           - manifest: sh-manifestjob1 # it can only apply to one manifest
-            image: sh-myapp3 # it can only apply to one image in the manifest
+            image: sh-myapp2 # it can only apply to one image in the manifest
             port: 3000
       - TASK: managed
         deployMethod: upgrade
