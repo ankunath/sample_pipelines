@@ -117,7 +117,7 @@ jobs:
           #   port: 80
           - manifest: sh-manifestjob1 # it can only apply to one manifest
             image: sh-myapp2 # it can only apply to one image in the manifest
-            port: 3001
+            port: 3000
       - TASK: managed
         deployMethod: upgrade
 
