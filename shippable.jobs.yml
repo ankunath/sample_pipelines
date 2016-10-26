@@ -3,7 +3,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp2
-      - IN: sh-myapp3
+      #- IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
       #- IN: sh-trigger
@@ -14,13 +14,14 @@ jobs:
       #   applyTo:
       #     - sh-myapp2
       #- IN: scale
-  # - name: sh-manifestjob2
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp3
-  #     #- IN: sh-myapp3
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
+  - name: sh-manifestjob2
+    type: manifest
+    steps:
+      - IN: sh-myapp3
+      - IN: sh-manifestjob1
+      #- IN: sh-myapp3
+      - IN: sh-docker-opts
+      - IN: sh-trigger
 
   # - name: sh-manifestjob3
   #   type: manifest
@@ -122,7 +123,7 @@ jobs:
     type: deploy
     steps:
       - IN: ddc-cluster
-      - IN: sh-manifestjob1
+      - IN: sh-manifestjob2
 
 
 
