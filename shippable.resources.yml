@@ -1,5 +1,5 @@
 resources:
-  - name: sh-myapp2
+  - name: sh-myapp3
     type: image
     integration: docker
     pointer:
@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 48
+      memory: 98
       # ulimits:
       #   - name: nofile
       #     soft: 50
