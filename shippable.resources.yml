@@ -8,7 +8,7 @@ resources:
       isPull: true
     seed:
       #versionName: "driftking"
-      versionName: "myapp2"
+      versionName: "myapp3"
 
   # - name: gke-cluster
   #   type: cluster
@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 32
+      memory: 38
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -89,7 +89,7 @@ resources:
         #- "root"
         #- "driftking2"
       portMappings:
-        - "80:80"
+        - "80:3000"
       #   - "443:443"
       # # #entrypoint
       # publishAllPorts: true
