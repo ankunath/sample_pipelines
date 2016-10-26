@@ -26,11 +26,11 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/sample_node"
+      sourceName: "scriptnull/debian"
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "myapp3"
+      versionName: "driftking"
       #versionName: "latest"
 
 
@@ -40,10 +40,10 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  # - name: scale
-  #   type: replicas
-  #   version:
-  #     count: 3
+  - name: scale
+    type: replicas
+    version:
+      count: 3
 
   # - name: scale-2
   #   type: replicas
@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 19
+      memory: 27
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -88,8 +88,8 @@ resources:
       #   - "driftking"
         #- "root"
         #- "driftking2"
-      portMappings:
-        - "80:80"
+      # portMappings:
+      #   - "10:80"
       #   - "443:443"
       # # #entrypoint
       # publishAllPorts: true

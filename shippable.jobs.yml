@@ -124,6 +124,9 @@ jobs:
     steps:
       - IN: ddc-cluster
       - IN: sh-m-shubh-1
+      - IN: scale
+      - TASK: managed
+        deployMethod: scale
 
 
 
