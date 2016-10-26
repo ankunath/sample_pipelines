@@ -8,7 +8,7 @@ resources:
       isPull: true
     seed:
       #versionName: "driftking"
-      versionName: "myapp3"
+      versionName: "myapp2"
 
   # - name: gke-cluster
   #   type: cluster
@@ -89,7 +89,7 @@ resources:
         #- "root"
         #- "driftking2"
       portMappings:
-        - "80:80"
+        - "80:3000"
       #   - "443:443"
       # # #entrypoint
       # publishAllPorts: true
