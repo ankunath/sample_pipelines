@@ -78,12 +78,12 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 23
+      memory: 13
       # ulimits:
       #   - name: nofile
       #     soft: 50
       #     hard: 100
-      #cpuShares: 40
+      cpuShares: 4
       # user:
       #   - "driftking"
         #- "root"
