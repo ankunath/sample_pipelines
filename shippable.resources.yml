@@ -5,10 +5,10 @@ resources:
     pointer:
       sourceName: "scriptnull/debian"
       #sourceName: "busybox"
-      isPull: false
+      isPull: true
     seed:
-      versionName: "driftking"
-      #versionName: "latest"
+      #versionName: "driftking"
+      versionName: "latest"
 
   # - name: gke-cluster
   #   type: cluster
@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 32
+      memory: 33
       # ulimits:
       #   - name: nofile
       #     soft: 50
