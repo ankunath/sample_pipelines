@@ -3,12 +3,12 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/debian"
+      sourceName: "scriptnull/sample_node"
       #sourceName: "busybox"
       isPull: true
     seed:
       #versionName: "driftking"
-      versionName: "latest"
+      versionName: "myapp3"
 
   # - name: gke-cluster
   #   type: cluster
@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 33
+      memory: 34
       # ulimits:
       #   - name: nofile
       #     soft: 50
