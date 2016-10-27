@@ -223,12 +223,12 @@ resources:
   #   flags:
   #     - box2
 
-  # - name: sample_node
-  #   type: syncRepo
-  #   integration: git
-  #   pointer:
-  #     sourceName: ankunath/sample_node
-  #     branch: master
+  - name: sample_node
+    type: syncRepo
+    integration: git
+    pointer:
+      sourceName: ankunath/sample_node
+      branch: master
 
   # - name: sample_node
   #   type: gitRepo

@@ -119,14 +119,14 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: ddc-deploy1234
-  #   type: deploy
-  #   steps:
-  #     - IN: ddc-cluster
-  #     - IN: sh-m-shubh-1
-  #     - IN: scale
-  #     - TASK: managed
-  #       deployMethod: scale
+  - name: ddc-deploy1234
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: sh-m-shubh-1
+      - IN: scale
+      - TASK: managed
+        deployMethod: scale
 
 
 
