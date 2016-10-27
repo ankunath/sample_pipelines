@@ -2,7 +2,7 @@ triggers:
    - name: sh-trigger
      type: trigger
      version:
-       counter: 5198
+       counter: 51980009
    #   type: trigger
    #   version:
    #     message: '2q22qreate a AArelease from staging cluster. triggered:1'
