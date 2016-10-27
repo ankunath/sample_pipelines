@@ -38,7 +38,7 @@ resources:
     type: cluster
     integration: shubh-triton
     pointer:
-      region: "us-east-21"
+      region: "us-east-2"
 
   # - name: scale
   #   type: replicas
