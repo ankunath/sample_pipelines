@@ -1,14 +1,14 @@
 resources:
-  - name: sh-myapp2
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      #sourceName: "busybox"
-      isPull: true
-    seed:
-      versionName: "entrypoint"
-      #versionName: "myapp2"
+  # - name: sh-myapp2
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     #sourceName: "busybox"
+  #     isPull: true
+  #   seed:
+  #     versionName: "entrypoint"
+  #     #versionName: "myapp2"
 
   # - name: gke-cluster
   #   type: cluster
@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 25
+      memory: 29
       # ulimits:
       #   - name: nofile
       #     soft: 50

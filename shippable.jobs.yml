@@ -1,27 +1,27 @@
 jobs:
-  - name: sh-m-shubh-1
-    type: manifest
-    steps:
-      - IN: sh-myapp2
-      #- IN: sh-myapp3
-      - IN: sh-docker-opts
-      - IN: sh-trigger
-      #- IN: sh-trigger
-      # - IN: dv-params
-      #   applyTo:
-      #     - sh-myapp2
-      # - IN: dv-params-2
-      #   applyTo:
-      #     - sh-myapp2
-      #- IN: scale
+  # - name: sh-m-shubh-1
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp2
+  #     #- IN: sh-myapp3
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
+  #     #- IN: sh-trigger
+  #     # - IN: dv-params
+  #     #   applyTo:
+  #     #     - sh-myapp2
+  #     # - IN: dv-params-2
+  #     #   applyTo:
+  #     #     - sh-myapp2
+  #     #- IN: scale
   - name: sh-manifestjob2
     type: manifest
     steps:
       - IN: sh-myapp3
-      - IN: sh-m-shubh-1
+      #- IN: sh-m-shubh-1
       #- IN: sh-myapp3
       - IN: sh-docker-opts
-     # - IN: sh-trigger
+      - IN: sh-trigger
 
   # - name: sh-manifestjob3
   #   type: manifest
@@ -134,15 +134,15 @@ jobs:
   - name: deploytriton
     type: deploy
     steps:
-      - IN: tri-cluster
+    - IN: tri-cluster
       - IN: sh-manifestjob2
       #- IN: scale
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
   #     - NOTIFY: slackNotification
-      - TASK: managed
-        deployMethod: replace
+      # - TASK: managed
+      #   deployMethod: replace
 
   # - name: deployecs-1
   #   type: deploy
