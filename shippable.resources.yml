@@ -43,7 +43,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 1
+      count: 3
 
   # - name: scale-2
   #   type: replicas
