@@ -34,11 +34,11 @@ resources:
       #versionName: "latest"
 
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: tri-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
 
   - name: scale
     type: replicas
@@ -223,12 +223,12 @@ resources:
   #   flags:
   #     - box2
 
-  - name: sample_node
-    type: syncRepo
-    integration: git
-    pointer:
-      sourceName: ankunath/sample_node
-      branch: master
+  # - name: sample_node
+  #   type: syncRepo
+  #   integration: git
+  #   pointer:
+  #     sourceName: ankunath/sample_node
+  #     branch: master
 
   # - name: sample_node
   #   type: gitRepo

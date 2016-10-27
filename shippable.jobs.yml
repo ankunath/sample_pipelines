@@ -124,25 +124,25 @@ jobs:
     steps:
       - IN: ddc-cluster
       - IN: sh-m-shubh-1
-      - IN: scale
-      - TASK: managed
-        deployMethod: scale
+      # - IN: scale
+      # - TASK: managed
+      #   deployMethod: scale
 
 
 
 
-  # - name: deploytriton
-  #   type: deploy
-  #   steps:
-  #     - IN: tri-cluster
-  #     - IN: sh-manifestjob1
-  #     - IN: scale
-  # #   on_success:
-  # #     - NOTIFY: slackNotification
-  # #   on_failure:
-  # #     - NOTIFY: slackNotification
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-m-shubh-1
+      #- IN: scale
+  #   on_success:
+  #     - NOTIFY: slackNotification
+  #   on_failure:
+  #     - NOTIFY: slackNotification
+      # - TASK: managed
+      #   deployMethod: upgrade
 
   # - name: deployecs-1
   #   type: deploy
