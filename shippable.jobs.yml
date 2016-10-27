@@ -134,7 +134,7 @@ jobs:
   - name: deploytriton
     type: deploy
     steps:
-    - IN: tri-cluster
+      - IN: tri-cluster
       - IN: sh-manifestjob2
       #- IN: scale
   #   on_success:
