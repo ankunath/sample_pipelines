@@ -40,10 +40,10 @@ resources:
     pointer:
       region: "us-east-2"
 
-  - name: scale
-    type: replicas
-    version:
-      count: 1
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 1
 
   # - name: scale-2
   #   type: replicas
@@ -78,7 +78,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 24
+      memory: 28
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -137,11 +137,11 @@ resources:
 #   "cmd": [
 #     "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
 #   ]
-  - name: ddc-cluster
-    type: cluster
-    integration: shubh-ddc
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: shubh-ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: ddc-cluster
   #   type: cluster
