@@ -136,13 +136,13 @@ jobs:
     steps:
       - IN: tri-cluster
       - IN: sh-manifestjob2
-      #- IN: scale
+      - IN: scale
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
   #     - NOTIFY: slackNotification
-      - TASK: managed
-        deployMethod: replace
+      # - TASK: managed
+      #   deployMethod: scale
 
   # - name: deployecs-1
   #   type: deploy

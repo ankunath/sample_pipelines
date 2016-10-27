@@ -40,10 +40,10 @@ resources:
     pointer:
       region: "us-east-2"
 
-  # - name: scale
-  #   type: replicas
-  #   version:
-  #     count: 1
+  - name: scale
+    type: replicas
+    version:
+      count: 1
 
   # - name: scale-2
   #   type: replicas
