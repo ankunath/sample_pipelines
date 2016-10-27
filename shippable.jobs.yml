@@ -142,7 +142,7 @@ jobs:
   #   on_failure:
   #     - NOTIFY: slackNotification
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: replace
 
   # - name: deployecs-1
   #   type: deploy
