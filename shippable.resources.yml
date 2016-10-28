@@ -20,7 +20,7 @@ resources:
   - name: stagingVerBase1
     type: version
     seed:
-      versionName: "124.0.0"
+      versionName: "1.0.0"
 
   - name: stagingVerBase2
     type: version
@@ -40,7 +40,7 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "driftking"
+      versionName: "entrypoint"
       #versionName: "latest"
 
 
