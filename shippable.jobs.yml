@@ -226,7 +226,7 @@ jobs:
     type: release
     steps:
       - IN: deploytriton
-      - IN: stagingVerBase2
+      #- IN: stagingVerBase2
         #switch: on
       #- IN: sh-manifestjob1
       - TASK: managed
