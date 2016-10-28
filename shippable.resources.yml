@@ -17,10 +17,20 @@ resources:
   #     sourceName: "small-cluster"
   #     region: "us-east1-d"
 
-  - name: stagingVerBase
+  - name: stagingVerBase1
     type: version
     seed:
-      versionName: "10.0.0"
+      versionName: "1.0.0"
+
+  - name: stagingVerBase2
+    type: version
+    seed:
+      versionName: "35.0.0"
+
+  - name: stagingVerBase3
+    type: version
+    seed:
+      versionName: "60.0.0"
 
   - name: sh-myapp3
     type: image
@@ -78,7 +88,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 32
+      memory: 37
       # ulimits:
       #   - name: nofile
       #     soft: 50

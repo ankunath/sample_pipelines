@@ -226,7 +226,7 @@ jobs:
     type: release
     steps:
       - IN: deploytriton
-      - IN: stagingVerBase
+      - IN: stagingVerBase2
         #switch: on
       #- IN: sh-manifestjob1
       - TASK: managed
@@ -236,17 +236,17 @@ jobs:
     type: release
     steps:
       #- IN: deploytriton
-      - IN: stagingVerBase
+      - IN: stagingVerBase1
         #switch: on
       - IN: sh-manifestjob2
       - TASK: managed
         bump: major
 
-  - name: finaleVersion
+  - name: finaleRelease
     type: release
     steps:
       #- IN: deploytriton
-      - IN: stagingVerBase
+      - IN: stagingVerBase3
         #switch: on
       - IN: stagingRelease
       - TASK: managed
