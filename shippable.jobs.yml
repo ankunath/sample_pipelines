@@ -222,7 +222,7 @@ jobs:
  #    on_failure:
  #      - NOTIFY: slackNotification
 
-  - name: stagingRelease
+  - name: stagingRelease-1
     type: release
     steps:
       - IN: deploytriton
