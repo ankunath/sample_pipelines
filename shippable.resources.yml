@@ -17,10 +17,10 @@ resources:
   #     sourceName: "small-cluster"
   #     region: "us-east1-d"
 
-  # - name: stagingVerBase
-  #   type: version
-  #   seed:
-  #     versionName: "3.0.0"
+  - name: stagingVerBase
+    type: version
+    seed:
+      versionName: "2.0.0"
 
   - name: sh-myapp3
     type: image
@@ -40,10 +40,10 @@ resources:
     pointer:
       region: "us-east-2"
 
-  - name: scale
-    type: replicas
-    version:
-      count: 1
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 1
 
   # - name: scale-2
   #   type: replicas
