@@ -229,8 +229,8 @@ jobs:
       #- IN: stagingVerBase2
         #switch: on
       #- IN: sh-manifestjob1
-      - TASK: managed
-        bump: major
+      # - TASK: managed
+      #   bump: major
 
   - name: stagingReleaseWithoutDeployJob
     type: release
