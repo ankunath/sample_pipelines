@@ -238,7 +238,7 @@ jobs:
       #- IN: deploytriton
       - IN: stagingVerBase
         #switch: on
-      - IN: sh-manifestjob1
+      - IN: sh-manifestjob2
       - TASK: managed
         bump: major
 
