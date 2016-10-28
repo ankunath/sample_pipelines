@@ -20,7 +20,7 @@ resources:
   - name: stagingVerBase1
     type: version
     seed:
-      versionName: "3.0.0"
+      versionName: "124.0.0"
 
   - name: stagingVerBase2
     type: version
@@ -40,7 +40,7 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "driftking"
+      versionName: "entrypoint"
       #versionName: "latest"
 
 
@@ -88,7 +88,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 38
+      memory: 30
       # ulimits:
       #   - name: nofile
       #     soft: 50
