@@ -242,6 +242,16 @@ jobs:
       - TASK: managed
         bump: major
 
+  - name: finaleVersion
+    type: release
+    steps:
+      #- IN: deploytriton
+      - IN: stagingVerBase
+        #switch: on
+      - IN: stagingRelease
+      - TASK: managed
+        bump: major
+
 
 
   # - name: tri-deploy123
