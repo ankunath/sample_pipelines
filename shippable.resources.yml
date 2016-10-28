@@ -40,7 +40,7 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "entrypoint"
+      versionName: "driftking"
       #versionName: "latest"
 
 
@@ -88,7 +88,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 30
+      memory: 35
       # ulimits:
       #   - name: nofile
       #     soft: 50
