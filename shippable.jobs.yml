@@ -246,7 +246,7 @@ jobs:
     type: release
     steps:
       #- IN: deploytriton
-      - IN: stagingVerBase3
+      #- IN: stagingVerBase3
         #switch: on
       - IN: stagingRelease
       - TASK: managed

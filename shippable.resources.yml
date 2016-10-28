@@ -20,12 +20,12 @@ resources:
   - name: stagingVerBase1
     type: version
     seed:
-      versionName: "1.0.0"
+      versionName: "3.0.0"
 
   - name: stagingVerBase2
     type: version
     seed:
-      versionName: "35.0.0"
+      versionName: "40.0.0"
 
   - name: stagingVerBase3
     type: version
