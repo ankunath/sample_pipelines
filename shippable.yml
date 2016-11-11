@@ -1,10 +1,14 @@
-# Language setting
-language: python
-
-# Version number
-python:
-  - 2.7
+language: node_js
 
 build:
   ci:
-    - python --version
+    - echo "Hello world"
+    - MYVERSION=`date +%s`
+
+integrations:
+  notifications:
+    - integrationName: Etrigger
+      type: webhook
+      payload:
+        - versionName=$MYVERSION
+      on_success: always
