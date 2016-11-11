@@ -222,35 +222,35 @@ jobs:
  #    on_failure:
  #      - NOTIFY: slackNotification
 
-  - name: stagingRelease
-    type: release
-    steps:
-      - IN: deploytriton
-      - IN: stagingVerBase2
-        #switch: on
-      #- IN: sh-manifestjob1
-      - TASK: managed
-        bump: major
+  # - name: stagingRelease
+  #   type: release
+  #   steps:
+  #     - IN: deploytriton
+  #     - IN: stagingVerBase2
+  #       #switch: on
+  #     #- IN: sh-manifestjob1
+  #     - TASK: managed
+  #       bump: major
 
-  - name: stagingReleaseWithoutDeployJob
-    type: release
-    steps:
-      #- IN: deploytriton
-      - IN: stagingVerBase1
-        #switch: on
-      - IN: sh-manifestjob2
-      - TASK: managed
-        bump: major
+  # - name: stagingReleaseWithoutDeployJob
+  #   type: release
+  #   steps:
+  #     #- IN: deploytriton
+  #     - IN: stagingVerBase1
+  #       #switch: on
+  #     - IN: sh-manifestjob2
+  #     - TASK: managed
+  #       bump: major
 
-  - name: finaleRelease
-    type: release
-    steps:
-      #- IN: deploytriton
-      #- IN: stagingVerBase3
-        #switch: on
-      - IN: stagingRelease
-      - TASK: managed
-        bump: major
+  # - name: finaleRelease
+  #   type: release
+  #   steps:
+  #     #- IN: deploytriton
+  #     #- IN: stagingVerBase3
+  #       #switch: on
+  #     - IN: stagingRelease
+  #     - TASK: managed
+  #       bump: major
 
 
 
