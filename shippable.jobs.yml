@@ -19,17 +19,16 @@ jobs:
     steps:
       - IN: sh-myapp3
       #- IN: sh-m-shubh-1
-      - IN: sh-myapp2
+      #- IN: sh-myapp2
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  # - name: sh-manifestjob3
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp2
-  #     #- IN: sh-myapp3
-  #     - IN: sh-docker-opts-3
-  #     - IN: sh-trigger
+  - name: sh-manifestjob2
+    type: manifest
+    steps:
+      - IN: sh-myapp2
+      - IN: sh-manifestjob1
+      - IN: sh-docker-opts
 
 
   # - name: deploytriton
@@ -200,7 +199,7 @@ jobs:
     type: deploy
     steps:
       - IN: ddc-cluster
-      - IN: sh-manifestjob1
+      - IN: sh-manifestjob2
       # - TASK: managed
       #   deployMethod: upgrade
     # on_success:
