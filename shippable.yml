@@ -5,10 +5,10 @@ build:
     - echo "Hello world"
     - MYVERSION=`date +%s`
 
-integrations:
-  notifications:
-    - integrationName: Etrigger
-      type: webhook
-      payload:
-        - versionName=$MYVERSION
-      on_success: always
+# integrations:
+#   notifications:
+#     - integrationName: Etrigger
+#       type: webhook
+#       payload:
+#         - versionName=$MYVERSION
+#       on_success: always

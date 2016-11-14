@@ -40,15 +40,15 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "entrypoint"
+      versionName: "driftking"
       #versionName: "latest"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: shubh-triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: shubh-triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: scale
   #   type: replicas
@@ -88,7 +88,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 70
+      memory: 23
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -153,11 +153,11 @@ resources:
   #   pointer:
   #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: shubh-ddc
-  #   pointer:
-  #     sourceName: "small-cluster" #name of the cluster we are deploying.
+  - name: ddc-cluster
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
 
