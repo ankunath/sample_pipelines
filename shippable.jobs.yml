@@ -143,7 +143,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: shubh-deploy
+  - name: shubh-deploy1
     type: deploy
     steps:
       - IN: sh-ecs-cluster
