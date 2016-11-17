@@ -23,12 +23,12 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  # - name: sh-manifestjob2
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp2
-  #     - IN: sh-manifestjob1
-  #     - IN: sh-docker-opts
+  - name: sh-manifestjob2
+    type: manifest
+    steps:
+      - IN: sh-myapp2
+      - IN: sh-manifestjob1
+      - IN: sh-docker-opts
 
 
   # - name: deploytriton
@@ -148,6 +148,14 @@ jobs:
     steps:
       - IN: sh-ecs-cluster
       - IN: sh-manifestjob1
+      - TASK: managed
+        deployMethod: replace
+
+  - name: deployecs-2
+    type: deploy
+    steps:
+      - IN: sh-ecs-cluster
+      - IN: sh-manifestjob2
       - TASK: managed
         deployMethod: replace
 
