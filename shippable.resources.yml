@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 19
+      memory: 49
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -133,7 +133,7 @@ resources:
       # # #   #   key11: value11
       # # #   #   key22: value22
       # dnsServers: "127.0.0.1"
-      # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+      dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
       # labels:
       #   ri_tu: 123
