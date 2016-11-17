@@ -146,10 +146,10 @@ jobs:
   - name: deployecs-1
     type: deploy
     steps:
-      - IN: ecs-cluster
+      - IN: sh-ecs-cluster
       - IN: sh-manifestjob1
       - TASK: managed
-        deployMethod: replace
+        deployMethod: upgrade
 
   # - name: deployecs-2
   #   type: deploy
