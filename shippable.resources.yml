@@ -96,7 +96,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 40
+      memory: 49
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -107,7 +107,7 @@ resources:
         #- "root"
         #- "driftking2"
       portMappings:
-        - "80:80"
+        - "802:802"
        # - "443:443"
       # # #entrypoint
       # publishAllPorts: true
