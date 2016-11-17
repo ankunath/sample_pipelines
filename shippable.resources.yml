@@ -43,6 +43,17 @@ resources:
       #versionName: "driftking"
       versionName: "latest"
 
+  - name: sh-myapp3
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      #sourceName: "busybox"
+      isPull: true
+    seed:
+      versionName: "entrypoint"
+      #versionName: "latest"
+
   # - name: sh-myapp3
   #   type: image
   #   integration: docker
@@ -97,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 200
+      memory: 178
       # ulimits:
       #   - name: nofile
       #     soft: 50
