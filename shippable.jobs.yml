@@ -143,7 +143,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: deployecs-1909
+  - name: deployecs-1909000
     type: deploy
     steps:
       - IN: sh-ecs-cluster
