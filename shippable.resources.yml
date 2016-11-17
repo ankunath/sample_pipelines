@@ -96,7 +96,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 88
+      memory: 34
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -129,7 +129,7 @@ resources:
       #   - vault:vault
       #   - containerNameTwo:twoAlias
       volumesFrom:
-        - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
+        - "sh-manifestjob1111:rw"
       #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
       #   - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
       # volumes:
