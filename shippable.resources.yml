@@ -113,13 +113,13 @@ resources:
       #   - name: nofile
       #     soft: 50
       #     hard: 100
-      cpuShares: 400
+      #cpuShares: 400
       # user:
       #   - "driftking"
         #- "root"
         #- "driftking2"
-      # portMappings:
-      #   - "802:802"
+      portMappings:
+        - "80:80"
        # - "443:443"
       # # #entrypoint
       # publishAllPorts: true
