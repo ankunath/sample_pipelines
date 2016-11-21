@@ -193,11 +193,11 @@ resources:
   #   flags:
   #     - nightly
 
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: ddc-cluster
+    type: cluster
+    integration: ddc
+    pointer:
+      region: "us-east-2"
 
   # - name: gke-cluster
   #   type: cluster
