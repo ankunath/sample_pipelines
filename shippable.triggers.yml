@@ -1,15 +1,5 @@
 triggers:
-   - name: sh-trigger
+   - name: an-trigger
      type: trigger
      version:
-       counter: 1123
-   #   type: trigger
-   #   version:
-   #     message: '2q22qreate a AArelease from staging cluster. triggered:1'
-   # - name: sh-trigger-1
-   #   type: trigger
-   #   #version:
-   #   counter: 1012
-   # #   type: trigger
-   #   version:
-   #     message: '2q22qreate a AArelease from staging cluster. triggered:1'
+       counter: 1
