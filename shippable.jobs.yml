@@ -129,11 +129,11 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: foo-app-ci
-    type: jenkinsJob
-    integration: "jenkins"
-    pointer:
-      sourceName: "abc"  # This is the job name on Jenkins
+  # - name: foo-app-ci
+  #   type: jenkinsJob
+  #   integration: "jenkins"
+  #   pointer:
+  #     sourceName: "abc"  # This is the job name on Jenkins
 
 
 
