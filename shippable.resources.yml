@@ -298,13 +298,13 @@ resources:
   #   flags:
   #     - nightly2
 
-  - name: slackNotification
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        - "#testissues"
-        #- "#slackchannel"
+  # - name: slackNotification
+  #   type: notification
+  #   integration: slack
+  #   pointer:
+  #     recipients:
+  #       - "#testissues"
+  #       #- "#slackchannel"
 
   # - name: myEmail
   #   type: notification

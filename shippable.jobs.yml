@@ -123,8 +123,8 @@ jobs:
     steps:
       - IN: ddc-cluster
       - IN: sh-manifestjob
-    on_success:
-      - NOTIFY: slackNotification
+    # on_success:
+    #   - NOTIFY: slackNotification
       # - IN: scale
       # - TASK: managed
       #   deployMethod: scale
