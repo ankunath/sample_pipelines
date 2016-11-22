@@ -1,4 +1,4 @@
 git status -s
 git add .
 git commit -m "increment"
-git push origin scriptnull.pipeline
+git push origin master:scriptnull.pipeline
