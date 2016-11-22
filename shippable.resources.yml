@@ -199,6 +199,8 @@ resources:
     pointer:
       region: "us-east-2"
 
+
+
   # - name: gke-cluster
   #   type: cluster
   #   integration: gce
