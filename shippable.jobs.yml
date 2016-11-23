@@ -118,7 +118,7 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: ddc-deploy1234
+  - name: ddc-deploy
     type: deploy
     steps:
       - IN: ddc-cluster
