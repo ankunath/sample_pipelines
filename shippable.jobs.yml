@@ -22,6 +22,7 @@ jobs:
       - IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
+      - IN: sh-lb-1
 
   # - name: sh-manifestjob2
   #   type: manifest
