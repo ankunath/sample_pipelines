@@ -3,7 +3,7 @@ language: node_js
 build:
   ci:
     - echo "Hello worl"
-    - MYVERSION=`dat +%s`
+    - MYVERSION=`date +%s`
 
 # integrations:
 #   notifications:
