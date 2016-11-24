@@ -213,7 +213,7 @@ resources:
     integration: gce
     pointer:
       sourceName: "small-cluster"
-      region: "us-east2-d"
+      region: "us-east1-d"
 
 
 
