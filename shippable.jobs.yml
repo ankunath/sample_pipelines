@@ -188,7 +188,7 @@ jobs:
     type: deploy
     steps:
       - IN: gke-cluster
-      - IN: sh-manifestjob1
+      - IN: sh-manifestjob
   #     - TASK: managed
   #       deployMethod: replace
 
