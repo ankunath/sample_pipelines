@@ -118,11 +118,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: ddc-deploy
-    type: deploy
-    steps:
-      - IN: ddc-cluster
-      - IN: sh-manifestjob
+  # - name: ddc-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: ddc-cluster
+  #     - IN: sh-manifestjob
     # on_success:
     #   - NOTIFY: slackNotification
       # - IN: scale
@@ -151,11 +151,11 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  # - name: newJob123
-  #   type: deploy
-  #   steps:
-  #     - IN: sh-ecs-cluster
-  #     - IN: sh-manifestjob112
+  - name: newEcsJob
+    type: deploy
+    steps:
+      - IN: sh-ecs-cluster
+      - IN: sh-manifestjob
   #     - TASK: managed
   #       deployMethod: replace
 

@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 109
+      memory: 45
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -391,12 +391,12 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  # - name: sh-ecs-cluster
-  #   type: cluster
-  #   integration: aws
-  #   pointer:
-  #     sourceName : "default" #name of the cluster we are deploying
-  #     region: "us-west-2"
+  - name: sh-ecs-cluster
+    type: cluster
+    integration: aws
+    pointer:
+      sourceName : "default" #name of the cluster we are deploying
+      region: "us-west-2"
 
 
   # # - name: sh-lb-1
