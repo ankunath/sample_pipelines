@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 75
+      memory: 65
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -399,10 +399,10 @@ resources:
       region: "us-west-2"
 
 
-  # - name: sh-lb-1
-  #   type: loadBalancer
-  #   pointer:
-  #     sourceName: EC2Contai-EcsElast-1R4843KO6RLL0
+  - name: sh-lb-1
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-1R4843KO6RLL0
 
   # - name: sh-lb-2
   #   type: loadBalancer

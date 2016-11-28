@@ -156,11 +156,11 @@ jobs:
     steps:
       - IN: sh-ecs-cluster
       - IN: sh-manifestjob
-      # - IN: sh-lb-1
-      #   applyTo:
-      #     - manifest: sh-manifestjob # it can only apply to one manifest
-      #       image: sh-myapp2 # it can only apply to one image in the manifest
-      #       port: 80
+      - IN: sh-lb-1
+        applyTo:
+          - manifest: sh-manifestjob # it can only apply to one manifest
+            image: sh-myapp2 # it can only apply to one image in the manifest
+            port: 80
       - TASK: managed
         deployMethod: upgrade
 
