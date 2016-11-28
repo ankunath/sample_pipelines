@@ -161,8 +161,8 @@ jobs:
       #     - manifest: sh-manifestjob # it can only apply to one manifest
       #       image: sh-myapp2 # it can only apply to one image in the manifest
       #       port: 80
-      - TASK: managed
-        deployMethod: upgrade
+      # - TASK: managed
+      #   deployMethod: upgrade
 
   # - name: deployecs-2
   #   type: deploy
