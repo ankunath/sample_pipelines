@@ -108,7 +108,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 79
+      memory: 71
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -118,8 +118,8 @@ resources:
       #   - "driftking"
         #- "root"
         #- "driftking2"
-      # portMappings:
-      #   - "80:80"
+      portMappings:
+        - "80:80"
       #  # - "443:443"
       # # #entrypoint
       # publishAllPorts: true
@@ -399,10 +399,10 @@ resources:
       region: "us-west-2"
 
 
-  # - name: sh-lb-1
-  #   type: loadBalancer
-  #   pointer:
-  #     sourceName: EC2Contai-EcsElast-1R4843KO6RLL0
+  - name: sh-lb-1
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-1R4843KO6RLL0
 
   # - name: sh-lb-2
   #   type: loadBalancer
