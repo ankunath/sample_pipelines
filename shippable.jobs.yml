@@ -151,7 +151,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: newEcsJob123
+  - name: newEcsJob
     type: deploy
     steps:
       - IN: sh-ecs-cluster
