@@ -173,11 +173,11 @@ resources:
   #   pointer:
   #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
-  - name: ddc-cluster
-    type: cluster
-    integration: ddc
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
 
@@ -391,18 +391,18 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  # - name: sh-ecs-cluster
-  #   type: cluster
-  #   integration: aws
-  #   pointer:
-  #     sourceName : "default" #name of the cluster we are deploying
-  #     region: "us-west-2"
+  - name: sh-ecs-cluster
+    type: cluster
+    integration: aws
+    pointer:
+      sourceName : "default" #name of the cluster we are deploying
+      region: "us-west-2"
 
 
-  # - name: sh-lb-1
-  #   type: loadBalancer
-  #   pointer:
-  #     sourceName: EC2Contai-EcsElast-PVSUK0O2DEVT
+  - name: sh-lb-1
+    type: loadBalancer
+    pointer:
+      sourceName: EC2Contai-EcsElast-QWTC3UHVG6MQ
 
   # - name: sh-lb-2
   #   type: loadBalancer
