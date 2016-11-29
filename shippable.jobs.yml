@@ -44,12 +44,12 @@ jobs:
   #       deployMethod: upgrade
 
 
-  # - name: deploytriton
-  #   type: deploy
-  #   steps:
-  #     - IN: sh-manifestjob1
-  #     - IN: scale
-  #     - IN: tri-cluster
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: manifestjob
+      #- IN: scale
+      - IN: tri-cluster
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:

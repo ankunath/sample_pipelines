@@ -113,11 +113,11 @@ resources:
   #   seed:
   #     versionName: "entrypoint"
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: tri-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
 
   # - name: scale
   #   type: replicas
