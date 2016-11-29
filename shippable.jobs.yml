@@ -14,7 +14,7 @@ jobs:
   #     #   applyTo:
   #     #     - sh-myapp2
   #     #- IN: scale
-  - name: manifestjob
+  - name: manifestjob1
     type: manifest
     steps:
       #- IN: sh-myapp3
@@ -23,7 +23,7 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  - name: sh-manifestjob2
+  - name: manifestjob2
     type: manifest
     steps:
       - IN: sh-myapp3
@@ -34,7 +34,7 @@ jobs:
     type: deploy
     steps:
       - IN: sh-ecs-cluster
-      - IN: sh-manifestjob2
+      - IN: manifestjob2
       # - IN: sh-lb-1
       #   applyTo:
       #     - manifest: sh-manifestjob # it can only apply to one manifest
@@ -47,8 +47,7 @@ jobs:
   - name: deploytriton
     type: deploy
     steps:
-      - IN: manifestjob
-      #- IN: scale
+      - IN: manifestjob1
       - IN: tri-cluster
   #   on_success:
   #     - NOTIFY: slackNotification
