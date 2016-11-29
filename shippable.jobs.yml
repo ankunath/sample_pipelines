@@ -361,13 +361,13 @@ jobs:
     #  - TASK: managed
     #    deployMethod: upgrade
 
-  - name: ddc-deploy-1
+  - name: ddc-deploy-12
     type: deploy
     steps:
       - IN: manifestjob
       - IN: ddc-cluster
-      - TASK: managed
-        deployMethod: upgrade
+      # - TASK: managed
+      #   deployMethod: upgrade
 
   # - name: tri-deploy
   #   type: deploy
