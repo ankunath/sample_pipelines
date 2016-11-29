@@ -22,10 +22,10 @@ resources:
   #   seed:
   #     versionName: "1.0.0"
 
-  # - name: stagingVerBase2
-  #   type: version
-  #   seed:
-  #     versionName: "40.0.0"
+  - name: stagingVerBase2
+    type: version
+    seed:
+      versionName: "40.0.0"
 
   # - name: stagingVerBase3
   #   type: version
@@ -64,11 +64,11 @@ resources:
   #   seed:
   #     versionName: "entrypoint"
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: shubh-triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: tri-cluster
+    type: cluster
+    integration: shubh-triton
+    pointer:
+      region: "us-east-2"
 
   # - name: scale
   #   type: replicas
@@ -391,12 +391,12 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  - name: sh-ecs-cluster
-    type: cluster
-    integration: aws
-    pointer:
-      sourceName : "default" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: sh-ecs-cluster
+  #   type: cluster
+  #   integration: aws
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  #     region: "us-west-2"
 
 
   # - name: sh-lb-1

@@ -138,11 +138,11 @@ jobs:
 
 
 
-  # - name: deploytriton
-  #   type: deploy
-  #   steps:
-  #     - IN: tri-cluster
-  #     - IN: sh-manifestjob2
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: sh-manifestjob
       #- IN: scale
   #   on_success:
   #     - NOTIFY: slackNotification
@@ -151,18 +151,18 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: newEcsJob
-    type: deploy
-    steps:
-      - IN: sh-ecs-cluster
-      - IN: sh-manifestjob
-      # - IN: sh-lb-1
-      #   applyTo:
-      #     - manifest: sh-manifestjob # it can only apply to one manifest
-      #       image: sh-myapp2 # it can only apply to one image in the manifest
-      #       port: 80
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: newEcsJob
+  #   type: deploy
+  #   steps:
+  #     - IN: sh-ecs-cluster
+  #     - IN: sh-manifestjob
+  #     # - IN: sh-lb-1
+  #     #   applyTo:
+  #     #     - manifest: sh-manifestjob # it can only apply to one manifest
+  #     #       image: sh-myapp2 # it can only apply to one image in the manifest
+  #     #       port: 80
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
   # - name: deployecs-2
   #   type: deploy
@@ -242,15 +242,15 @@ jobs:
  #    on_failure:
  #      - NOTIFY: slackNotification
 
-  # - name: stagingRelease
-  #   type: release
-  #   steps:
-  #     - IN: deploytriton
-  #     - IN: stagingVerBase2
-  #       #switch: on
-  #     #- IN: sh-manifestjob1
-  #     - TASK: managed
-  #       bump: major
+  - name: stagingRelease
+    type: release
+    steps:
+      - IN: deploytriton
+      - IN: stagingVerBase2
+        #switch: on
+      #- IN: sh-manifestjob1
+      - TASK: managed
+        bump: minor
 
   # - name: stagingReleaseWithoutDeployJob
   #   type: release
