@@ -32,16 +32,16 @@ resources:
   #   seed:
   #     versionName: "60.0.0"
 
-  # - name: sh-myapp2
-  #   type: image
-  #   integration: docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"
-  #     #sourceName: "busybox"
-  #     isPull: true
-  #   seed:
-  #     versionName: "driftking"
-  #     #versionName: "latest"
+  - name: sh-myapp2
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/debian"
+      #sourceName: "busybox"
+      isPull: true
+    seed:
+      versionName: "driftking"
+      #versionName: "latest"
 
   # - name: sh-myapp3
   #   type: image
@@ -167,11 +167,11 @@ resources:
 #   "cmd": [
 #     "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
 #   ]
-  - name: ddc-cluster
-    type: cluster
-    integration: ddc
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
   # - name: ddc-cluster
   #   type: cluster
@@ -291,7 +291,7 @@ resources:
   #   seed:
   #     interval: "*/2 * * * *"
   #   flags:
-  #     - nightly1
+  #     - nightly1dd
 
   # - name: nightly2
   #   type: time
@@ -391,12 +391,12 @@ resources:
   #   seed:
   #     versionName: "myapp3"
 
-  # - name: sh-ecs-cluster
-  #   type: cluster
-  #   integration: aws
-  #   pointer:
-  #     sourceName : "default" #name of the cluster we are deploying
-  #     region: "us-west-2"
+  - name: sh-ecs-cluster
+    type: cluster
+    integration: aws
+    pointer:
+      sourceName : "default" #name of the cluster we are deploying
+      region: "us-west-2"
 
 
   # - name: sh-lb-1
