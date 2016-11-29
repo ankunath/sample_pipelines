@@ -361,7 +361,7 @@ jobs:
     #  - TASK: managed
     #    deployMethod: upgrade
 
-  - name: ddc-deploy
+  - name: ddc-deploy-1
     type: deploy
     steps:
       - IN: manifestjob
