@@ -17,7 +17,7 @@ jobs:
   - name: manifestjob1
     type: manifest
     steps:
-      #- IN: sh-myapp2
+      - IN: sh-myapp2
       #- IN: sh-m-shubh-1
       #- IN: sh-myapp2
       - IN: sh-docker-opts
@@ -26,7 +26,7 @@ jobs:
   - name: manifestjob2
     type: manifest
     steps:
-      #- IN: sh-myapp3
+      - IN: sh-myapp3
       - IN: sh-docker-opts
       #- IN: manifestjob
       - IN: sh-trigger
