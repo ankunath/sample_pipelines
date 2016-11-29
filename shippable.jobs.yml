@@ -366,6 +366,8 @@ jobs:
     steps:
       - IN: manifestjob
       - IN: ddc-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: tri-deploy
   #   type: deploy

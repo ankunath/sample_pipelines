@@ -32,16 +32,16 @@ resources:
   #   seed:
   #     versionName: "60.0.0"
 
-  - name: sh-myapp2
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      #sourceName: "busybox"
-      isPull: true
-    seed:
-      versionName: "driftking"
-      #versionName: "latest"
+  # - name: sh-myapp2
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     #sourceName: "busybox"
+  #     isPull: true
+  #   seed:
+  #     versionName: "driftking"
+  #     #versionName: "latest"
 
   # - name: sh-myapp3
   #   type: image
