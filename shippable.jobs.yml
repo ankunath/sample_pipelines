@@ -32,7 +32,7 @@ jobs:
       - IN: sh-trigger
 
 
-  - name: newEcsJob111
+  - name: newEcsJob1110
     type: deploy
     steps:
       - IN: sh-ecs-cluster
@@ -46,13 +46,13 @@ jobs:
   #       deployMethod: upgrade
 
 
-  - name: deploytriton222
+  - name: deploytriton2220
     type: deploy
     steps:
       - IN: manifestjob1
       - IN: tri-cluster
 
-  - name: deploygce333
+  - name: deploygce3330
     type: deploy
     steps:
       - IN: gke-cluster
