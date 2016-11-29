@@ -131,11 +131,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: ddc-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: ddc-cluster
-  #     - IN: sh-manifestjob
+  - name: ddc-deploy
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: sh-manifestjob
     # on_success:
     #   - NOTIFY: slackNotification
       # - IN: scale
