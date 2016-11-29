@@ -26,7 +26,7 @@ jobs:
   - name: manifestjob2
     type: manifest
     steps:
-      - IN: sh-myapp3
+      #- IN: sh-myapp3
       - IN: sh-docker-opts
       #- IN: manifestjob
 
