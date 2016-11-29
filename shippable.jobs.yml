@@ -14,7 +14,7 @@ jobs:
   #     #   applyTo:
   #     #     - sh-myapp2
   #     #- IN: scale
-  - name: sh-manifestjob
+  - name: manifestjob
     type: manifest
     steps:
       #- IN: sh-myapp3
@@ -138,11 +138,11 @@ jobs:
 
 
 
-  - name: deploytriton
-    type: deploy
-    steps:
-      - IN: tri-cluster
-      - IN: sh-manifestjob
+  # - name: deploytriton
+  #   type: deploy
+  #   steps:
+  #     - IN: tri-cluster
+  #     - IN: sh-manifestjob
       #- IN: scale
   #   on_success:
   #     - NOTIFY: slackNotification
@@ -361,11 +361,11 @@ jobs:
     #  - TASK: managed
     #    deployMethod: upgrade
 
-  # - name: ddc-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: manifestjob1
-  #     - IN: ddc-cluster
+  - name: ddc-deploy
+    type: deploy
+    steps:
+      - IN: manifestjob
+      - IN: ddc-cluster
 
   # - name: tri-deploy
   #   type: deploy
