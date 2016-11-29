@@ -22,10 +22,10 @@ resources:
   #   seed:
   #     versionName: "1.0.0"
 
-  - name: stagingVerBase2
-    type: version
-    seed:
-      versionName: "40.0.0"
+  # - name: stagingVerBase2
+  #   type: version
+  #   seed:
+  #     versionName: "40.0.0"
 
   # - name: stagingVerBase3
   #   type: version
@@ -43,16 +43,16 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  - name: sh-myapp3
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/debian"
-      #sourceName: "busybox"
-      isPull: true
-    seed:
-      versionName: "entrypoint"
-      #versionName: "latest"
+  # - name: sh-myapp3
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"
+  #     #sourceName: "busybox"
+  #     isPull: true
+  #   seed:
+  #     versionName: "entrypoint"
+  #     #versionName: "latest"
 
   # - name: sh-myapp3
   #   type: image
