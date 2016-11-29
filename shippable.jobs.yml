@@ -49,6 +49,12 @@ jobs:
     steps:
       - IN: manifestjob1
       - IN: tri-cluster
+
+  - name: deploygce
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      - IN: manifestjob1
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
@@ -185,11 +191,7 @@ jobs:
   #     - IN: ecs-cluster
   #     - IN: sh-manifestjob3
 
-  # - name: deploygce
-  #   type: deploy
-  #   steps:
-  #     - IN: gke-cluster
-  #     - IN: sh-manifestjob
+
   # #     - TASK: managed
   # #       deployMethod: replace
 
