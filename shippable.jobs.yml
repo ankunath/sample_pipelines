@@ -26,9 +26,9 @@ jobs:
   - name: sh-manifestjob2
     type: manifest
     steps:
-      #- IN: sh-myapp3
+      - IN: sh-myapp3
       - IN: sh-docker-opts
-      - IN: manifestjob
+      #- IN: manifestjob
 
   - name: newEcsJob
     type: deploy
@@ -135,7 +135,7 @@ jobs:
     type: deploy
     steps:
       - IN: ddc-cluster
-      - IN: sh-manifestjob
+      - IN: manifestjob
     # on_success:
     #   - NOTIFY: slackNotification
       # - IN: scale
