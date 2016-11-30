@@ -64,7 +64,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 56
+      memory: 70
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -113,11 +113,11 @@ resources:
   #   seed:
   #     versionName: "entrypoint"
 
-  - name: tri-cluster
-    type: cluster
-    integration: triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: scale
   #   type: replicas
@@ -190,11 +190,11 @@ resources:
 
 
 
-  # - name: dcl-cluster
-  #   type: dclCluster
-  #   integration: jatin-dcl
-  #   pointer:
-  #     sourceName: "cluster-dcl"
+  - name: dcl-cluster
+    type: cluster
+    integration: dcl
+    pointer:
+      sourceName: "default"
   # - name: nightly
   #   type: time
   #   seed:
@@ -210,12 +210,12 @@ resources:
 
 
 
-  - name: gke-cluster
-    type: cluster
-    integration: gce
-    pointer:
-      sourceName: "small-cluster"
-      region: "us-east1-d"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gce
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "us-east1-d"
 
   # - name: gke-cluster
   #   type: cluster
@@ -271,12 +271,12 @@ resources:
   #     sourceName: ankunath/sample_node
   #     branch: master
 
-  - name: sample_node
-    type: gitRepo
-    integration: git
-    pointer:
-      sourceName: ankunath/sample_node
-      branch: master
+  # - name: sample_node
+  #   type: gitRepo
+  #   integration: git
+  #   pointer:
+  #     sourceName: ankunath/sample_node
+  #     branch: master
 
   # - name: slackNotification
   #   type: notification

@@ -23,46 +23,52 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  - name: manifestjob2
-    type: manifest
-    steps:
-      - IN: sh-myapp3
-      - IN: sh-docker-opts
-      #- IN: manifestjob
-      - IN: sh-trigger
+  # - name: manifestjob2
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     - IN: sh-docker-opts
+  #     #- IN: manifestjob
+  #     - IN: sh-trigger
 
 
-  - name: newEcsJob1110
-    type: deploy
-    steps:
-      - IN: sh-ecs-cluster
-      - IN: manifestjob2
-      # - IN: sh-lb-1
-      #   applyTo:
-      #     - manifest: sh-manifestjob # it can only apply to one manifest
-      #       image: sh-myapp2 # it can only apply to one image in the manifest
-      #       port: 80
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  # - name: newEcsJob1110
+  #   type: deploy
+  #   steps:
+  #     - IN: sh-ecs-cluster
+  #     - IN: manifestjob2
+  #     # - IN: sh-lb-1
+  #     #   applyTo:
+  #     #     - manifest: sh-manifestjob # it can only apply to one manifest
+  #     #       image: sh-myapp2 # it can only apply to one image in the manifest
+  #     #       port: 80
+  # #     - TASK: managed
+  # #       deployMethod: upgrade
 
 
-  - name: deploytriton2220
-    type: deploy
-    steps:
-      - IN: manifestjob1
-      - IN: tri-cluster
+  # - name: deploytriton2220
+  #   type: deploy
+  #   steps:
+  #     - IN: manifestjob1
+  #     - IN: tri-cluster
 
-  - name: deploygce3330
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      - IN: manifestjob1
+  # - name: deploygce3330
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     - IN: manifestjob1
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
   #     - NOTIFY: slackNotification
       # - TASK: managed
       #   deployMethod: scale
+
+  - name: deployDcl
+    type: deploy
+    steps:
+      - IN: manifestjob1
+      - IN: dcl-cluster
 
 
   # - name: sh-manifestjob2
@@ -291,18 +297,6 @@ jobs:
   #     # - TASK: managed
   #       # deployMethod: upgrade
   #       # bump: major
-
-  - name: script-1
-    type: runSh
-    steps:
-      - IN: sample-node
-      - IN: sh-trigger
-      - TASK:
-        - script: ls
-        - script: echo "ran ls 1234"
-        - script: pwd
-    on_success:
-        - script: echo 'This will executes after the process is completed'
 
   # - name: sample
   #   type: runSh
