@@ -292,6 +292,18 @@ jobs:
   #       # deployMethod: upgrade
   #       # bump: major
 
+  - name: script-1
+    type: runSh
+    steps:
+      - IN: sample-node
+      - IN: sh-trigger
+      - TASK:
+        - script: ls
+        - script: echo "ran ls 1234"
+        - script: pwd
+    on_success:
+        - script: echo 'This will executes after the process is completed'
+
   # - name: sample
   #   type: runSh
   #   steps:

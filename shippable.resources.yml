@@ -54,17 +54,17 @@ resources:
       versionName: "entrypoint"
       #versionName: "latest"
 
-  - name: sh-ecs-cluster
-    type: cluster
-    integration: aws
-    pointer:
-      sourceName : "default" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: sh-ecs-cluster
+  #   type: cluster
+  #   integration: aws
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  #     region: "us-west-2"
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 70
+      memory: 56
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -271,12 +271,12 @@ resources:
   #     sourceName: ankunath/sample_node
   #     branch: master
 
-  # - name: sample_node
-  #   type: gitRepo
-  #   integration: git
-  #   pointer:
-  #     sourceName: ankunath/sample_node
-  #     branch: master
+  - name: sample_node
+    type: gitRepo
+    integration: git
+    pointer:
+      sourceName: ankunath/sample_node
+      branch: master
 
   # - name: slackNotification
   #   type: notification
