@@ -64,13 +64,13 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: DCL
+  - name: DCL1009
     type: deploy
     steps:
       - IN: manifestjob
       - IN: dcl-cluster
-      # - TASK: managed
-      #   deployMethod: upgrade
+      - TASK: managed
+        deployMethod: blueGreen
 
 
   # - name: sh-manifestjob2
