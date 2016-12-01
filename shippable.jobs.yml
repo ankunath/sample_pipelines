@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: DCL1009
+  - name: DCLDEPLOYMENT
     type: deploy
     steps:
       - IN: manifestjob
