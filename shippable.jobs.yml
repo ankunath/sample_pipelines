@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: deployDCL100
+  - name: deployDCLSHUBH
     type: deploy
     steps:
       - IN: manifestjob
