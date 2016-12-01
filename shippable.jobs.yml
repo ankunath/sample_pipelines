@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: DCLDEPLOYMENT
+  - name: DCLANKU
     type: deploy
     steps:
       - IN: manifestjob
