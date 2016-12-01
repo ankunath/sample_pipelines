@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: deployDcl20
+  - name: deployDCL100
     type: deploy
     steps:
       - IN: manifestjob1
