@@ -14,7 +14,7 @@ jobs:
   #     #   applyTo:
   #     #     - sh-myapp2
   #     #- IN: scale
-  - name: manifestjob11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+  - name: manifestjob1
     type: manifest
     steps:
       - IN: sh-myapp2
@@ -67,7 +67,7 @@ jobs:
   - name: deployDCL100
     type: deploy
     steps:
-      - IN: manifestjob11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+      - IN: manifestjob1
       - IN: dcl-cluster
       # - TASK: managed
       #   deployMethod: upgrade
