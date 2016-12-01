@@ -64,7 +64,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 53
+      memory: 50
       # ulimits:
       #   - name: nofile
       #     soft: 50
