@@ -36,12 +36,12 @@ resources:
     type: image
     integration: docker
     pointer:
-      #sourceName: "scriptnull/debian"
-      sourceName: "busybox"
+      sourceName: "scriptnull/debian"
+      #sourceName: "busybox"
       isPull: true
     seed:
-      #versionName: "driftking"
-      versionName: "latest"
+      versionName: "driftking"
+      #versionName: "latest"
 
   - name: sh-myapp3
     type: image
@@ -64,7 +64,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 38
+      memory: 38766
       # ulimits:
       #   - name: nofile
       #     soft: 50
