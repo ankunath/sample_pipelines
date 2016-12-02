@@ -41,7 +41,7 @@ resources:
       isPull: true
     seed:
       #versionName: "driftking"
-      versionName: "dockerhub.28"
+      versionName: "dockerhub.4"
 
   - name: sh-myapp3
     type: image
@@ -64,7 +64,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 57
+      memory: 59
       # ulimits:
       #   - name: nofile
       #     soft: 50
