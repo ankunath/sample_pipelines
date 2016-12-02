@@ -37,11 +37,11 @@ resources:
     integration: docker
     pointer:
       #sourceName: "scriptnull/debian"
-      sourceName: "busybox"
+      sourceName: "ankul/test-repo"
       isPull: true
     seed:
       #versionName: "driftking"
-      versionName: "latest"
+      versionName: "dockerhub.4"
 
   - name: sh-myapp3
     type: image
@@ -64,7 +64,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 551
+      memory: 55
       # ulimits:
       #   - name: nofile
       #     soft: 50
