@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: DCL_PROJECT_123
+  - name: DCLPROJECT123
     type: deploy
     steps:
       - IN: manifestjob
