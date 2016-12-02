@@ -38,7 +38,7 @@ resources:
     pointer:
       #sourceName: "scriptnull/debian"
       sourceName: "busybox"
-      isPull: true
+      #isPull: true
     seed:
       #versionName: "driftking"
       versionName: "latest"
@@ -64,7 +64,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 4000
+      memory: 40098
       # ulimits:
       #   - name: nofile
       #     soft: 50
