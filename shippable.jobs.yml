@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: SHUBHANKIT123
+  - name: SHUBHANKIT123000
     type: deploy
     steps:
       - IN: manifestjob
