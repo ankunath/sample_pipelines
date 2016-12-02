@@ -38,7 +38,7 @@ resources:
     pointer:
       #sourceName: "scriptnull/debian"
       sourceName: "busybox"
-      #isPull: true
+      isPull: true
     seed:
       #versionName: "driftking"
       versionName: "latest"
@@ -51,7 +51,7 @@ resources:
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "entrypoint"
+      versionName: "driftking"
       #versionName: "latest"
 
   # - name: sh-ecs-cluster
