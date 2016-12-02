@@ -69,8 +69,8 @@ jobs:
     steps:
       - IN: manifestjob
       - IN: dcl-cluster
-      - TASK: managed
-        deployMethod: blueGreen
+      # - TASK: managed
+      #   deployMethod: blueGreen
 
 
   # - name: sh-manifestjob2
