@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: DDC-DEPLOY123000
+  - name: DDC-DEPLOY12300
     type: deploy
     steps:
       - IN: manifestjob
