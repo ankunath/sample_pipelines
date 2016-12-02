@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: DDC-DEPLOY-FAILED
+  - name: DDC-DEPLOY123
     type: deploy
     steps:
       - IN: manifestjob
