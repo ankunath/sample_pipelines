@@ -64,12 +64,12 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 193
+      memory: 345
       # ulimits:
       #   - name: nofile
       #     soft: 50
       #     hard: 100
-      cpuShares: 109
+      cpuShares: 100
       sequential_deployment: true
       # user:
       #   - "driftking"
