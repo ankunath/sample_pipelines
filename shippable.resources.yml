@@ -95,8 +95,8 @@ resources:
       # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
       # labels:
       #   ri_tu: 123
-      # links:
-      #   - manifestjob-1-1:myAlias
+      links:
+        - manifestjob-1-1:myAlias
       # volumesFrom:
       #   - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
       #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
