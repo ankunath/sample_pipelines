@@ -84,6 +84,7 @@ resources:
       #privileged: true
       # #readOnlyRootFilesystem: true
       network: host
+      autorestart: true
       # # # logConfig:
       # # #   type: json-file
       # # #   # options:  # "options" is not required
