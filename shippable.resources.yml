@@ -96,7 +96,7 @@ resources:
       labels:
         ri_tu: 123
       links:
-        -  ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:manifestjob-1
+        -  ALPHA123-MANIFESTJOB-7FBD13D7-5321-4248-BEA9-4F422D69438B:manifestjob-1
       # volumesFrom:
       #   - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
       #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
