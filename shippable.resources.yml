@@ -64,7 +64,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 34
+      memory: 39
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -83,7 +83,7 @@ resources:
       # workingDir: "/app"
       # privileged: true
       # #readOnlyRootFilesystem: true
-      network: host
+      #network: host
       #autorestart: true
       # # # logConfig:
       # # #   type: json-file
