@@ -96,7 +96,7 @@ resources:
       labels:
         ri_tu: 123
       links:
-        -  manifestjob-1:alias
+        -  oldone:alias
       # volumesFrom:
       #   - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
       #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
