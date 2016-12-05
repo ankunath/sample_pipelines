@@ -83,7 +83,7 @@ resources:
       workingDir: "/app"
       #privileged: true
       # #readOnlyRootFilesystem: true
-      # # network: bridge
+      network: host
       # # # logConfig:
       # # #   type: json-file
       # # #   # options:  # "options" is not required
