@@ -69,7 +69,7 @@ resources:
       #   - name: nofile
       #     soft: 50
       #     hard: 100
-      cpuShares: 100
+      cpuShares: 109
       sequential_deployment: true
       # user:
       #   - "driftking"
