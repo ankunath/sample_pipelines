@@ -77,15 +77,14 @@ resources:
         #- "driftking2"
       portMappings:
         - "80:80"
-        - "443:443"
-      entrypoint: '/app/shubhankit'
+      #entrypoint: '/app/shubhankit'
       # publishAllPorts: true
-      deployment_strategy: "EVERY_NODE"
+      #deployment_strategy: "EVERY_NODE"
       workingDir: "/app"
       privileged: true
       # #readOnlyRootFilesystem: true
       network: host
-      autorestart: true
+      #autorestart: true
       # # # logConfig:
       # # #   type: json-file
       # # #   # options:  # "options" is not required
