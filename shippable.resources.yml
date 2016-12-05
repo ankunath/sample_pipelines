@@ -64,12 +64,13 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 56
+      memory: 198
       # ulimits:
       #   - name: nofile
       #     soft: 50
       #     hard: 100
-      #cpuShares: 400
+      cpuShares: 100
+      sequential_deployment: true
       # user:
       #   - "driftking"
         #- "root"
@@ -79,7 +80,7 @@ resources:
       #  # - "443:443"
       # # #entrypoint
       # publishAllPorts: true
-      # workingDir: "/app"
+      workingDir: "/app"
       #privileged: true
       # #readOnlyRootFilesystem: true
       # # network: bridge
@@ -102,6 +103,7 @@ resources:
       #   - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
       # volumes:
       #   - "/host/path:/container/path2:rw"
+      nickname: teamBRAVE
 
   # - name: sh-myapp3
   #   type: image
