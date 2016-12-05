@@ -80,6 +80,7 @@ resources:
       #  # - "443:443"
       # # #entrypoint
       # publishAllPorts: true
+      deployment_strategy: "EVERY_NODE"
       workingDir: "/app"
       #privileged: true
       # #readOnlyRootFilesystem: true
