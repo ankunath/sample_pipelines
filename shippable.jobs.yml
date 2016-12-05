@@ -64,7 +64,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: ALPHA123
+  - name: ALPHALOCAL
     type: deploy
     steps:
       - IN: manifestjob
