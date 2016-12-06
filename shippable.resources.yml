@@ -81,8 +81,8 @@ resources:
       # publishAllPorts: true
       #deployment_strategy: "EVERY_NODE"
       workingDir: "/app"
-      # privileged: true
-      # #readOnlyRootFilesystem: true
+      privileged: true
+      readOnlyRootFilesystem: true
       #network: host
       #restart: true
       # # # logConfig:
