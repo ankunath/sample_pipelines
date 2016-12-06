@@ -14,7 +14,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 60
+      memory: 67
       cpuShares: 110
       # workingDir: "/app"
       # privileged: true
@@ -43,13 +43,14 @@ resources:
       #   - NET_ADMIN
       #   - SYS_ADMIN
       #cmd: "echo 'HELLO WORLD!!!!'"
+      #entryPoint: '/app/shubhankit'
       cGroupParent: "m-executer-abcd"
       hostName: "shubh"
       tty: true
       stdin: true
-      entryPoint: '/app/shubhankit'
       devices:
         - "/dev/ttyUSB0:/dev/ttyUSB0"
+      memorySwap: 100
       extra_hosts:
         - "somehost:162.242.195.82"
         - "otherhost:50.31.209.229"
