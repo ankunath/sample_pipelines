@@ -14,7 +14,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 56
+      memory: 54
       cpuShares: 116
       # workingDir: "/app"
       # privileged: true
@@ -57,10 +57,10 @@ resources:
       # publishAllPorts: true
       # links:
       #   -   ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:oldone:alias
-      volumesFrom:
-        - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
-      volumes:
-        - "/usr/bin:/makemeworking:ro"
+      # volumesFrom:
+      #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
+      # volumes:
+      #   - "/usr/bin:/makemeworking:ro"
 
 
 
