@@ -14,13 +14,13 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 50
+      memory: 60
       cpuShares: 110
       # workingDir: "/app"
       # privileged: true
       # readOnlyRootFilesystem: true
       # #network: host
-      # restart: "on-failure"
+      # restartPolicy: "on-failure"
       # autodestroy: "no"
       # autoredeploy: true
       #sequential_deployment: true
@@ -34,17 +34,25 @@ resources:
       # labels:
       #   ri_tu: 123
       #deployment_strategy: "high_availability"
-      securityOptions:
-        - label:user:USER
-        - label:role:ROLE
-      capAdd:
-        - ALL
-      capDrop:
-        - NET_ADMIN
-        - SYS_ADMIN
+      # securityOptions:
+      #   - label:user:USER
+      #   - label:role:ROLE
+      # capAdd:
+      #   - ALL
+      # capDrop:
+      #   - NET_ADMIN
+      #   - SYS_ADMIN
       #cmd: "echo 'HELLO WORLD!!!!'"
       cGroupParent: "m-executer-abcd"
+      hostName: "shubh"
+      tty: true
+      stdin: true
       entryPoint: '/app/shubhankit'
+      devices:
+        - "/dev/ttyUSB0:/dev/ttyUSB0"
+      extra_hosts:
+        - "somehost:162.242.195.82"
+        - "otherhost:50.31.209.229"
       # publishAllPorts: true
       # links:
       #   -   ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:oldone:alias
