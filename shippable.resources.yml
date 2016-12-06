@@ -14,7 +14,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 96
+      memory: 92
       cpuShares: 116
       # workingDir: "/app"
       # privileged: true
@@ -27,8 +27,8 @@ resources:
       #user: "driftking"
       #domainName: "www.levelachievers.com"
       #nickname: teamBRAVE
-      portMappings:
-        - "80:80"
+      # portMappings:
+      #   - "80:80"
       # dnsServers: "127.0.0.2"
       # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # labels:
@@ -58,8 +58,13 @@ resources:
       #   - "somehost:162.242.195.82"
       #   - "otherhost:50.31.209.229"
       # publishAllPorts: true
-      links:
-        -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
+      # links:
+      #   -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
+      roles:
+        - global
+      tags:
+        - staging
+      pid: "host"
       # volumesFrom:
       #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
       # volumes:
