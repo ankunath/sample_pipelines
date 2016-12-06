@@ -14,7 +14,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 565
+      memory: 56
       cpuShares: 110
       # workingDir: "/app"
       # privileged: true
@@ -34,11 +34,14 @@ resources:
       # labels:
       #   ri_tu: 123
       #deployment_strategy: "high_availability"
+      security_opt:
+        - label:user:USER
+        - label:role:ROLE
       capAdd:
-        - "ALL"
+        - ALL
       capDrop:
-        - "NET_ADMIN"
-        - "SYS_ADMIN"
+        - NET_ADMIN
+        - SYS_ADMIN
       #cmd: "echo 'HELLO WORLD!!!!'"
       cGroupParent: "m-executer-abcd"
       entrypoint: '/app/shubhankit'
