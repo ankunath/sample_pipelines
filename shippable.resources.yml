@@ -14,7 +14,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 250
+      memory: 57
       cpuShares: 110
       # workingDir: "/app"
       # privileged: true
@@ -57,12 +57,10 @@ resources:
       # publishAllPorts: true
       # links:
       #   -   ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:oldone:alias
-      # # volumesFrom:
-      #   - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
-      #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
-      #   - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
-      # volumes:
-      #   - "/host/path:/container/path2:rw"
+      volumesFrom:
+        - "manifestjob1-1"
+      volumes:
+        - "/usr/bin:/makemeworking:ro"
 
 
 
