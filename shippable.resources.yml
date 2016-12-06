@@ -70,7 +70,7 @@ resources:
       #     soft: 50
       #     hard: 100
       cpuShares: 110
-      #sequential_deployment: true
+      sequential_deployment: true
       user: "driftking"
       #   - "driftking"
         #- "root"
@@ -84,7 +84,7 @@ resources:
       privileged: true
       readOnlyRootFilesystem: true
       #network: host
-      #restart: true
+      restart: true
       # # # logConfig:
       # # #   type: json-file
       # # #   # options:  # "options" is not required
