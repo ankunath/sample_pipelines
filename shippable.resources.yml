@@ -64,7 +64,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 42
+      memory: 49
       # ulimits:
       #   - name: nofile
       #     soft: 50
@@ -84,7 +84,7 @@ resources:
       privileged: true
       readOnlyRootFilesystem: true
       #network: host
-      restart: "on_failure"
+      restart: "on-failure"
       # # # logConfig:
       # # #   type: json-file
       # # #   # options:  # "options" is not required
