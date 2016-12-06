@@ -16,30 +16,24 @@ resources:
     version:
       memory: 59
       cpuShares: 110
-      sequential_deployment: true
-      user: "driftking"
+      # workingDir: "/app"
+      # privileged: true
+      # readOnlyRootFilesystem: true
+      # #network: host
+      # restart: "on-failure"
+      # autodestroy: "no"
+      # autoredeploy: true
+      #sequential_deployment: true
+      #user: "driftking"
+      #domainName: "www.levelachievers.com"
+      #nickname: teamBRAVE
       # portMappings:
       #   - "80:80"
-      #entrypoint: '/app/shubhankit'
-      # publishAllPorts: true
+      # dnsServers: "127.0.0.2"
+      # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+      # labels:
+      #   ri_tu: 123
       deployment_strategy: "high_availability"
-      workingDir: "/app"
-      privileged: true
-      readOnlyRootFilesystem: true
-      #network: host
-      restart: "on-failure"
-      autodestroy: "no"
-      autoredeploy: true
-      # # # logConfig:
-      # # #   type: json-file
-      # # #   # options:  # "options" is not required
-      # # #   #   key11: value11
-      # # #   #   key22: value22
-      dnsServers: "127.0.0.2"
-      dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
-      # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
-      labels:
-        ri_tu: 123
       capAdd:
         - "ALL"
       capDrop:
@@ -47,7 +41,8 @@ resources:
         - "SYS_ADMIN"
       cmd: "echo 'HELLO WORLD!!!!'"
       cGroupParent: "m-executer-abcd"
-
+      #entrypoint: '/app/shubhankit'
+      # publishAllPorts: true
       # links:
       #   -   ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:oldone:alias
       # # volumesFrom:
@@ -56,8 +51,7 @@ resources:
       #   - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
       # volumes:
       #   - "/host/path:/container/path2:rw"
-      domainName: "www.levelachievers.com"
-      nickname: teamBRAVE
+
 
 
   - name: dcl-cluster
