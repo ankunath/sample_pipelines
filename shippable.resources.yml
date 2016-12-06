@@ -14,8 +14,8 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 57
-      cpuShares: 110
+      memory: 56
+      cpuShares: 116
       # workingDir: "/app"
       # privileged: true
       # readOnlyRootFilesystem: true
@@ -58,7 +58,7 @@ resources:
       # links:
       #   -   ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:oldone:alias
       volumesFrom:
-        - "manifestjob1-1"
+        - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
       volumes:
         - "/usr/bin:/makemeworking:ro"
 
