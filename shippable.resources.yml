@@ -14,7 +14,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 78
+      memory: 99
       cpuShares: 116
       # workingDir: "/app"
       # privileged: true
@@ -27,13 +27,13 @@ resources:
       #user: "driftking"
       #domainName: "www.levelachievers.com"
       #nickname: teamBRAVE
-      # portMappings:
-      #   - "80:80"
+      portMappings:
+        - "80:80"
       # dnsServers: "127.0.0.2"
       # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # labels:
       #   ri_tu: 123
-      deployment_strategy: "high_availability"
+      #deployment_strategy: "high_availability"
       # securityOptions:
       #   - label:user:USER
       #   - label:role:ROLE
