@@ -51,15 +51,15 @@ resources:
       # devices:
       #   - "/dev/ttyUSB0:/dev/ttyUSB0"
       memorySwap: 100
-      linked_to_service:
-        - "to_service": "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
-        - "name" : "shubh"
+      # linked_to_service:
+      #   - "to_service": "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
+      #   - "name" : "shubh"
       # extraHosts:
       #   - "somehost:162.242.195.82"
       #   - "otherhost:50.31.209.229"
       # publishAllPorts: true
-      # links:
-      #   -   ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:oldone:alias
+      links:
+        -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
       # volumesFrom:
       #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
       # volumes:
