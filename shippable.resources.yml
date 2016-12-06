@@ -14,15 +14,15 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 96
+      memory: 100
       cpuShares: 110
       # workingDir: "/app"
       # privileged: true
       # readOnlyRootFilesystem: true
       # #network: host
       # restartPolicy: "on-failure"
-      # autodestroy: "no"
-      # autoredeploy: true
+      autodestroy: "no"
+      autoredeploy: true
       #sequential_deployment: true
       #user: "driftking"
       #domainName: "www.levelachievers.com"
@@ -33,7 +33,7 @@ resources:
       # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       # labels:
       #   ri_tu: 123
-      #deployment_strategy: "high_availability"
+      deployment_strategy: "high_availability"
       # securityOptions:
       #   - label:user:USER
       #   - label:role:ROLE
