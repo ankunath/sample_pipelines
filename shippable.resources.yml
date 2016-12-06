@@ -14,7 +14,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 46
+      memory: 56
       cpuShares: 110
       sequential_deployment: true
       user: "driftking"
