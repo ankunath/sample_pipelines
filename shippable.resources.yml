@@ -14,7 +14,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 97
+      memory: 99
       cpuShares: 120
       workingDir: "/app"
       privileged: true
