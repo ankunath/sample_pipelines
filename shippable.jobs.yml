@@ -64,13 +64,37 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: dcl-deploy
+  - name: dcl-deploy-bluegreen
     type: deploy
     steps:
       - IN: manifestjob0
       - IN: dcl-cluster
       # - TASK: managed
       #   deployMethod: blueGreen
+
+  - name: dcl-deploy-upgrade
+    type: deploy
+    steps:
+      - IN: manifestjob0
+      - IN: dcl-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: dcl-deploy-replace
+    type: deploy
+    steps:
+      - IN: manifestjob0
+      - IN: dcl-cluster
+      - TASK: managed
+        deployMethod: replace
+
+  - name: dcl-deploy-replace
+    type: deploy
+    steps:
+      - IN: manifestjob0
+      - IN: dcl-cluster
+      - IN: deployCluster123
+      - IN: scale
 
 
   # - name: sh-manifestjob2

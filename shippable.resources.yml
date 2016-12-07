@@ -11,11 +11,16 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
+  - name: scale
+    type: replicas
+    version:
+      count: 5
+
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 68
-      cpuShares: 125
+      memory: 60
+      cpuShares: 100
       workingDir: "/app"
       privileged: true
       readOnlyRootFilesystem: true
@@ -65,7 +70,7 @@ resources:
       tags:
         - staging
       #nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
-      pid: ""
+      #pid: ""
       # volumesFrom:
       #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
       # volumes:
