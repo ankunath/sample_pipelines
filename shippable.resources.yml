@@ -19,7 +19,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 64
+      memory: 69
       cpuShares: 100
       # workingDir: "/app"
       # privileged: true
@@ -78,8 +78,9 @@ resources:
       # volumes:
       #   - "/usr/bin:/makemeworking:ro"
       ############################## for gke ###########################
-      hostname: "shubhankit"
-      restartPolicy: "Always"
+      pod:
+        hostname: "shubhankit"
+        restartPolicy: "Always"
 
 
 
