@@ -14,40 +14,40 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 997666
-      cpuShares: 116
-      # workingDir: "/app"
-      # privileged: true
-      # readOnlyRootFilesystem: true
-      # #network: host
-      # restartPolicy: "on-failure"
-      # autodestroy: "no"
-      # autoredeploy: true
-      #sequential_deployment: true
-      #user: "driftking"
-      #domainName: "www.levelachievers.com"
-      #nickname: teamBRAVE
-      # portMappings:
-      #   - "80:80"
-      # dnsServers: "127.0.0.2"
-      # dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
-      # labels:
-      #   ri_tu: 123
-      #deployment_strategy: "high_availability"
-      # securityOptions:
-      #   - label:user:USER
-      #   - label:role:ROLE
-      # capAdd:
-      #   - ALL
-      # capDrop:
-      #   - NET_ADMIN
-      #   - SYS_ADMIN
+      memory: 97
+      cpuShares: 120
+      workingDir: "/app"
+      privileged: true
+      readOnlyRootFilesystem: true
+      #network: host
+      restartPolicy: "on-failure"
+      autodestroy: "no"
+      autoredeploy: true
+      sequential_deployment: true
+      user: "driftking"
+      domainName: "www.levelachievers.com"
+      nickname: teamBRAVE
+      portMappings:
+        - "80:80"
+      dnsServers: "127.0.0.2"
+      dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+      labels:
+        ri_tu: 123
+      deployment_strategy: "high_availability"
+      securityOptions:
+        - label:user:USER
+        - label:role:ROLE
+      capAdd:
+        - ALL
+      capDrop:
+        - NET_ADMIN
+        - SYS_ADMIN
       #cmd: "echo 'HELLO WORLD!!!!'"
-      #entryPoint: '/app/shubhankit'
-      # cGroupParent: "m-executer-abcd"
-      # hostName: "shubh"
-      #tty: true
-      # stdin: true
+      entryPoint: '/app/shubhankit'
+      cGroupParent: "m-executer-abcd"
+      hostName: "shubh"
+      tty: true
+      stdin: true
       # devices:
       #   - "/dev/ttyUSB0:/dev/ttyUSB0"
       memorySwap: 100
@@ -64,7 +64,7 @@ resources:
         - global
       # tags:
       #   - staging
-      nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
+      #nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
       pid: "host"
       # volumesFrom:
       #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
