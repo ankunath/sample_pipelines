@@ -19,7 +19,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 40
+      memory: 49
       cpuShares: 100
       workingDir: "/app"
       privileged: true
@@ -71,7 +71,7 @@ resources:
         - global
       tags:
         - staging
-      nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
+      #nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
       #pid: ""
       # volumesFrom:
       #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
@@ -97,9 +97,9 @@ resources:
     pointer:
       sourceName: "default"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gke
-    pointer:
-      sourceName: "small-cluster"
-      region: "europe-west1-b"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gke
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "europe-west1-b"
