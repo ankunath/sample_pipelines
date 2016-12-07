@@ -14,8 +14,8 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 32
-      cpuShares: 120
+      memory: 65
+      cpuShares: 125
       workingDir: "/app"
       privileged: true
       readOnlyRootFilesystem: true
@@ -62,8 +62,8 @@ resources:
       #   -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
       roles:
         - global
-      # tags:
-      #   - staging
+      tags:
+        - staging
       #nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
       pid: "host"
       # volumesFrom:
