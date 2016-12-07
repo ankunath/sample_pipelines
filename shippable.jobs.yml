@@ -93,7 +93,6 @@ jobs:
     steps:
       - IN: manifestjob0
       - IN: dcl-cluster
-      - IN: deployCluster123
       - IN: scale
 
 
