@@ -19,7 +19,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 28
+      memory: 29
       cpuShares: 100
       # workingDir: "/app"
       # privileged: true
@@ -81,6 +81,16 @@ resources:
       pod:
         hostname: "shubhankit"
         restartPolicy: "Always"
+        terminationGracePeriodSeconds: 500
+        activeDeadlineSeconds: 1000
+        dnsPolicy: "8.8.8.8"
+        nodeSelector: "123"
+        serviceAccountName: "shubh"
+        nodeName: "anku"
+
+
+
+
 
 
 
