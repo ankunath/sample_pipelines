@@ -19,7 +19,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 43
+      memory: 65
       cpuShares: 100
       workingDir: "/app"
       privileged: true
@@ -91,4 +91,4 @@ resources:
     integration: gke
     pointer:
       sourceName: "small-cluster"
-      region: "us-east1-d"
+      region: "europe-west1-b"
