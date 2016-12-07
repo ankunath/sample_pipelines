@@ -19,58 +19,58 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 49
+      memory: 78
       cpuShares: 100
-      workingDir: "/app"
-      privileged: true
-      readOnlyRootFilesystem: true
-      #network: host
-      restartPolicy: "on-failure"
-      autodestroy: "no"
-      autoredeploy: true
-      sequential_deployment: true
-      #user: "driftking"
-      domainName: "www.levelachievers.com"
-      nickname: teamBRAVE
-      # portMappings:
-      #   - "80:80"
-      dnsServers:
-        - "127.0.0.3"
-      dnsSearch:
-        - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
-      labels:
-        ri_tu: 123
-      deployment_strategy: "high_availability"
-      securityOptions:
-        - label:user:USER
-        - label:role:ROLE
-      capAdd:
-        - ALL
-      capDrop:
-        - NET_ADMIN
-        - SYS_ADMIN
-      #cmd: "echo 'HELLO WORLD!!!!'"
-      #entryPoint: '/app/shubhankit'
-      cGroupParent: "m-executer-abcd"
-      hostName: "shubh"
-      tty: true
-      stdin: true
-      # devices:
-      #   - "/dev/ttyUSB0:/dev/ttyUSB0"
-      memorySwap: 100
-      # linked_to_service:
-      #   - "to_service": "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
-      #   - "name" : "shubh"
-      # extraHosts:
-      #   - "somehost:162.242.195.82"
-      #   - "otherhost:50.31.209.229"
-      # publishAllPorts: true
-      # links:
-      #   -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
-      roles:
-        - global
-      tags:
-        - staging
+      # workingDir: "/app"
+      # privileged: true
+      # readOnlyRootFilesystem: true
+      # #network: host
+      # restartPolicy: "on-failure"
+      # autodestroy: "no"
+      # autoredeploy: true
+      # sequential_deployment: true
+      # #user: "driftking"
+      # domainName: "www.levelachievers.com"
+      # nickname: teamBRAVE
+      # # portMappings:
+      # #   - "80:80"
+      # dnsServers:
+      #   - "127.0.0.3"
+      # dnsSearch:
+      #   - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+      # labels:
+      #   ri_tu: 123
+      # #deployment_strategy: "high_availability"
+      # securityOptions:
+      #   - label:user:USER
+      #   - label:role:ROLE
+      # capAdd:
+      #   - ALL
+      # capDrop:
+      #   - NET_ADMIN
+      #   - SYS_ADMIN
+      # #cmd: "echo 'HELLO WORLD!!!!'"
+      # #entryPoint: '/app/shubhankit'
+      # cGroupParent: "m-executer-abcd"
+      # hostName: "shubh"
+      # tty: true
+      # stdin: true
+      # # devices:
+      # #   - "/dev/ttyUSB0:/dev/ttyUSB0"
+      # memorySwap: 100
+      # # linked_to_service:
+      # #   - "to_service": "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
+      # #   - "name" : "shubh"
+      # # extraHosts:
+      # #   - "somehost:162.242.195.82"
+      # #   - "otherhost:50.31.209.229"
+      # # publishAllPorts: true
+      # # links:
+      # #   -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
+      # roles:
+      #   - global
+      # tags:
+      #   - staging
       #nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
       #pid: ""
       # volumesFrom:
@@ -78,12 +78,10 @@ resources:
       # volumes:
       #   - "/usr/bin:/makemeworking:ro"
       ############################## for gke ###########################
-      # pod:
-      #   #hostname: "shubhankit"
-      #   #restartPolicy: "Always"
-      #   terminationGracePeriodSeconds: 500
-      #   activeDeadlineSeconds: 1000
-      #   dnsPolicy: "Default"
+      pod:
+        terminationGracePeriodSeconds: 500
+        activeDeadlineSeconds: 1000
+        dnsPolicy: "Default"
 
 
 
@@ -97,9 +95,9 @@ resources:
     pointer:
       sourceName: "default"
 
-  # - name: gke-cluster
-  #   type: cluster
-  #   integration: gke
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "europe-west1-b"
+  - name: gke-cluster
+    type: cluster
+    integration: gke
+    pointer:
+      sourceName: "small-cluster"
+      region: "europe-west1-b"
