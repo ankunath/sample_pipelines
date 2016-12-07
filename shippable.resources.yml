@@ -34,8 +34,10 @@ resources:
       nickname: teamBRAVE
       # portMappings:
       #   - "80:80"
-      dnsServers: "127.0.0.1"
-      dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+      dnsServers:
+        - "127.0.0.1"
+      dnsSearch:
+        - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
       labels:
         ri_tu: 123
       #deployment_strategy: "high_availability"
