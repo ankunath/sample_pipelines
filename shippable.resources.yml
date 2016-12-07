@@ -28,7 +28,7 @@ resources:
       restartPolicy: "always"
       autodestroy: "no"
       autoredeploy: true
-      sequential_deployment: false
+      sequential_deployment: true
       user: "driftking"
       domainName: "www.levelachievers.com"
       nickname: teamBRAVE
