@@ -19,7 +19,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 22
+      memory: 227
       cpuShares: 100
       # workingDir: "/app"
       # privileged: true
@@ -80,7 +80,7 @@ resources:
       ############################## for gke ###########################
       pod:
         hostname: "shubhankit"
-        restartPolicy: "OnFailure"
+        restartPolicy: "Always"
         terminationGracePeriodSeconds: 500
         activeDeadlineSeconds: 1000
         dnsPolicy: "Default"
