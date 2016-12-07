@@ -228,7 +228,7 @@ jobs:
   # #     - TASK: managed
   # #       deployMethod: replace
 
-  - name: deploy-gke
+  - name: deploy-gke-upgrade
     type: deploy
     steps:
       - IN: gke-cluster
@@ -240,8 +240,28 @@ jobs:
       #   applyTo:
       #     - sh-myapp2
       # - IN: scale-2
-      # - TASK: managed
-      #   deployMethod: upgrade
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: deploy-gke-bluegreen
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      #- IN: gke-cluster-2
+      #- IN: sh-myapp3
+      #- IN: sh-docker-opts
+      - IN: manifestjob0
+
+  - name: deploy-gke-replace
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      #- IN: gke-cluster-2
+      #- IN: sh-myapp3
+      #- IN: sh-docker-opts
+      - IN: manifestjob0
+      - TASK: managed
+        deployMethod: replace
 
   # - name: deploygceUpgrade
   #   type: deploy
