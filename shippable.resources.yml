@@ -19,7 +19,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 21
+      memory: 22
       cpuShares: 100
       # workingDir: "/app"
       # privileged: true
@@ -84,9 +84,7 @@ resources:
         terminationGracePeriodSeconds: 500
         activeDeadlineSeconds: 1000
         dnsPolicy: "Default"
-        nodeSelector: "123"
         serviceAccountName: "shubh"
-        nodeName: "anku"
 
 
 
