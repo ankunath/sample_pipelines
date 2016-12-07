@@ -19,7 +19,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 100
+      memory: 101
       cpuShares: 100
       # workingDir: "/app"
       # privileged: true
@@ -89,11 +89,11 @@ resources:
 
 
 
-  - name: dcl-cluster
-    type: cluster
-    integration: dcl
-    pointer:
-      sourceName: "default"
+  # - name: dcl-cluster
+  #   type: cluster
+  #   integration: dcl
+  #   pointer:
+  #     sourceName: "default"
 
   - name: gke-cluster
     type: cluster
