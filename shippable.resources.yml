@@ -25,7 +25,7 @@ resources:
       privileged: true
       readOnlyRootFilesystem: true
       #network: host
-      restartPolicy: "on-failure"
+      restartPolicy: "always"
       autodestroy: "no"
       autoredeploy: true
       sequential_deployment: false
