@@ -18,6 +18,7 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp3
+      - IN: lb
       #- IN: sh-m-shubh-1
       #- IN: sh-myapp2
       - IN: sh-docker-opts
@@ -212,11 +213,10 @@ jobs:
       # - TASK: managed
       #   deployMethod: replace
 
-  - name: deployecs
+  - name: deployecslb
     type: deploy
     steps:
       - IN: ecs-cluster
-      - IN: lb
       - IN: manifestjob0
 
   # - name: deployecs-3
