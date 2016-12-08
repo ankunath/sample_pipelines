@@ -20,7 +20,7 @@ resources:
     type: loadBalancer
     pointer:
       sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
-      role: ecsServiceRole
+      role: shubhrole
 
 
   - name: sh-docker-opts
