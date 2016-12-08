@@ -212,11 +212,11 @@ jobs:
       # - TASK: managed
       #   deployMethod: replace
 
-  # - name: deployecs-2
-  #   type: deploy
-  #   steps:
-  #     - IN: ecs-cluster
-  #     - IN: sh-manifestjob2
+  - name: deployecs
+    type: deploy
+    steps:
+      - IN: ecs-cluster
+      - IN: manifestjob0
 
   # - name: deployecs-3
   #   type: deploy
@@ -228,40 +228,40 @@ jobs:
   # #     - TASK: managed
   # #       deployMethod: replace
 
-  - name: deploy-gke-upgrade
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      #- IN: gke-cluster-2
-      #- IN: sh-myapp3
-      #- IN: sh-docker-opts
-      - IN: manifestjob0
-      # - IN: dv-params
-      #   applyTo:
-      #     - sh-myapp2
-      # - IN: scale-2
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: deploy-gke-upgrade
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     #- IN: gke-cluster-2
+  #     #- IN: sh-myapp3
+  #     #- IN: sh-docker-opts
+  #     - IN: manifestjob0
+  #     # - IN: dv-params
+  #     #   applyTo:
+  #     #     - sh-myapp2
+  #     # - IN: scale-2
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
-  - name: deploy-gke-bluegreen
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      #- IN: gke-cluster-2
-      #- IN: sh-myapp3
-      #- IN: sh-docker-opts
-      - IN: manifestjob0
+  # - name: deploy-gke-bluegreen
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     #- IN: gke-cluster-2
+  #     #- IN: sh-myapp3
+  #     #- IN: sh-docker-opts
+  #     - IN: manifestjob0
 
-  - name: deploy-gke-replace
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      #- IN: gke-cluster-2
-      #- IN: sh-myapp3
-      #- IN: sh-docker-opts
-      - IN: manifestjob0
-      - TASK: managed
-        deployMethod: replace
+  # - name: deploy-gke-replace
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     #- IN: gke-cluster-2
+  #     #- IN: sh-myapp3
+  #     #- IN: sh-docker-opts
+  #     - IN: manifestjob0
+  #     - TASK: managed
+  #       deployMethod: replace
 
   # - name: deploygceUpgrade
   #   type: deploy
