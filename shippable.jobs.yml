@@ -212,7 +212,7 @@ jobs:
       # - TASK: managed
       #   deployMethod: replace
 
-  - name: deployecslbUpgrade
+  - name: ECS
     type: deploy
     steps:
       - IN: ecs-cluster

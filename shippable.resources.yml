@@ -20,14 +20,14 @@ resources:
     type: loadBalancer
     pointer:
       sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
-      role: ecsInstanceRole
+      role: newRole
 
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 25
-      cpuShares: 100
+      memory: 20
+      #cpuShares: 100
       # workingDir: "/app"
       # privileged: true
       # readOnlyRootFilesystem: true
