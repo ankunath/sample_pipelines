@@ -18,7 +18,6 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp3
-      - IN: lb
       #- IN: sh-m-shubh-1
       #- IN: sh-myapp2
       - IN: sh-docker-opts
@@ -218,6 +217,12 @@ jobs:
     steps:
       - IN: ecs-cluster
       - IN: manifestjob0
+      - IN: lb
+        applyTo:
+          - manifest: manifestjob0 # it can only apply to one manifest
+            image: sh-myapp3 # it can only apply to one image in the manifest
+            port: 80
+
 
   # - name: deployecs-3
   #   type: deploy
