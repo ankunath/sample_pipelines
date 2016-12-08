@@ -25,7 +25,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 50
+      memory: 40
       cpuShares: 100
       # workingDir: "/app"
       # privileged: true
@@ -38,8 +38,8 @@ resources:
       # #user: "driftking"
       # domainName: "www.levelachievers.com"
       # nickname: teamBRAVE
-      # # portMappings:
-      # #   - "80:80"
+      portMappings:
+        - "80:80"
       # dnsServers:
       #   - "127.0.0.3"
       # dnsSearch:
