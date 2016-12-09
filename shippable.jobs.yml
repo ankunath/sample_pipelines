@@ -310,7 +310,7 @@ jobs:
     type: release
     steps:
       #- IN: deploytriton
-      - IN: manifest0
+      - IN: manifestjob0
       - IN: stagingVerBase
       - TASK: managed
         bump: major
