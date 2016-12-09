@@ -312,8 +312,8 @@ jobs:
       #- IN: deploytriton
       - IN: manifestjob0
       - IN: stagingVerBase
-      # - TASK: managed
-      #   bump: minor
+      - TASK: managed
+        bump: patch
 
   # - name: stagingReleaseWithoutDeployJob
   #   type: release
