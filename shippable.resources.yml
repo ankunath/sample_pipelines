@@ -25,7 +25,7 @@ resources:
   - name: stagingVerBase
     type: version
     seed:
-      versionName: "10.0.0"
+      versionName: "1.0.0"
 
 
   - name: sh-docker-opts
