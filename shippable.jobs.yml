@@ -313,7 +313,7 @@ jobs:
       - IN: manifestjob0
       - IN: stagingVerBase
       - TASK: managed
-        bump: major
+        bump: minor
 
   # - name: stagingReleaseWithoutDeployJob
   #   type: release
