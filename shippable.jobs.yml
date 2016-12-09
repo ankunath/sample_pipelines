@@ -319,8 +319,8 @@ jobs:
     type: release
     steps:
       - IN: stagingRelease
-      - IN: manifestjob0
-      - IN: stagingVerBase
+      # - IN: manifestjob0
+      # - IN: stagingVerBase
       - TASK: managed
         bump: rc
 
