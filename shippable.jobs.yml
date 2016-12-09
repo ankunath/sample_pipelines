@@ -212,18 +212,18 @@ jobs:
       # - TASK: managed
       #   deployMethod: replace
 
-  - name: ECS
-    type: deploy
-    steps:
-      - IN: ecs-cluster
-      - IN: manifestjob0
-      - IN: lb
-        applyTo:
-          - manifest: manifestjob0 # it can only apply to one manifest
-            image: sh-myapp3 # it can only apply to one image in the manifest
-            port: 80
-      # - TASK: managed
-      #   deployMethod: upgrade
+  # - name: ECS
+  #   type: deploy
+  #   steps:
+  #     - IN: ecs-cluster
+  #     - IN: manifestjob0
+  #     - IN: lb
+  #       applyTo:
+  #         - manifest: manifestjob0 # it can only apply to one manifest
+  #           image: sh-myapp3 # it can only apply to one image in the manifest
+  #           port: 80
+  #     # - TASK: managed
+  #     #   deployMethod: upgrade
 
 
   # - name: deployecs-3
@@ -306,15 +306,14 @@ jobs:
  #    on_failure:
  #      - NOTIFY: slackNotification
 
-  # - name: stagingRelease
-  #   type: release
-  #   steps:
-  #     - IN: deploytriton
-  #     - IN: stagingVerBase2
-  #       #switch: on
-  #     #- IN: sh-manifestjob1
-  #     - TASK: managed
-  #       bump: major
+  - name: stagingRelease
+    type: release
+    steps:
+      #- IN: deploytriton
+      - IN: manifest0
+      - IN: stagingVerBase
+      - TASK: managed
+        bump: major
 
   # - name: stagingReleaseWithoutDeployJob
   #   type: release

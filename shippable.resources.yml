@@ -11,16 +11,21 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  - name: scale
-    type: replicas
-    version:
-      count: 2
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 2
 
-  - name: lb
-    type: loadBalancer
-    pointer:
-      sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
-      role: newRole
+  # - name: lb
+  #   type: loadBalancer
+  #   pointer:
+  #     sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
+  #     role: newRole
+
+  - name: stagingVerBase
+    type: version
+    seed:
+      versionName: "1.0.0"
 
 
   - name: sh-docker-opts
@@ -39,8 +44,8 @@ resources:
       # #user: "driftking"
       # domainName: "www.levelachievers.com"
       # nickname: teamBRAVE
-      portMappings:
-        - "80:80"
+      # portMappings:
+      #   - "80:80"
       # dnsServers:
       #   - "127.0.0.3"
       # dnsSearch:
@@ -108,9 +113,9 @@ resources:
   #   pointer:
   #     sourceName: "small-cluster"
   #     region: "europe-west1-b"
-  - name: ecs-cluster
-    type: cluster
-    integration: aws
-    pointer:
-      sourceName : "default" #name of the cluster we are deploying
-      region: "us-west-2"
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: aws
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  #     region: "us-west-2"
