@@ -313,7 +313,16 @@ jobs:
       - IN: manifestjob0
       - IN: stagingVerBase
       - TASK: managed
-        bump: patch
+        bump: alpha
+
+  - name: Finale
+    type: release
+    steps:
+      - IN: stagingRelease
+      - IN: manifestjob0
+      - IN: stagingVerBase
+      - TASK: managed
+        bump: rc
 
   # - name: stagingReleaseWithoutDeployJob
   #   type: release
