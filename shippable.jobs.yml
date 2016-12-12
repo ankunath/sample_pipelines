@@ -169,11 +169,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: ddc-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: ddc-cluster
-  #     - IN: manifestjob
+  - name: ddc-deploy
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: manifestjob0
     # on_success:
     #   - NOTIFY: slackNotification
       # - IN: scale
@@ -306,23 +306,23 @@ jobs:
  #    on_failure:
  #      - NOTIFY: slackNotification
 
-  - name: stagingRelease
-    type: release
-    steps:
-      #- IN: deploytriton
-      - IN: manifestjob0
-      - IN: stagingVerBase
-      - TASK: managed
-        bump: alpha
+  # - name: stagingRelease
+  #   type: release
+  #   steps:
+  #     #- IN: deploytriton
+  #     - IN: manifestjob0
+  #     - IN: stagingVerBase
+  #     - TASK: managed
+  #       bump: alpha
 
-  - name: Finale
-    type: release
-    steps:
-      - IN: stagingRelease
-      # - IN: manifestjob0
-      # - IN: stagingVerBase
-      - TASK: managed
-        bump: rc
+  # - name: Finale
+  #   type: release
+  #   steps:
+  #     - IN: stagingRelease
+  #     # - IN: manifestjob0
+  #     # - IN: stagingVerBase
+  #     - TASK: managed
+  #       bump: rc
 
   # - name: stagingReleaseWithoutDeployJob
   #   type: release

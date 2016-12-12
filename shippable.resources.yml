@@ -22,16 +22,22 @@ resources:
   #     sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
   #     role: newRole
 
-  - name: stagingVerBase
-    type: version
-    seed:
-      versionName: "v10.12.1-alpha"
+  # - name: stagingVerBase
+  #   type: version
+  #   seed:
+  #     versionName: "v10.12.1-alpha"
+
+  - name: ddc-cluster
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 40
+      memory: 49
       #cpuShares: 100
       # workingDir: "/app"
       # privileged: true
