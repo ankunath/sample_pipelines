@@ -64,11 +64,11 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  # - name: dcl-deploy-bluegreen
-  #   type: deploy
-  #   steps:
-  #     - IN: manifestjob0
-  #     - IN: dcl-cluster
+  - name: dcl-deploy-bluegreen
+    type: deploy
+    steps:
+      - IN: manifestjob0
+      - IN: dcl-cluster
   #     # - TASK: managed
   #     #   deployMethod: blueGreen
 
@@ -169,11 +169,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: ddc-deploy
-    type: deploy
-    steps:
-      - IN: ddc-cluster
-      - IN: manifestjob0
+  # - name: ddc-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: ddc-cluster
+  #     - IN: manifestjob0
     # on_success:
     #   - NOTIFY: slackNotification
       # - IN: scale
