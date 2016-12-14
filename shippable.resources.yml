@@ -34,72 +34,72 @@ resources:
   #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
-  - name: sh-docker-opts
-    type: dockerOptions
-    version:
-      memory: 55
-      cpuShares: 10
-      workingDir: "/app"
-      privileged: true
-      readOnlyRootFilesystem: true
-      #network: host
-      restartPolicy: "on-failure"
-      autodestroy: "no"
-      autoredeploy: true
-      sequential_deployment: true
-      #user: "driftking"
-      domainName: "www.levelachievers.com"
-      nickname: teamBRAVE
-      # portMappings:
-      #   - "80:80"
-      dnsServers:
-        - "127.0.0.3"
-      dnsSearch:
-        - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
-      labels:
-        ri_tu: 123
-      #deployment_strategy: "high_availability"
-      securityOptions:
-        - label:user:USER
-        - label:role:ROLE
-      capAdd:
-        - ALL
-      capDrop:
-        - NET_ADMIN
-        - SYS_ADMIN
-      #cmd: "echo 'HELLO WORLD!!!!'"
-      #entryPoint: '/app/shubhankit'
-      cGroupParent: "m-executer-abcd"
-      hostName: "shubh"
-      tty: true
-      stdin: true
-      # devices:
-      #   - "/dev/ttyUSB0:/dev/ttyUSB0"
-      memorySwap: 100
-      # linked_to_service:
-      #   - "to_service": "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
-      #   - "name" : "shubh"
-      # extraHosts:
-      #   - "somehost:162.242.195.82"
-      #   - "otherhost:50.31.209.229"
-      # publishAllPorts: true
-      # links:
-      #   -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
-      roles:
-        - global
-      tags:
-        - staging
-      #nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
-      #pid: "host"
-      # volumesFrom:
-      #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
-      # volumes:
-      #   - "/usr/bin:/makemeworking:ro"
-      ############################## for gke ###########################
-      # pod:
-      #   terminationGracePeriodSeconds: 500
-      #   activeDeadlineSeconds: 1000
-      #   dnsPolicy: "Default"
+  # - name: sh-docker-opts
+  #   type: dockerOptions
+  #   version:
+  #     memory: 55
+  #     cpuShares: 10
+  #     workingDir: "/app"
+  #     privileged: true
+  #     readOnlyRootFilesystem: true
+  #     #network: host
+  #     restartPolicy: "on-failure"
+  #     autodestroy: "no"
+  #     autoredeploy: true
+  #     sequential_deployment: true
+  #     #user: "driftking"
+  #     domainName: "www.levelachievers.com"
+  #     nickname: teamBRAVE
+  #     # portMappings:
+  #     #   - "80:80"
+  #     dnsServers:
+  #       - "127.0.0.3"
+  #     dnsSearch:
+  #       - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+  #     labels:
+  #       ri_tu: 123
+  #     #deployment_strategy: "high_availability"
+  #     securityOptions:
+  #       - label:user:USER
+  #       - label:role:ROLE
+  #     capAdd:
+  #       - ALL
+  #     capDrop:
+  #       - NET_ADMIN
+  #       - SYS_ADMIN
+  #     #cmd: "echo 'HELLO WORLD!!!!'"
+  #     #entryPoint: '/app/shubhankit'
+  #     cGroupParent: "m-executer-abcd"
+  #     hostName: "shubh"
+  #     tty: true
+  #     stdin: true
+  #     # devices:
+  #     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
+  #     memorySwap: 100
+  #     # linked_to_service:
+  #     #   - "to_service": "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
+  #     #   - "name" : "shubh"
+  #     # extraHosts:
+  #     #   - "somehost:162.242.195.82"
+  #     #   - "otherhost:50.31.209.229"
+  #     # publishAllPorts: true
+  #     # links:
+  #     #   -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
+  #     roles:
+  #       - global
+  #     tags:
+  #       - staging
+  #     #nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
+  #     #pid: "host"
+  #     # volumesFrom:
+  #     #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
+  #     # volumes:
+  #     #   - "/usr/bin:/makemeworking:ro"
+  #     ############################## for gke ###########################
+  #     # pod:
+  #     #   terminationGracePeriodSeconds: 500
+  #     #   activeDeadlineSeconds: 1000
+  #     #   dnsPolicy: "Default"
 
 
 
@@ -107,11 +107,11 @@ resources:
 
 
 
-  - name: dcl-cluster
-    type: cluster
-    integration: dcl
-    pointer:
-      sourceName: "default"
+  # - name: dcl-cluster
+  #   type: cluster
+  #   integration: dcl
+  #   pointer:
+  #     sourceName: "default"
 
   # - name: gke-cluster
   #   type: cluster

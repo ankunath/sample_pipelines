@@ -23,6 +23,12 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
+  - name: foo-app-ci
+    type: jenkinsJob
+    integration: "jenkins"
+    pointer:
+      sourceName: "firstjob"
+
   # - name: manifestjob2
   #   type: manifest
   #   steps:
@@ -64,11 +70,11 @@ jobs:
       # - TASK: managed
       #   deployMethod: scale
 
-  - name: dcl-deploy-bluegreen
-    type: deploy
-    steps:
-      - IN: manifestjob0
-      - IN: dcl-cluster
+  # - name: dcl-deploy-bluegreen
+  #   type: deploy
+  #   steps:
+  #     - IN: manifestjob0
+  #     - IN: dcl-cluster
   #     # - TASK: managed
   #     #   deployMethod: blueGreen
 
