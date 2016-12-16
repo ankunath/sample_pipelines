@@ -29,7 +29,7 @@ jobs:
     pointer:
       sourceName: "job"
     steps:
-      - OUT: "sh-my"
+      - OUT: "sh-myapp3"
 
   # - name: manifestjob2
   #   type: manifest
