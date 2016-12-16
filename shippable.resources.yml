@@ -27,17 +27,17 @@ resources:
   #   seed:
   #     versionName: "v10.12.1-alpha"
 
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: ddc
-  #   pointer:
-  #     sourceName: "small-cluster" #name of the cluster we are deploying.
+  - name: ddc-cluster
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
-  # - name: sh-docker-opts
-  #   type: dockerOptions
-  #   version:
-  #     memory: 55
+  - name: sh-docker-opts
+    type: dockerOptions
+    version:
+      memory: 55
   #     cpuShares: 10
   #     workingDir: "/app"
   #     privileged: true
