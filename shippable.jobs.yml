@@ -28,6 +28,8 @@ jobs:
     integration: "jenkins"
     pointer:
       sourceName: "job"
+    steps:
+      - OUT: "sh-myapp3"
 
   # - name: manifestjob2
   #   type: manifest
