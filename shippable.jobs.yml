@@ -22,6 +22,15 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
+  - name: manifestjob1
+    type: manifest
+    steps:
+      - IN: sh-myapp3
+      #- IN: sh-myapp2
+      - IN: sh-docker-opts
+      #- IN: sh-trigger
+      - IN: jenkinsJobDemo
+
   - name: jenkinsJobDemo
     type: jenkinsJob
     integration: "jenkins"
@@ -181,6 +190,13 @@ jobs:
     steps:
       - IN: ddc-cluster
       - IN: manifestjob0
+      - IN: jenkinsJobDemo
+
+  - name: ddc-deploy-2
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: manifestjob1
       - IN: jenkinsJobDemo
     # on_success:
     #   - NOTIFY: slackNotification
