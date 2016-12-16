@@ -18,10 +18,9 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp3
-      - IN: jenkinsJobDemo
       #- IN: sh-myapp2
       - IN: sh-docker-opts
-      #- IN: sh-trigger
+      - IN: sh-trigger
 
   - name: jenkinsJobDemo
     type: jenkinsJob
@@ -182,6 +181,7 @@ jobs:
     steps:
       - IN: ddc-cluster
       - IN: manifestjob0
+      - IN: jenkinsJobDemo
     # on_success:
     #   - NOTIFY: slackNotification
       # - IN: scale
