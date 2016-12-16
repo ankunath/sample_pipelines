@@ -18,12 +18,12 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp3
-      #- IN: sh-m-shubh-1
+      - IN: jenkinsJobDemo
       #- IN: sh-myapp2
       - IN: sh-docker-opts
       #- IN: sh-trigger
 
-  - name: foo-app-ci-2
+  - name: jenkinsJobDemo
     type: jenkinsJob
     integration: "jenkins"
     pointer:
