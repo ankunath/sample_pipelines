@@ -22,13 +22,13 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  # - name: jenkinsJobDemo
-  #   type: jenkinsJob
-  #   integration: "jenkins"
-  #   pointer:
-  #     sourceName: "job"
-  #   steps:
-  #     - OUT: "sh-myapp3"
+  - name: jenkinsJobDemo
+    type: jenkinsJob
+    integration: "jenkins"
+    pointer:
+      sourceName: "job"
+    # steps:
+    #   - OUT: "sh-myapp3"
 
   # - name: manifestjob2
   #   type: manifest

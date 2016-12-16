@@ -33,13 +33,6 @@ resources:
     pointer:
       sourceName: "small-cluster" #name of the cluster we are deploying.
 
-  - name: jenkinsJobDemo
-    type: jenkinsJob
-    integration: "jenkins"
-    pointer:
-      sourceName: "job"
-    # steps:
-    #   - OUT: "sh-myapp3"
 
 
   - name: sh-docker-opts
