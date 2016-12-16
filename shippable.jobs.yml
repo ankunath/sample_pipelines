@@ -197,7 +197,7 @@ jobs:
     steps:
       - IN: ddc-cluster
       - IN: manifestjob1
-      - IN: jenkinsJobDemo
+      #- IN: jenkinsJobDemo
     # on_success:
     #   - NOTIFY: slackNotification
       # - IN: scale
