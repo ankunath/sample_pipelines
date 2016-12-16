@@ -27,7 +27,7 @@ jobs:
     type: jenkinsJob
     integration: "jenkins"
     pointer:
-      sourceName: "firstjob"
+      sourceName: "job"
 
   # - name: manifestjob2
   #   type: manifest
