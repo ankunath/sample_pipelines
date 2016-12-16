@@ -4,11 +4,11 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "shippabledocker/pipelinev2"
+      sourceName: "shubhankit/sshubh"
       #sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "deploy.1"
+      versionName: "jenkins-job-12"
       #versionName: "latest"
 
   # - name: scale
