@@ -23,7 +23,7 @@ jobs:
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
 
-  - name: foo-app-ci
+  - name: foo-app-ci-2
     type: jenkinsJob
     integration: "jenkins"
     pointer:
