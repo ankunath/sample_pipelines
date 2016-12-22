@@ -31,15 +31,15 @@ jobs:
   #     #- IN: sh-trigger
   #     - IN: jenkinsJobDemo
 
-  - name: jenkinsJobDemo
-    type: jenkinsJob
-    integration: "jenkins"
-    pointer:
-      sourceName: "job"
-    steps:
-      - OUT: "sh-myapp3"
+  # - name: jenkinsJobDemo
+  #   type: jenkinsJob
+  #   integration: "jenkins"
+  #   pointer:
+  #     sourceName: "job"
+  #   steps:
+  #     - OUT: "sh-myapp3"
 
-  # - name: manifestjob2
+  # # - name: manifestjob2
   #   type: manifest
   #   steps:
   #     - IN: sh-myapp3
