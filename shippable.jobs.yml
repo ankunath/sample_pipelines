@@ -28,7 +28,7 @@ jobs:
       - IN: sh-myapp3
       - IN: sh-trigger
 
-  - name: sn-kube-deploy-3
+  - name: sn-kube
     type: deploy
     steps:
       - IN: sn-kube-man
