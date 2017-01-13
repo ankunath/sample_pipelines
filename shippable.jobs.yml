@@ -28,13 +28,13 @@ jobs:
       - IN: sh-myapp3
       - IN: sh-trigger
 
-  - name: sn-kube
+  - name: sn-kube-2
     type: deploy
     steps:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
       - TASK: managed
-        deployMethod: bluegreen
+        deployMethod: blueGreen
 
   # - name: manifestjob1
   #   type: manifest
