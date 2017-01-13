@@ -4,12 +4,12 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/debian"
-      #sourceName: "busybox"
+      #sourceName: "scriptnull/debian"
+      sourceName: "busybox"
       isPull: true
     seed:
-      versionName: "driftking"
-      #versionName: "latest"
+      #versionName: "driftking"
+      versionName: "latest"
 
   - name: sn-kube-cluster
     type: cluster
@@ -65,7 +65,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 4
+      memory: 9
   #     cpuShares: 10
   #     workingDir: "/app"
   #     privileged: true
