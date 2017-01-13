@@ -11,6 +11,25 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
+  - name: sn-kube-cluster
+    type: cluster
+    integration: kubemaster
+
+
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: triton
+  #   pointer:
+  #     region: "us-east-2"
+
+  # - name: slackNotification
+  #   type: notification
+  #   integration: slack
+  #   pointer:
+  #     recipients:
+  #       - "#testissues"
+        #- "#slackchannel"
+
   # - name: scale
   #   type: replicas
   #   version:
@@ -27,11 +46,11 @@ resources:
   #   seed:
   #     versionName: "v10.12.1-alpha"
 
-  - name: ddc-cluster
-    type: cluster
-    integration: ddc
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
   # - name: sn-file-4

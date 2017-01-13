@@ -14,13 +14,27 @@ jobs:
   #     #   applyTo:
   #     #     - sh-myapp2
   #     #- IN: scale
-  - name: manifestjob0
+  # - name: manifestjob0
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     #- IN: sh-myapp2
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
+
+  - name: sn-kube-man
     type: manifest
     steps:
       - IN: sh-myapp3
-      #- IN: sh-myapp2
-      - IN: sh-docker-opts
       - IN: sh-trigger
+
+  - name: sn-kube-deploy-3
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: manifestjob1
   #   type: manifest
@@ -185,11 +199,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: ddc-deploy
-    type: deploy
-    steps:
-      - IN: ddc-cluster
-      - IN: manifestjob0
+  # - name: ddc-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: ddc-cluster
+  #     - IN: manifestjob0
       #- IN: jenkinsJobDemo
 
   # - name: ddc-deploy-2
@@ -217,8 +231,8 @@ jobs:
   #   type: deploy
   #   steps:
   #     - IN: tri-cluster
-  #     - IN: sh-manifestjob
-      #- IN: scale
+  #     - IN: manifestjob0
+  #     - IN: scale
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
