@@ -34,7 +34,7 @@ jobs:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
       - TASK: managed
-        deployMethod: upgrade
+        deployMethod: bluegreen
 
   # - name: manifestjob1
   #   type: manifest
