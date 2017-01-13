@@ -29,7 +29,7 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  - name: shubh
+  - name: shubh-deploy
     type: deploy
     steps:
       - IN: sn-kube-man
