@@ -72,8 +72,8 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 17
-      cpuShares: 14
+      memory: 13
+      cpuShares: 19
       #entryPoint: "/app"
       workingDir: "/app"
       cmd: "node"
