@@ -71,7 +71,7 @@ resources:
       workingDir: "/app"
       cmd: "node"
       privileged: true
-      readOnlyRootFilesystem: true
+      #readOnlyRootFilesystem: true
   #     #network: host
   #     restartPolicy: "on-failure"
   #     autodestroy: "no"
