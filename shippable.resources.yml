@@ -65,20 +65,19 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 5
+      memory: 10
       cpuShares: 10
       #entryPoint: '/app'
       workingDir: "/app"
-      cmd: "node job2.js"
-
-  #     privileged: true
-  #     readOnlyRootFilesystem: true
+      cmd: "node"
+      privileged: true
+      readOnlyRootFilesystem: true
   #     #network: host
   #     restartPolicy: "on-failure"
   #     autodestroy: "no"
   #     autoredeploy: true
   #     sequential_deployment: true
-  #     #user: "driftking"
+      user: "driftking"
   #     domainName: "www.levelachievers.com"
   #     nickname: teamBRAVE
   #     # portMappings:
@@ -93,11 +92,11 @@ resources:
   #     securityOptions:
   #       - label:user:USER
   #       - label:role:ROLE
-  #     capAdd:
-  #       - ALL
-  #     capDrop:
-  #       - NET_ADMIN
-  #       - SYS_ADMIN
+      capAdd:
+        - ALL
+      capDrop:
+        - NET_ADMIN
+        - SYS_ADMIN
   #     cGroupParent: "m-executer-abcd"
   #     hostName: "shubh"
   #     tty: true
