@@ -65,19 +65,19 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 4
+      memory: 6
       cpuShares: 11
       #entryPoint: "/app"
       workingDir: "/app"
       cmd: "node"
       privileged: true
-      #readOnlyRootFilesystem: true
+      readOnlyRootFilesystem: true
   #     #network: host
-  #     restartPolicy: "on-failure"
+      restartPolicy: "OnFailure"
   #     autodestroy: "no"
   #     autoredeploy: true
   #     sequential_deployment: true
-  #    user: "driftking"
+      user: "root"
   #     domainName: "www.levelachievers.com"
   #     nickname: teamBRAVE
   #     # portMappings:
