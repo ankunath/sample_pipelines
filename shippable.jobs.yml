@@ -40,6 +40,22 @@ jobs:
       - TASK: managed
         deployMethod: blueGreen
 
+  - name: new-shubh-alpha-u
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: upgrade
+
+  - name: new-shubh-alpha-r
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: replace
+
   # - name: manifestjob1
   #   type: manifest
   #   steps:
