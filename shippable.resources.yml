@@ -65,7 +65,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 15
+      memory: 17
       cpuShares: 15
       #entryPoint: "/app"
       workingDir: "/app"
@@ -78,7 +78,7 @@ resources:
   #     autoredeploy: true
   #     sequential_deployment: true
       user: 7100
-  #     domainName: "www.levelachievers.com"
+      domainName: "www.levelachievers.com"
   #     nickname: teamBRAVE
   #     # portMappings:
   #     #   - "80:80"
@@ -98,7 +98,7 @@ resources:
         - NET_ADMIN
         - SYS_ADMIN
   #     cGroupParent: "m-executer-abcd"
-  #     hostName: "shubh"
+      hostName: "shubh"
       tty: true
       stdin: true
       stdinOnce: true
