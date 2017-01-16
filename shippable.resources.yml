@@ -65,8 +65,10 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 10
-  #     cpuShares: 10
+      memory: 12
+      cpuShares: 10
+      entryPoint: '/app'
+
   #     workingDir: "/app"
   #     privileged: true
   #     readOnlyRootFilesystem: true
@@ -96,7 +98,6 @@ resources:
   #       - NET_ADMIN
   #       - SYS_ADMIN
   #     #cmd: "echo 'HELLO WORLD!!!!'"
-  #     #entryPoint: '/app/shubhankit'
   #     cGroupParent: "m-executer-abcd"
   #     hostName: "shubh"
   #     tty: true
