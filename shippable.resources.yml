@@ -72,13 +72,13 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 13
+      memory: 12
       cpuShares: 19
       #entryPoint: "/app"
       workingDir: "/app"
       cmd: "node"
       privileged: true
-      readOnlyRootFilesystem: true
+  #    readOnlyRootFilesystem: true
   #     #network: host
       restartPolicy: "OnFailure"
   #     autodestroy: "no"
@@ -99,11 +99,11 @@ resources:
   #     securityOptions:
   #       - label:user:USER
   #       - label:role:ROLE
-      capAdd:
-        - ALL
-      capDrop:
-        - NET_ADMIN
-        - SYS_ADMIN
+      # capAdd:
+      #   - ALL
+      # capDrop:
+      #   - NET_ADMIN
+      #   - SYS_ADMIN
   #     cGroupParent: "m-executer-abcd"
       hostName: "shubh"
       tty: true
