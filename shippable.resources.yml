@@ -65,7 +65,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 19
+      memory: 6
       cpuShares: 10
       entryPoint: "/app"
       workingDir: "/app"
@@ -92,11 +92,11 @@ resources:
   #     securityOptions:
   #       - label:user:USER
   #       - label:role:ROLE
-      capAdd:
-        - ALL
-      capDrop:
-        - NET_ADMIN
-        - SYS_ADMIN
+      # capAdd:
+      #   - ALL
+      # capDrop:
+      #   - NET_ADMIN
+      #   - SYS_ADMIN
   #     cGroupParent: "m-executer-abcd"
   #     hostName: "shubh"
   #     tty: true
