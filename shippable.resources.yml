@@ -65,9 +65,9 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 9
-      cpuShares: 10
-      entryPoint: "/app"
+      memory: 4
+      cpuShares: 11
+      #entryPoint: "/app"
       workingDir: "/app"
       cmd: "node"
       privileged: true
