@@ -32,7 +32,7 @@ jobs:
         applyTo:
           - sh-myapp3
 
-  - name: new-shubh
+  - name: new-shubh-alpha
     type: deploy
     steps:
       - IN: sn-kube-man
