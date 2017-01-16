@@ -65,9 +65,9 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 9
+      memory: 11
       cpuShares: 10
-      entryPoint: '/app'
+      #entryPoint: '/app'
       workingDir: "/app"
       cmd: "echo 'HELLO WORLD!!!!'"
 
