@@ -65,7 +65,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 12
+      memory: 15
       cpuShares: 15
       #entryPoint: "/app"
       workingDir: "/app"
@@ -99,8 +99,9 @@ resources:
         - SYS_ADMIN
   #     cGroupParent: "m-executer-abcd"
   #     hostName: "shubh"
-  #     tty: true
-  #     stdin: true
+      tty: true
+      stdin: true
+      stdinOnce: true
   #     # devices:
   #     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
   #     memorySwap: 100
