@@ -65,7 +65,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 10
+      memory: 19
       cpuShares: 10
       #entryPoint: '/app'
       workingDir: "/app"
@@ -77,7 +77,7 @@ resources:
   #     autodestroy: "no"
   #     autoredeploy: true
   #     sequential_deployment: true
-      user: "driftking"
+  #    user: "driftking"
   #     domainName: "www.levelachievers.com"
   #     nickname: teamBRAVE
   #     # portMappings:
