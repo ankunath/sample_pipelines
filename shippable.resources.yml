@@ -69,6 +69,8 @@ resources:
       cpuShares: 10
       entryPoint: '/app'
       workingDir: "/app"
+      cmd: "echo 'HELLO WORLD!!!!'"
+
   #     privileged: true
   #     readOnlyRootFilesystem: true
   #     #network: host
@@ -96,7 +98,6 @@ resources:
   #     capDrop:
   #       - NET_ADMIN
   #       - SYS_ADMIN
-  #     #cmd: "echo 'HELLO WORLD!!!!'"
   #     cGroupParent: "m-executer-abcd"
   #     hostName: "shubh"
   #     tty: true
