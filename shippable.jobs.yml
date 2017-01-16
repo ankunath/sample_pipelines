@@ -28,6 +28,9 @@ jobs:
       - IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
+      - IN: my-params
+        applyTo:
+          - sh-myapp3
 
   - name: new-shubh
     type: deploy

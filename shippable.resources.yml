@@ -15,6 +15,13 @@ resources:
     type: cluster
     integration: kubemaster
 
+  - name: my-params
+    type: params
+    version:
+      params:
+        HELLO: "ShippableCodeFaster5"
+        SHIPPABLE: "code-faster-faster"
+
 
   # - name: tri-cluster
   #   type: cluster
@@ -65,7 +72,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 17
+      memory: 13
       cpuShares: 15
       #entryPoint: "/app"
       workingDir: "/app"
