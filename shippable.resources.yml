@@ -67,7 +67,7 @@ resources:
     version:
       memory: 19
       cpuShares: 10
-      #entryPoint: '/app'
+      entryPoint: "/app"
       workingDir: "/app"
       cmd: "node"
       privileged: true
