@@ -29,7 +29,7 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  - name: anku-new-deploy
+  - name: anku-new
     type: deploy
     steps:
       - IN: sn-kube-man
