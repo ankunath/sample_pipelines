@@ -41,13 +41,13 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  - name: slackNotification
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        - "#testissues"
-        - "#slackchannel"
+  # - name: slackNotification
+  #   type: notification
+  #   integration: slack
+  #   pointer:
+  #     recipients:
+  #       - "#testissues"
+  #       #- "#slackchannel"
 
   - name: scale
     type: replicas

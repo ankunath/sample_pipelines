@@ -426,7 +426,7 @@ jobs:
       - IN: scale
       - IN: sn-kube-cluster
       - IN: stagingVerBase
-      - IN: slackNotification
+      #- IN: slackNotification
       - IN: sn-file-4
       - IN: newIntegration
       #- IN: sample_nod
