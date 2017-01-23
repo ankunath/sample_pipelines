@@ -424,8 +424,12 @@ jobs:
       - IN: sh-docker-opts
       - IN: my-params
       - IN: scale
+      - IN: sn-kube-cluster
       - IN: stagingVerBase
+      - IN: slackNotification
       - IN: sn-file-4
+      - IN: newIntegration
+      - IN: sample_nod
       - IN: sh-trigger
       - TASK:
         - script: echo 'This block executes during TASK section executes successfully'
