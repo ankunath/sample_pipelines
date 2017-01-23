@@ -46,7 +46,7 @@ resources:
     integration: slack
     pointer:
       recipients:
-        - "#testissues"
+        #- "#testissues"
         - "#slackchannel"
 
   - name: scale
