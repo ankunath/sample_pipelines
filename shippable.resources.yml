@@ -37,10 +37,10 @@ resources:
   #       - "#testissues"
         #- "#slackchannel"
 
-  # - name: scale
-  #   type: replicas
-  #   version:
-  #     count: 2
+  - name: scale
+    type: replicas
+    version:
+      count: 2
 
   # - name: lb
   #   type: loadBalancer
@@ -48,10 +48,10 @@ resources:
   #     sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
   #     role: newRole
 
-  # - name: stagingVerBase
-  #   type: version
-  #   seed:
-  #     versionName: "v10.12.1-alpha"
+  - name: stagingVerBase
+    type: version
+    seed:
+      versionName: "v10.12.1-alpha"
 
   # - name: ddc-cluster
   #   type: cluster
@@ -60,12 +60,12 @@ resources:
   #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
-  # - name: sn-file-4
-  #   type: file
-  #   pointer:
-  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
-  #   seed:
-  #     versionName: "newVersionShip"
+  - name: sn-file-4
+    type: file
+    pointer:
+      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+    seed:
+      versionName: "newVersionShip"
 
 
 

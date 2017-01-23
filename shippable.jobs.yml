@@ -422,6 +422,10 @@ jobs:
     steps:
       - IN: sh-myapp3
       - IN: sh-docker-opts
+      - IN: my-params
+      - IN: scale
+      - IN: stagingVerBase
+      - IN: sn-file-4
       - IN: sh-trigger
       - TASK:
         - script: echo 'This block executes during TASK section executes successfully'
