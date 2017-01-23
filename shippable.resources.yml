@@ -72,11 +72,11 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 7
-      cpuShares: 19
+      memory: 10
+      cpuShares: 5
       #entryPoint: "/app"
       workingDir: "/app"
-      cmd: "node"
+      #cmd: "node"
       privileged: true
   #    readOnlyRootFilesystem: true
   #     #network: host
@@ -84,9 +84,9 @@ resources:
   #     autodestroy: "no"
   #     autoredeploy: true
   #     sequential_deployment: true
-      user: 7100
-      volumes:
-        - "/anku/user/100:/makemeworking:ro"
+     # user: 7100
+      # volumes:
+      #   - "/anku/user/100:/makemeworking:ro"
       domainName: "www.levelachievers.com"
   #     nickname: teamBRAVE
   #     # portMappings:
