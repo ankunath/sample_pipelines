@@ -22,15 +22,15 @@ jobs:
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
 
-  - name: sn-kube-man
-    type: manifest
-    steps:
-      - IN: sh-myapp3
-      - IN: sh-docker-opts
-      - IN: sh-trigger
-      - IN: my-params
-        applyTo:
-          - sh-myapp3
+  # - name: sn-kube-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
+  #     - IN: my-params
+  #       applyTo:
+  #         - sh-myapp3
 
   # - name: new-shubh-alpha
   #   type: deploy
@@ -421,6 +421,8 @@ jobs:
     type: runSh
     steps:
       - IN: sh-myapp3
+      - IN: sh-docker-opts
+      - IN: sh-trigger
       - TASK:
         - script: echo 'This block executes during TASK section executes successfully'
     on_success:
