@@ -48,13 +48,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: new-shubh-alpha-r
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: new-shubh-alpha-r
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
 
   # - name: manifestjob1
   #   type: manifest
@@ -417,12 +417,12 @@ jobs:
   #       # deployMethod: upgrade
   #       # bump: major
 
-  # - name: sample
-  #   type: runSh
-  #   steps:
-  #     - IN: sample_node
-  #   on_success:
-  #     - script: echo 'This block executes after TASK section executes successfully'
+  - name: sample
+    type: runSh
+    steps:
+      - IN: sh-myapp3
+    on_success:
+      - script: echo 'This block executes after TASK section executes successfully'
 
   # - name: release-job
   #   type: release
