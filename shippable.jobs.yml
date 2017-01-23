@@ -421,6 +421,8 @@ jobs:
     type: runSh
     steps:
       - IN: sh-myapp3
+      - TASK:
+        - script: echo 'This block executes during TASK section executes successfully'
     on_success:
       - script: echo 'This block executes after TASK section executes successfully'
 
