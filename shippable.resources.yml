@@ -11,12 +11,12 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  # - name: sample_node
-  #   type: gitRepo
-  #   integration: git
-  #   pointer:
-  #     sourceName: ankunath/sample_node
-  #     branch: master
+  - name: sample_node
+    type: gitRepo
+    integration: git
+    pointer:
+      sourceName: ankunath/sample_node
+      branch: master1
 
   - name: newIntegration
     type: integration
@@ -41,13 +41,13 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  # - name: slackNotification
-  #   type: notification
-  #   integration: slack
-  #   pointer:
-  #     recipients:
-  #       - "#testissues"
-  #       #- "#slackchannel"
+  - name: slackNotification
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "#testissues"
+        - "#slackchannel"
 
   - name: scale
     type: replicas
