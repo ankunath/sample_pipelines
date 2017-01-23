@@ -429,7 +429,7 @@ jobs:
       - IN: slackNotification
       #- IN: sn-file-4
       #- IN: newIntegration
-      #- IN: sample_node
+      - IN: sample_node
       - IN: sh-trigger
       - TASK:
         - script: echo 'This block executes during TASK section executes successfully'
