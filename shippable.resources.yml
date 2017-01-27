@@ -32,7 +32,7 @@ resources:
     version:
       params:
         HELLO: "ShippableCodeFaster5"
-        SHIPPABLE: "code-faster-faster"
+        SHIPPABLE: "code-faster"
 
 
   # - name: tri-cluster
@@ -48,11 +48,10 @@ resources:
       recipients:
         #- "#testissues"
         - "#slackchannel"
-
-  - name: scale
-    type: replicas
-    version:
-      count: 2
+  #- name: scale
+   # type: replicas
+    #version:
+     # count: 2
 
   # - name: lb
   #   type: loadBalancer
@@ -85,21 +84,21 @@ resources:
     type: dockerOptions
     version:
       memory: 28
-      cpuShares: 7
+      #cpuShares: 7
       #entryPoint: "/app"
-      workingDir: "/app"
+      #workingDir: "/app"
       #cmd: "node"
-      privileged: true
+      #privileged: true
   #    readOnlyRootFilesystem: true
   #     #network: host
-      restartPolicy: "OnFailure"
+      #restartPolicy: "OnFailure"
   #     autodestroy: "no"
   #     autoredeploy: true
   #     sequential_deployment: true
      # user: 7100
       # volumes:
       #   - "/anku/user/100:/makemeworking:ro"
-      domainName: "www.levelachievers.com"
+      #domainName: "www.levelachievers.com"
   #     nickname: teamBRAVE
   #     # portMappings:
   #     #   - "80:80"
@@ -119,10 +118,10 @@ resources:
       #   - NET_ADMIN
       #   - SYS_ADMIN
   #     cGroupParent: "m-executer-abcd"
-      hostName: "shubh"
-      tty: true
-      stdin: true
-      stdinOnce: true
+      # hostName: "shubh"
+      # tty: true
+      # stdin: true
+      # stdinOnce: true
   #     # devices:
   #     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
   #     memorySwap: 100
