@@ -25,14 +25,14 @@ resources:
 
   - name: sn-kube-cluster
     type: cluster
-    integration: kubemastera
+    integration: kubemaster
 
-  - name: my-params
-    type: params
-    version:
-      params:
-        HELLO: "ShippableCodeFaster5"
-        SHIPPABLE: "code-faster"
+  # - name: my-params
+  #   type: params
+  #   version:
+  #     params:
+  #       HELLO: "ShippableCodeFaster5"
+  #       SHIPPABLE: "code-faster"
 
 
   # - name: tri-cluster
@@ -41,49 +41,49 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  - name: slackNotification
-    type: notification
-    integration: slack
-    pointer:
-      recipients:
-        #- "#testissues"
-        - "#slackchannel"
-  #- name: scale
-   # type: replicas
-    #version:
-     # count: 2
-
-  # - name: lb
-  #   type: loadBalancer
+  # - name: slackNotification
+  #   type: notification
+  #   integration: slack
   #   pointer:
-  #     sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
-  #     role: newRole
+  #     recipients:
+  #       #- "#testissues"
+  #       - "#slackchannel"
+  # #- name: scale
+  #  # type: replicas
+  #   #version:
+  #    # count: 2
 
-  - name: stagingVerBase
-    type: version
-    seed:
-      versionName: "v10.12.1-alpha"
+  # # - name: lb
+  # #   type: loadBalancer
+  # #   pointer:
+  # #     sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
+  # #     role: newRole
 
-  # - name: ddc-cluster
-  #   type: cluster
-  #   integration: ddc
+  # - name: stagingVerBase
+  #   type: version
+  #   seed:
+  #     versionName: "v10.12.1-alpha"
+
+  # # - name: ddc-cluster
+  # #   type: cluster
+  # #   integration: ddc
+  # #   pointer:
+  # #     sourceName: "small-cluster" #name of the cluster we are deploying.
+
+
+  # - name: sn-file-4
+  #   type: file
   #   pointer:
-  #     sourceName: "small-cluster" #name of the cluster we are deploying.
-
-
-  - name: sn-file-4
-    type: file
-    pointer:
-      sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
-    seed:
-      versionName: "newVersionShip"
+  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+  #   seed:
+  #     versionName: "newVersionShip"
 
 
 
-  - name: sh-docker-opts
-    type: dockerOptions
-    version:
-      memory: 28
+  # - name: sh-docker-opts
+  #   type: dockerOptions
+  #   version:
+  #     memory: 28
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
