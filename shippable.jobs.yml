@@ -22,9 +22,9 @@ jobs:
       #- IN: sh-docker-opts
       #- IN: my-params
       #- IN: scale
-      #- IN: sn-kube-cluster
+      - IN: sn-kube-cluster
       #- IN: stagingVerBase
-      - IN: slackNotification
+      #- IN: slackNotification
       #- IN: sn-file-4
       #- IN: newIntegration
       #- IN: sample_node
@@ -34,28 +34,28 @@ jobs:
     on_success:
       - script: sleep 5m
 
-  # TEST deployment to Google GKE
-  - name: deploy-test-messaging-gke
-    type: deploy
-    integration: ttrahan-gke
-    steps:
-      - IN: man-messagin-service-for-local
-      - IN: my-params
-      - IN: sh-trigger
-      - IN: gke-cluster
-      - TASK: managed
-    flags:
-      - ttrn-file
+#   # TEST deployment to Google GKE
+#   - name: deploy-test-messaging-gke
+#     type: deploy
+#     integration: ttrahan-gke
+#     steps:
+#       - IN: man-messagin-service-for-local
+#       - IN: my-params
+#       - IN: sh-trigger
+#       - IN: gke-cluster
+#       - TASK: managed
+#     flags:
+#       - ttrn-file
 
-# Create external loadBalancer entrypoint for messaging app
-  - name: service-messaging-test
-    type: provision
-    steps:
-      - IN: deploy-test-messaging-gke
-      - IN: man-messaging-service-for-local
-      - TASK: managed
-    flags:
-      - ttrn-file
+# # Create external loadBalancer entrypoint for messaging app
+#   - name: service-messaging-test
+#     type: provision
+#     steps:
+#       - IN: deploy-test-messaging-gke
+#       - IN: man-messaging-service-for-local
+#       - TASK: managed
+#     flags:
+#       - ttrn-file
 
   # - name: manifestjob0
   #   type: manifest

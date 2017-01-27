@@ -11,17 +11,17 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  - name: sample_node
-    type: gitRepo
-    integration: git
-    pointer:
-      sourceName: ankunath/sample_node
-      branch: master
+  # - name: sample_node
+  #   type: gitRepo
+  #   integration: git
+  #   pointer:
+  #     sourceName: ankunath/sample_node
+  #     branch: master
 
-  - name: newIntegration
-    type: integration
-    integration: docker
-      #versionName: "latest"
+  # - name: newIntegration
+  #   type: integration
+  #   integration: docker
+  #     #versionName: "latest"
 
   - name: sn-kube-cluster
     type: cluster
