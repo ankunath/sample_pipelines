@@ -162,12 +162,12 @@ resources:
   #   pointer:
   #     sourceName: "default"
 
-  # - name: gke-cluster
-  #   type: cluster
-  #   integration: gke
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "europe-west1-b"
+  - name: gke-cluster
+    type: cluster
+    integration: gke
+    pointer:
+      sourceName: "small-cluster"
+      region: "europe-west1-b"
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws

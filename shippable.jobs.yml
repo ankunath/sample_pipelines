@@ -15,24 +15,24 @@ jobs:
   #     #     - sh-myapp2
   #     #- IN: scale
 
-  - name: sample
-    type: runSh
-    steps:
-      - IN: sh-myapp3
-      - IN: sh-docker-opts
-      #- IN: my-params
-      #- IN: scale
-      #- IN: sn-kube-cluster
-      #- IN: stagingVerBase
-      #- IN: slackNotification
-      #- IN: sn-file-4
-      #- IN: newIntegration
-      #- IN: sample_node
-      - IN: sh-trigger
-      - TASK:
-        - script: printenv
-    on_success:
-      - script: sleep 20s
+  # - name: sample
+  #   type: runSh
+  #   steps:
+  #     - IN: sh-myapp3
+  #     - IN: sh-docker-opts
+  #     #- IN: my-params
+  #     #- IN: scale
+  #     #- IN: sn-kube-cluster
+  #     #- IN: stagingVerBase
+  #     #- IN: slackNotification
+  #     #- IN: sn-file-4
+  #     #- IN: newIntegration
+  #     #- IN: sample_node
+  #     - IN: sh-trigger
+  #     - TASK:
+  #       - script: printenv
+  #   on_success:
+  #     - script: sleep 20s
 
 #   # TEST deployment to Google GKE
 #   - name: deploy-test-messaging-gke
@@ -57,13 +57,13 @@ jobs:
 #     flags:
 #       - ttrn-file
 
-  # - name: manifestjob0
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp3
-  #     #- IN: sh-myapp2
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
+  - name: manifestjob0
+    type: manifest
+    steps:
+      - IN: sh-myapp3
+      #- IN: sh-myapp2
+      - IN: sh-docker-opts
+      - IN: sh-trigger
 
   # - name: sn-kube-man
   #   type: manifest
@@ -145,11 +145,11 @@ jobs:
   #     - IN: manifestjob1
   #     - IN: tri-cluster
 
-  # - name: deploygce3330
-  #   type: deploy
-  #   steps:
-  #     - IN: gke-cluster
-  #     - IN: manifestjob1
+  - name: deploygce
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      - IN: manifestjob0
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
