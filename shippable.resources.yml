@@ -25,7 +25,7 @@ resources:
 
   - name: sn-kube-cluster
     type: cluster
-    integration: kubemasterb
+    integration: kubemastera
 
   - name: my-params
     type: params
