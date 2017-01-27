@@ -19,10 +19,10 @@ jobs:
     type: runSh
     steps:
       - IN: sh-myapp3
-      #- IN: sh-docker-opts
+      - IN: sh-docker-opts
       #- IN: my-params
       #- IN: scale
-      - IN: sn-kube-cluster
+      #- IN: sn-kube-cluster
       #- IN: stagingVerBase
       #- IN: slackNotification
       #- IN: sn-file-4
