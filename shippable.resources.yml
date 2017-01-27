@@ -23,9 +23,9 @@ resources:
   #   integration: docker
   #     #versionName: "latest"
 
-  - name: sn-kube-cluster
-    type: cluster
-    integration: kubemaster
+  # - name: sn-kube-cluster
+  #   type: cluster
+  #   integration: kubemaster
 
   # - name: my-params
   #   type: params
