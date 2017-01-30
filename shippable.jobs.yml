@@ -83,13 +83,13 @@ jobs:
   #     - TASK: managed
   #       deployMethod: blueGreen
 
-  # - name: new-shubh-alpha-u
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-kube-man
-  #     - IN: sn-kube-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: deployService
+    type: provision
+    steps:
+      - IN: lb
+      # - IN: sn-kube-cluster
+      # - TASK: managed
+      #   deployMethod: upgrade
 
   # - name: new-shubh-alpha-r
   #   type: deploy
@@ -145,11 +145,11 @@ jobs:
   #     - IN: manifestjob1
   #     - IN: tri-cluster
 
-  - name: deploygce
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      - IN: manifestjob0
+  # - name: deploygce
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     - IN: manifestjob0
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
