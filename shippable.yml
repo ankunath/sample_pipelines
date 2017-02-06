@@ -9,5 +9,6 @@ integrations:
   notifications:
     - integrationName: slackInt
       type: slack
-      recepient: "#slackchannel"
+      recepient:
+        - "#slackchannel"
       on_success: always
