@@ -23,9 +23,9 @@ resources:
   #   integration: docker
   #     #versionName: "latest"
 
-  # - name: sn-kube-cluster
-  #   type: cluster
-  #   integration: kubemaster
+  - name: sn-kube-cluster
+    type: cluster
+    integration: kubemaster
 
   # - name: my-params
   #   type: params
@@ -150,14 +150,14 @@ resources:
   #     #   activeDeadlineSeconds: 1000
   #     #   dnsPolicy: "Default"
 
-  - name: lb                               #required
-    type: loadBalancer                          #required
-    integration: gke  #Required for use in provision jobs
-    pointer:
-      sourceName: "small-cluster"  # the service name (metadata.name)
-      #method: ExternalName | ClusterIP | NodePort | LoadBalancer # the service type Kubernetes default: ClusterIP
-      #namespace: <string> # The namespace for the service
-    version:
+  # - name: lb                               #required
+  #   type: loadBalancer                          #required
+  #   integration: gke  #Required for use in provision jobs
+  #   pointer:
+  #     sourceName: "small-cluster"  # the service name (metadata.name)
+  #     #method: ExternalName | ClusterIP | NodePort | LoadBalancer # the service type Kubernetes default: ClusterIP
+  #     #namespace: <string> # The namespace for the service
+  #   version:
       # ports:
       #   - name: <string>  # Required for multiple ports, must be a DNS_LABEL
       #     protocol: TCP | UDP  # Kubernetes default: TCP
