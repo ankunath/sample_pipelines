@@ -12,3 +12,6 @@ integrations:
       recipients:
         - "#slackchannel"
       on_success: always
+  key:
+    - integrationName: pemkey
+      type: pem-key
