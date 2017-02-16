@@ -75,13 +75,13 @@ jobs:
   #       applyTo:
   #         - sh-myapp3
 
-  - name: adkad123__12-assad
+  - name: newkubernetes
     type: deploy
     steps:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
-      - TASK: managed
-        deployMethod: replace
+      # - TASK: managed
+      #   deployMethod: replace
 
   # - name: deployService
   #   type: provision
