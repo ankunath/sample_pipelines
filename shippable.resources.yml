@@ -27,7 +27,7 @@ resources:
     type: cluster
     integration: kubemaster
     pointer: 
-      namespace: 'localnamespace'
+      namespace: 'localname'
 
   # - name: my-params
   #   type: params
