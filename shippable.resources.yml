@@ -53,7 +53,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 2
+      count: 10
 
   # # - name: lb
   # #   type: loadBalancer
