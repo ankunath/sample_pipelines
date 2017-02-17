@@ -26,8 +26,8 @@ resources:
   - name: sn-kube-cluster
     type: cluster
     integration: kubemaster
-    # pointer: 
-    #   namespace: 'thirdnamespace'
+    pointer: 
+      namespace: 'thirdnamespace'
 
   # - name: my-params
   #   type: params
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 14
+      memory: 10
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
