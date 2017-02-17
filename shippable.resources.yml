@@ -26,8 +26,8 @@ resources:
   - name: sn-kube-cluster
     type: cluster
     integration: kubemaster
-    pointer: 
-      namespace: 'thirdnamespace'
+    # pointer: 
+    #   namespace: 'thirdnamespace'
 
   # - name: my-params
   #   type: params
