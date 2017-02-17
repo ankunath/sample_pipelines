@@ -80,8 +80,9 @@ jobs:
     steps:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
-      - TASK: managed
-        deployMethod: replace
+      - IN: scale
+      # - TASK: managed
+      #   deployMethod: replace
 
   # - name: deployService
   #   type: provision
