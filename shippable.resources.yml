@@ -27,7 +27,7 @@ resources:
     type: cluster
     integration: kubemaster
     pointer: 
-      namespace: 'namereplace3'
+      namespace: 'namereplace'
 
   # - name: my-params
   #   type: params
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 21
+      memory: 25
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
