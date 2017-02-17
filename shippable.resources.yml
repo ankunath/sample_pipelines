@@ -27,7 +27,7 @@ resources:
     type: cluster
     integration: kubemaster
     pointer: 
-      namespace: 'localnameupdate'
+      namespace: 'newnamespace'
 
   # - name: my-params
   #   type: params
