@@ -72,12 +72,12 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  # - name: sn-kube-man-2
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp3
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
+  - name: sn-kube-man-2
+    type: manifest
+    steps:
+      - IN: sh-myapp3
+      - IN: sh-docker-opts
+      - IN: sh-trigger
   #     - IN: my-params
   #       applyTo:
   #         - sh-myapp3
@@ -86,6 +86,7 @@ jobs:
     type: deploy
     steps:
       - IN: sn-kube-man
+      - IN: sn-kube-man-2
       - IN: sn-kube-cluster
       #- IN: scale
       # - TASK: managed
