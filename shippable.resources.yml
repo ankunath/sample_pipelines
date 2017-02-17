@@ -26,8 +26,8 @@ resources:
   - name: sn-kube-cluster
     type: cluster
     integration: kubemaster
-    pointer: 
-      namespace: 'anotherthing'
+    # pointer: 
+    #   namespace: 'anotherthing'
 
   # - name: my-params
   #   type: params
@@ -53,7 +53,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 7
+      count: 2
 
   # # - name: lb
   # #   type: loadBalancer
