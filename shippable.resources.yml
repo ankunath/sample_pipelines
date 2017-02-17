@@ -50,10 +50,10 @@ resources:
   #     recipients:
   #       #- "#testissues"
   #       - "#slackchannel"
-  - name: scale
-    type: replicas
-    version:
-      count: 10
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 10
 
   # # - name: lb
   # #   type: loadBalancer
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 62
+      memory: 17
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
