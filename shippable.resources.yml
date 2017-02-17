@@ -4,7 +4,7 @@ resources:
     type: image
     integration: docker
     pointer:
-      sourceName: "scriptnull/debian"
+      sourceName: "scriptnull/debian"       
       #sourceName: "busybox"
       isPull: true
     seed:
@@ -16,9 +16,9 @@ resources:
   #   integration: git
   #   pointer:
   #     sourceName: ankunath/sample_node
-  #     branch: master
+  #     branch: master    
 
-  # - name: newIntegration
+  # - name: newIntegration   
   #   type: integration
   #   integration: docker
   #     #versionName: "latest"
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 30
+      memory: 38
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
