@@ -57,20 +57,20 @@ jobs:
 #     flags:
 #       - ttrn-file
 
-  # - name: manifestjob0
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp3
-  #     #- IN: sh-myapp2
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
-
-  - name: sn-kube-man
+  - name: manifestjob
     type: manifest
     steps:
       - IN: sh-myapp3
+      #- IN: sh-myapp2
       - IN: sh-docker-opts
       - IN: sh-trigger
+
+  # - name: sn-kube-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
 
   # - name: sn-kube-man-2
   #   type: manifest
@@ -92,27 +92,27 @@ jobs:
       # - TASK: managed
       #   deployMethod: replace
 
-  - name: kubernetesbluegreen
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
+  # - name: kubernetesbluegreen
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
 
-  - name: kubernetesupgrade
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: kubernetesupgrade
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
+  #     - TASK: managed
+  #       deployMethod: upgrade
 
-  - name: kubernetesreplace
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
-      - TASK: managed
-        deployMethod: replace
+  # - name: kubernetesreplace
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
+  #     - TASK: managed
+  #       deployMethod: replace
 
 
   # - name: deployService
@@ -384,25 +384,25 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: deploy-gke-bluegreen
-  #   type: deploy
-  #   steps:
-  #     - IN: gke-cluster
-  #     #- IN: gke-cluster-2
-  #     #- IN: sh-myapp3
-  #     #- IN: sh-docker-opts
-  #     - IN: manifestjob0
+  - name: deploy-gke-bluegreen
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      #- IN: gke-cluster-2
+      #- IN: sh-myapp3
+      #- IN: sh-docker-opts
+      - IN: manifestjob
 
-  # - name: deploy-gke-replace
-  #   type: deploy
-  #   steps:
-  #     - IN: gke-cluster
-  #     #- IN: gke-cluster-2
-  #     #- IN: sh-myapp3
-  #     #- IN: sh-docker-opts
-  #     - IN: manifestjob0
-  #     - TASK: managed
-  #       deployMethod: replace
+  - name: deploy-gke-replace
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      #- IN: gke-cluster-2
+      #- IN: sh-myapp3
+      #- IN: sh-docker-opts
+      - IN: manifestjob
+      - TASK: managed
+        deployMethod: replace
 
   # - name: deploygceUpgrade
   #   type: deploy
