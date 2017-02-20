@@ -98,21 +98,21 @@ jobs:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
 
-  # - name: kubernetesupgrade
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-kube-man
-  #     - IN: sn-kube-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: kubernetesupgrade
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
-  # - name: kubernetesreplace
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-kube-man
-  #     - IN: sn-kube-cluster
-  #     - TASK: managed
-  #       deployMethod: replace
+  - name: kubernetesreplace
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: replace
 
 
   # - name: deployService
