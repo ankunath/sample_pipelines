@@ -101,6 +101,7 @@ jobs:
   - name: runSh-Job
     type: runSh
     steps:
+      - IN: sh-trigger
       - TASK:
         - script: echo "true"
     on_success:
