@@ -92,11 +92,19 @@ jobs:
       # - TASK: managed
       #   deployMethod: replace
 
-  - name: kubernetesbluegreen
-    type: deploy
+  # - name: kubernetesbluegreen
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
+
+  - name: runSh-Job
+    type: runSh
     steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
+      - TASK:
+        - script: echo "true"
+    on_success:
+      - script: echo "successfully completed"
 
   # - name: kubernetesupgrade
   #   type: deploy
