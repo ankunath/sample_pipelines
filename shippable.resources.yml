@@ -26,8 +26,8 @@ resources:
   - name: sn-kube-cluster
     type: cluster
     integration: kubemaster
-    pointer: 
-      namespace: 'todayspace'
+    # pointer: 
+    #   namespace: 'todayspace'
 
   # - name: my-params
   #   type: params
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 24
+      memory: 22
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
