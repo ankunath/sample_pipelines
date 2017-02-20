@@ -23,11 +23,11 @@ resources:
   #   integration: docker
   #     #versionName: "latest"
 
-  # - name: sn-kube-cluster
-  #   type: cluster
-  #   integration: kubemaster
-  #   pointer: 
-  #     namespace: 'mynamespace'
+  - name: sn-kube-cluster
+    type: cluster
+    integration: kubemaster
+    pointer: 
+      namespace: 'todayspace'
 
   # - name: my-params
   #   type: params
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 39
+      memory: 19
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
@@ -188,12 +188,12 @@ resources:
   #   pointer:
   #     sourceName: "default"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gke
-    pointer:
-      sourceName: "small-cluster"
-      region: "europe-west1-b"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gke
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "europe-west1-b"
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws
