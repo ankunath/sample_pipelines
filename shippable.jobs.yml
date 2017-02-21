@@ -57,63 +57,59 @@ jobs:
 #     flags:
 #       - ttrn-file
 
-  # - name: manifestjob0
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp3
-  #     #- IN: sh-myapp2
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
-
-  - name: sn-kube-man
+  - name: manifestjob
     type: manifest
     steps:
       - IN: sh-myapp3
+      #- IN: sh-myapp2
       - IN: sh-docker-opts
       - IN: sh-trigger
-    on_success:
-      - NOTIFY: slackNotification
-    on_failure:
-      - NOTIFY: slackNotification
 
-  # - name: sn-kube-man-2
+  # - name: sn-kube-man
   #   type: manifest
   #   steps:
   #     - IN: sh-myapp3
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
-  #     - IN: my-params
-  #       applyTo:
-  #         - sh-myapp3
 
-  # - name: kubernetesremove1
+  # # - name: sn-kube-man-2
+  # #   type: manifest
+  # #   steps:
+  # #     - IN: sh-myapp3
+  # #     - IN: sh-docker-opts
+  # #     - IN: sh-trigger
+  # #     - IN: my-params
+  # #       applyTo:
+  # #         - sh-myapp3
+
+  # # - name: kubernetesremove1
+  # #   type: deploy
+  # #   steps:
+  # #     - IN: sn-kube-man
+  # #     #- IN: sn-kube-man-2
+  # #     - IN: sn-kube-cluster
+  #     #- IN: scale
+  #     # - TASK: managed
+  #     #   deployMethod: replace
+
+  # - name: kubernetesbluegreen
   #   type: deploy
   #   steps:
   #     - IN: sn-kube-man
-  #     #- IN: sn-kube-man-2
   #     - IN: sn-kube-cluster
-      #- IN: scale
-      # - TASK: managed
-      #   deployMethod: replace
+  #  on_success:
+  #     - NOTIFY: slackNotification
+  #   on_failure:
+  #     - NOTIFY: slackNotification
 
-  - name: kubernetesbluegreen
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
-    on_success:
-      - NOTIFY: slackNotification
-    on_failure:
-      - NOTIFY: slackNotification
-
-  - name: runSh-Job
-    type: runSh
-    steps:
-      #- IN: sh-trigger
-      - TASK:
-        - script: echo "true"
-    on_success:
-      - script: echo "successfully completed"
+  # - name: runSh-Job
+  #   type: runSh
+  #   steps:
+  #     #- IN: sh-trigger
+  #     - TASK:
+  #       - script: echo "true"
+  #   on_success:
+  #     - script: echo "successfully completed"
 
   # - name: kubernetesupgrade
   #   type: deploy
@@ -194,15 +190,15 @@ jobs:
   #     - IN: manifestjob1
   #     - IN: tri-cluster
 
-  # - name: deploygce
-  #   type: deploy
-  #   steps:
-  #     - IN: gke-cluster
-  #     - IN: manifestjob0
-  #   on_success:
-  #     - NOTIFY: slackNotification
-  #   on_failure:
-  #     - NOTIFY: slackNotification
+  - name: deploygce
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      - IN: manifestjob
+    on_success:
+      - NOTIFY: slackNotification
+    on_failure:
+      - NOTIFY: slackNotification
       # - TASK: managed
       #   deployMethod: scale
 
