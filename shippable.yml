@@ -12,6 +12,14 @@ integrations:
       recipients:
         - "#slackchannel"
       on_success: always
-  key:
-    - integrationName: pemkey
-      type: pem-key
+
+    - integrationName: notify-hipchat
+      type: hipchat
+      recipients:
+        - '#hipchatNotifications'
+      on_start: always
+      on_success: always   
+      on_failure: always
+  # key:
+  #   - integrationName: pemkey
+  #     type: pem-key
