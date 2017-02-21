@@ -7,13 +7,13 @@ build:
 
 integrations:
   notifications:
-    - integrationName: slackInt
-      type: slack
-      recipients:
-        - "#slackchannel"
-      on_success: always
+    # - integrationName: slack
+    #   type: slack
+    #   recipients:
+    #     - "#slackchannel"
+    #   on_success: always
 
-    - integrationName: notify-hipchat
+    - integrationName: slack
       type: hipchat
       recipients:
         - '#hipchatNotifications'
