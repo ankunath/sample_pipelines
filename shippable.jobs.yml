@@ -195,10 +195,10 @@ jobs:
     steps:
       - IN: gke-cluster
       - IN: manifestjob
-    on_success:
-      - NOTIFY: slackNotification
-    on_failure:
-      - NOTIFY: slackNotification
+    # on_success:
+    #   - NOTIFY: slackNotification
+    # on_failure:
+    #   - NOTIFY: slackNotification
       # - TASK: managed
       #   deployMethod: scale
 

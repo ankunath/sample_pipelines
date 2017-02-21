@@ -13,13 +13,13 @@ integrations:
     #     - "#slackchannel"
     #   on_success: always
 
-    - integrationName: slack
-      type: hipchat
-      recipients:
-        - '#hipchatNotifications'
-      on_start: always
-      on_success: always   
-      on_failure: always
+    # - integrationName: slack
+    #   type: hipchat
+    #   recipients:
+    #     - '#hipchatNotifications'
+    #   on_start: always
+    #   on_success: always   
+    #   on_failure: always
   # key:
   #   - integrationName: pemkey
   #     type: pem-key
