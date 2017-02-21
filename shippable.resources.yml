@@ -43,11 +43,19 @@ resources:
   #   pointer:
   #     region: "us-east-2"
 
-  - name: slackNotification
-    type: notification
-    integration: slack
+  - integrationName: slackNotification
+    type: hipchat
     recipients:
-      - "#hipchatNotifications"
+      - '#hipchatNotifications'
+    on_start: always
+    on_success: always   
+    on_failure: always
+
+  # - name: slackNotification
+  #   type: notification
+  #   integration: slack
+  #   recipients:
+  #     - "#hipchatNotifications"
   #       - "#slackchannel"
   # - name: scale
   #   type: replicas
