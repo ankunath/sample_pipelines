@@ -37,18 +37,18 @@ resources:
   #       SHIPPABLE: "code-faster"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: triton
-    pointer:
-      region: "us-east-2"
-
-  # - name: slackNotification
-  #   type: notification
-  #   integration: slack
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: triton
   #   pointer:
-  #     recipients:
-  #       #- "#testissues"
+  #     region: "us-east-2"
+
+  - name: slackNotification
+    type: notification
+    integration: slack
+    pointer:
+      recipients:
+        - "#hipchatNotifications"
   #       - "#slackchannel"
   # - name: scale
   #   type: replicas
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 23
+      memory: 19
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
