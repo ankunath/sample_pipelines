@@ -71,6 +71,10 @@ jobs:
       - IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
+    on_success:
+      - NOTIFY: slackNotification
+    on_failure:
+      - NOTIFY: slackNotification
 
   # - name: sn-kube-man-2
   #   type: manifest

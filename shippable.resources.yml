@@ -46,17 +46,9 @@ resources:
   - name: slackNotification
     type: notification
     integration: slack
-    recipients:
-      - '#hipchatNotifications'
-    on_start: always
-    on_success: always   
-    on_failure: always
-
-  # - name: slackNotification
-  #   type: notification
-  #   integration: slack
-  #   recipients:
-  #     - "#hipchatNotifications"
+    pointer:
+      recipients:
+        - "#hipchatNotifications"
   #       - "#slackchannel"
   # - name: scale
   #   type: replicas
