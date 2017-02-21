@@ -23,9 +23,9 @@ resources:
   #   integration: docker
   #     #versionName: "latest"
 
-  - name: sn-kube-cluster
-    type: cluster
-    integration: kubemaster
+  # - name: sn-kube-cluster
+  #   type: cluster
+  #   integration: kubemaster
     # pointer: 
     #   namespace: 'todayspace'
 
@@ -37,11 +37,11 @@ resources:
   #       SHIPPABLE: "code-faster"
 
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: tri-cluster
+    type: cluster
+    integration: triton
+    pointer:
+      region: "us-east-2"
 
   # - name: slackNotification
   #   type: notification
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 19
+      memory: 23
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"

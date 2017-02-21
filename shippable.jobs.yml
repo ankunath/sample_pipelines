@@ -65,12 +65,19 @@ jobs:
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
 
-  - name: sn-kube-man
+  - name: triton-manifest
     type: manifest
     steps:
       - IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
+
+
+  - name: deploytriton
+    type: deploy
+    steps:
+      - IN: tri-cluster
+      - IN: manifestjob
 
   # - name: sn-kube-man-2
   #   type: manifest
@@ -98,22 +105,22 @@ jobs:
   #     - IN: sn-kube-man
   #     - IN: sn-kube-cluster
 
-  - name: runSh-Job
-    type: runSh
-    steps:
-      #- IN: sh-trigger
-      - TASK:
-        - script: echo "true"
-    on_success:
-      - script: echo "successfully completed"
+  # - name: runSh-Job
+  #   type: runSh
+  #   steps:
+  #     #- IN: sh-trigger
+  #     - TASK:
+  #       - script: echo "true"
+  #   on_success:
+  #     - script: echo "successfully completed"
 
-  - name: kubernetesupgrade
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
-      - TASK: managed
-        deployMethod: upgrade
+  # - name: kubernetesupgrade
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
+  #     - TASK: managed
+        # deployMethod: upgrade
 
   # - name: kubernetesreplace
   #   type: deploy
@@ -331,12 +338,8 @@ jobs:
 
 
 
-  # - name: deploytriton
-  #   type: deploy
-  #   steps:
-  #     - IN: tri-cluster
-  #     - IN: manifestjob0
-  #     - IN: scale
+  
+      # - IN: scale
   #   on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
