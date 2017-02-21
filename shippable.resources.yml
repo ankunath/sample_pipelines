@@ -46,9 +46,8 @@ resources:
   - name: slackNotification
     type: notification
     integration: slack
-    pointer:
-      recipients:
-        - "#hipchatNotifications"
+    recipients:
+      - "#hipchatNotifications"
   #       - "#slackchannel"
   # - name: scale
   #   type: replicas
