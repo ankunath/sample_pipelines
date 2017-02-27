@@ -23,9 +23,9 @@ resources:
   #   integration: docker
   #     #versionName: "latest"
 
-  # - name: sn-kube-cluster
-  #   type: cluster
-  #   integration: kubemaster
+  - name: sn-kube-cluster
+    type: cluster
+    integration: kubemaster
     # pointer: 
     #   namespace: 'todayspace'
 
@@ -188,12 +188,12 @@ resources:
   #   pointer:
   #     sourceName: "default"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gce
-    pointer:
-      sourceName: "small-cluster"
-      region: "europe-west1-b"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gce
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "europe-west1-b"
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws
