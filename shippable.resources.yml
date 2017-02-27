@@ -81,7 +81,7 @@ resources:
   #     versionName: "newVersionShip"
   - name: lb
     type: loadBalancer                          #required
-    integration: gke  #Required for use in provision jobs
+    integration: kubemaster  #Required for use in provision jobs
     pointer:
       sourceName: "xyz-shippable"  # the service name (metadata.name)
       method: ClusterIP # the service type Kubernetes default: ClusterIP
