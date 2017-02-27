@@ -27,7 +27,7 @@ resources:
     type: cluster
     integration: kubemaster
     pointer: 
-      namespace: 'newspace'
+      namespace: 'newspace2'
 
   # - name: my-params
   #   type: params
@@ -50,10 +50,10 @@ resources:
   #     recipients:
   #       - "#hipchatNotifications"
   #       - "#slackchannel"
-  # - name: scale
-  #   type: replicas
-  #   version:
-  #     count: 10
+  - name: scale
+    type: replicas
+    version:
+      count: 10
 
   # # - name: lb
   # #   type: loadBalancer
