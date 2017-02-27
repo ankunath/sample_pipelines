@@ -119,14 +119,13 @@ jobs:
       - TASK: managed
         deployMethod: upgrade
 
-  - name: kubernetesscale
+  - name: kubernetesreplace
     type: deploy
     steps:
       - IN: sn-kube-man
       - IN: sn-kube-cluster
-      - IN: scale
-      # - TASK: managed
-      #   deployMethod: replace
+      - TASK: managed
+        deployMethod: replace
 
 
   # - name: deployService

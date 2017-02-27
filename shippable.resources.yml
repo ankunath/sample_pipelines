@@ -25,9 +25,9 @@ resources:
 
   - name: sn-kube-cluster
     type: cluster
-    integration: kubemaster
+    integration: kubeBastion
     pointer: 
-      namespace: 'newspace2'
+      namespace: 'myspace123'
 
   # - name: my-params
   #   type: params
@@ -50,10 +50,10 @@ resources:
   #     recipients:
   #       - "#hipchatNotifications"
   #       - "#slackchannel"
-  - name: scale
-    type: replicas
-    version:
-      count: 2
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 2
 
   # # - name: lb
   # #   type: loadBalancer
@@ -154,31 +154,22 @@ resources:
 
   # - name: lb                               #required
   #   type: loadBalancer                          #required
-  #   integration: gke  #Required for use in provision jobs
+  #   integration: kubemaster  #Required for use in provision jobs
   #   pointer:
-  #     sourceName: "small-cluster"  # the service name (metadata.name)
-  #     #method: ExternalName | ClusterIP | NodePort | LoadBalancer # the service type Kubernetes default: ClusterIP
-  #     #namespace: <string> # The namespace for the service
+  #     sourceName: "xyz-shippable"  # the service name (metadata.name)
+  #     method: ClusterIP # the service type Kubernetes default: ClusterIP
+  #     clusterName: "small-cluster" # The namespace for the service
+  #     region: "europe-west1-b"
+  #     namespace: "default"
   #   version:
-      # ports:
-      #   - name: <string>  # Required for multiple ports, must be a DNS_LABEL
-      #     protocol: TCP | UDP  # Kubernetes default: TCP
-      #     port: <integer>     # Required.
-      #     targetPort: <string> # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
-      #     nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
-      # selector:
-      #   <string>: <string> # Required. Labels to match the pod
-      #   <string>: <string> # Labels to match the pod
-      # clusterIP: None | "" | 0.0.0.0 # Optional IP Address of the service.  Ignored for ExternalName type.
-      # externalIPs:
-      #   - <string> # Optional IP Addresses for which nodes in the cluster will also accept traffic for this service
-      # sessionAffinity: ClientIP | None # Kubernetes default: None
-      # loadBalancerIP: <string> # LoadBalancer-type services will be created with this IP Address, if supported by the "cloud provider"
-      # loadBalancerSourceRanges:
-      #   - <string> # If supported by the "cloud provider," traffic through the load balancer is limited to these addresses
-      # externalName: <string> # Valid DNS name to be returned as CNAME for this service.  Only for ExternalName-type services.
-
-
+  #     ports:
+  #       - name: newname  # Required for multiple ports, must be a DNS_LABEL
+  #         protocol: TCP  # Kubernetes default: TCP
+  #         port: 80     # Required.
+  #         targetPort: 100 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
+  #         # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
+  #     selector:
+  #       new: label # Required. Labels to match the pod
 
 
 
