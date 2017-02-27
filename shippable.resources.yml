@@ -27,7 +27,7 @@ resources:
     type: cluster
     integration: kubemaster
     pointer: 
-      namespace: 'nameapple'
+      namespace: 'nameQQQ'
 
   # - name: my-params
   #   type: params
@@ -79,31 +79,13 @@ resources:
   #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
   #   seed:
   #     versionName: "newVersionShip"
-  - name: lb
-    type: loadBalancer                          #required
-    integration: kubemaster  #Required for use in provision jobs
-    pointer:
-      sourceName: "xyz-shippable"  # the service name (metadata.name)
-      method: ClusterIP # the service type Kubernetes default: ClusterIP
-      clusterName: "small-cluster" # The namespace for the service
-      region: "europe-west1-b"
-      namespace: "default"
-    version:
-      ports:
-        - name: newname  # Required for multiple ports, must be a DNS_LABEL
-          protocol: TCP  # Kubernetes default: TCP
-          port: 80     # Required.
-          targetPort: 100 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
-          # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
-      selector:
-        new: label
 
 
 
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 24
+      memory: 25
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"

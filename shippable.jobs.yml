@@ -65,12 +65,12 @@ jobs:
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
 
-  # - name: sn-kube-man
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp3
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
+  - name: sn-kube-man
+    type: manifest
+    steps:
+      - IN: sh-myapp3
+      - IN: sh-docker-opts
+      - IN: sh-trigger
 
   # - name: sn-kube-man-2
   #   type: manifest
@@ -92,32 +92,32 @@ jobs:
   #     # - TASK: managed
   #     #   deployMethod: replace
 
-  # - name: kubernetesbluegreen12
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-kube-man
-  #     - IN: sn-kube-cluster
-  # #  on_success:
-  # #     - NOTIFY: slackNotification
-  # #   on_failure:
-  # #     - NOTIFY: slackNotification
+  - name: kubernetesbluegreen12
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+  #  on_success:
+  #     - NOTIFY: slackNotification
+  #   on_failure:
+  #     - NOTIFY: slackNotification
 
-  # # - name: runSh-Job
-  # #   type: runSh
-  # #   steps:
-  # #     #- IN: sh-trigger
-  # #     - TASK:
-  # #       - script: echo "true"
-  # #   on_success:
-  # #     - script: echo "successfully completed"
-
-  # - name: kubernetesupgrade12
-  #   type: deploy
+  # - name: runSh-Job
+  #   type: runSh
   #   steps:
-  #     - IN: sn-kube-man
-  #     - IN: sn-kube-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  #     #- IN: sh-trigger
+  #     - TASK:
+  #       - script: echo "true"
+  #   on_success:
+  #     - script: echo "successfully completed"
+
+  - name: kubernetesupgrade12
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
   # - name: kubernetesreplace1
   #   type: deploy
@@ -128,11 +128,11 @@ jobs:
   #       deployMethod: replace
 
 
-  - name: deployService
-    type: provision
-    steps:
-      - IN: lb
-      #- IN: sn-kube-cluster
+  # - name: deployService
+  #   type: provision
+  #   steps:
+  #     - IN: lb
+      # - IN: sn-kube-cluster
       # - TASK: managed
       #   deployMethod: upgrade
 
