@@ -25,9 +25,9 @@ resources:
 
   - name: sn-kube-cluster
     type: cluster
-    integration: kubeBastion
-    pointer: 
-      namespace: 'myspace123'
+    integration: kubemaster
+    # pointer: 
+    #   namespace: 'myspace123'
 
   # - name: my-params
   #   type: params
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 30
+      memory: 34
       #cpuShares: 7
       #entryPoint: "/app"
       #workingDir: "/app"
