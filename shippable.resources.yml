@@ -27,7 +27,7 @@ resources:
     type: cluster
     integration: kubemaster
     pointer: 
-      namespace: 'todayspace'
+      namespace: 'newspace'
 
   # - name: my-params
   #   type: params
