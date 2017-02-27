@@ -92,11 +92,11 @@ jobs:
   #     # - TASK: managed
   #     #   deployMethod: replace
 
-  - name: kubernetesbluegreen12
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
+  # - name: kubernetesbluegreen12
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
   #  on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
