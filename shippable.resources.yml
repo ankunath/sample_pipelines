@@ -92,10 +92,10 @@ resources:
         paused: false
         progressDeadlineSeconds: 1000
         replicas: 4
-        revisionHistoryLimit: <number>
-        rollbackTo: RollbackConfig # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
-        selector: LabelSelector # https://kubernetes.io/docs/api-reference/v1.5/#labelselector-unversioned
-        strategy: DeploymentStrategy
+        revisionHistoryLimit: 100
+        # rollbackTo: RollbackConfig # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
+        # selector: LabelSelector # https://kubernetes.io/docs/api-reference/v1.5/#labelselector-unversioned
+        # strategy: DeploymentStrategy
       #entryPoint: "/app"
       #workingDir: "/app"
       #cmd: "node"
