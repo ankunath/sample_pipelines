@@ -93,12 +93,9 @@ resources:
         # progressDeadlineSeconds: 200
         replicas: 2
         revisionHistoryLimit: 100
-        rollbackTo:
-          - newrollback # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
-        selector: 
-          - matchLabels:
-            - newlabel: mylabel # https://kubernetes.io/docs/api-reference/v1.5/#labelselector-unversioned
-        strategy: RollingUpdate
+        rollbackTo: {} # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
+        selector: {}
+        strategy: {}
       #entryPoint: "/app"
       #workingDir: "/app"
       #cmd: "node"
