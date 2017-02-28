@@ -95,9 +95,12 @@ resources:
         revisionHistoryLimit: 100
         #rollbackTo:  
         selector: 
-              shippable.myname: shubhankit
+              shippable.jobName: kubernetesbluegreen
         strategy:
           type: Recreate
+      pod:
+        terminationGracePeriodSeconds: 1002
+        activeDeadlineSeconds: 1001
       #entryPoint: "/app"
       #workingDir: "/app"
       #cmd: "node"
