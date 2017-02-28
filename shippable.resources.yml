@@ -96,7 +96,8 @@ resources:
         # rollbackTo:
         #   revision: 0  
         selector: 
-          deploymentName: kubernetesbluegreen-da74d95d-9074-45d7-85de-460e0420b88d
+          matchLabel:
+            shippable.deploymentName: kubernetesbluegreen-da74d95d-9074-45d7-85de-460e0420b88d
         strategy:
           type: Recreate
       pod:
