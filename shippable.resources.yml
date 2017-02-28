@@ -89,13 +89,16 @@ resources:
       cpuShares: 7
       deployment:
         minReadySeconds: 20
-        paused: false
-        progressDeadlineSeconds: 200
+        # paused: false
+        # progressDeadlineSeconds: 200
         replicas: 2
         revisionHistoryLimit: 100
-        # rollbackTo: RollbackConfig # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
-        # selector: LabelSelector # https://kubernetes.io/docs/api-reference/v1.5/#labelselector-unversioned
-        # strategy: DeploymentStrategy
+        rollbackTo:
+          - newrollback # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
+        selector: 
+          - matchLabels:
+            - newlabel: mylabel # https://kubernetes.io/docs/api-reference/v1.5/#labelselector-unversioned
+        strategy: RollingUpdate
       #entryPoint: "/app"
       #workingDir: "/app"
       #cmd: "node"
