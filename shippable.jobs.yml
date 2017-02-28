@@ -111,21 +111,21 @@ jobs:
   #   on_success:
   #     - script: echo "successfully completed"
 
-  # - name: kubernetesupgrade12
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-kube-man
-  #     - IN: sn-kube-cluster
-  #     - TASK: managed
-  #       deployMethod: upgrade
+  - name: kubernetesupgrade12
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: upgrade
 
-  # - name: kubernetesreplace1
-  #   type: deploy
-  #   steps:
-  #     - IN: sn-kube-man
-  #     - IN: sn-kube-cluster
-  #     - TASK: managed
-  #       deployMethod: replace
+  - name: kubernetesreplace1
+    type: deploy
+    steps:
+      - IN: sn-kube-man
+      - IN: sn-kube-cluster
+      - TASK: managed
+        deployMethod: replace
 
 
   # - name: deployService
