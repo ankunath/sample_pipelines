@@ -93,7 +93,8 @@ resources:
         # progressDeadlineSeconds: 200
         replicas: 2
         revisionHistoryLimit: 100
-        #rollbackTo:  
+        rollbackTo:
+          revision: 0  
         # selector: 
         #       "shippable.deploymentName": "kubernetesbluegreen-da74d95d-9074-45d7-85de-460e0420b88d"
         strategy:
