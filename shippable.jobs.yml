@@ -92,7 +92,7 @@ jobs:
   #     # - TASK: managed
   #     #   deployMethod: replace
 
-  - name: kubernetesbluegreen12
+  - name: kubernetesbluegreen
     type: deploy
     steps:
       - IN: sn-kube-man
