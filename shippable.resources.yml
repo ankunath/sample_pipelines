@@ -87,6 +87,15 @@ resources:
     version:
       memory: 12
       cpuShares: 7
+      deployment:
+        minReadySeconds: 20
+        paused: false
+        progressDeadlineSeconds: 100
+        replicas: 4
+        # revisionHistoryLimit: <number>
+        # rollbackTo: RollbackConfig # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
+        # selector: LabelSelector # https://kubernetes.io/docs/api-reference/v1.5/#labelselector-unversioned
+        # strategy: DeploymentStrategy
       #entryPoint: "/app"
       #workingDir: "/app"
       #cmd: "node"
