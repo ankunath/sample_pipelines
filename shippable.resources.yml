@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 23
+      memory: 27
       cpuShares: 7
       deployment:
         minReadySeconds: 20
