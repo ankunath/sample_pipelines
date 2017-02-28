@@ -85,13 +85,13 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 18
+      memory: 23
       cpuShares: 7
       deployment:
-        minReadySeconds: 50
+        minReadySeconds: 20
         paused: false
-        progressDeadlineSeconds: 1000
-        replicas: 4
+        progressDeadlineSeconds: 200
+        replicas: 2
         revisionHistoryLimit: 100
         # rollbackTo: RollbackConfig # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
         # selector: LabelSelector # https://kubernetes.io/docs/api-reference/v1.5/#labelselector-unversioned
