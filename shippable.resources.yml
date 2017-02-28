@@ -94,7 +94,12 @@ resources:
         replicas: 2
         revisionHistoryLimit: 100
         rollbackTo: {} # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
-        selector: {}
+        selector: {
+          "matchLabels": {
+            "shippable.deploymentName": "kubernetesupgrade12-994e741b-fee7-4769-9f0a-6b6c0b1afcd4",
+            "shippable.jobName": "kubernetesupgrade12"
+          }
+        }
         strategy: {}
       #entryPoint: "/app"
       #workingDir: "/app"
