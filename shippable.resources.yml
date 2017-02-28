@@ -93,11 +93,11 @@ resources:
         # progressDeadlineSeconds: 200
         replicas: 2
         revisionHistoryLimit: 100
-        rollbackTo: {} # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
-        # selector: 
-        #   - matchLabels:
-        #       - shippable.jobName: kubernetesbluegreen
-        strategy: {}
+        #rollbackTo:  
+        selector: 
+              shippable.myname: shubhankit
+        strategy:
+          type: Recreate
       #entryPoint: "/app"
       #workingDir: "/app"
       #cmd: "node"
