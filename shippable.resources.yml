@@ -94,9 +94,9 @@ resources:
         replicas: 2
         revisionHistoryLimit: 100
         rollbackTo: {} # https://kubernetes.io/docs/api-reference/v1.5/#rollbackconfig-v1beta1
-        selector: 
-          - matchLabels:
-              - shippable.jobName: kubernetesbluegreen
+        # selector: 
+        #   - matchLabels:
+        #       - shippable.jobName: kubernetesbluegreen
         strategy: {}
       #entryPoint: "/app"
       #workingDir: "/app"
