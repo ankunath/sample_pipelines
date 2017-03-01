@@ -37,7 +37,15 @@ build:
     - echo $distribution
     - echo $tag
     - echo $test
-    - echo $secure
+    - echo $BOO
+    - echo $BOO2
+    - echo $BOO3
+    - echo $FOO
+    - echo $FOO2
+    - echo $FOO3
+    - echo $key1
+    - echo $IOO2
+    - echo $IOO3
 
 integrations:
   notifications:
