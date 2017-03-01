@@ -26,7 +26,7 @@ matrix:
   #       - IOO2: newInclude
   #         IOO3: thirdInclude
   exclude:
-    - node_js: "0.10"
+    # - node_js: "0.10"
       env:
         - BOO=Bar
         - BOO2: newBar
