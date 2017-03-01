@@ -1,8 +1,7 @@
 language: node_js
 
 env:
-  - distribution: centos 
-    tag: 6.8
+  - distribution=centos tag=6.8
   - distribution: ubuntu 
     tag: 14.04
   - secure: newprojectsecure
