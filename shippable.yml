@@ -5,6 +5,8 @@ env:
   - distribution=centos tag=7.2.1511
   - distribution=ubuntu tag=14.04
   - distribution=debian tag=jessie
+  - secure: lKsG8BlGGyup21VOZY8sCkiTvuSXvSb/rr6l2N+GNdQil6TLCFkmc62X3GEG36bc4JlK1mQR05oivRdGZ0yk3XSZ+Ou71f307OvU2W6NUPrXI/DLyl6mHsZapGlYrspOQbXK8Ut0QXlr/yEd2oVWPpORJwqk/yujavajnu61pZp4JJlRTXfs+gcPiRyVuU6b0RWBjiC6D/aZtGaj3bGzW0BHpnSPQY0VqjtlD5kXVtK1xekbhrEtIicqnwphq6SRUUXFYERyndqSwN92sNWl+jp4EIUZYRjjR9T0l/CJ+jrA6CgX2U/bS12ZLb4Z3lfCptx1rneevWh615zwoi3uTw==
+  
 
 build:
   ci:
@@ -12,6 +14,7 @@ build:
     - MYVERSION=`date +%s`
     - echo $distribution
     - echo $tag
+    - echo $SHUBH
 
 # integrations:
 #   notifications:
