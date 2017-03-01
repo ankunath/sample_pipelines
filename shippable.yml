@@ -1,22 +1,19 @@
 language: node_js
 
 env:
-  - distribution: centos 
-    tag: 6.8
-  - distribution: centos 
-    tag: 7.2.1511
-  - distribution: ubuntu 
-    tag: 14.04
-  - distribution: debian 
-    tag: jessie
+  - distribution=centos tag=6.8
+  - distribution=centos tag=7.2.1511
+  - distribution=ubuntu tag=14.04
+  - distribution=debian tag=jessie
 
 build:
   ci:
     - echo "Hello worl"
     - MYVERSION=`date +%s`
+    - echo "$distribution"
 
-integrations:
-  notifications:
+# integrations:
+#   notifications:
     # - integrationName: slack
     #   type: slack
     #   recipients:
