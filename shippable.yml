@@ -29,8 +29,8 @@ matrix:
     - node_js: "0.10"
       env:
         - BOO=Bar
-        - BOO2: newBar
-          BOO3: thirdBar
+        # - BOO2: newBar
+        #   BOO3: thirdBar
 
 build:
   ci:
