@@ -1,26 +1,29 @@
 language: node_js
 
+node_js:
+  - 0.10
+
 env:
   global:
     - BOO=Bar
     - BOO2: newBar
-      B003: thirdBar
+      BOO3: thirdBar
   matrix:
     - FOO=Tar
     - FOO2: newFar
-      F003: thirdFar
+      FOO3: thirdFar
   include:
     - node_js: "5.0"
       env:
         - key1=include1
         - IOO2: newInclude
-          I003: thirdInclude
+          IOO3: thirdInclude
   exclude:
     - node_js: "4.2.3"
       env:
-        - key2=exclude1
-        - EOO2: newExclude
-          E003: thirdExclude
+        - BOO=Bar
+        - BOO2: newBar
+          BOO3: thirdBar
   - distribution=centos tag=6.8
   - distribution: ubuntu 
     tag: 14.04
