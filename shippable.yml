@@ -10,6 +10,8 @@ build:
   ci:
     - echo "Hello worl"
     - MYVERSION=`date +%s`
+    - echo $distribution
+    - echo $tag
 
 integrations:
   notifications:
