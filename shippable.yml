@@ -4,28 +4,29 @@ node_js:
   - 0.10
   #- 5.0
   - 4.2.3
+  # - 4.2.4
+  # - 4.2.5
 
 env:
-  global:
-    - BOO=Bar
-    - BOO2: newBar
-      BOO3: thirdBar
-    - distribution=centos tag=6.8
-    - distribution: ubuntu 
-      tag: 14.04
-    - secure: A3fpdLDwCroSte8VDk5M7cltbz7UlwkANKFHsnw/8QS4LCfP5+YlCfPsyMkoaU9QFbCszipQFVpB52NobDssXfQ8iqiBZWKHuy08Hn0HBWtkAzPETvWbeRay4xjJM2xQfJq5214YBrO3bgTsZVVcQtF6yOW24AqrNI2Ble3S0KaI+p4Wg0uADbaW9bb4eohehLZpS2H40pyj67ZFtnKtX0Qd1hRUQbiRdPO6upDInVVMjv2ztC7DSRXoM+u7SelHfZLYVIPVynGxD4Z6W84kGwikyDCP/efPnrFYZaoTX1ZbYJD4bNxUH4iU285ZMx0IbGEeqoUHZm+mwzIP9sD+wA==
+  - BOO=Bar
+  - BOO2: newBar
+    BOO3: thirdBar
+  # - distribution=centos tag=6.8
+  - distribution: ubuntu 
+    tag: 14.04
+  - secure: A3fpdLDwCroSte8VDk5M7cltbz7UlwkANKFHsnw/8QS4LCfP5+YlCfPsyMkoaU9QFbCszipQFVpB52NobDssXfQ8iqiBZWKHuy08Hn0HBWtkAzPETvWbeRay4xjJM2xQfJq5214YBrO3bgTsZVVcQtF6yOW24AqrNI2Ble3S0KaI+p4Wg0uADbaW9bb4eohehLZpS2H40pyj67ZFtnKtX0Qd1hRUQbiRdPO6upDInVVMjv2ztC7DSRXoM+u7SelHfZLYVIPVynGxD4Z6W84kGwikyDCP/efPnrFYZaoTX1ZbYJD4bNxUH4iU285ZMx0IbGEeqoUHZm+mwzIP9sD+wA==
 
 matrix:
     # - FOO=Tar
     # - FOO2: newFar
     #   FOO3: thirdFar
-  include:
-    - node_js: "5.0"
-      env:
-        - key1=include1
-        - BOO=Bar
-        - IOO2: newInclude
-          IOO3: thirdInclude
+  # include:
+  #   - node_js: "5.0"
+  #     env:
+  #       - key1=include1
+  #       - BOO=Bar
+  #       - IOO2: newInclude
+  #         IOO3: thirdInclude
   exclude:
     - node_js: "0.10"
       env:
