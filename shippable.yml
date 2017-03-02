@@ -36,6 +36,7 @@ matrix:
         - BOO=Bar
         - BOO2: newBar
           BOO3: thirdBar
+          NEWFAIL: failedValue
 
 build:
   ci:
@@ -53,6 +54,7 @@ build:
     - echo $key1
     - echo $IOO2
     - echo $IOO3
+    - echo $NEWFAIL
 
 integrations:
   notifications:
