@@ -9,8 +9,8 @@ node_js:
 
 env:
   - BOO=Bar
-  - BOO2=newBar
-    #BOO3: thirdBar
+  - BOO2: newBar
+    BOO3: thirdBar
   # - distribution=centos tag=6.8
   # - distribution: ubuntu 
   #   tag: 14.04
@@ -37,8 +37,8 @@ matrix:
     - node_js: "4.2.3"
       env:
         - BOO=Bar
-        - BOO2=newBar
-          # BOO3: thirdBar
+        - BOO2: newBar
+          BOO3: thirdBar
           # NEWFAIL: failedValue
 
 build:
