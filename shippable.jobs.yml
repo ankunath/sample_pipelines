@@ -57,20 +57,20 @@ jobs:
 #     flags:
 #       - ttrn-file
 
-  # - name: manifestjob
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp3
-  #     #- IN: sh-myapp2
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
-
-  - name: sn-kube-man
+  - name: manifestjob
     type: manifest
     steps:
       - IN: sh-myapp3
+      #- IN: sh-myapp2
       - IN: sh-docker-opts
       - IN: sh-trigger
+
+  # - name: sn-kube-man
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
 
   # - name: sn-kube-man-2
   #   type: manifest
@@ -92,11 +92,11 @@ jobs:
   #     # - TASK: managed
   #     #   deployMethod: replace
 
-  - name: kubernetesbluegreen
-    type: deploy
-    steps:
-      - IN: sn-kube-man
-      - IN: sn-kube-cluster
+  # - name: kubernetesbluegreen
+  #   type: deploy
+  #   steps:
+  #     - IN: sn-kube-man
+  #     - IN: sn-kube-cluster
   #  on_success:
   #     - NOTIFY: slackNotification
   #   on_failure:
@@ -184,17 +184,17 @@ jobs:
   # #       deployMethod: upgrade
 
 
-  # - name: deploytriton2220
-  #   type: deploy
-  #   steps:
-  #     - IN: manifestjob1
-  #     - IN: tri-cluster
+  - name: deploytriton2220
+    type: deploy
+    steps:
+      - IN: manifestjob
+      - IN: tri-cluster
 
-  # - name: deploygce
-  #   type: deploy
-  #   steps:
-  #     - IN: gke-cluster
-  #     - IN: manifestjob
+  - name: deploygce
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      - IN: manifestjob
     # on_success:
     #   - NOTIFY: slackNotification
     # on_failure:
@@ -307,11 +307,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  # - name: ddc-deploy
-  #   type: deploy
-  #   steps:
-  #     - IN: ddc-cluster
-  #     - IN: manifestjob0
+  - name: ddc-deploy
+    type: deploy
+    steps:
+      - IN: ddc-cluster
+      - IN: manifestjob
       #- IN: jenkinsJobDemo
 
   # - name: ddc-deploy-2

@@ -23,9 +23,9 @@ resources:
   #   integration: docker
   #     #versionName: "latest"
 
-  - name: sn-kube-cluster
-    type: cluster
-    integration: kubemaster
+  # - name: sn-kube-cluster
+  #   type: cluster
+  #   integration: kubemaster
     # pointer: 
     #   namespace: 'newnamepace'
 
@@ -37,11 +37,11 @@ resources:
   #       SHIPPABLE: "code-faster"
 
 
-  # - name: tri-cluster
-  #   type: cluster
-  #   integration: triton
-  #   pointer:
-  #     region: "us-east-2"
+  - name: tri-cluster
+    type: cluster
+    integration: triton
+    pointer:
+      region: "us-east-2"
 
   # - name: slackNotification
   #   type: notification
@@ -66,11 +66,11 @@ resources:
   #   seed:
   #     versionName: "v10.12.1-alpha"
 
-  # # - name: ddc-cluster
-  # #   type: cluster
-  # #   integration: ddc
-  # #   pointer:
-  # #     sourceName: "small-cluster" #name of the cluster we are deploying.
+  - name: ddc-cluster
+    type: cluster
+    integration: ddc
+    pointer:
+      sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
   # - name: sn-file-4
@@ -87,22 +87,22 @@ resources:
     version:
       memory: 27
       cpuShares: 7
-      deployment:
-        minReadySeconds: 20
-        # paused: false
-        # progressDeadlineSeconds: 200
-        replicas: 2
-        revisionHistoryLimit: 100
-        # rollbackTo:
-        #   revision: 0  
-        selector: 
-          matchLabels:
-            "shippable.jobName": "kubernetesbluegreen"
-        strategy:
-          type: Recreate
-      pod:
-        terminationGracePeriodSeconds: 1002
-        activeDeadlineSeconds: 1001
+      # deployment:
+      #   minReadySeconds: 20
+      #   # paused: false
+      #   # progressDeadlineSeconds: 200
+      #   replicas: 2
+      #   revisionHistoryLimit: 100
+      #   # rollbackTo:
+      #   #   revision: 0  
+      #   selector: 
+      #     matchLabels:
+      #       "shippable.jobName": "kubernetesbluegreen"
+      #   strategy:
+      #     type: Recreate
+      # pod:
+      #   terminationGracePeriodSeconds: 1002
+      #   activeDeadlineSeconds: 1001
       #entryPoint: "/app"
       #workingDir: "/app"
       #cmd: "node"
@@ -189,18 +189,18 @@ resources:
 
 
 
-  # - name: dcl-cluster
-  #   type: cluster
-  #   integration: dcl
-  #   pointer:
-  #     sourceName: "default"
+  - name: dcl-cluster
+    type: cluster
+    integration: dcl
+    pointer:
+      sourceName: "default"
 
-  # - name: gke-cluster
-  #   type: cluster
-  #   integration: gce
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "europe-west1-b"
+  - name: gke-cluster
+    type: cluster
+    integration: gce
+    pointer:
+      sourceName: "small-cluster"
+      region: "europe-west1-b"
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws
