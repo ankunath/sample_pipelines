@@ -9,6 +9,7 @@ node_js:
 
 env:
   # - BOO=Bar
+  - 1
   - BOO2: newBar
     BOO3: thirdBar
   # - distribution=centos tag=6.8
@@ -33,12 +34,12 @@ matrix:
   #       #- BOO=Bar
   #       - BOO2: newBar
   #         BOO3: thirdBar
-  allow_failures:
-    - node_js: "4.2.3"
-      env:
-        #- BOO=Bar
-        - BOO2: newBar
-          BOO3: thirdBar
+  # allow_failures:
+  #   - node_js: "4.2.3"
+  #     env:
+  #       #- BOO=Bar
+  #       - BOO2: newBar
+  #         BOO3: thirdBar
           # NEWFAIL: failedValue
 
 build:
