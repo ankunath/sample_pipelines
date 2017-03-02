@@ -30,7 +30,7 @@ matrix:
   exclude:
     - node_js: "0.10"
       env:
-        - BOO=Bar
+        #- BOO=Bar
         - BOO2: newBar
           BOO3: thirdBar
   allow_failures:
