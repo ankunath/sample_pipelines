@@ -8,12 +8,13 @@ node_js:
   # - 4.2.5
 
 env:
-  - BOO=Bar
-  - BOO2: newBar
-    BOO3: thirdBar
-  - distribution=centos tag=6.8
-  - distribution: ubuntu 
-    tag: 14.04
+  global:
+    - BOO=Bar
+    - BOO2: newBar
+      BOO3: thirdBar
+    - distribution=centos tag=6.8
+    - distribution: ubuntu 
+      tag: 14.04
   matrix:
     - FOO=Tar
     - FOO2: newFar
