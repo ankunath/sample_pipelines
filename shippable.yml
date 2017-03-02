@@ -15,6 +15,8 @@ env:
     - distribution=centos tag=6.8
     - distribution: ubuntu 
       tag: 14.04
+    - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
+
   matrix:
     - FOO=Tar
     - FOO2: newFar
@@ -39,8 +41,10 @@ matrix:
     - node_js: "0.10"
       env:
         #- BOO=Bar
-        - BOO2: newBar
-          BOO3: thirdBar
+        # - BOO2: newBar
+        #   BOO3: thirdBar
+        - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
+
   allow_failures:
     - node_js: "4.2.3"
       env:
@@ -69,6 +73,7 @@ build:
     - node test.js
     - echo $fine
     - echo $new
+    - echo $secretkey
 
 integrations:
   notifications:
