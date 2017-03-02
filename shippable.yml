@@ -8,7 +8,7 @@ node_js:
   # - 4.2.5
 
 env:
-  BOO: Bar
+  BOO=Bar
   
   # - distribution=centos tag=6.8
   # - distribution: ubuntu 
