@@ -9,7 +9,7 @@ node_js:
 
 env:
   # - BOO=Bar
-  - 1
+  - true
   - BOO2: newBar
     BOO3: thirdBar
   # - distribution=centos tag=6.8
