@@ -27,11 +27,10 @@ matrix:
     #   FOO3: thirdFar
   include:
     - node_js: "5.0"
-      env:
-        - key1=include1
-        - BOO=Bar
-        - IOO2: newInclude
-          IOO3: thirdInclude
+      env: key1=include1
+        # - BOO=Bar
+        # - IOO2: newInclude
+        #   IOO3: thirdInclude
   exclude:
     - node_js: "0.10"
       env:
