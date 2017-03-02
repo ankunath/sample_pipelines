@@ -31,7 +31,7 @@ matrix:
       env:
         - BOO=Bar
   allow_failures:
-    - node_js: 4.2.3
+    - node_js: "4.2.3"
       env:
         - BOO=Bar
         - BOO2: newBar
