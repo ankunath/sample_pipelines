@@ -8,8 +8,7 @@ node_js:
   # - 4.2.5
 
 env:
-  # - BOO=Bar
-  - true
+  - BOO=Bar
   - BOO2: newBar
     BOO3: thirdBar
   # - distribution=centos tag=6.8
@@ -34,12 +33,12 @@ matrix:
   #       #- BOO=Bar
   #       - BOO2: newBar
   #         BOO3: thirdBar
-  # allow_failures:
-  #   - node_js: "4.2.3"
-  #     env:
-  #       #- BOO=Bar
-  #       - BOO2: newBar
-  #         BOO3: thirdBar
+  allow_failures:
+    - node_js: "4.2.3"
+      env:
+        - BOO=Bar
+        - BOO2: newBar
+          BOO3: thirdBar
           # NEWFAIL: failedValue
 
 build:
@@ -59,7 +58,7 @@ build:
     - echo $IOO2
     - echo $IOO3
     - echo $NEWFAIL
-    #- node test.js
+    - node test.js
 
 integrations:
   notifications:
