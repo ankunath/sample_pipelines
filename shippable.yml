@@ -27,13 +27,13 @@ matrix:
     #   FOO3: thirdFar
   include:
     - node_js: "5.0"
-      env: key1=include1
+      env: 1234
         # - BOO=Bar
         # - IOO2: newInclude
         #   IOO3: thirdInclude
   exclude:
     - node_js: "0.10"
-      env: BOO=Bar
+      env: true
         # - BOO2: newBar
         #   BOO3: thirdBar
   # allow_failures:
