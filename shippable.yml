@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  #- 0.10
+  - 0.10
   #- 5.0
   - 4.2.3
   # - 4.2.4
@@ -20,26 +20,26 @@ matrix:
     # - FOO=Tar
     # - FOO2: newFar
     #   FOO3: thirdFar
-  # include:
-  #   - node_js: "5.0"
-  #     env:
-  #       - key1=include1
-  #       - BOO=Bar
-  #       - IOO2: newInclude
-  #         IOO3: thirdInclude
-  # exclude:
-  #   - node_js: "0.10"
-  #     env:
-  #       #- BOO=Bar
-  #       - BOO2: newBar
-  #         BOO3: thirdBar
-  # allow_failures:
-  #   - node_js: "4.2.3"
-  #     env:
-  #       - BOO=Bar
-  #       - BOO2: newBar
-  #         BOO3: thirdBar
-          # NEWFAIL: failedValue
+  include:
+    - node_js: "5.0"
+      env:
+        - key1=include1
+        - BOO=Bar
+        - IOO2: newInclude
+          IOO3: thirdInclude
+  exclude:
+    - node_js: "0.10"
+      env:
+        #- BOO=Bar
+        - BOO2: newBar
+          BOO3: thirdBar
+  allow_failures:
+    - node_js: "4.2.3"
+      env:
+        #- BOO=Bar
+        - BOO2: newBar
+          BOO3: thirdBar
+          #NEWFAIL: failedValue
 
 build:
   ci:
