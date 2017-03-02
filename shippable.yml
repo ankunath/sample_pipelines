@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - 0.10
+  #- 0.10
   #- 5.0
   - 4.2.3
   # - 4.2.4
@@ -9,8 +9,8 @@ node_js:
 
 env:
   - BOO=Bar
-  - BOO2: newBar
-    BOO3: thirdBar
+  # - BOO2: newBar
+  #   BOO3: thirdBar
   # - distribution=centos tag=6.8
   # - distribution: ubuntu 
   #   tag: 14.04
@@ -27,18 +27,18 @@ matrix:
   #       - BOO=Bar
   #       - IOO2: newInclude
   #         IOO3: thirdInclude
-  exclude:
-    - node_js: "0.10"
-      env:
-        #- BOO=Bar
-        - BOO2: newBar
-          BOO3: thirdBar
+  # exclude:
+  #   - node_js: "0.10"
+  #     env:
+  #       #- BOO=Bar
+  #       - BOO2: newBar
+  #         BOO3: thirdBar
   allow_failures:
     - node_js: "4.2.3"
       env:
         - BOO=Bar
-        - BOO2: newBar
-          BOO3: thirdBar
+        # - BOO2: newBar
+        #   BOO3: thirdBar
           # NEWFAIL: failedValue
 
 build:
