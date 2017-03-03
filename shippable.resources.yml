@@ -37,11 +37,11 @@ resources:
   #       SHIPPABLE: "code-faster"
 
 
-  - name: tri-cluster
-    type: cluster
-    integration: triton
-    pointer:
-      region: "us-east-2"
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: triton
+  #   pointer:
+  #     region: "us-east-2"
 
   # - name: slackNotification
   #   type: notification

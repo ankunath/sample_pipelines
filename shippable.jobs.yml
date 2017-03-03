@@ -184,11 +184,11 @@ jobs:
   # #       deployMethod: upgrade
 
 
-  - name: deploytriton2220
-    type: deploy
-    steps:
-      - IN: manifestjob
-      - IN: tri-cluster
+  # - name: deploytriton2220
+  #   type: deploy
+  #   steps:
+  #     - IN: manifestjob
+  #     - IN: tri-cluster
 
   - name: deploygce
     type: deploy
