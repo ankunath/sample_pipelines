@@ -39,9 +39,9 @@ env:
   #   - secure: daMBwc3YFXL+303+YeVNDzgPObwWSdRPF9LrLoEAu0nFwWiXKjm05RXI8mx83vVuGCqyuUUpOW6hG1lyXzpAHZwkzwvjZXj/bAtTH+fhk6o4KFOS29yTt7mBJO8/oU8xHZ3byQAvGflDxobAkaFMDpQaaZc8tsENkny8f+A7Mo64ruU5xZ6CZQsR+pGBsJkbtg5NNprErKFMJ72RVTAdLiQ15kB4wLYiaWtC5iy8uPR3lL7OM9I/rgdjdAG1Xz+R0vch7pX4rxml+XywLz6Vgda3zT++J6+GXJIFONTQ5Jsp07wrM919eIukaGPu3YfqwTNVdHh5Ry/dOAXwZmRuMQ==
 
 matrix:
-    - FOO=Tar
-    - FOO2: newFar
-      FOO3: thirdFar
+    # - FOO=Tar
+    # - FOO2: newFar
+    #   FOO3: thirdFar
   include:
     - node_js: "5.0"
       env: 
