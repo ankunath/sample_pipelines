@@ -69,6 +69,10 @@ jobs:
     type: runCLI                                #required
     on_start:                                   #optional
       - script: echo 'This block executes when the TASK starts'
+    steps:                                      #required
+      - IN: sh-myapp3                         #specify at least one cliConfig resource to set up CLI tools
+      - TASK:
+        - script: echo 'This block executes when  steps the TASK starts'
   # - name: sn-kube-man
   #   type: manifest
   #   steps:
