@@ -3,16 +3,16 @@ language: node_js
 node_js:
   - 0.10
   - 5.0
-  - 4.2.3
-  - 4.2.4
-  - 4.2.5
-  - 4.3.1
-  - 4.5
-  - 4.3.3
-  - 4.4.4
-  - 4.5.5
-  - 4.5.6
-  - 4.1.1
+  # - 4.2.3
+  # - 4.2.4
+  # - 4.2.5
+  # - 4.3.1
+  # - 4.5
+  # - 4.3.3
+  # - 4.4.4
+  # - 4.5.5
+  # - 4.5.6
+  # - 4.1.1
   # - 4.5.3
   # - 4.5.4
   # - 4.6.5
@@ -23,13 +23,13 @@ env:
   - BOO2: newBar
   - BOO3: thirdBar
   - newBoo: newBar
-  - BOOnew: thirdBar
-  - 14Boo: UBar
-  - BOO50: UBer
-  - distribution=centos tag=6.8
-  - distribution: ubuntu 
-    tag: 14.04
-  - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
+  # - BOOnew: thirdBar
+  # - 14Boo: UBar
+  # - BOO50: UBer
+  # - distribution=centos tag=6.8
+  # - distribution: ubuntu 
+  #   tag: 14.04
+  # - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
 
   # matrix:
   #   - FOO=Tar
