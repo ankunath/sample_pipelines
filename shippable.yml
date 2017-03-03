@@ -2,10 +2,20 @@ language: node_js
 
 node_js:
   - 0.10
-  #- 5.0
+  - 5.0
   - 4.2.3
-  # - 4.2.4
-  # - 4.2.5
+  - 4.2.4
+  - 4.2.5
+  - 0.11
+  - 5.2
+  - 4.3.3
+  - 4.4.4
+  - 4.5.5
+  - 0.12
+  - 5.6
+  - 4.5.3
+  - 4.5.4
+  - 4.6.5
 
 env:
   # global:
@@ -29,9 +39,9 @@ env:
   #   - secure: daMBwc3YFXL+303+YeVNDzgPObwWSdRPF9LrLoEAu0nFwWiXKjm05RXI8mx83vVuGCqyuUUpOW6hG1lyXzpAHZwkzwvjZXj/bAtTH+fhk6o4KFOS29yTt7mBJO8/oU8xHZ3byQAvGflDxobAkaFMDpQaaZc8tsENkny8f+A7Mo64ruU5xZ6CZQsR+pGBsJkbtg5NNprErKFMJ72RVTAdLiQ15kB4wLYiaWtC5iy8uPR3lL7OM9I/rgdjdAG1Xz+R0vch7pX4rxml+XywLz6Vgda3zT++J6+GXJIFONTQ5Jsp07wrM919eIukaGPu3YfqwTNVdHh5Ry/dOAXwZmRuMQ==
 
 matrix:
-    # - FOO=Tar
-    # - FOO2: newFar
-    #   FOO3: thirdFar
+    - FOO=Tar
+    - FOO2: newFar
+      FOO3: thirdFar
   include:
     - node_js: "5.0"
       env: 
@@ -41,13 +51,13 @@ matrix:
         # - BOO=Bar
         # - IOO2: newInclude
         #   IOO3: thirdInclude
-  exclude:
-    - node_js: "0.10"
-      env:
-        #- BOO=Bar
-        # - BOO2: newBar
-        #   BOO3: thirdBar
-        - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
+  # exclude:
+  #   - node_js: "0.10"
+  #     env:
+  #       #- BOO=Bar
+  #       # - BOO2: newBar
+  #       #   BOO3: thirdBar
+  #       - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
 
   allow_failures:
     - node_js: "4.2.3"
