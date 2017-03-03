@@ -65,6 +65,10 @@ jobs:
       - IN: sh-docker-opts
       - IN: sh-trigger
 
+  - name: runcliJob                                #required
+    type: runCLI                                #required
+    on_start:                                   #optional
+      - script: echo 'This block executes when the TASK starts'
   # - name: sn-kube-man
   #   type: manifest
   #   steps:
