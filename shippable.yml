@@ -2,7 +2,7 @@ language: node_js
 
 node_js:
   - 0.10
-  - 5.0
+  # - 5.0
   # - 4.2.3
   # - 4.2.4
   # - 4.2.5
@@ -46,7 +46,7 @@ matrix:
     - node_js: "5.0"
       env: 
         - key1: include1
-        - secure: HQgkjfaI+kqPhccm9lKxUufm51KSzlFV6Jwwe4/3sWHweSszEt4rsbts+Al7T5CJMgaUmJXzXj72a/3BlpE/Ug6d8I6gqSF/sl+WTnc8MJXMtZfKyGtF/+AdvviudabC8VHJds4iz7jL2dudriCoqtc14a5BmqPhVrHAeWTC8N3j2eVX3CT7AcY6hAWb0W6czYwTJMpkEPMqQi3sCRw79AMwfrwvCi7xkwuZ3pyQFcC95keH5KH4TykNx7z5srTIEzrv/xOnG+j5+nl5QPeKzfJr4MSHUYiLNanPXii9iGExUpJeYYXs9PaaBm+yMyJZKD9RelVRfENW2XnA/WZmoA==
+        # - secure: HQgkjfaI+kqPhccm9lKxUufm51KSzlFV6Jwwe4/3sWHweSszEt4rsbts+Al7T5CJMgaUmJXzXj72a/3BlpE/Ug6d8I6gqSF/sl+WTnc8MJXMtZfKyGtF/+AdvviudabC8VHJds4iz7jL2dudriCoqtc14a5BmqPhVrHAeWTC8N3j2eVX3CT7AcY6hAWb0W6czYwTJMpkEPMqQi3sCRw79AMwfrwvCi7xkwuZ3pyQFcC95keH5KH4TykNx7z5srTIEzrv/xOnG+j5+nl5QPeKzfJr4MSHUYiLNanPXii9iGExUpJeYYXs9PaaBm+yMyJZKD9RelVRfENW2XnA/WZmoA==
 
         # - BOO=Bar
         # - IOO2: newInclude
@@ -59,12 +59,12 @@ matrix:
   #       #   BOO3: thirdBar
   #       - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
 
-  allow_failures:
-    - node_js: "4.2.3"
-      env:
-        #- BOO=Bar
-        - BOO2: newBar
-          BOO3: thirdBar
+  # allow_failures:
+  #   - node_js: "4.2.3"
+  #     env:
+  #       #- BOO=Bar
+  #       - BOO2: newBar
+  #         BOO3: thirdBar
           #NEWFAIL: failedValue
 
 build:
@@ -88,6 +88,7 @@ build:
     - echo $fine
     - echo $new
     - echo $secretkey
+    - echo $shubhAnku
 
 integrations:
   notifications:
