@@ -66,11 +66,11 @@ resources:
   #   seed:
   #     versionName: "v10.12.1-alpha"
 
-  - name: ddc-cluster
-    type: cluster
-    integration: ddc
-    pointer:
-      sourceName: "small-cluster" #name of the cluster we are deploying.
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
 
 
   # - name: sn-file-4
@@ -85,7 +85,7 @@ resources:
   - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 27
+      memory: 47
       cpuShares: 7
       # deployment:
       #   minReadySeconds: 20
@@ -189,11 +189,11 @@ resources:
 
 
 
-  - name: dcl-cluster
-    type: cluster
-    integration: dcl
-    pointer:
-      sourceName: "default"
+  # - name: dcl-cluster
+  #   type: cluster
+  #   integration: dcl
+  #   pointer:
+  #     sourceName: "default"
 
   - name: gke-cluster
     type: cluster

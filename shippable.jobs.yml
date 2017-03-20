@@ -61,34 +61,34 @@ jobs:
     type: manifest
     steps:
       - IN: sh-myapp3
-      - IN: manifestjobParent
+      #- IN: manifestjobParent
       - IN: sh-docker-opts
       - IN: sh-trigger
 
-  - name: manifestjobParent
-    type: manifest
-    steps:
-      - IN: sh-myapp3
-      - IN: manifestjobParentP
-      - IN: sh-docker-opts
-      - IN: sh-trigger
+  # - name: manifestjobParent
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     - IN: manifestjobParentP
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
 
-  - name: manifestjobParentP
-    type: manifest
-    steps:
-      - IN: sh-myapp3
-      #- IN: sh-myapp2
-      - IN: sh-docker-opts
-      - IN: sh-trigger
+  # - name: manifestjobParentP
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     #- IN: sh-myapp2
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
 
-  - name: runcliJob                                #required
-    type: runCLI                                #required
-    # on_start:                                   #optional
-    #   - script: echo 'This block executes when the TASK starts'
-    steps:                                      #required
-      # - IN: sh-myapp3                         #specify at least one cliConfig resource to set up CLI tools
-      - TASK:
-        - script: echo 'This block executes when  steps the TASK starts'
+  # - name: runcliJob                                #required
+  #   type: runCLI                                #required
+  #   # on_start:                                   #optional
+  #   #   - script: echo 'This block executes when the TASK starts'
+  #   steps:                                      #required
+  #     # - IN: sh-myapp3                         #specify at least one cliConfig resource to set up CLI tools
+  #     - TASK:
+  #       - script: echo 'This block executes when  steps the TASK starts'
   # - name: sn-kube-man
   #   type: manifest
   #   steps:
@@ -331,11 +331,11 @@ jobs:
   #     - TASK: managed
   #       deployMethod: upgrade
 
-  - name: ddc-deploy
-    type: deploy
-    steps:
-      - IN: ddc-cluster
-      - IN: manifestjob
+  # - name: ddc-deploy
+  #   type: deploy
+  #   steps:
+  #     - IN: ddc-cluster
+  #     - IN: manifestjob
       #- IN: jenkinsJobDemo
 
   # - name: ddc-deploy-2
