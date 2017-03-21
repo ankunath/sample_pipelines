@@ -38,34 +38,34 @@ env:
   #   #- secure: A3fpdLDwCroSte8VDk5M7cltbz7UlwkANKFHsnw/8QS4LCfP5+YlCfPsyMkoaU9QFbCszipQFVpB52NobDssXfQ8iqiBZWKHuy08Hn0HBWtkAzPETvWbeRay4xjJM2xQfJq5214YBrO3bgTsZVVcQtF6yOW24AqrNI2Ble3S0KaI+p4Wg0uADbaW9bb4eohehLZpS2H40pyj67ZFtnKtX0Qd1hRUQbiRdPO6upDInVVMjv2ztC7DSRXoM+u7SelHfZLYVIPVynGxD4Z6W84kGwikyDCP/efPnrFYZaoTX1ZbYJD4bNxUH4iU285ZMx0IbGEeqoUHZm+mwzIP9sD+wA==
   #   - secure: daMBwc3YFXL+303+YeVNDzgPObwWSdRPF9LrLoEAu0nFwWiXKjm05RXI8mx83vVuGCqyuUUpOW6hG1lyXzpAHZwkzwvjZXj/bAtTH+fhk6o4KFOS29yTt7mBJO8/oU8xHZ3byQAvGflDxobAkaFMDpQaaZc8tsENkny8f+A7Mo64ruU5xZ6CZQsR+pGBsJkbtg5NNprErKFMJ72RVTAdLiQ15kB4wLYiaWtC5iy8uPR3lL7OM9I/rgdjdAG1Xz+R0vch7pX4rxml+XywLz6Vgda3zT++J6+GXJIFONTQ5Jsp07wrM919eIukaGPu3YfqwTNVdHh5Ry/dOAXwZmRuMQ==
 
-matrix:
-    # - FOO=Tar
-    # - FOO2: newFar
-    #   FOO3: thirdFar
-  include:
-    - node_js: "5.0"
-      env: 
-        - key1: include1
-        # - secure: HQgkjfaI+kqPhccm9lKxUufm51KSzlFV6Jwwe4/3sWHweSszEt4rsbts+Al7T5CJMgaUmJXzXj72a/3BlpE/Ug6d8I6gqSF/sl+WTnc8MJXMtZfKyGtF/+AdvviudabC8VHJds4iz7jL2dudriCoqtc14a5BmqPhVrHAeWTC8N3j2eVX3CT7AcY6hAWb0W6czYwTJMpkEPMqQi3sCRw79AMwfrwvCi7xkwuZ3pyQFcC95keH5KH4TykNx7z5srTIEzrv/xOnG+j5+nl5QPeKzfJr4MSHUYiLNanPXii9iGExUpJeYYXs9PaaBm+yMyJZKD9RelVRfENW2XnA/WZmoA==
+# matrix:
+#     # - FOO=Tar
+#     # - FOO2: newFar
+#     #   FOO3: thirdFar
+#   include:
+#     - node_js: "5.0"
+#       env: 
+#         - key1: include1
+#         # - secure: HQgkjfaI+kqPhccm9lKxUufm51KSzlFV6Jwwe4/3sWHweSszEt4rsbts+Al7T5CJMgaUmJXzXj72a/3BlpE/Ug6d8I6gqSF/sl+WTnc8MJXMtZfKyGtF/+AdvviudabC8VHJds4iz7jL2dudriCoqtc14a5BmqPhVrHAeWTC8N3j2eVX3CT7AcY6hAWb0W6czYwTJMpkEPMqQi3sCRw79AMwfrwvCi7xkwuZ3pyQFcC95keH5KH4TykNx7z5srTIEzrv/xOnG+j5+nl5QPeKzfJr4MSHUYiLNanPXii9iGExUpJeYYXs9PaaBm+yMyJZKD9RelVRfENW2XnA/WZmoA==
 
-        # - BOO=Bar
-        # - IOO2: newInclude
-        #   IOO3: thirdInclude
-  # exclude:
-  #   - node_js: "0.10"
-  #     env:
-        #- BOO=Bar
-  #       # - BOO2: newBar
-  #       #   BOO3: thirdBar
-  #       - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
+#         # - BOO=Bar
+#         # - IOO2: newInclude
+#         #   IOO3: thirdInclude
+#   # exclude:
+#   #   - node_js: "0.10"
+#   #     env:
+#         #- BOO=Bar
+#   #       # - BOO2: newBar
+#   #       #   BOO3: thirdBar
+#   #       - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
 
-  allow_failures:
-    - node_js: "4.2.3"
-      env:
-        #- BOO=Bar
-        - BOO2: newBar
-          BOO3: thirdBar
-          #NEWFAIL: failedValue
+#   allow_failures:
+#     - node_js: "4.2.3"
+#       env:
+#         #- BOO=Bar
+#         - BOO2: newBar
+#           BOO3: thirdBar
+#           #NEWFAIL: failedValue
 
 build:
   ci:
