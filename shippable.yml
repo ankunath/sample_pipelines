@@ -49,7 +49,7 @@ matrix:
       env:
         #- BOO=Bar
         - BOO2: newBar
-        - BOO3: thirdBar
+        # - BOO3: thirdBar
           #NEWFAIL: failedValue
 
 build:
