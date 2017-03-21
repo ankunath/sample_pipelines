@@ -1,62 +1,110 @@
-#language
-language: php
+language: node_js
 
-#Version number
-php:
-  #- 5.4
-  #- 5.5
-  #- 5.6
-  - 7.0
+node_js:
+  - 0.10
+  # - 5.0
+  - 4.2.3
+  # - 4.2.4
+  # - 4.2.5
+  # - 4.3.1
+  # - 4.5
+  # - 4.3.3
+  # - 4.4.4
+  # - 4.5.5
+  # - 4.5.6
+  # - 4.1.1
+  # - 4.5.3
+  # - 4.5.4
+  # - 4.6.5
 
-env: 
-
+env:
+  # global:
   - BOO=Bar
-  - FOO="TAR" 
+  - BOO2: newBar
+  - BOO3: thirdBar
+  - newBoo: newBar
+  # - BOOnew: thirdBar
+  # - 14Boo: UBar
+  # - BOO50: UBer
+  # - distribution=centos tag=6.8
+  # - distribution: ubuntu 
+  #   tag: 14.04
+  # - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
+
   matrix:
-    - a=1
-    - b=2
-# matrix:
-#   - BOO=Bar
-#   - FOO="TAR" 
-#   - a=1
-#   - b=2
-    
-  #- YUB=*rub #valid
- # - EUG: po@*p #valid
-  # - secure: mF9EtXzRh20IGB5WWKsQqnKnELJ0CWAqIDFtrD6Ny4gaKSXg/NlRwKeZmhdgat0I/gZg19jdPLv0knjbAnBpcXDFGZ67OIP+5E7oXotRSPRKYm+cYXCLfoHrqUerfq6R3khDbYZjuBBUD2e9fbbzdQvgGqEOu6RtUVYtNvntJSxmObOEIrQNzwS7IeYZTa04UEiwMju+o3Ri+YrYDVWCIl3XPZ5CWfqknxaPWKtlYzB6b3lUpPC7CEJRie0eRXuChSAYwUbGaH4HihUvGh7p0HUAYA78pgguYglEZ3MdBPkdDUqU43HeNU4T3bmeeNpEYXrbHM3L36XrMZc9EcXZPQ== #RC=test
-  
+    - FOO=Tar
+    - FOO2: newFar
+      FOO3: thirdFar
+  #   #- secure: A3fpdLDwCroSte8VDk5M7cltbz7UlwkANKFHsnw/8QS4LCfP5+YlCfPsyMkoaU9QFbCszipQFVpB52NobDssXfQ8iqiBZWKHuy08Hn0HBWtkAzPETvWbeRay4xjJM2xQfJq5214YBrO3bgTsZVVcQtF6yOW24AqrNI2Ble3S0KaI+p4Wg0uADbaW9bb4eohehLZpS2H40pyj67ZFtnKtX0Qd1hRUQbiRdPO6upDInVVMjv2ztC7DSRXoM+u7SelHfZLYVIPVynGxD4Z6W84kGwikyDCP/efPnrFYZaoTX1ZbYJD4bNxUH4iU285ZMx0IbGEeqoUHZm+mwzIP9sD+wA==
+  #   - secure: daMBwc3YFXL+303+YeVNDzgPObwWSdRPF9LrLoEAu0nFwWiXKjm05RXI8mx83vVuGCqyuUUpOW6hG1lyXzpAHZwkzwvjZXj/bAtTH+fhk6o4KFOS29yTt7mBJO8/oU8xHZ3byQAvGflDxobAkaFMDpQaaZc8tsENkny8f+A7Mo64ruU5xZ6CZQsR+pGBsJkbtg5NNprErKFMJ72RVTAdLiQ15kB4wLYiaWtC5iy8uPR3lL7OM9I/rgdjdAG1Xz+R0vch7pX4rxml+XywLz6Vgda3zT++J6+GXJIFONTQ5Jsp07wrM919eIukaGPu3YfqwTNVdHh5Ry/dOAXwZmRuMQ==
+
 matrix:
+    # - FOO=Tar
+    # - FOO2: newFar
+    #   FOO3: thirdFar
   include:
-    - php: 5.4
-      env: TODAY=21ma TOM=344
-
-    - php: 5.5
+    - node_js: "5.0"
       env: 
-        - TODAY=21ma TOM=344
-        - test12: beta12 #valid
-        - TEST="bar" # valid   
-        - ZUB=tub MUB=sub SUG=lig  #valid
+        - key1: include1
+        # - secure: HQgkjfaI+kqPhccm9lKxUufm51KSzlFV6Jwwe4/3sWHweSszEt4rsbts+Al7T5CJMgaUmJXzXj72a/3BlpE/Ug6d8I6gqSF/sl+WTnc8MJXMtZfKyGtF/+AdvviudabC8VHJds4iz7jL2dudriCoqtc14a5BmqPhVrHAeWTC8N3j2eVX3CT7AcY6hAWb0W6czYwTJMpkEPMqQi3sCRw79AMwfrwvCi7xkwuZ3pyQFcC95keH5KH4TykNx7z5srTIEzrv/xOnG+j5+nl5QPeKzfJr4MSHUYiLNanPXii9iGExUpJeYYXs9PaaBm+yMyJZKD9RelVRfENW2XnA/WZmoA==
 
-          # secure: jYWXrFUtNi26XYZYiOXHRnbcput0pnh04ilIYs9rE9Lfax6+h4EkNNTU1iB6vHqvsGLNid/fyEBI8Ix6VFHbkuiiI0lz+1D/j6wYH75f6u9c4rtcn+o1+ZoVv5LBo4npbOlETTXU6iIpX9phY+a+NB+3QxI7z2d8cVnNKxrShDb75GUEUx9jarxfNRTizdRSAI9n2zl3EYp5kGzcaC9WA2GKG7tKFZjX+ydntT+UaTvxs9LMwwzvz/4ApqUtzTr1SCAQrVuD1Z0DJgUxTwgcCTCahMtFfNkMy/8cHDMWt6QnRUubxfA8m3gHbiHzBaHbRqoHXcCBkFVSQs+YVliiiA==
-        
+        # - BOO=Bar
+        # - IOO2: newInclude
+        #   IOO3: thirdInclude
+  # exclude:
+  #   - node_js: "0.10"
+  #     env:
+        #- BOO=Bar
+  #       # - BOO2: newBar
+  #       #   BOO3: thirdBar
+  #       - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
+
+  allow_failures:
+    - node_js: "4.2.3"
+      env:
+        #- BOO=Bar
+        - BOO2: newBar
+          BOO3: thirdBar
+          #NEWFAIL: failedValue
+
 build:
-
   ci:
-    - php --version
-    - echo "$FOO"
-    - echo "$BOO"
-    - echo "$test12"
-    - echo "$TEST"
-    - echo "$ZUB"
-    - echo "$MUB"
-    - echo "$SUG"
-    - echo "$YUB"
-    - echo "$EUG"   
-    - echo "$RC"
-    - echo "$THREE" #custom build env key
-    - echo "$FOUR" #custom build env key
-    - echo "$ROO"
-    - echo "$ME"
-    - echo "$TODAY"
-    - echo "$TOMO"
-    - echo "$YEST"
+    - echo "Hello worl"
+    - MYVERSION=`date +%s`
+    - echo $distribution
+    - echo $tag
+    - echo $test
+    - echo $BOO
+    - echo $BOO2
+    - echo $BOO3
+    - echo $FOO
+    - echo $FOO2
+    - echo $FOO3
+    - echo $key1
+    - echo $IOO2
+    - echo $IOO3
+    - echo $NEWFAIL
+    - node test.js
+    - echo $fine
+    - echo $new
+    - echo $secretkey
+    - echo $shubhAnku
+
+integrations:
+  notifications:
+    # - integrationName: slack
+    #   type: slack
+    #   recipients:
+    #     - "#slackchannel"
+    #   on_success: always
+
+    # - integrationName: slack
+    #   type: hipchat
+    #   recipients:
+    #     - '#hipchatNotifications'
+    #   on_start: always
+    #   on_success: always   
+    #   on_failure: always
+  # key:
+  #   - integrationName: pemkey
+  #     type: pem-key
