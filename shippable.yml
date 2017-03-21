@@ -12,6 +12,14 @@ env:
 
   - BOO=Bar
   - FOO="TAR" 
+  matrix:
+    - a=1
+    - b=2
+# matrix:
+#   - BOO=Bar
+#   - FOO="TAR" 
+#   - a=1
+#   - b=2
     
   #- YUB=*rub #valid
  # - EUG: po@*p #valid
