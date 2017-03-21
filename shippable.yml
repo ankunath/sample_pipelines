@@ -21,10 +21,10 @@ env:
   global:
     - anku: nit
     
-  - BOO=Bar
-  - BOO2: newBar
-  - BOO3: thirdBar
-  - newBoo: newBar
+  # - BOO=Bar
+  # - BOO2: newBar
+  # - BOO3: thirdBar
+  # - newBoo: newBar
   # - BOOnew: thirdBar
   # - 14Boo: UBar
   # - BOO50: UBer
