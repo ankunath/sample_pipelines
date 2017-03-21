@@ -8,9 +8,10 @@ php:
   #- 5.6
   - 7.0
 
-env:  
-  - BOO: Bar
-    FOO: TAR 
+env: 
+
+  - BOO=Bar
+  - FOO="TAR" 
     
   #- YUB=*rub #valid
  # - EUG: po@*p #valid
