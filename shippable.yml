@@ -51,10 +51,10 @@ matrix:
         # - BOO=Bar
         # - IOO2: newInclude
         #   IOO3: thirdInclude
-  # exclude:
-  #   - node_js: "0.10"
-  #     env:
-  #       #- BOO=Bar
+  exclude:
+    - node_js: "0.10"
+      env:
+        - BOO=Bar
   #       # - BOO2: newBar
   #       #   BOO3: thirdBar
   #       - secure: sfWZwXLez00ITNb/P5r5N47S5IjiEYJrEZNjNglmMfhhhwbqYsQsJyIABbVdqioWkHH2gihI0KDg3blWR19zOkeDAVmqCrLYifgYIyLgJ8ht+UoDOc1ZFMlk6mJRmDMZ13LbLw2pgkBgcj59cbBzInSNteSNedZMi3ZAl+Eo58wzXXonYyVdpdRI6WrL4uQodbH0UksPawYiuEhNj6sPQHI45bvW6bg4QY5dftxRwTmFJ7x2xrl+eABigYXDZZhh6DtXw5czCeFJSI9aiyd51id+X/N3jSL+482IXuHnFqhJAMcvc1pqptF1dh0EyjUouJEQVhqAyc6JnW0LNOtZ0A==
