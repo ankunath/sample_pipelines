@@ -18,11 +18,11 @@ node_js:
   # - 4.6.5
 
 env:
-  # global:
-  - BOO=Bar
-  - BOO2: newBar
-  - BOO3: thirdBar
-  - newBoo: newBar
+  global:
+    - BOO=Bar
+    - BOO2: newBar
+    - BOO3: thirdBar
+    - newBoo: newBar
   # - BOOnew: thirdBar
   # - 14Boo: UBar
   # - BOO50: UBer
