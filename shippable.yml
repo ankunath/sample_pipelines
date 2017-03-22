@@ -62,7 +62,7 @@ matrix:
     - node_js: "4.2.3"
       env:
         #- BOO=Bar
-        - BOO2: newBar
+        - BOO2=newBar
           # BOO3: thirdBar
           #NEWFAIL: failedValue
 
