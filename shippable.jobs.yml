@@ -80,8 +80,8 @@ jobs:
   #     #- IN: sh-myapp2
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
-  - name: sample_runCI
-    type: runCI
+  - name: sample_runSh
+    type: runSh
     steps:
       - IN: nightly-trigger
       - IN: sh-docker-opts
