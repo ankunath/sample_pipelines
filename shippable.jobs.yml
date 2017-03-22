@@ -85,9 +85,9 @@ jobs:
     steps:
       IN: nightly-trigger
     on_success:
-        script: echo 'on success !!!!!'
+      - script: echo 'on success !!!!!'
     on_failure:
-        script: echo 'Failed job .... :('
+      - script: echo 'Failed job .... :('
 
   # - name: runcliJob                                #required
   #   type: runCLI                                #required
