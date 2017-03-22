@@ -57,13 +57,13 @@ jobs:
 #     flags:
 #       - ttrn-file
 
-  - name: manifestjob
-    type: manifest
-    steps:
-      - IN: sh-myapp3
-      #- IN: manifestjobParent
-      - IN: sh-docker-opts
-      - IN: sh-trigger
+  # - name: manifestjob
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     #- IN: manifestjobParent
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
 
   # - name: manifestjobParent
   #   type: manifest
@@ -80,6 +80,14 @@ jobs:
   #     #- IN: sh-myapp2
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
+  - name: "sample_runCI"
+    type: runCI
+    steps:
+      IN: nightly-trigger
+    on_success:
+        script: echo 'on success !!!!!'
+    on_failure:
+        script: echo 'Failed job .... :('
 
   # - name: runcliJob                                #required
   #   type: runCLI                                #required
@@ -214,11 +222,11 @@ jobs:
   #     - IN: manifestjob
   #     - IN: tri-cluster
 
-  - name: deploygce
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      - IN: manifestjob
+  # - name: deploygce
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     - IN: manifestjob
     # on_success:
     #   - NOTIFY: slackNotification
     # on_failure:

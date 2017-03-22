@@ -1,15 +1,20 @@
 resources:
 
-  - name: sh-myapp3
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/debian"       
-      #sourceName: "busybox"
-      isPull: true
+  # - name: sh-myapp3
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"       
+  #     #sourceName: "busybox"
+  #     isPull: true
+  #   seed:
+  #     versionName: "driftking"
+  #     #versionName: "latest"
+
+  - name: nightly-trigger
+    type: time
     seed:
-      versionName: "driftking"
-      #versionName: "latest"
+      interval: "*/2 * * * *"
 
   # - name: sample_node
   #   type: gitRepo
@@ -195,12 +200,12 @@ resources:
   #   pointer:
   #     sourceName: "default"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gce
-    pointer:
-      sourceName: "small-cluster"
-      region: "europe-west1-b"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gce
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "europe-west1-b"
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws
