@@ -83,7 +83,7 @@ jobs:
   - name: "sample_runCI"
     type: runCI
     steps:
-      IN: nightly-trigger
+      - IN: nightly-trigger
     on_success:
       - script: echo 'on success !!!!!'
     on_failure:
