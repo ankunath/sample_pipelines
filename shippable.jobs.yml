@@ -86,10 +86,12 @@ jobs:
       - IN: nightly-trigger
       - IN: sh-docker-opts
       - IN: sh-trigger
-    on_success:
-      - script: echo 'on success !!!!!'
-    on_failure:
-      - script: echo 'Failed job .... :('
+      - TASK:
+        - script: echo 'on success !!!!!'
+    # on_success:
+    #   - script: echo 'on success !!!!!'
+    # on_failure:
+    #   - script: echo 'Failed job .... :('
 
   # - name: runcliJob                                #required
   #   type: runCLI                                #required
