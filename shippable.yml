@@ -21,11 +21,11 @@ env:
   # global:
   # - BOO=Bar
   - BOO2: newBar
-  # - BOO3: thirdBar
-  # - newBoo: newBar
-  # - BOOnew: thirdBar
-  # - 14Boo: UBar
-  # - BOO50: UBer
+  - BOO3: thirdBar
+  - newBoo: newBar
+  - BOOnew: thirdBar
+  - 14Boo: UBar
+  - BOO50: UBer
   # - distribution=centos tag=6.8
   # - distribution: ubuntu 
   #   tag: 14.04
