@@ -14,7 +14,7 @@ resources:
   - name: nightly-trigger
     type: time
     seed:
-      interval: "*/2 * * * *"
+      interval: "1 2 3 * * * *"
 
   # - name: sample_node
   #   type: gitRepo
