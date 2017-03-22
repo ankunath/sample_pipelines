@@ -80,11 +80,12 @@ jobs:
   #     #- IN: sh-myapp2
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
-  - name: "sample_runCI"
+  - name: sample_runCI
     type: runCI
     steps:
       - IN: nightly-trigger
       - IN: sh-docker-opts
+      - IN: sh-trigger
     on_success:
       - script: echo 'on success !!!!!'
     on_failure:
