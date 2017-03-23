@@ -14,7 +14,7 @@ resources:
   - name: nightly-trigger-2
     type: time
     seed:
-      interval: "*/30 * * * *"
+      interval: "*/11 * * * *"
 
   # - name: nightly-trigger-2
   #   type: time
