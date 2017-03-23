@@ -84,6 +84,7 @@ jobs:
     type: runSh
     steps:
       - IN: nightly-trigger
+      - IN: nightly-trigger-2
       - IN: sh-docker-opts
       - IN: sh-trigger
       - TASK:
