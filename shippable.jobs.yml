@@ -83,7 +83,7 @@ jobs:
   - name: sample_runSh
     type: runSh
     steps:
-      - IN: nightly-trigger
+      - IN: nightly-trigger-2
       # - IN: nightly-trigger-2
       # - IN: nightly-trigger-3
       - IN: sh-docker-opts
