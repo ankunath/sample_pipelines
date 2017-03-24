@@ -14,17 +14,17 @@ resources:
   - name: nightly-trigger-2
     type: time
     seed:
-      interval: "*/10 * * * *"
+      interval: "1 * * * *"
 
   - name: nightly-trigger-3
     type: time
     seed:
-      interval: "*/4 * * * *"
+      interval: "3 * * * *"
 
   - name: nightly-trigger
     type: time
     seed:
-      interval: "*/5 * * * *"
+      interval: "5 * * * *"
 
   # - name: nightly-trigger-3
   #   type: time
