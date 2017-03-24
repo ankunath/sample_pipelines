@@ -13,7 +13,8 @@ resources:
 
   - name: nightly-trigger-2
     type: time
-    interval: "*/21 * * * *"
+    pointer:
+      interval: "*/21 * * * *"
 
   # - name: nightly-trigger-2
   #   type: time
