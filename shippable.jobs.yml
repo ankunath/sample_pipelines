@@ -85,7 +85,7 @@ jobs:
     steps:
       - IN: nightly-trigger-2
       - IN: nightly-trigger-3
-      # - IN: nightly-trigger-3
+      - IN: nightly-trigger
       - IN: sh-docker-opts
       - IN: sh-trigger
       - TASK:
