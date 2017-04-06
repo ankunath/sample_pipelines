@@ -1,30 +1,30 @@
 resources:
 
-  # - name: sh-myapp3
-  #   type: image
-  #   integration: docker
-  #   pointer:
-  #     sourceName: "scriptnull/debian"       
-  #     #sourceName: "busybox"
-  #     isPull: true
-  #   seed:
-  #     versionName: "driftking"
-  #     #versionName: "latest"
-
-  - name: nightly-trigger-2
-    type: time
+  - name: sh-myapp3
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/debian"       
+      #sourceName: "busybox"
+      isPull: true
     seed:
-      interval: "*/1 * * * *"
+      versionName: "driftking"
+      #versionName: "latest"
 
-  # - name: nightly-trigger-3
+  # - name: nightly-trigger-2
   #   type: time
   #   seed:
-  #     interval: "3 * * * *"
+  #     interval: "*/1 * * * *"
 
-  - name: nightly-trigger
-    type: time
-    seed:
-      interval: "*/5 * * * *"
+  # # - name: nightly-trigger-3
+  # #   type: time
+  # #   seed:
+  # #     interval: "3 * * * *"
+
+  # - name: nightly-trigger
+  #   type: time
+  #   seed:
+  #     interval: "*/5 * * * *"
 
   # - name: nightly-trigger-3
   #   type: time
@@ -215,12 +215,12 @@ resources:
   #   pointer:
   #     sourceName: "default"
 
-  # - name: gke-cluster
-  #   type: cluster
-  #   integration: gce
-  #   pointer:
-  #     sourceName: "small-cluster"
-  #     region: "europe-west1-b"
+  - name: gke-cluster
+    type: cluster
+    integration: gce
+    pointer:
+      sourceName: "small-cluster"
+      region: "europe-west1-b"
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws
