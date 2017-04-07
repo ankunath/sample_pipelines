@@ -11,15 +11,15 @@ resources:
       versionName: "driftking"
       #versionName: "latest"
 
-  # - name: nightly-trigger-2
+  - name: nightly-trigger-2
+    type: time
+    seed:
+      interval: "*/1 * * * *"
+
+  # - name: nightly-trigger-3
   #   type: time
   #   seed:
-  #     interval: "*/1 * * * *"
-
-  # # - name: nightly-trigger-3
-  # #   type: time
-  # #   seed:
-  # #     interval: "3 * * * *"
+  #     interval: "3 * * * *"
 
   # - name: nightly-trigger
   #   type: time

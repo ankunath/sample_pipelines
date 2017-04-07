@@ -80,16 +80,16 @@ jobs:
   #     #- IN: sh-myapp2
   #     - IN: sh-docker-opts
   #     - IN: sh-trigger
-  # - name: sample_runSh
-  #   type: runSh
-  #   steps:
-  #     - IN: nightly-trigger-2
-  #     # - IN: nightly-trigger-3
-  #     - IN: nightly-trigger
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
-  #     - TASK:
-  #       - script: echo 'on success !!!!!'
+  - name: sample_runSh
+    type: runSh
+    steps:
+      - IN: nightly-trigger-2
+      # - IN: nightly-trigger-3
+      # - IN: nightly-trigger
+      - IN: sh-docker-opts
+      - IN: sh-trigger
+      - TASK:
+        - script: echo 'on success !!!!!'
     # on_success:
     #   - script: echo 'on success !!!!!'
     # on_failure:
