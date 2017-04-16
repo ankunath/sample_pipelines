@@ -106,7 +106,7 @@ resources:
     type: dockerOptions
     version:
       memory: 29
-      cpuShares: 7
+      cpuShares: 10
       # deployment:
       #   minReadySeconds: 20
       #   # paused: false
