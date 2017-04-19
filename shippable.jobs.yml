@@ -19,10 +19,19 @@ jobs:
     steps:
       - IN: rsync_gitRepo_1
         showBuildStatus: true
-      - IN: rsync_gitRepo_2
       - TASK:
         - script: printenv
         - script: echo 'ec29ss'
+
+  - name: sample-runCLI
+    type: runCLI
+    steps:
+      - IN: rsync_gitRepo_2
+        showBuildStatus: true
+      - TASK:
+        - script: printenv
+        - script: echo 'ec29ss'
+
   # - name: sample
   #   type: runSh
   #   steps:
