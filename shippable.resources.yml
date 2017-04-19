@@ -1,15 +1,33 @@
 resources:
 
-  - name: sh-myapp3
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "scriptnull/debian"       
-      #sourceName: "busybox"
-      isPull: true
-    seed:
-      versionName: "driftking"
+  # - name: sh-myapp3
+  #   type: image
+  #   integration: docker
+  #   pointer:
+  #     sourceName: "scriptnull/debian"       
+  #     #sourceName: "busybox"
+  #     isPull: true
+  #   seed:
+  #     versionName: "driftking"
       #versionName: "latest"
+
+  - name: rsync_test_gitRepo_1
+    type: gitRepo
+    integration: git
+    pointer:
+      sourceName: ankunath/ds-sll
+      branch: master
+      buildOnPullRequest: true #since this is true by default
+      buildOnCommit: true #since this is true by default
+
+  - name: rsync_gitRepo_2
+    type: gitRepo
+    integration: git
+    pointer:
+      sourceName: ankunath/ci-jacoco
+      branch: master
+      buildOnPullRequest: true #since this is true by default
+      buildOnCommit: true #since this is true by default
 
   # - name: nightly-trigger-2
   #   type: time
@@ -102,12 +120,12 @@ resources:
 
 
 
-  - name: sh-docker-opts
-    type: dockerOptions
-    version:
-      memory: 28
-      cpuShares: 10
-      # deployment:
+  # - name: sh-docker-opts
+  #   type: dockerOptions
+  #   version:
+  #     memory: 69
+  #     cpuShares: 12
+  #     # deployment:
       #   minReadySeconds: 20
       #   # paused: false
       #   # progressDeadlineSeconds: 200
@@ -215,12 +233,12 @@ resources:
   #   pointer:
   #     sourceName: "default"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gce
-    pointer:
-      sourceName: "small-cluster"
-      region: "europe-west1-b"
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gce
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "europe-west1-b"
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws

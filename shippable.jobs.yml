@@ -14,7 +14,14 @@ jobs:
   #     #   applyTo:
   #     #     - sh-myapp2
   #     #- IN: scale
-
+  - name: sample-runSh
+    type: runSh
+    steps:
+      - IN: rsync_test_gitRepo_1
+        showBuildStatus: true
+      - TASK:
+        - script: printenv
+        - script: echo 'ec29ss'
   # - name: sample
   #   type: runSh
   #   steps:
@@ -57,13 +64,13 @@ jobs:
 #     flags:
 #       - ttrn-file
 
-  - name: manifestjob
-    type: manifest
-    steps:
-      - IN: sh-myapp3
-      #- IN: manifestjobParent
-      - IN: sh-docker-opts
-      - IN: sh-trigger
+  # - name: manifestjob
+  #   type: manifest
+  #   steps:
+  #     - IN: sh-myapp3
+  #     #- IN: manifestjobParent
+  #     - IN: sh-docker-opts
+  #     - IN: sh-trigger
 
   # - name: manifestjobParent
   #   type: manifest
@@ -228,11 +235,11 @@ jobs:
   #     - IN: manifestjob
   #     - IN: tri-cluster
 
-  - name: deploygce
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      - IN: manifestjob
+  # - name: deploygce
+  #   type: deploy
+  #   steps:
+  #     - IN: gke-cluster
+  #     - IN: manifestjob
     # on_success:
     #   - NOTIFY: slackNotification
     # on_failure:
