@@ -11,7 +11,7 @@ resources:
   #     versionName: "driftking"
       #versionName: "latest"
 
-  - name: rsync_test_gitRepo_1
+  - name: rsync_gitRepo_1
     type: gitRepo
     integration: git
     pointer:

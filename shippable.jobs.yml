@@ -17,8 +17,9 @@ jobs:
   - name: sample-runSh
     type: runSh
     steps:
-      - IN: rsync_test_gitRepo_1
+      - IN: rsync_gitRepo_1
         showBuildStatus: true
+      - IN: rsync_gitRepo_2
       - TASK:
         - script: printenv
         - script: echo 'ec29ss'
