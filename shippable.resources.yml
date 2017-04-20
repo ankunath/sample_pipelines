@@ -72,7 +72,7 @@ resources:
     version:
       params:
         HELLO: "ShippableCodeFaster5"
-        SHIPPABLE: "code-faster"
+        SHIPPABLE: "code-faster shippable"
 
 
   # - name: tri-cluster
@@ -91,7 +91,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 20
+      count: 2
 
   # - name: kick
   #   type: kickStart
