@@ -6,6 +6,7 @@ jobs:
       #- IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
+      - IN: rsync_gitRepo_1
       #- IN: sh-trigger
       # - IN: dv-params
       #   applyTo:
