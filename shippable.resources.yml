@@ -71,7 +71,7 @@ resources:
     type: params
     version:
       params:
-        HELLO: "Shippable"
+        HELLO: "Shippable code-faster shippablecode-faster shippable"
         SHIPPABLE: "code-faster shippable"
 
 
@@ -91,7 +91,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 2
+      count: 20
 
   # - name: kick
   #   type: kickStart
