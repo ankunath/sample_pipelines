@@ -1,15 +1,494 @@
 triggers:
-  - name: t1
-    type: trigger
-    version:
-      counter: 0
-      
-  - name: t2runsh
-    type: trigger
-    version:
-      counter: 0
+   - name: sh-trigger
+     type: trigger
+     version:
+       counter: 1
+#    #   type: trigger
+#    #   version:
+#    #     message: '2q22qreate a AArelease from staging cluster. triggered:1'
+#    # - name: sh-trigger-1
+#    #   type: trigger
+#    #   #version:
+#    #   counter: 1012
+#    # #   type: trigger
+#    #   version:
+#    #     message: '2q22qreate a AArelease from staging cluster. triggered:1'
 
-  - name: t3runcli
-    type: trigger
-    version:
-      counter: 0
+
+
+#    # - name: sh-docker-opts
+#    #  type: dockerOptions
+#    #  version:
+#    #    memory: 49
+#    #    # ulimits:
+#    #    #   - name: nofile
+#    #    #     soft: 50
+#    #    #     hard: 100
+#    #    cpuShares: 110
+#    #    sequential_deployment: true
+#    #    user: "driftking"
+#    #    #   - "driftking"
+#    #      #- "root"
+#    #      #- "driftking2"
+#    #    # portMappings:
+#    #    #   - "80:80"
+#    #    #entrypoint: '/app/shubhankit'
+#    #    # publishAllPorts: true
+#    #    #deployment_strategy: "EVERY_NODE"
+#    #    workingDir: "/app"
+#    #    privileged: true
+#    #    readOnlyRootFilesystem: true
+#    #    #network: host
+#    #    restart: "on-failure"
+#    #    autodestroy:
+#    #    # # # logConfig:
+#    #    # # #   type: json-file
+#    #    # # #   # options:  # "options" is not required
+#    #    # # #   #   key11: value11
+#    #    # # #   #   key22: value22
+#    #    dnsServers: "127.0.0.2"
+#    #    dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+#    #    # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
+#    #    labels:
+#    #      ri_tu: 123
+#    #    capAdd:
+#    #      - "ALL"
+#    #    capDrop:
+#    #      - "NET_ADMIN"
+#    #      - "SYS_ADMIN"
+#    #    # links:
+#    #    #   -   ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:oldone:alias
+#    #    # # volumesFrom:
+#    #    #   - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
+#    #    #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
+#    #    #   - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
+#    #    # volumes:
+#    #    #   - "/host/path:/container/path2:rw"
+#    #    domainName: "www.levelachievers.com"
+#    #    nickname: teamBRAVE
+
+
+
+
+
+
+# resources:
+#   # - name: sh-myapp2
+#   #   type: image
+#   #   integration: docker
+#   #   pointer:
+#   #     sourceName: "scriptnull/debian"
+#   #     #sourceName: "busybox"
+#   #     isPull: true
+#   #   seed:
+#   #     versionName: "entrypoint"
+#   #     #versionName: "myapp2"
+
+#   # - name: gke-cluster
+#   #   type: cluster
+#   #   integration: gce
+#   #   pointer:
+#   #     sourceName: "small-cluster"
+#   #     region: "us-east1-d"
+
+#   # - name: stagingVerBase1
+#   #   type: version
+#   #   seed:
+#   #     versionName: "1.0.0"
+
+#   # - name: stagingVerBase2
+#   #   type: version
+#   #   seed:
+#   #     versionName: "40.0.0"
+
+#   # - name: stagingVerBase3
+#   #   type: version
+#   #   seed:
+#   #     versionName: "60.0.0"
+
+#   - name: sh-myapp2
+#     type: image
+#     integration: docker
+#     pointer:
+#       #sourceName: "scriptnull/debian"
+#       sourceName: "ankul/test-repo"
+#       isPull: true
+#     seed:
+#       #versionName: "driftking"
+#       versionName: "dockerhub.4"
+
+#   - name: sh-myapp3
+#     type: image
+#     integration: docker
+#     pointer:
+#       sourceName: "scriptnull/debian"
+#       #sourceName: "busybox"
+#       isPull: true
+#     seed:
+#       versionName: "driftking"
+#       #versionName: "latest"
+
+#   # - name: sh-ecs-cluster
+#   #   type: cluster
+#   #   integration: aws
+#   #   pointer:
+#   #     sourceName : "default" #name of the cluster we are deploying
+#   #     region: "us-west-2"
+
+#   - name: sh-docker-opts
+#     type: dockerOptions
+#     version:
+#       memory: 49
+#       cpuShares: 110
+#       sequential_deployment: true
+#       user: "driftking"
+#       # portMappings:
+#       #   - "80:80"
+#       #entrypoint: '/app/shubhankit'
+#       # publishAllPorts: true
+#       #deployment_strategy: "EVERY_NODE"
+#       workingDir: "/app"
+#       privileged: true
+#       readOnlyRootFilesystem: true
+#       #network: host
+#       restart: "on-failure"
+#       autodestroy:
+#       # # # logConfig:
+#       # # #   type: json-file
+#       # # #   # options:  # "options" is not required
+#       # # #   #   key11: value11
+#       # # #   #   key22: value22
+#       dnsServers: "127.0.0.2"
+#       dnsSearch: "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+#       # # cmd: "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
+#       labels:
+#         ri_tu: 123
+#       capAdd:
+#         - "ALL"
+#       capDrop:
+#         - "NET_ADMIN"
+#         - "SYS_ADMIN"
+#       # links:
+#       #   -   ALPHALOCAL-manifestjob-0a43feb6-7de4-4475-b6bf-33928d98d394:oldone:alias
+#       # # volumesFrom:
+#       #   - "sh-manifestjob1_0_1_30e87608-540d-417c-b34b-549c2a735530:rw"
+#       #   - "sh-manifestjob1_0_0_30e87608-540d-417c-b34b-549c2a735530:rw"
+#       #   - "rituraj-2-2_0_0_d6255f54-4305-466d-ad3c-f1d10edd7b9e:rw"
+#       # volumes:
+#       #   - "/host/path:/container/path2:rw"
+#       domainName: "www.levelachievers.com"
+#       nickname: teamBRAVE
+
+#   # - name: sh-myapp3
+#   #   type: image
+#   #   integration: docker
+#   #   pointer:
+#   #     sourceName: "scriptnull/debian"
+#   #     #sourceName: "busybox"
+#   #     isPull: true
+#   #   seed:
+#   #     versionName: "entrypoint"
+
+#   # - name: tri-cluster
+#   #   type: cluster
+#   #   integration: triton
+#   #   pointer:
+#   #     region: "us-east-2"
+
+#   # - name: scale
+#   #   type: replicas
+#   #   version:
+#   #     count: 1
+
+#   # - name: scale-2
+#   #   type: replicas
+#   #   version:
+#   #     count: 1
+
+#   # - name: sh-docker-opts-2
+#   #   type: dockerOptions
+#   #   version:
+#   #     memory: 23
+#   #     cpuShares: 50
+
+#   # - name: sh-docker-opts-1
+#   #   type: dockerOptions
+#   #   version:
+#   #     memory: 21
+#   #     ulimits:
+#   #       - name: nofile
+#   #         soft: 50
+#   #         #hard: 100
+
+#   # - name: sh-docker-opts-2
+#   #   type: dockerOptions
+#   #   version:
+#   #     memory: 22
+#   #     ulimits:
+#   #       - name: nofile
+#   #         #soft: 50
+#   #         hard: 100
+
+
+
+
+# # "memory": 128,
+# #   "cpuShares": 128,
+# #   "portMappings": [
+# #     "80:80",
+# #     "443:443"
+# #   ],
+# #   "publishAllPorts": true,
+# #   "links": [
+# #     "consul:consul",
+# #     "vault:vault"
+# #   ],
+# #   "labels": {
+# #     "triton.cns.services": "lb-sw1-dv"
+# #   },
+# #   "dnsSearch": [
+# #     "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+# #   ],
+# #   "cmd": [
+# #     "/usr/local/bin/containerpilot nginx -g 'daemon off;'"
+# #   ]
+#   # - name: ddc-cluster
+#   #   type: cluster
+#   #   integration: ddc
+#   #   pointer:
+#   #     sourceName: "small-cluster" #name of the cluster we are deploying.
+
+#   # - name: ddc-cluster
+#   #   type: cluster
+#   #   integration: ddc
+#   #   pointer:
+#   #     sourceName: "small-cluster" #name of the cluster we are deploying.
+
+
+
+#   - name: dcl-cluster
+#     type: cluster
+#     integration: dcl
+#     pointer:
+#       sourceName: "default"
+#   # - name: nightly
+#   #   type: time
+#   #   seed:
+#   #      interval: "*/2 * * * *"
+#   #   flags:
+#   #     - nightly
+
+#   # - name: ddc-cluster
+#   #   type: cluster
+#   #   integration: ddc
+#   #   pointer:
+#   #     region: "us-east-2"
+
+
+
+#   # - name: gke-cluster
+#   #   type: cluster
+#   #   integration: gce
+#   #   pointer:
+#   #     sourceName: "small-cluster"
+#   #     region: "us-east1-d"
+
+#   # - name: gke-cluster
+#   #   type: cluster
+#   #   integration: gce
+#   #   pointer:
+#   #     sourceName: "small-cluster"
+#   #     region: "us-east1-d"
+
+
+
+
+
+#       #sourceName: "shubh"
+#     # version:
+#     #   params:
+#     #     pipelinev2: fleming
+
+#   # - name: dv-params
+#   #   type: params
+#   #   version:
+#   #     params:
+#   #       MONGO_API_URL: "localhost:28017"
+#   #       SHUBH:
+#   #         - "ANKUNATH"
+#   #         - "ANKUNATH2"
+#   #         - "ANKUNATH3"
+#   #       #secure: HoVr0VQak5dFoBJr6WeOD8QlZ9k7vkldOJcrR0oqDnzswgTCBG5TLuWkL5R7oIYS2RADcZY0edbrgZ1/3tcaJ+uCA+CKLHUDKB9BrLhuor+YgBP2PPsg6c0St0nihB+dR2ty6upxMnAVih8k6KiTeVSCiqY4KcfQ1T/wgNZEhdRWPkyWpJrpRASYo7Dg5w1sn73TrSKTiuA85D9O6mDWL/sqMbtVVKoNv9jNBUKH9Moeup1tKB7Yd6Pp4ReekdoJGzywGojhoHSnEdOOx7FMGkJZcZEY+BMlOikBq08qSk9S08E00bweoVZ62cunR0eK/Y4RkJm6LdHXs1u2atUKiA==
+#   #       #secure: G9mAGNS6RrMim/ahSP99MyIoiNzJdfuGbByevM4kzM3uqED1JPq4cIYoqZOs4fgXujpsSsDRmV840BjmV9b2pdEFQZSM0p41jfX9F8Efjt1381DDK/yej+vOibHNFaqAlkTfkft2ori9I7feNXtIdh1L+e/ncThnXbZ52bcxYobVUjmMQkzV/F0e1D1PCekZ+D/phjN5W8E41kadFgfQFLFZgkT/NkccTYVM9+pXEKi0nCqyzkLfDRaQSLozEn34YhSViBESVTeDC4d+vEP+t6nJkMCicWAE0CjQ7MSWnBvwG895XhfETVkbU7W46yAWwafxjuvORAmTgXhhD20dzg==
+#   #       #secure: GIFzp/NNbDn7L7YRuUrvidxqXsAy6h3zzUOiljrzWQgd8DvUo5hirwU5CInkapIJsjQarEVujo2uFUG52M3jIx7/YNOs92/FcF6EXH23MLSU+0c+Q3RAbzEGvSIguVJXoYI7SC+kECgA+aVikr8wTPT0u2JbA/7TjcCV8LsKfEEg4ARxjJgzLpiMpLq3Ss8zMvmJUBG89lYniy1ljdkBAVxp2TuX5EzC0wTm1VrMW+tRHK1V9V89HXrK38a9qw/ZV3tJc72a1MPnRb7rI+dBb+ffZUbrSI9qfCbJK5hOAhfDvnY7rymIQTdyEOcP+f8zeA6rAU9fVBajgn/d3B/iGg==
+#   #       #secure: whW7ayc5KTktZ+w3G0OxBrqKdWlsiZHAiaDuLcJJCLxC6ZTt9mrA/DQlvXuvb834/KqCXu7Jaj/+dgfwA5cYX/2bv6lnXRzp4tb8/MVIWJzM0y8TnGmsru8JUcAyX/9NptSJjY7e6x5tinmWkrWrRNEfuWzIt/XULfbu5LgMfV78uim8UWxhop294JUFsPegZma2eNZJ+h/b5yaPaMP/JrEUvgqDu7vokmmYB26UG0WhvfDXOHBb4GeKPa4PEZEt2wpicOBa35dpFEk6KSgtccs8CrIw7qTahN4gdxCp8rCYQ3lIf6wWFt7kSPip0NgJWIWHk+g+jHbLdDv2To7lUQ==
+#   #       #secure: XKN4RNbuMpjRHl7I5FozeYpz/KuBlUCpy+2fbU8hMaYNf9g18zLCbynxeHtI4/aRfEEBb2IDRq7bI/HA+cpiGBgon1lw8pTGGWuXFxJxA3H7vRiHRVuJP3QuQB7Kh9p0jRy8I4cKHZTNpte9uqqmvnsyFn14nw9gxdYTxsfn+yDi1lMhHVt2TajjPpy/bB4b5ciR1+uNzi7e6g7Lc+GcaanUGSxAERHTLi95W2Qm1DIwlyN5+xvKtt9kVoyFGeRTq/gOwGaVBVV5tOSH7AiwOApe1bBsOmBmSHMLAW6a5slaUam8f70ehr8yUWCTkG2KhlxvaAh0Ud/fPJmMUs7f+Q==
+#   #       secure: qnga4g/oJOCzS6iPbYnClHfHzwZIFyVZmmBz33DqdYWzMLxJIlbvJI1u+beJeQWUHfOm8vGPZ8TukIGZytxnbqxeH3UVSfpDky1Ou6rQxTfTKRSKyrpMpO0gze+WwvVGS07FjVmkNL2xtRpceOoDdiAtAqUXVZd1J8wg7kpDWeh3SpGOtpezLbO6hy6BSNCreKZMPXpW6TcWv7rmN/+CClhdEKpib+Fl/3xHjHDQdf+aDCHQWzZIOHg8pIXH31BXBRTiKY/bZ94wU2QO7t9wqODaStm3BUsnzR/eiDYQBXmuH6VI/69C4M9GopvIYmOtkq77zESmkAH7WcWzyx3nZQ==
+#   #   flags:
+#   #     - box
+
+#   # - name: dv-params
+#   #   type: params
+#   #   version:
+#   #     params:
+#   #       MONGO_API_URL: "localhost:28017"
+#   #       #secure: HoVr0VQak5dFoBJr6WeOD8QlZ9k7vkldOJcrR0oqDnzswgTCBG5TLuWkL5R7oIYS2RADcZY0edbrgZ1/3tcaJ+uCA+CKLHUDKB9BrLhuor+YgBP2PPsg6c0St0nihB+dR2ty6upxMnAVih8k6KiTeVSCiqY4KcfQ1T/wgNZEhdRWPkyWpJrpRASYo7Dg5w1sn73TrSKTiuA85D9O6mDWL/sqMbtVVKoNv9jNBUKH9Moeup1tKB7Yd6Pp4ReekdoJGzywGojhoHSnEdOOx7FMGkJZcZEY+BMlOikBq08qSk9S08E00bweoVZ62cunR0eK/Y4RkJm6LdHXs1u2atUKiA==
+#   #       #secure: G9mAGNS6RrMim/ahSP99MyIoiNzJdfuGbByevM4kzM3uqED1JPq4cIYoqZOs4fgXujpsSsDRmV840BjmV9b2pdEFQZSM0p41jfX9F8Efjt1381DDK/yej+vOibHNFaqAlkTfkft2ori9I7feNXtIdh1L+e/ncThnXbZ52bcxYobVUjmMQkzV/F0e1D1PCekZ+D/phjN5W8E41kadFgfQFLFZgkT/NkccTYVM9+pXEKi0nCqyzkLfDRaQSLozEn34YhSViBESVTeDC4d+vEP+t6nJkMCicWAE0CjQ7MSWnBvwG895XhfETVkbU7W46yAWwafxjuvORAmTgXhhD20dzg==
+#   #       #secure: GIFzp/NNbDn7L7YRuUrvidxqXsAy6h3zzUOiljrzWQgd8DvUo5hirwU5CInkapIJsjQarEVujo2uFUG52M3jIx7/YNOs92/FcF6EXH23MLSU+0c+Q3RAbzEGvSIguVJXoYI7SC+kECgA+aVikr8wTPT0u2JbA/7TjcCV8LsKfEEg4ARxjJgzLpiMpLq3Ss8zMvmJUBG89lYniy1ljdkBAVxp2TuX5EzC0wTm1VrMW+tRHK1V9V89HXrK38a9qw/ZV3tJc72a1MPnRb7rI+dBb+ffZUbrSI9qfCbJK5hOAhfDvnY7rymIQTdyEOcP+f8zeA6rAU9fVBajgn/d3B/iGg==
+#   #       secure: whW7ayc5KTktZ+w3G0OxBrqKdWlsiZHAiaDuLcJJCLxC6ZTt9mrA/DQlvXuvb834/KqCXu7Jaj/+dgfwA5cYX/2bv6lnXRzp4tb8/MVIWJzM0y8TnGmsru8JUcAyX/9NptSJjY7e6x5tinmWkrWrRNEfuWzIt/XULfbu5LgMfV78uim8UWxhop294JUFsPegZma2eNZJ+h/b5yaPaMP/JrEUvgqDu7vokmmYB26UG0WhvfDXOHBb4GeKPa4PEZEt2wpicOBa35dpFEk6KSgtccs8CrIw7qTahN4gdxCp8rCYQ3lIf6wWFt7kSPip0NgJWIWHk+g+jHbLdDv2To7lUQ==
+#   #       #secure: XKN4RNbuMpjRHl7I5FozeYpz/KuBlUCpy+2fbU8hMaYNf9g18zLCbynxeHtI4/aRfEEBb2IDRq7bI/HA+cpiGBgon1lw8pTGGWuXFxJxA3H7vRiHRVuJP3QuQB7Kh9p0jRy8I4cKHZTNpte9uqqmvnsyFn14nw9gxdYTxsfn+yDi1lMhHVt2TajjPpy/bB4b5ciR1+uNzi7e6g7Lc+GcaanUGSxAERHTLi95W2Qm1DIwlyN5+xvKtt9kVoyFGeRTq/gOwGaVBVV5tOSH7AiwOApe1bBsOmBmSHMLAW6a5slaUam8f70ehr8yUWCTkG2KhlxvaAh0Ud/fPJmMUs7f+Q==
+#   #   flags:
+#   #     - box2
+
+#   # - name: sample_node
+#   #   type: syncRepo
+#   #   integration: git
+#   #   pointer:
+#   #     sourceName: ankunath/sample_node
+#   #     branch: master
+
+#   # - name: sample_node
+#   #   type: gitRepo
+#   #   integration: git
+#   #   pointer:
+#   #     sourceName: ankunath/sample_node
+#   #     branch: master
+
+#   # - name: slackNotification
+#   #   type: notification
+#   #   #integration: slack
+#   #   pointer:
+#   #     recipients:
+#   #       - "#slackchannel"
+
+#   # - name: sh-myapp3
+#   #   type: image
+#   #   integration: docker
+#   #   pointer:
+#   #     sourceName: "shubhankit/ubuntu"
+#   #     #sourceName: "busybox"
+#   #     isPull: true
+#   #   seed:
+#   #     versionName: "shubh"
+
+#   # - name: nightly3
+#   #   type: time
+#   #   seed:
+#   #     interval: "*/2 * * * *"
+#   #   flags:
+#   #     - nightly1dd
+
+#   # - name: nightly2
+#   #   type: time
+#   #   seed:
+#   #     interval: "*/1 * * * *"
+#   #   flags:
+#   #     - nightly2
+
+#   # - name: slackNotification
+#   #   type: notification
+#   #   integration: slack
+#   #   pointer:
+#   #     recipients:
+#   #       - "#testissues"
+#   #       #- "#slackchannel"
+
+#   # - name: myEmail
+#   #   type: notification
+#   #   pointer:
+#   #     method: email
+#   #     recipients:
+#   #       -  "shubhankit@shippable.com"
+
+#   # - name: sn-file-4
+#   #   type: file
+#   #   pointer:
+#   #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+#   #   seed:
+#   #     versionName: "newVersionShip"
+
+#   # # - name: sn-file-2
+#   # #   type: file
+#   # #   pointer:
+#   # #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+#   # #   seed:
+#   # #     versionName: "newVersionShip-2"
+
+#   # # - name: sn-vici-http-js
+#   # #   type: file
+#   # #   pointer:
+#   # #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.http.js"
+#   # #   seed:
+#   # #     versionName: "initial"
+
+#   # - name: sn-cluster-file
+#   #   type: cluster
+#   #   integration: scriptnull-node
+#   #   pointer:
+#   #     sourceName: 'scriptnull-cluster'
+
+#   # - name: sn-cluster-image
+#   #   type: cluster
+#   #   integration: scriptnull-node-image
+#   #   pointer:
+#   #     sourceName: 'scriptnull-cluster-image'
+
+#   # - name: my-params
+#   #   type: params
+#   #   version:
+#   #     params:
+#   #       HELLO: "ShippableCodeFaster5"
+#   #       SHIPPABLE: "code-faster-faster"
+#   #       SHIPPABLE1: "code-faster-1"
+#   #       SHIPPABLE2: "code-faster-2"
+#   #       SHIPPABLE3: "code-faster-3"
+
+#   # - name: my-params-2
+#   #   type: params
+#   #   version:
+#   #     params:
+#   #       HELLO-2: "world"
+#   #       SHIPPABLE-2: "code-faster"
+#   #       SHIPPABLE1-2: "code-faster-1"
+#   #       SHIPPABLE2-2: "code-faster-2"
+#   #       SHIPPABLE3-2: "code-faster-3"
+
+#   # - name: sh-myapp1
+#   #   type: image
+#   #   integration: docker
+#   #   pointer:
+#   #     sourceName: "scriptnull/sample_node"
+#   #     isPull: true
+#   #   seed:
+#   #     versionName: "myapp1"
+
+#   # - name: version-resource
+#   #   type: version
+#   #   seed:
+#   #    # versionName: "0.0.1-beta"
+
+#   # - name: sh-myapp3
+#   #   type: image
+#   #   integration: docker
+#   #   pointer:
+#   #     sourceName: "scriptnull/sample_node"
+#   #     isPull: true
+#   #   seed:
+#   #     versionName: "myapp3"
+
+
+#   # - name: sh-lb-1
+#   #   type: loadBalancer
+#   #   pointer:
+#   #     sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
+
+#   # - name: sh-lb-2
+#   #   type: loadBalancer
+#   #   pointer:
+#   #     sourceName: EC2Contai-EcsElast-GPCOXIIKWPUJ
+
+#   # - name: sh-docker-opts
+#   #   type: dockerOptions
+#   #   version:
+#   #     memory: 200
+#   #     user: "driftking1"

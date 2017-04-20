@@ -1,112 +1,247 @@
 resources:
-  - name: pipeline_scriptRepo
+
+  - name: sh-myapp3
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/debian"       
+      #sourceName: "busybox"
+      isPull: true
+    seed:
+      versionName: "driftking"
+      # versionName: "latest"
+
+  - name: rsync_gitRepo_1
     type: gitRepo
     integration: git
     pointer:
-      sourceName: "~SHIPTEST-RC-OW/pipeline_scripts"
+      sourceName: ankunath/ds-sll
       branch: master
+      buildOnPullRequest: true #since this is true by default
+      buildOnCommit: true #since this is true by default
 
-  - name: sample_img
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "shippabledocker/pipelinev2"
-    seed:
-      versionName: "deploy.1"
-  
-  - name: deploy_img
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "shippabledocker/pipelinev2"
-    seed:
-      versionName: "deploy.2"
-      
-  # - name: ddc_cluster
-  #   type: cluster
-  #   integration: ship-ddc
+  # - name: rsync_gitRepo_2
+  #   type: gitRepo
+  #   integration: git
   #   pointer:
-  #     sourceName : "nothing"
-      
-  - name: ddc_dopts
+  #     sourceName: ankunath/ci-jacoco
+  #     branch: master
+  #     buildOnPullRequest: true #since this is true by default
+  #     buildOnCommit: true #since this is true by default
+
+  # - name: nightly-trigger-2
+  #   type: time
+  #   seed:
+  #     interval: "*/1 * * * *"
+
+  # - name: nightly-trigger-3
+  #   type: time
+  #   seed:
+  #     interval: "3 * * * *"
+
+  # - name: nightly-trigger
+  #   type: time
+  #   seed:
+  #     interval: "*/5 * * * *"
+
+  # - name: nightly-trigger-3
+  #   type: time
+  #   seed:
+  #     interval: "*/2 * * * *"
+
+  # - name: sample_node
+  #   type: gitRepo
+  #   integration: git
+  #   pointer:
+  #     sourceName: ankunath/sample_node
+  #     branch: master    
+
+  # - name: newIntegration   
+  #   type: integration
+  #   integration: docker
+  #     #versionName: "latest"
+
+  # - name: sn-kube-cluster
+  #   type: cluster
+  #   integration: kubemaster
+    # pointer: 
+    #   namespace: 'newnamepace'
+
+  # - name: my-params
+  #   type: params
+  #   version:
+  #     params:
+  #       HELLO: "ShippableCodeFaster5"
+  #       SHIPPABLE: "code-faster"
+
+
+  # - name: tri-cluster
+  #   type: cluster
+  #   integration: triton
+  #   pointer:
+  #     region: "us-east-2"
+
+  # - name: slackNotification
+  #   type: notification
+  #   integration: slack
+  #   pointer:
+  #     recipients:
+  #       - "#hipchatNotifications"
+  #       - "#slackchannel"
+  # - name: scale
+  #   type: replicas
+  #   version:
+  #     count: 2
+
+  # # - name: lb
+  # #   type: loadBalancer
+  # #   pointer:
+  # #     sourceName: EC2Contai-EcsElast-1HSINMX36W0XC
+  # #     role: newRole
+
+  # - name: stagingVerBase
+  #   type: version
+  #   seed:
+  #     versionName: "v10.12.1-alpha"
+
+  # - name: ddc-cluster
+  #   type: cluster
+  #   integration: ddc
+  #   pointer:
+  #     sourceName: "small-cluster" #name of the cluster we are deploying.
+
+
+  # - name: sn-file-4
+  #   type: file
+  #   pointer:
+  #     sourceName: "https://raw.githubusercontent.com/scriptnull/vici/master/vici.init.js"
+  #   seed:
+  #     versionName: "newVersionShip"
+
+
+
+  - name: sh-docker-opts
     type: dockerOptions
     version:
-      memory: 128
-      
-  - name: test_out_img
-    type: image
-    integration: docker
-    pointer:
-      sourceName: "shippabledocker/ship_plv2node"
-    seed:
-      versionName: "latest"
-            
-  - name: ship_dh
-    type: integration
-    integration: "docker"
-      
-  
-    
-  # - name: ship_aws
-  #   type: integration
-  #   integration: "ship-aws"
+      memory: 69
+      cpuShares: 12
+  #     # deployment:
+      #   minReadySeconds: 20
+      #   # paused: false
+      #   # progressDeadlineSeconds: 200
+      #   replicas: 2
+      #   revisionHistoryLimit: 100
+      #   # rollbackTo:
+      #   #   revision: 0  
+      #   selector: 
+      #     matchLabels:
+      #       "shippable.jobName": "kubernetesbluegreen"
+      #   strategy:
+      #     type: Recreate
+      # pod:
+      #   terminationGracePeriodSeconds: 1002
+      #   activeDeadlineSeconds: 1001
+      #entryPoint: "/app"
+      #workingDir: "/app"
+      #cmd: "node"
+      #privileged: true
+  #    readOnlyRootFilesystem: true
+  #     #network: host
+      #restartPolicy: "OnFailure"
+  #     autodestroy: "no"
+  #     autoredeploy: true
+  #     sequential_deployment: true
+     # user: 7100
+      # volumes:
+      #   - "/anku/user/100:/makemeworking:ro"
+      #domainName: "www.levelachievers.com"
+  #     nickname: teamBRAVE
+  #     # portMappings:
+  #     #   - "80:80"
+  #     dnsServers:
+  #       - "127.0.0.3"
+  #     dnsSearch:
+  #       - "ae592553-251a-4860-8828-a377aed9f636.us-sw-1.cns.joyent.com"
+  #     labels:
+  #       ri_tu: 123
+  #     #deployment_strategy: "high_availability"
+  #     securityOptions:
+  #       - label:user:USER
+  #       - label:role:ROLE
+      # capAdd:
+      #   - ALL
+      # capDrop:
+      #   - NET_ADMIN
+      #   - SYS_ADMIN
+  #     cGroupParent: "m-executer-abcd"
+      # hostName: "shubh"
+      # tty: true
+      # stdin: true
+      # stdinOnce: true
+  #     # devices:
+  #     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
+  #     memorySwap: 100
+  #     # linked_to_service:
+  #     #   - "to_service": "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
+  #     #   - "name" : "shubh"
+  #     # extraHosts:
+  #     #   - "somehost:162.242.195.82"
+  #     #   - "otherhost:50.31.209.229"
+  #     # publishAllPorts: true
+  #     # links:
+  #     #   -  nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c:alias
+  #     roles:
+  #       - global
+  #     tags:
+  #       - staging
+  #     #nickName: "shubhaaaaaaaaaaaaaaaaaaaaaa"
+  #     #pid: "host"
+  #     # volumesFrom:
+  #     #   - "nginx-manifest-dcl-1.dcl-deploy-nginx-manifest-dcl-debc8df9-1c13-4803-97b9-65af6307107c"
+  #     # volumes:
+  #     #   - "/usr/bin:/makemeworking:ro"
+  #     ############################## for gke ###########################
+  #     # pod:
+  #     #   terminationGracePeriodSeconds: 500
+  #     #   activeDeadlineSeconds: 1000
+  #     #   dnsPolicy: "Default"
 
-  - name: test_params
-    type: params
-    version:
-      params:
-        TEST: rc
-       # secure: cQbUa4I3pIy3NRdYFg3lPDKeIw/Rmv8ne3caPkhV0YhAuS7bEMEOs44GTbehyZjbEOyyOUxx6YQgnljPp9rg9nzuDQCMAYr5E21/WoCTfF7ez+nyPTnEBmUiHUftiI64vBYtn3q6x1z66DToDoVYgel8+jWo8cHAEeTEj6Zabubj+X9imwkaRsBf20792f3nP5sAG1nTFTabirpUXDinfLRJmtEM17YIChVb/GQiUpAw81TIbkRtelQFzcMxnjTaHocb+4+zivwRa9RlQLMxOsllY73hfz+t1ZUFdTXtJiAZp/8Gmf9+44b5I8+T0A9tsWc9/K+qfs7CL10ptTH5WA== #DEV=alpha
-     
-  - name: notify-slack
-    type: notification
-    integration: "notify-slack"
-    pointer:
-      recipients:
-        - "#rc-public" 
-        - "#rc-private"
-        - "@shiptest-rc-me"
+  # - name: lb                               #required
+  #   type: loadBalancer                          #required
+  #   integration: kubemaster  #Required for use in provision jobs
+  #   pointer:
+  #     sourceName: "xyz-shippable"  # the service name (metadata.name)
+  #     method: ClusterIP # the service type Kubernetes default: ClusterIP
+  #     clusterName: "small-cluster" # The namespace for the service
+  #     region: "europe-west1-b"
+  #     namespace: "default"
+  #   version:
+  #     ports:
+  #       - name: newname  # Required for multiple ports, must be a DNS_LABEL
+  #         protocol: TCP  # Kubernetes default: TCP
+  #         port: 80     # Required.
+  #         targetPort: 100 # A number in 1-65535 or an "IANA_SVC_NAME"  This is the port to access the pod.
+  #         # nodePort: <integer> # Port exposed on the node.  Kubernetes will auto-allocate by default.
+  #     selector:
+  #       new: label # Required. Labels to match the pod
 
-  - name: notify-email
-    type: notification
-    pointer:
-      method: email
-      recipients: 
-        - shiptest.rc.ow@gmail.com
-        - shiptest.rc.me@gmail.com
-  
-  - name: ship_ecr_cli
-    type: cliConfig
-    integration: "ship-ecr"
-    pointer:
-      region: "us-east-1"
-      
-  - name: ship_aws_cli
-    type: cliConfig
-    integration: "ship-aws"
-    pointer:
-      region: "us-east-1"
-  
-  - name: ship_dh_cli
-    type: cliConfig
-    integration: "ship-docker"
-  
-  - name: ship_gcr_cli
-    type: cliConfig
-    integration: "ship-gcr"
-    
-  - name: ship_gke_cli
-    type: cliConfig
-    integration: "ship-gke"
-    pointer:
-      sourceName: "small-cluster"
-      region: "us-east1-d"
-    
-  - name: ship_quay_cli
-    type: cliConfig
-    integration: "ship-quay"
-    
-  # - name: key_values
-  #   type: integration
-  #   integration: "ship-keyvalue"
-  #   
+
+
+  # - name: dcl-cluster
+  #   type: cluster
+  #   integration: dcl
+  #   pointer:
+  #     sourceName: "default"
+
+  # - name: gke-cluster
+  #   type: cluster
+  #   integration: gce
+  #   pointer:
+  #     sourceName: "small-cluster"
+  #     region: "europe-west1-b"
+  # - name: ecs-cluster
+  #   type: cluster
+  #   integration: aws
+  #   pointer:
+  #     sourceName : "default" #name of the cluster we are deploying
+  #     region: "us-west-2"
