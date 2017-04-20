@@ -93,10 +93,10 @@ resources:
     version:
       count: 12
 
-  - name: kick
-    type: kickStart
-    version:
-      counter: 1000
+  # - name: kick
+  #   type: kickStart
+  #   version:
+  #     counter: 1000
 
   # # - name: lb
   # #   type: loadBalancer
