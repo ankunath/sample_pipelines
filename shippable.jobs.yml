@@ -247,11 +247,11 @@ jobs:
   #     - IN: manifestjob
   #     - IN: tri-cluster
 
-  # - name: deploygce
-  #   type: deploy
-  #   steps:
-  #     - IN: gke-cluster
-  #     - IN: manifestjob
+  - name: deploygce
+    type: deploy
+    steps:
+      - IN: gke-cluster
+      - IN: manifestjob
     # on_success:
     #   - NOTIFY: slackNotification
     # on_failure:
