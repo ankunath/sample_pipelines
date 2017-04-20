@@ -243,7 +243,7 @@ resources:
     integration: gce
     pointer:
       sourceName: "cluster-1"
-      region: "us-central1-a  "
+      region: "us-central1-a"
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws
