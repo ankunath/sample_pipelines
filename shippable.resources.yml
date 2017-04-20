@@ -71,7 +71,7 @@ resources:
     type: params
     version:
       params:
-        HELLO: "ShippableCodeFaster5"
+        HELLO: "Shippable"
         SHIPPABLE: "code-faster shippable"
 
 
