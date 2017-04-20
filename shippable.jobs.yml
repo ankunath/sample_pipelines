@@ -14,7 +14,8 @@ jobs:
       # - IN: dv-params-2
       #   applyTo:
       #     - sh-myapp2
-      #- IN: scale
+      - IN: scale
+      - IN: my-params
   # # - name: sample-runSh
   # #   type: runSh
   # #   steps:

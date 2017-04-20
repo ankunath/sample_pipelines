@@ -67,12 +67,12 @@ resources:
     # pointer: 
     #   namespace: 'newnamepace'
 
-  # - name: my-params
-  #   type: params
-  #   version:
-  #     params:
-  #       HELLO: "ShippableCodeFaster5"
-  #       SHIPPABLE: "code-faster"
+  - name: my-params
+    type: params
+    version:
+      params:
+        HELLO: "ShippableCodeFaster5"
+        SHIPPABLE: "code-faster"
 
 
   # - name: tri-cluster
@@ -88,10 +88,10 @@ resources:
   #     recipients:
   #       - "#hipchatNotifications"
   #       - "#slackchannel"
-  # - name: scale
-  #   type: replicas
-  #   version:
-  #     count: 2
+  - name: scale
+    type: replicas
+    version:
+      count: 2
 
   # # - name: lb
   # #   type: loadBalancer
