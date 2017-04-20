@@ -9,7 +9,7 @@ resources:
       isPull: true
     seed:
       versionName: "driftking"
-      versionName: "latest"
+      # versionName: "latest"
 
   # - name: rsync_gitRepo_1
   #   type: gitRepo
