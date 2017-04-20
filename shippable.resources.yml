@@ -94,7 +94,7 @@ resources:
       count: 12
 
   - name: kick
-    type: kickstart
+    type: kickStart
     version:
       counter: 1000
 
