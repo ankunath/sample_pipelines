@@ -96,7 +96,7 @@ resources:
   - name: kick
     type: kickstart
     version:
-      
+      counter: 1000
 
   # # - name: lb
   # #   type: loadBalancer
