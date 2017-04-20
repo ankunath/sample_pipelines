@@ -91,7 +91,7 @@ resources:
   - name: scale
     type: replicas
     version:
-      count: 12
+      count: 20
 
   # - name: kick
   #   type: kickStart
