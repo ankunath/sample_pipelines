@@ -1,36 +1,36 @@
 jobs:
-  # - name: sh-m-shubh-1
-  #   type: manifest
-  #   steps:
-  #     - IN: sh-myapp2
-  #     #- IN: sh-myapp3
-  #     - IN: sh-docker-opts
-  #     - IN: sh-trigger
-  #     #- IN: sh-trigger
-  #     # - IN: dv-params
-  #     #   applyTo:
-  #     #     - sh-myapp2
-  #     # - IN: dv-params-2
-  #     #   applyTo:
-  #     #     - sh-myapp2
-  #     #- IN: scale
-  - name: sample-runSh
-    type: runSh
+  - name: sh-m-shubh-1
+    type: manifest
     steps:
-      - IN: rsync_gitRepo_1
-        showBuildStatus: true
-      - TASK:
-        - script: printenv
-        - script: echo 'ec29ss'
+      - IN: sh-myapp2
+      #- IN: sh-myapp3
+      - IN: sh-docker-opts
+      - IN: sh-trigger
+      #- IN: sh-trigger
+      # - IN: dv-params
+      #   applyTo:
+      #     - sh-myapp2
+      # - IN: dv-params-2
+      #   applyTo:
+      #     - sh-myapp2
+      #- IN: scale
+  # # - name: sample-runSh
+  # #   type: runSh
+  # #   steps:
+  # #     - IN: rsync_gitRepo_1
+  # #       showBuildStatus: true
+  # #     - TASK:
+  # #       - script: printenv
+  # #       - script: echo 'ec29ss'
 
-  - name: sample-runCLI
-    type: runCLI
-    steps:
-      - IN: rsync_gitRepo_2
-        showBuildStatus: true
-      - TASK:
-        - script: printenv
-        - script: echo 'ec29ss'
+  # # - name: sample-runCLI
+  # #   type: runCLI
+  # #   steps:
+  # #     - IN: rsync_gitRepo_2
+  # #       showBuildStatus: true
+  # #     - TASK:
+  # #       - script: printenv
+  #       - script: echo 'ec29ss'
 
   # - name: sample
   #   type: runSh

@@ -1,33 +1,33 @@
 resources:
 
-  # - name: sh-myapp3
-  #   type: image
-  #   integration: docker
+  - name: sh-myapp3
+    type: image
+    integration: docker
+    pointer:
+      sourceName: "scriptnull/debian"       
+      #sourceName: "busybox"
+      isPull: true
+    seed:
+      versionName: "driftking"
+      versionName: "latest"
+
+  # - name: rsync_gitRepo_1
+  #   type: gitRepo
+  #   integration: git
   #   pointer:
-  #     sourceName: "scriptnull/debian"       
-  #     #sourceName: "busybox"
-  #     isPull: true
-  #   seed:
-  #     versionName: "driftking"
-      #versionName: "latest"
+  #     sourceName: ankunath/ds-sll
+  #     branch: master
+  #     buildOnPullRequest: true #since this is true by default
+  #     buildOnCommit: true #since this is true by default
 
-  - name: rsync_gitRepo_1
-    type: gitRepo
-    integration: git
-    pointer:
-      sourceName: ankunath/ds-sll
-      branch: master
-      buildOnPullRequest: true #since this is true by default
-      buildOnCommit: true #since this is true by default
-
-  - name: rsync_gitRepo_2
-    type: gitRepo
-    integration: git
-    pointer:
-      sourceName: ankunath/ci-jacoco
-      branch: master
-      buildOnPullRequest: true #since this is true by default
-      buildOnCommit: true #since this is true by default
+  # - name: rsync_gitRepo_2
+  #   type: gitRepo
+  #   integration: git
+  #   pointer:
+  #     sourceName: ankunath/ci-jacoco
+  #     branch: master
+  #     buildOnPullRequest: true #since this is true by default
+  #     buildOnCommit: true #since this is true by default
 
   # - name: nightly-trigger-2
   #   type: time
