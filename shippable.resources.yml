@@ -120,11 +120,11 @@ resources:
 
 
 
-  # - name: sh-docker-opts
-  #   type: dockerOptions
-  #   version:
-  #     memory: 69
-  #     cpuShares: 12
+  - name: sh-docker-opts
+    type: dockerOptions
+    version:
+      memory: 69
+      cpuShares: 12
   #     # deployment:
       #   minReadySeconds: 20
       #   # paused: false

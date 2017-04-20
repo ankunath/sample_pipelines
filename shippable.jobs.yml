@@ -2,7 +2,7 @@ jobs:
   - name: sh-m-shubh-1
     type: manifest
     steps:
-      - IN: sh-myapp2
+      - IN: sh-myapp3
       #- IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
