@@ -93,6 +93,11 @@ resources:
     version:
       count: 12
 
+  - name: kick
+    type: kickstart
+    version:
+      
+
   # # - name: lb
   # #   type: loadBalancer
   # #   pointer:

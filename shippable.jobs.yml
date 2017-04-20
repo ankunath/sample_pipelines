@@ -16,6 +16,7 @@ jobs:
       #     - sh-myapp2
       - IN: scale
       - IN: my-params
+      - IN: kick
   # # - name: sample-runSh
   # #   type: runSh
   # #   steps:
