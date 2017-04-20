@@ -1,5 +1,5 @@
 jobs:
-  - name: sh-m-shubh-1
+  - name: manifestjob
     type: manifest
     steps:
       - IN: sh-myapp3
