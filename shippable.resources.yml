@@ -242,8 +242,8 @@ resources:
     type: cluster
     integration: gce
     pointer:
-      sourceName: "small-cluster"
-      region: "europe-west1-b"
+      sourceName: "cluster-1"
+      region: "us-central1-a  "
   # - name: ecs-cluster
   #   type: cluster
   #   integration: aws
