@@ -11,14 +11,6 @@ resources:
       versionName: "driftking"
       # versionName: "latest"
 
-  - name: rsync_gitRepo_1
-    type: gitRepo
-    integration: git
-    pointer:
-      sourceName: ankunath/ds-sll
-      branch: master
-      buildOnPullRequest: true #since this is true by default
-      buildOnCommit: true #since this is true by default
 
   # - name: rsync_gitRepo_2
   #   type: gitRepo
@@ -244,9 +236,9 @@ resources:
     pointer:
       sourceName: "cluster-1"
       region: "us-central1-a"
-  # - name: ecs-cluster
-  #   type: cluster
-  #   integration: aws
-  #   pointer:
-  #     sourceName : "default" #name of the cluster we are deploying
-  #     region: "us-west-2"
+  - name: ecs-cluster
+    type: cluster
+    integration: aws
+    pointer:
+      sourceName : "default" #name of the cluster we are deploying
+      region: "us-east-1"
