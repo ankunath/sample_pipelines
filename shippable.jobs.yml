@@ -400,16 +400,17 @@ jobs:
   # - name: deployecs-2
   #   type: deploy
   #   steps:
-  #     - IN: sh-ecs-cluster
+  #     - IN: sh-
+  
   #     - IN: sh-manifestjob2
       # - TASK: managed
       #   deployMethod: replace
 
-  # - name: ECS
-  #   type: deploy
-  #   steps:
-  #     - IN: ecs-cluster
-  #     - IN: manifestjob0
+  - name: ECS
+    type: deploy
+    steps:
+      - IN: ecs-cluster
+      - IN: manifestjob
   #     - IN: lb
   #       applyTo:
   #         - manifest: manifestjob0 # it can only apply to one manifest
