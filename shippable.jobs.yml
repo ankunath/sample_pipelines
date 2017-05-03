@@ -6,7 +6,7 @@ jobs:
       #- IN: sh-myapp3
       - IN: sh-docker-opts
       - IN: sh-trigger
-      - IN: rsync_gitRepo_1
+      #- IN: rsync_gitRepo_1
       #- IN: sh-trigger
       # - IN: dv-params
       #   applyTo:
@@ -14,8 +14,7 @@ jobs:
       # - IN: dv-params-2
       #   applyTo:
       #     - sh-myapp2
-      - IN: scale
-      - IN: my-params
+    
   # # - name: sample-runSh
   # #   type: runSh
   # #   steps:
@@ -227,11 +226,11 @@ jobs:
   #     - IN: sh-trigger
 
 
-  # - name: newEcsJob1110
-  #   type: deploy
-  #   steps:
-  #     - IN: sh-ecs-cluster
-  #     - IN: manifestjob2
+  - name: newEcsJob1110
+    type: deploy
+    steps:
+      - IN: ecs-cluster
+      - IN: manifestjob
   #     # - IN: sh-lb-1
   #     #   applyTo:
   #     #     - manifest: sh-manifestjob # it can only apply to one manifest
@@ -247,11 +246,6 @@ jobs:
   #     - IN: manifestjob
   #     - IN: tri-cluster
 
-  - name: deploygce
-    type: deploy
-    steps:
-      - IN: gke-cluster
-      - IN: manifestjob
     # on_success:
     #   - NOTIFY: slackNotification
     # on_failure:
