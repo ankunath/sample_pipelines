@@ -230,15 +230,9 @@ resources:
   #   pointer:
   #     sourceName: "default"
 
-  - name: gke-cluster
-    type: cluster
-    integration: gce
-    pointer:
-      sourceName: "cluster-1"
-      region: "us-central1-a"
   - name: ecs-cluster
     type: cluster
-    integration: aws
+    integration: ecs
     pointer:
       sourceName : "default" #name of the cluster we are deploying
       region: "us-east-1"
