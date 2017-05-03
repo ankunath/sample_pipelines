@@ -226,11 +226,7 @@ jobs:
   #     - IN: sh-trigger
 
 
-  - name: newEcsJob1110
-    type: deploy
-    steps:
-      - IN: ecs-cluster
-      - IN: manifestjob
+  
   #     # - IN: sh-lb-1
   #     #   applyTo:
   #     #     - manifest: sh-manifestjob # it can only apply to one manifest
